@@ -1,18 +1,14 @@
 function setTimmer(){
-    let borderTimmer = document.getElementById("container-timmer")
     let timmer = document.getElementById("timmer")
-    let cronometer = 30 
-    setInterval(() => {
-        timmer.addEventListener("load",function(){
-            borderTimmer.style.color= "#b4ec68"
-            cronometer--
-            timmer.textContent = cronometer
-            borderTimmer.style.color = "#579700"
-            console.log("hoa")
-        })  
+    let sec = 30 
+    let cronometer = setInterval(function(){
+        timmer.textContent = sec
+        sec--;
+        if (sec < 0) {
+            clearInterval(cronometer);
+        }
     }, 1000);
 }
-
 
 function addEventsToAnswerOptions() {
     let options = document.querySelectorAll(".answer")
@@ -30,6 +26,6 @@ function addEventsToAnswerOptions() {
 window.addEventListener("load",function(){
     addEventsToAnswerOptions()
     setTimmer()
-    
+    timmerBorderColorChanges()
 
 })

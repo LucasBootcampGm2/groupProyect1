@@ -13,11 +13,16 @@ body {
   padding: 10px 0 0;
 }
 
+#question-number {
+  font-size: 1.5em;
+}
+
 #main {
   display: flex;
   flex-direction: column;
   gap: 50px;
   padding: 70px 0 0;
+  width: 90%;
 }
 
 #container-timmer {
@@ -33,6 +38,7 @@ body {
   transform: translate(0, -110%);
   font-size: 1.5em;
   padding: 19px;
+  min-width: 1.25em;
 }
 
 #container-question {
@@ -48,6 +54,7 @@ body {
 #container-answers {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 15px;
 }
 
@@ -78,6 +85,16 @@ body {
   padding: 10px;
   font-size: 1.25em;
   border-radius: 20px;
-  border: 1px solid red;
-  box-shadow: 0 0 3px 1px #0000009e;
+  border: 1px solid;
+  box-shadow: 0 0 10px 1px #0000009e;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+@media (min-width: 1024px) {
+  #container-answers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
