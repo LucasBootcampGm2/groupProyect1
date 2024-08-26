@@ -1,74 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMania</title>
 
-    <link rel="stylesheet" href="questions.css">
-
-</head>
-<body>
-    <header>
-        <p id="bars">
-            barra
-        </p>
+    <link rel="stylesheet" href="questions.css" />
+  </head>
+  <body>
+    <header id="header">
+      <p id="bars"><0/10></p>
     </header>
-    <main>
-
-        <div id="container-question">
-
-            <div class="timmer">
-                 <span>
-                    texto numero
-                </span>
-            </div>
-
-            <h3 class="question">
-                pregunta
-            </h3>
-
-        </div>  
-
-        <div id="container-answers">
-            <div class="answers">
-                <p>Opcion</p>
-                <input type="checkbox">
-            </div >
-
-            <div class="answers">
-                <p>Opcion</p>
-                <input type="checkbox">
-            </div>
-
-            <div class="answers">
-                <p>Opcion</p>
-                <input type="checkbox">
-            </div>
-
-            <div class="answers">
-                <p>Opcion</p>
-                <input type="checkbox">
-            </div>
+    <main id="main">
+      <div id="container-question">
+        <div class="timmer">
+          <span>30</span>
         </div>
 
-        <div id="container-next-buttons">
+        <h3 class="question">pregunta</h3>
+      </div>
 
-            <div id="next-button">
-                <button>
-                    Next
-                </button>
-            </div>
-
-            <div id="skip-button">
-                <button>
-                    Skip
-                </button>
-            </div>
+      <div id="container-answers">
+        <div class="answer">
+          <p>Option</p>
+          <input class="answer-checkbox" type="checkbox" />
         </div>
 
+        <div class="answer">
+          <p>Option</p>
+          <input class="answer-checkbox" type="checkbox" />
+        </div>
 
+        <div class="answer">
+          <p>Option</p>
+          <input class="answer-checkbox" type="checkbox" />
+        </div>
+
+        <div class="answer">
+          <p>Option</p>
+          <input class="answer-checkbox" type="checkbox" />
+        </div>
+      </div>
+
+      <div id="container-answer-buttons">
+        <button id="next-answer-button">Next</button>
+
+        <button id="skip-answer-button">Skip</button>
+      </div>
     </main>
     <script src="quizaBank.js"></script>
-</body>
+  </body>
 </html>
