@@ -1,0 +1,28 @@
+body {
+   display: flex ;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+.timmer {
+    border:8px solid #B4EC68;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    box-shadow: 0px 20px 50px -10px #00000026;
+    border-radius: 20px;
+    padding: 54px 100px;
+}
+
+#container-question {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
