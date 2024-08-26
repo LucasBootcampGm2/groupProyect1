@@ -52,10 +52,8 @@ body {
 }
 
 #container-answers {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  display: grid;
+  gap: 25px;
 }
 
 .answer {
