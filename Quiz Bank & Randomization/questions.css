@@ -20,19 +20,19 @@ body {
   padding: 70px 0 0;
 }
 
-.timmer {
+#container-timmer {
   background-color: white;
-  border: 8px inset #b4ec68;
+  border: 8px inset;
+  border-color: #b4ec68;
   border-radius: 100%;
-  width: 80px;
-  height: 80px;
   display: flex;
   justify-content: center;
   text-align: center;
   position: absolute;
   align-items: center;
-  transform: translate(0, -100%);
+  transform: translate(0, -110%);
   font-size: 1.5em;
+  padding: 19px;
 }
 
 #container-question {
