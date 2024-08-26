@@ -25,7 +25,8 @@ p {
 #container-dropdowns {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 30px;
+  padding: 20px 0 40px;
 }
 
 .container-inputs {
@@ -39,4 +40,90 @@ p {
   width: 200px;
   border-radius: 30px;
   padding: 5px;
+}
+
+#start-button {
+  padding: 5px 15px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  body {
+  }
+
+  #main {
+  }
+
+  h1 {
+  }
+
+  p {
+  }
+
+  #container-dropdowns {
+    flex-direction: row;
+  }
+
+  .container-inputs {
+  }
+
+  .dropdown {
+  }
+
+  #start-button {
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+  }
+
+  #main {
+  }
+
+  h1 {
+  }
+
+  p {
+  }
+
+  #container-dropdowns {
+  }
+
+  .container-inputs {
+  }
+
+  .dropdown {
+  }
+
+  #start-button {
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+  }
+
+  #main {
+  }
+
+  h1 {
+  }
+
+  p {
+  }
+
+  #container-dropdowns {
+  }
+
+  .container-inputs {
+  }
+
+  .dropdown {
+  }
+
+  #start-button {
+  }
 }
