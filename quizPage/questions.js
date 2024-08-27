@@ -839,6 +839,12 @@ function addEventsToAnswerOptions() {
   });
 }
 
+let skipBtn = document.getElementById('skip-answer-button')
+skipBtn.addEventListener('click', function(){
+  loadQuiz()
+  console.log('skipeada')
+})
+
 window.addEventListener("load", function () {
   addEventsToAnswerOptions();
   setTimmer();
