@@ -48,7 +48,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 20px 0 40px;
+  padding: 5%;
 }
 
 .container-inputs {
@@ -98,12 +98,14 @@ p {
 
   #container-dropdowns {
     flex-direction: row;
+    padding: 5% 20%;
   }
 
   .container-inputs {
   }
 
   .dropdown {
+    width: 100%;
   }
 
   #start-button {
