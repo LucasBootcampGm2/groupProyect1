@@ -1,16 +1,15 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  background-color: black;
+  background-size: cover
 }
 
 #main {
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   gap: 30px;
-  padding: 50px 0;
 }
 
 h1 {
@@ -20,6 +19,29 @@ h1 {
 p {
   margin: 0;
   color: gray;
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+}
+
+#container-h1 {
+  border: 5px double white;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5em;
+  width: 58%;
+
+}
+
+#title-h1 {
+  color: white;
+  font-weight: 100;
+  font-size: 2.75em;
+  max-width: 450px;
 }
 
 #container-dropdowns {
@@ -33,20 +55,32 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  color: white;
+  width: 100%;
 }
 
 .dropdown {
-  width: 200px;
-  border-radius: 30px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 70%;
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 10px 0 white;
+}
+
+.container-start-button {
+  display: flex;
+  justify-content: center;
+
 }
 
 #start-button {
-  padding: 5px 15px;
-  border-radius: 50px;
+  padding: 10px 15px;
+  border-radius: 10px;
   background-color: black;
   color: white;
+  font-size: 1em;
 }
 
 @media (min-width: 768px) {
