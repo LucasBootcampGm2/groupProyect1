@@ -8,46 +8,32 @@
   </head>
   <body>
     <main id="main">
+      <form id="category-form" class="forms" action="">
+        <button id="science-button" class="category-option-buttons quiz-buttons">Science</button>
+        <button id="history-button" class="category-option-buttons quiz-buttons">History</button>
+        <button id="geography-button" class="category-option-buttons quiz-buttons">Geography</button>
+        <button id="language-button" class="category-option-buttons quiz-buttons">Language</button>
+        <button id="math-button" class="category-option-buttons quiz-buttons">Math</button>
+        <button id="sport-button" class="category-option-buttons quiz-buttons">Sport</button>
+      </form>
+      <form id="difficulty-form" class="forms" action="">
+        <button id="easy-button" class="difficulty-option-buttons quiz-buttons">Easy</button>
+        <button id="medium-button" class="difficulty-option-buttons quiz-buttons">Medium</button>
+        <button id="hard-button" class="difficulty-option-buttons quiz-buttons">Hard</button>
+      </form>
       <dv class="container-title">
         <div id="container-h1">
           <h1 id="title-h1">QUIZ ?</h1>
         </div>
       </dv>
-      <div id="container-dropdowns">
-        <div class="container-inputs">
-          <label for="category-input">Category</label>
-          <select name="category-input" id="category-input" class="dropdown">
-            <option value="aleatory" class="category-options">Aleatory</option>
-            <option value="sport" class="category-options">Sport</option>
-            <option value="moovies" class="category-options">Moovies</option>
-            <option value="games" class="category-options">Games</option>
-          </select>
-        </div>
-        <div class="container-inputs">
-          <label for="input-difficulty">Difficulty</label>
-          <select
-            name="input-difficulty"
-            id="input-difficulty"
-            class="dropdown"
-          >
-            <option value="aleatory" class="difficulty-options">
-              Aleatory
-            </option>
-            <option value="easy-difficulty" class="difficulty-options">
-              Easy
-            </option>
-            <option value="medium-difficulty" class="difficulty-options">
-              Medium
-            </option>
-            <option value="hard-difficulty" class="difficulty-options">
-              Hard
-            </option>
-          </select>
-        </div>
+      <div id="container-buttons">
+        <button id="category-button" class="appear-buttons">Category</button>
+        <button id="difficulty-button" class="appear-buttons">Difficulty</button>
       </div>
       <div class="container-start-button">
-        <button id="start-button">Start Quiz</button>
+        <button class="start-button">Start Quiz</button>
       </div>
     </main>
+    <script src="home.js"></script>
   </body>
 </html>
