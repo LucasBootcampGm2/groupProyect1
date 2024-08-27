@@ -1,8 +1,8 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  background-size: cover;
   background-color: black;
-  background-size: cover
 }
 
 #main {
@@ -34,7 +34,6 @@ p {
   justify-content: center;
   padding: 2.5em;
   width: 58%;
-
 }
 
 #title-h1 {
@@ -44,26 +43,18 @@ p {
   max-width: 450px;
 }
 
-#container-dropdowns {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 5%;
-}
-
-.container-inputs {
+#container-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  color: white;
-  width: 100%;
+  gap: 30px;
+  padding: 5% 20%;
 }
 
-.dropdown {
+.appear-buttons {
   border-radius: 10px;
   padding: 10px;
-  width: 70%;
+  width: 100%;
   background-color: white;
   border: none;
   box-shadow: 0 0 10px 0 white;
@@ -72,15 +63,79 @@ p {
 .container-start-button {
   display: flex;
   justify-content: center;
-
 }
 
-#start-button {
+.start-button {
   padding: 10px 15px;
   border-radius: 10px;
   background-color: black;
   color: white;
   font-size: 1em;
+}
+
+
+.forms {
+  position: absolute;
+  background-color: #b53d7f;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+  width: 275px;
+  height: 100px;
+  border-radius: 20px;
+  display: none;
+}
+
+.appear-form {
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.quiz-buttons {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+.difficulty-option-buttons{
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+}
+
+#science-button {
+  background-color: #43f243bf;
+}
+#history-button {
+  background-color: #ffeb02f5;
+}
+#sport-button {
+  background-color: #ffa500de;
+}
+#geography-button {
+  background-color: #0000ffa6;
+}
+#language-button {
+  background-color: #ff4c4c;
+}
+#math-button {
+  background-color: #ff05d1b0;
+}
+
+#easy-button {
+  background-color: green;
+}
+#medium-button {
+  background-color: yellow;
+}
+#hard-button {
+  background-color: red;
 }
 
 @media (min-width: 768px) {
@@ -125,13 +180,14 @@ p {
   p {
   }
 
-  #container-dropdowns {
+  #container-buttons {
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .container-inputs {
-  }
-
-  .dropdown {
+  .button {
+    max-width: 500px;
+    width: 80%;
   }
 
   #start-button {
