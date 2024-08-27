@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#container {
+    background-color: #70707099;
+    padding: 40px 25px 80px 25px;
+    position: relative;
+}
+
+#container::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    top: 410px;
+    left: 0;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+#container-score {
+    background-color: white;   
+    padding: 20px 20px;
+    margin: 10px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin: 10px 10px;
+    width: 50%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.container-result hr {
+    margin: 0;
+    height: 30px;
+    background-color: black;
+    border-style: solid;
+}
+
+.container-result span {
+    width: 30px;
+    display: flex;
+   justify-content: center;
+}
+
+.container-result .fa-solid {
+    min-width: 30px;
+   display: flex;
+   justify-content: center;
+}
+
+.correct-number {
+    color: rgb(150, 239, 16);
+}
+
+.wrong-number {   
+    color: red;
+}
+
+.skip-number{
+ color: black;
+}
+
+#container-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-options  button {
+    background-color: #108301;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border-style: none;
+    margin: 10px;
+}
