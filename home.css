@@ -54,3 +54,18 @@
 .quiz-img {
   width: 60px;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+#start-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #4d4de7;
+  color: white;
+}
