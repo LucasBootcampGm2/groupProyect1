@@ -2,109 +2,133 @@
 //           <img class="quiz-mode-img" src="" alt="" />
 //           <h4 class="quiz-mode-h4"></h4>
 //         </button> -->
-let sectionQuizMode = document.getElementById("section-quiz-mode")
+let sectionQuizMode = document.getElementById("section-quiz-mode");
 
-let categories = ['Geography', 'Science', 'Entretainment', 'History', 'Sport' ,'Art']
-let categoriesImgs = ['geographyImg', 'scienceImg', 'artImg', 'historyImg', 'sportImg' ,'EntretainmentImg']
+let categories = [
+  "Geography",
+  "Science",
+  "Entretainment",
+  "History",
+  "Sport",
+  "Art",
+];
+let categoriesImgs = [
+  "geographyImg",
+  "scienceImg",
+  "artImg",
+  "historyImg",
+  "sportImg",
+  "EntretainmentImg",
+];
 
-let difficulties = ['Easy','Medium', 'Hard']
-
-let categoryButtons = document.querySelectorAll('.quiz-category-button')
-
-let difficultyButtons = document.querySelectorAll('.quiz-difficulty-buttons')
-
-function addCategoryButtons(){
-  categories.forEach(function(category){
-    let newButton = document.createElement("button")
-    newButton.classList.add("quiz-category-button")
-    newButton.classList.add("quiz-button")
-    newButton.setAttribute("id", `${category.toLowerCase()}-button`)
-
-    let newImg = document.createElement('img')
-    newImg.setAttribute('id', `${category.toLowerCase()}-img`)
-    newImg.classList.add('quiz-img')
-    newImg.setAttribute('src', `images/${category.toLowerCase()}Img.svg`)
-    newImg.setAttribute('alt', `${category.toLowerCase()}Img`)
-    newButton.append(newImg)
-
-    let newH4 = document.createElement("h4")
-    newH4.classList.add("quiz-h4")
-    newH4.textContent = category
-    newButton.append(newH4)
-
-    sectionQuizMode.append(newButton)
-  })
+function getElementByQuery(element) {
+  return document.querySelectorAll(element);
 }
 
-function addDifficultyButtons(){
-  difficulties.forEach(function(difficulty){
-    
-    let newButton = document.createElement("button")
-    newButton.classList.add("quiz-button")
-    newButton.classList.add("quiz-difficulty-buttons")
-    newButton.setAttribute("id", `${difficulty.toLowerCase()}-button`)
+function addCategoryButtons() {
+  categories.forEach(function (category) {
+    let newButton = document.createElement("button");
+    newButton.classList.add("quiz-category-button");
+    newButton.classList.add("quiz-button");
+    newButton.setAttribute("id", `${category.toLowerCase()}-button`);
 
-    let newImg = document.createElement('img')
-    newImg.setAttribute('id', `${difficulty.toLowerCase()}-img`)
-    newImg.classList.add('quiz-img')
-    newImg.setAttribute('src', `images/${difficulty.toLowerCase()}Img`)
-    newImg.setAttribute('alt', `${difficulty.toLowerCase()}Img`)
-    newButton.append(newImg)
+    let newImg = document.createElement("img");
+    newImg.setAttribute("id", `${category.toLowerCase()}-img`);
+    newImg.classList.add("quiz-img");
+    newImg.setAttribute("src", `images/${category.toLowerCase()}Img.svg`);
+    newImg.setAttribute("alt", `${category.toLowerCase()}Img`);
+    newButton.append(newImg);
 
-    let newH4 = document.createElement("h4")
-    newH4.classList.add("quiz-h4")
-    newH4.textContent = difficulty
-    newButton.append(newH4)
+    let newH4 = document.createElement("h4");
+    newH4.classList.add("quiz-h4");
+    newH4.textContent = category;
+    newButton.append(newH4);
 
-    sectionQuizMode.append(newButton)
-  })
+    sectionQuizMode.append(newButton);
+  });
 }
 
+function addDifficultyButtons() {
+  let difficulties = ["Easy", "Medium", "Hard"];
+  difficulties.forEach(function (difficulty) {
+    let newButton = document.createElement("button");
+    newButton.classList.add("quiz-button");
+    newButton.classList.add("quiz-difficulty-buttons");
+    newButton.setAttribute("id", `${difficulty.toLowerCase()}-button`);
 
-function appearCategoryButtons(){
-  categoryButtons.forEach(function(mode){
-    mode.style.display = 'flex'
-  })
+    let newImg = document.createElement("img");
+    newImg.setAttribute("id", `${difficulty.toLowerCase()}-Img`);
+    newImg.classList.add("quiz-img");
+    newImg.setAttribute("src", `images/${difficulty.toLowerCase()}Img.svg`);
+    newImg.setAttribute("alt", `${difficulty.toLowerCase()}Img`);
+    newButton.append(newImg);
+
+    let newH4 = document.createElement("h4");
+    newH4.classList.add("quiz-h4");
+    newH4.textContent = difficulty;
+    newButton.append(newH4);
+
+    sectionQuizMode.append(newButton);
+  });
 }
 
-function appearDifficultyButtons(){
-  difficultyButtons.forEach(function(difficulty){
-    difficulty.style.display = 'flex'
-  })
+function appearCategoryButtons() {
+  getElementByQuery(".quiz-category-button").forEach(function (category) {
+    sectionQuizMode.style.display = "flex";
+    category.style.display = "block";
+  });
 }
 
-function disappearDifficultyButtons(){
-  difficultyButtons.forEach(function(difficulty){
-    difficulty.style.display = 'none'
-  })
+function appearDifficultyButtons() {
+  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
+    difficulty.style.display = "block";
+  });
 }
 
-function disappearCategoryButtons(){
-  categoryButtons.forEach(function(mode){
-    mode.style.display = 'none'
-  })
+function disappearDifficultyButtons() {
+  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
+    difficulty.style.display = "none";
+  });
 }
 
-
-function clickCategoryButton(){
-  let categoryButton = document.getElementById('category-button')
-  categoryButton.addEventListener("click", function(){
-    appearCategoryButtons()
-    disappearDifficultyButtons()
-  })
+function disappearCategoryButtons() {
+  getElementByQuery(".quiz-category-button").forEach(function (category) {
+    category.style.display = "none";
+  });
 }
 
-function clickDiffilcultyButton(){
-  let difficultyButton = document.getElementById('difficulty-button')
-  difficultyButton.addEventListener("click", function(){
-    appearDifficultyButtons()
-    disappearCategoryButtons()
-  })
+function clickCategoryButton() {
+  console.log("category");
+  let categoryButton = document.getElementById("category-button");
+  categoryButton.addEventListener("click", function () {
+    appearCategoryButtons();
+    disappearDifficultyButtons();
+    console.log("click");
+  });
 }
 
-window.addEventListener("load", function(){
-  addDifficultyButtons()
-  addCategoryButtons()
-  clickCategoryButton()
-  clickDiffilcultyButton()
-})
+function clickDiffilcultyButton() {
+  let difficultyButton = document.getElementById("difficulty-button");
+  difficultyButton.addEventListener("click", function () {
+    appearDifficultyButtons();
+    disappearCategoryButtons();
+    console.log("click");
+  });
+}
+
+function saveDifficulty() {
+  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
+    difficulty.addEventListener("click", function () {
+      console.log(difficulty);
+      localStorage.setItem("difficulty", `${difficulty.textContent}`);
+      console.log(localStorage.getItem("difficulty"));
+    });
+  });
+}
+
+window.addEventListener("load", function () {
+  addDifficultyButtons();
+  addCategoryButtons();
+  clickCategoryButton();
+  clickDiffilcultyButton();
+});

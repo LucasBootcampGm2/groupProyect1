@@ -26,11 +26,11 @@
 
 #section-quiz-mode {
   background-color: black;
-  display: flex;
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
   padding: 50px 30px;
+  display: flex;
 }
 
 .quiz-button {
