@@ -116,19 +116,29 @@ function clickDiffilcultyButton() {
   });
 }
 
+function saveCategory() {
+  getElementByQuery(".quiz-category-button").forEach(function (category) {
+    category.addEventListener("click", function () {
+      localStorage.setItem("category", `${category.textContent}`);
+    });
+  });
+}
+
 function saveDifficulty() {
   getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
     difficulty.addEventListener("click", function () {
-      console.log(difficulty);
-      localStorage.setItem("difficulty", `${difficulty.textContent}`);
-      console.log(localStorage.getItem("difficulty"));
+      let text = difficulty.querySelector(".quiz-h4");
+      localStorage.setItem("difficulty", `${text.textContent}`);
     });
   });
 }
 
 window.addEventListener("load", function () {
+  this.localStorage.clear()
   addDifficultyButtons();
   addCategoryButtons();
   clickCategoryButton();
   clickDiffilcultyButton();
+  saveDifficulty();
+  saveCategory();
 });
