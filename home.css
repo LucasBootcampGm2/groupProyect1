@@ -42,3 +42,7 @@
   box-shadow: 0 0 10px 0 blue;
   border-radius: 10px;
 }
+
+.quiz-mode-button:hover{
+    background-color: #383d5b;
+}
