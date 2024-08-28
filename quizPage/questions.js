@@ -1717,14 +1717,14 @@ let categoriaElegida = "sport";
 let dificultadElegida = "hard";
 let yaPreguntadas = [];
 
-let stopTimer = false
+let stopTimer = false;
 let seconds = 20;
-let continueBtn = document.getElementById('continue-button')
+let continueBtn = document.getElementById("continue-button");
 
-let corrects = 0
-let incorrects = 0
-let skipped = 0
-let alreadyAnswered = false
+let corrects = 0;
+let incorrects = 0;
+let skipped = 0;
+let alreadyAnswered = false;
 
 function selectRandomQuestion() {
   let cantidadPreguntas = categorys[categoriaElegida][dificultadElegida].length;
@@ -1746,7 +1746,7 @@ function showQuestion(question) {
 }
 
 function showAnswers(question) {
-  let questionData = getQuestion(question)
+  let questionData = getQuestion(question);
   let correctAnswer = questionData[question].correct;
   let incorrectAnswers = questionData[question].incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
@@ -1774,27 +1774,27 @@ function loadButtons() {
   let buttons = document.querySelectorAll(".answer");
   buttons.forEach(function (button) {
     button.addEventListener("click", function () {
-      if(!alreadyAnswered){
-        alreadyAnswered = true
+      if (!alreadyAnswered) {
+        alreadyAnswered = true;
         let answer = button.textContent;
         let question = document.querySelector(".question").textContent;
         isCorrect(answer, question, button);
-        stopTimer = true
-        changeButton()
+        stopTimer = true;
+        changeButton();
       }
     });
   });
 }
-function getQuestion(question){
+function getQuestion(question) {
   let questionData = categorys[categoriaElegida][dificultadElegida].find(
     function (searchedQuestion) {
       return Object.keys(searchedQuestion)[0] === question;
     }
   );
-  return questionData
+  return questionData;
 }
 function isCorrect(answer, question, button) {
-  let questionData = getQuestion(question)
+  let questionData = getQuestion(question);
   let index =
     categorys[categoriaElegida][dificultadElegida].indexOf(questionData);
   if (
@@ -1803,12 +1803,12 @@ function isCorrect(answer, question, button) {
       question
     ].correct.toString()
   ) {
-    button.style.backgroundColor = '#b4ec68'
-    corrects++
+    button.style.backgroundColor = "#b4ec68";
+    corrects++;
   } else {
     console.log("incorrecto");
-    button.style.backgroundColor = '#d23232'
-    incorrects++
+    button.style.backgroundColor = "#d23232";
+    incorrects++;
   }
   return;
 }
@@ -1817,21 +1817,21 @@ function loadQuiz() {
   let question = selectRandomQuestion();
   showQuestion(question);
   showAnswers(question);
-  alreadyAnswered = false
+  alreadyAnswered = false;
   return;
 }
 
-function runOutOfTime(){
-  alreadyAnswered = true
-  console.log('sin tiempo')
-  changeButton()
-  return
+function runOutOfTime() {
+  alreadyAnswered = true;
+  console.log("sin tiempo");
+  changeButton();
+  return;
 }
-function restartTime(){
-  stopTimer = false
-  seconds = 20
-  setTimer()
-  return
+function restartTime() {
+  stopTimer = false;
+  seconds = 20;
+  setTimer();
+  return;
 }
 function setTimer() {
   let timer = document.getElementById("timer");
@@ -1840,41 +1840,41 @@ function setTimer() {
     seconds--;
     manageTimer();
   } else if (!stopTimer) {
-    runOutOfTime()
+    runOutOfTime();
   }
-  return
+  return;
 }
 
 function manageTimer() {
   if (seconds >= -1) {
     setTimeout(setTimer, 1000);
   }
-  return
+  return;
 }
 
-function changeButton(){
-  continueBtn.classList.toggle('next-answer-button')
-  continueBtn.classList.toggle('skip-answer-button')
-  continueBtn.textContent = 'Next'
-  return
+function changeButton() {
+  continueBtn.classList.toggle("next-answer-button");
+  continueBtn.classList.toggle("skip-answer-button");
+  continueBtn.textContent = "Next";
+  return;
 }
 
-continueBtn.addEventListener('click', function(){
-  loadQuiz()
-  restartTime()
-  if(continueBtn.textContent.trim() === 'Skip'){
-    skipped++
-    console.log('skipeada')
+continueBtn.addEventListener("click", function () {
+  loadQuiz();
+  restartTime();
+  if (continueBtn.textContent.trim() === "Skip") {
+    skipped++;
+    console.log("skipeada");
   }
-  if(continueBtn.textContent.trim() === 'Next'){
-    changeButton()
-    continueBtn.textContent = 'Skip'
+  if (continueBtn.textContent.trim() === "Next") {
+    changeButton();
+    continueBtn.textContent = "Skip";
   }
-})
-
+});
 
 window.addEventListener("load", function () {
   setTimer();
   loadButtons();
   loadQuiz();
 });
+g
