@@ -4,8 +4,8 @@
 //         </button> -->
 let sectionQuizMode = document.getElementById("section-quiz-mode")
 
-let categories = ['Geography', 'Science', 'Math', 'History', 'Sport' ,'Language']
-let categoriesImgs = ['geographyImg', 'scienceImg', 'mathImg', 'historyImg', 'sportImg' ,'languageImg']
+let categories = ['Geography', 'Science', 'Entretainment', 'History', 'Sport' ,'Art']
+let categoriesImgs = ['geographyImg', 'scienceImg', 'artImg', 'historyImg', 'sportImg' ,'EntretainmentImg']
 
 let difficulties = ['Easy','Medium', 'Hard']
 
@@ -23,7 +23,7 @@ function addCategoryButtons(){
     let newImg = document.createElement('img')
     newImg.setAttribute('id', `${category.toLowerCase()}-img`)
     newImg.classList.add('quiz-img')
-    newImg.setAttribute('src', `${category.toLowerCase()}Img`)
+    newImg.setAttribute('src', `images/${category.toLowerCase()}Img.svg`)
     newImg.setAttribute('alt', `${category.toLowerCase()}Img`)
     newButton.append(newImg)
 
@@ -47,7 +47,7 @@ function addDifficultyButtons(){
     let newImg = document.createElement('img')
     newImg.setAttribute('id', `${difficulty.toLowerCase()}-img`)
     newImg.classList.add('quiz-img')
-    newImg.setAttribute('src', `${difficulty.toLowerCase()}Img`)
+    newImg.setAttribute('src', `images/${difficulty.toLowerCase()}Img`)
     newImg.setAttribute('alt', `${difficulty.toLowerCase()}Img`)
     newButton.append(newImg)
 

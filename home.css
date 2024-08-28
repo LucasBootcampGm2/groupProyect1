@@ -50,3 +50,7 @@
 .quiz-button:hover {
   background-color: #383d5b;
 }
+
+.quiz-img {
+  width: 60px;
+}
