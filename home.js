@@ -9,25 +9,26 @@ let categoriesImgs = ['geographyImg', 'scienceImg', 'mathImg', 'historyImg', 'sp
 
 let difficulties = ['Easy','Medium', 'Hard']
 
-let modeButtons = document.querySelectorAll('.quiz-mode-button')
+let categoryButtons = document.querySelectorAll('.quiz-category-button')
 
 let difficultyButtons = document.querySelectorAll('.quiz-difficulty-buttons')
 
-function addCategoryModeButtons(){
+function addCategoryButtons(){
   categories.forEach(function(category){
     let newButton = document.createElement("button")
-    newButton.classList.add("quiz-mode-button")
+    newButton.classList.add("quiz-category-button")
+    newButton.classList.add("quiz-button")
     newButton.setAttribute("id", `${category.toLowerCase()}-button`)
 
     let newImg = document.createElement('img')
     newImg.setAttribute('id', `${category.toLowerCase()}-img`)
-    newImg.classList.add('quiz-mode-img')
+    newImg.classList.add('quiz-img')
     newImg.setAttribute('src', `${category.toLowerCase()}Img`)
     newImg.setAttribute('alt', `${category.toLowerCase()}Img`)
     newButton.append(newImg)
 
     let newH4 = document.createElement("h4")
-    newH4.classList.add("quiz-mode-h4")
+    newH4.classList.add("quiz-h4")
     newH4.textContent = category
     newButton.append(newH4)
 
@@ -35,23 +36,23 @@ function addCategoryModeButtons(){
   })
 }
 
-function addDifficultyModeButtons(){
+function addDifficultyButtons(){
   difficulties.forEach(function(difficulty){
     
     let newButton = document.createElement("button")
-    newButton.classList.add("quiz-mode-button")
+    newButton.classList.add("quiz-button")
     newButton.classList.add("quiz-difficulty-buttons")
     newButton.setAttribute("id", `${difficulty.toLowerCase()}-button`)
 
     let newImg = document.createElement('img')
     newImg.setAttribute('id', `${difficulty.toLowerCase()}-img`)
-    newImg.classList.add('quiz-mode-img')
+    newImg.classList.add('quiz-img')
     newImg.setAttribute('src', `${difficulty.toLowerCase()}Img`)
     newImg.setAttribute('alt', `${difficulty.toLowerCase()}Img`)
     newButton.append(newImg)
 
     let newH4 = document.createElement("h4")
-    newH4.classList.add("quiz-mode-h4")
+    newH4.classList.add("quiz-h4")
     newH4.textContent = difficulty
     newButton.append(newH4)
 
@@ -60,27 +61,27 @@ function addDifficultyModeButtons(){
 }
 
 
-function appearModeButtons(){
-  modeButtons.forEach(function(mode){
-    mode.style.display = flex
+function appearCategoryButtons(){
+  categoryButtons.forEach(function(mode){
+    mode.style.display = 'flex'
   })
 }
 
 function appearDifficultyButtons(){
   difficultyButtons.forEach(function(difficulty){
-    difficulty.style.display = flex
+    difficulty.style.display = 'flex'
   })
 }
 
 function disappearDifficultyButtons(){
   difficultyButtons.forEach(function(difficulty){
-    difficulty.style.display = none
+    difficulty.style.display = 'none'
   })
 }
 
-function disappearModeButtons(){
-  modeButtons.forEach(function(mode){
-    mode.style.display = none
+function disappearCategoryButtons(){
+  categoryButtons.forEach(function(mode){
+    mode.style.display = 'none'
   })
 }
 
@@ -88,7 +89,7 @@ function disappearModeButtons(){
 function clickCategoryButton(){
   let categoryButton = document.getElementById('category-button')
   categoryButton.addEventListener("click", function(){
-    appearModeButtons()
+    appearCategoryButtons()
     disappearDifficultyButtons()
   })
 }
@@ -97,13 +98,13 @@ function clickDiffilcultyButton(){
   let difficultyButton = document.getElementById('difficulty-button')
   difficultyButton.addEventListener("click", function(){
     appearDifficultyButtons()
-    disappearModeButtons()
+    disappearCategoryButtons()
   })
 }
 
 window.addEventListener("load", function(){
+  addDifficultyButtons()
+  addCategoryButtons()
   clickCategoryButton()
   clickDiffilcultyButton()
-  addDifficultyModeButtons()
-  addCategoryModeButtons()
 })
