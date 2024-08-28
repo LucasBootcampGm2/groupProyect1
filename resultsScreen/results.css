@@ -19,7 +19,7 @@ body {
     width: 100%;
     height: 55px;
     background-color: white;
-    top: 410px;
+    top: 425px;
     left: 0;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
@@ -96,5 +96,5 @@ body {
     height: 40px;
     border-radius: 10px;
     border-style: none;
-    margin: 10px;
+    margin: 18px;
 }
