@@ -3,37 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Group 1 Quiz</title>
+    <title>Quiz Home</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <main id="main">
-      <form id="category-form" class="forms" action="">
-        <button id="science-button" class="category-option-buttons quiz-buttons">Science</button>
-        <button id="history-button" class="category-option-buttons quiz-buttons">History</button>
-        <button id="geography-button" class="category-option-buttons quiz-buttons">Geography</button>
-        <button id="language-button" class="category-option-buttons quiz-buttons">Language</button>
-        <button id="math-button" class="category-option-buttons quiz-buttons">Math</button>
-        <button id="sport-button" class="category-option-buttons quiz-buttons">Sport</button>
-      </form>
-      <form id="difficulty-form" class="forms" action="">
-        <button id="easy-button" class="difficulty-option-buttons quiz-buttons">Easy</button>
-        <button id="medium-button" class="difficulty-option-buttons quiz-buttons">Medium</button>
-        <button id="hard-button" class="difficulty-option-buttons quiz-buttons">Hard</button>
-      </form>
-      <dv class="container-title">
-        <div id="container-h1">
-          <h1 id="title-h1">QUIZ ?</h1>
-        </div>
-      </dv>
-      <div id="container-buttons">
-        <button id="category-button" class="appear-buttons">Category</button>
-        <button id="difficulty-button" class="appear-buttons">Difficulty</button>
+    <header>
+      <h1 id="h1">Welcome to our Quiz</h1>
+    </header>
+    <main>
+      <div id="container-quiz-buttons">
+        <button id="category-button" class="quiz-selection-buttons">
+          Category
+        </button>
+        <button id="difficulty-button" class="quiz-selection-buttons">
+          Difficulty
+        </button>
       </div>
-      <div class="container-start-button">
-        <button class="start-button">Start Quiz</button>
-      </div>
+      <section id="section-quiz-mode"></section>
     </main>
+    <footer>
+      <button class="start-button" href="quizPage/questions.html">
+        start-button
+      </button>
+    </footer>
     <script src="home.js" type="module"></script>
   </body>
 </html>
