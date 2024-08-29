@@ -11,6 +11,7 @@ let corrects = 0;
 let incorrects = 0;
 let skipped = 0;
 let alreadyAnswered = false;
+let timerId = 0
 
 function getCategory() {
   let questionsByCategory = { ...categories[selectedCategory] };
@@ -151,16 +152,17 @@ function runOutOfTime() {
   let question = document.querySelector(".question").textContent;
   let questionData = getQuestion(question);
   let index = finalQuestions.indexOf(questionData);
-  let correctAnswer = finalQuestions[index][question].correct.toString()
+  let correctAnswer = finalQuestions[index][question].correct.toString();
   let correctBtn = findCorrectBtn(correctAnswer);
   correctBtn.classList.add("answer-correct");
-  hideNotSelectedAnswers()
+  hideNotSelectedAnswers();
   changeButton();
   return;
 }
 function restartTime() {
   stopTimer = false;
   seconds = 20;
+  clearTimeout(timerId);
   setTimer();
   return;
 }
@@ -169,7 +171,7 @@ function setTimer() {
   if (seconds > 0 && !stopTimer) {
     timer.textContent = seconds;
     seconds--;
-    manageTimer();
+    timerId = setTimeout(setTimer, 1000);
   } else if (!stopTimer) {
     timer.textContent = seconds;
     runOutOfTime();
@@ -177,9 +179,9 @@ function setTimer() {
   return;
 }
 
-function manageTimer() {
+function repeatTimer() {
   if (seconds >= 0) {
-    setTimeout(setTimer, 1000);
+    timerId = setTimeout(setTimer, 1000);
   }
   return;
 }
