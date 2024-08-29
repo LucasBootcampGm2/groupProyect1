@@ -63,6 +63,17 @@ body {
   justify-content: space-between;
   border-radius: 20px;
 }
+
+.hide-button{
+  display: none;
+}
+
+.answer-correct{
+  background-color: #b4ec68;
+}
+.answer-incorrect{
+  background-color: #d23232;
+}
 .answer-text{
   margin: 0;
   
