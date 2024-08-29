@@ -120,6 +120,8 @@ function saveCategory() {
   getElementByQuery(".quiz-category-button").forEach(function (category) {
     category.addEventListener("click", function () {
       localStorage.setItem("category", `${category.textContent}`);
+      appearStartButton()
+
     });
   });
 }
@@ -129,9 +131,17 @@ function saveDifficulty() {
     difficulty.addEventListener("click", function () {
       let text = difficulty.querySelector(".quiz-h4");
       localStorage.setItem("difficulty", `${text.textContent}`);
+      appearStartButton()
     });
   });
 }
+
+function appearStartButton(){
+  if (localStorage.getItem('category')&& localStorage.getItem('difficulty')){
+    getElementByQuery('.start-button')[0].style.display = 'flex'
+  }
+}
+
 
 window.addEventListener("load", function () {
   this.localStorage.clear()
