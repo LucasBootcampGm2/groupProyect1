@@ -142,6 +142,9 @@ function appearStartButton(){
   }
 }
 
+getElementByQuery('.start-button')[0].addEventListener('click', function(){
+  window.location.href = "/quizPage/questions.html";
+})
 
 window.addEventListener("load", function () {
   this.localStorage.clear()
