@@ -3,7 +3,6 @@
 //           <h4 class="quiz-mode-h4"></h4>
 //         </button> -->
 let sectionQuizMode = document.getElementById("section-quiz-mode");
-
 let categories = [
   "Geography",
   "Science",
