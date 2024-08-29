@@ -8,45 +8,51 @@
 </head>
 <body>
     <header>
-        <div id="container">
+            <div id="container-degrade">
+                <div id="container-degrade1">
+                    <div id="container-score">
+                        <i class="fa-solid fa-crown"></i>
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <main>
+        <div id="container-results">
 
-            <div id="container-score">
-                <i class="fa-solid fa-crown"></i>
-                <img src="imgResultsScreen/profile-svgrepo-com 1.png">
+            <div class="container-answers">
+                <div id="container-circle-correct">
+                    <span class="correct-number"> 0 </span>
+                </div>
+                <p>Correct Answers</p>
             </div>
 
-            <div id="container-results">
-
-                <div class="container-result">
-                    <i class="fa-solid fa-check" style="color: #96ef10;"></i>
-                    <hr>
-                    <span class="correct-number">0</span>
-                </div>
-
-                <div class="container-result">
-                    <i class="fa-solid fa-x" style="color: #ff0000;"></i>
-                    <hr>
-                    <span class="wrong-number">0</span>
-                </div>
-
-                <div class="container-result">
-                  <i class="fa-solid fa-forward"></i>
-                    <hr>
+            <div class="container-answers">
+                <div id="container-circle-skip">
                     <span class="skip-number">0</span>
                 </div>
-                
+                <p>Skip Answers</p>
+             </div>
+
+            <div class="container-answers">
+                <div id="container-circle-wrong">
+                    <span class="wrong-number">0</span>
+                </div>
+                <p>Wrong Answers</p>
             </div>
+
+        </div>
+        
+        <div class="container-options">
+            <button class="button-options" href=""><i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>
+            <button class="button-options" href=""><i class="fa-solid fa-rotate-left" style="color: #ffffff;"></i></button>
         </div>
 
-        <div id="container-options">
-            <button class="button-view-questions" href="">View Questions</button>
-            <button class="button-restart" href="">Restart</button>
-            <button class="button-home" href="">Home</button>
-            <button class="button-leaderboard" href="">Leaderboard</button>
+        <div class="container-options">
+            <button class="button-options" href=""><i class="fa-solid fa-house" style="color: #ffffff;"></i></button>
+            <button class="button-options" href=""><i class="fa-solid fa-medal" style="color: #ffffff;"></i></button>
         </div>
-
-    </header>
-    
+    </main>
     <script src="results.js"></script>
     <script src="https://kit.fontawesome.com/7fef3468f2.js" crossorigin="anonymous"></script>
 
