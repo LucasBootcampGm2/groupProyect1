@@ -27,6 +27,9 @@ function loadAnswersButton(finalQuestions, finalAnswer) {
     alreadyAsked.push(finalQuestions[index].question);
   }
 
+  let divContent = document.createElement("div");
+  divContent.classList.add("div-content");
+
   let title = document.createElement("h3");
   title.textContent = `Question #${index + 1}`;
 
@@ -53,11 +56,12 @@ function loadAnswersButton(finalQuestions, finalAnswer) {
     placeWhereTheAnswerIs = answers;
   }
 
-  placeWhereTheAnswerIs.append(title);
-  placeWhereTheAnswerIs.append(question);
-  placeWhereTheAnswerIs.append(correctAnswer);
-  placeWhereTheAnswerIs.append(explanation);
-  placeWhereTheAnswerIs.append(youAnswer);
+  placeWhereTheAnswerIs.append(divContent);
+  divContent.append(title);
+  divContent.append(question);
+  divContent.append(correctAnswer);
+  divContent.append(explanation);
+  divContent.append(youAnswer);
 
   index++;
 
