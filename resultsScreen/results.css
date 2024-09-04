@@ -225,8 +225,8 @@
         align-items: center;
         justify-content: center;
     }
-
-    #container-score {
+    
+    #container-user {
         background-color: rgb(255, 255, 255);
         width: 158px;
         height: 158px;
@@ -237,9 +237,26 @@
         justify-content: center;
     }
 
-    .score {
-        font-size: 30px;
+    #container-user-score{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+    .score{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        margin: 20px 0 20px 0;
+        background-color:#ffffff;   
+        border-radius: 30px;
+        width: 100px;
+        height: 40px;
+        box-shadow: 1px 2px 30px #f5f5dc;
+    }
+
 
     .fa-crown {
     font-size: 30px;
@@ -252,7 +269,7 @@
     #container-results {
         padding: 40px 0 30px 0;
         border-radius: 30px;
-        height: 135px;
+        height: 160px;
         width: 379px;
         background-color: white;
         display: flex;
@@ -264,6 +281,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        width: 80px;
     }
 
     .container-answers p {
@@ -341,7 +359,7 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
 
 body {
     margin: 0;
@@ -386,7 +404,7 @@ main{
     justify-content: center;
 }
 
-#container-score {
+#container-user{
     background-color: rgb(255, 255, 255);
     width: 118px;
     height: 118px;
@@ -395,6 +413,26 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#container-user-score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 20px 0 20px 0;
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 70px;
+    height: 30px;
+    box-shadow: 1px 2px 30px #f5f5dc;
 }
 
 .fa-crown {
@@ -408,18 +446,19 @@ font-size: 20px;
 #container-results {
     padding: 40px 0 30px 0;
     border-radius: 30px;
-    height: 125px;
+    height: 140px;
     width: 274px;
     background-color: white;
     display: flex;
     justify-content: space-around;
-    margin-top: -20px;
+    margin-top: -60px;
 }
 
 .container-answers {
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 60px;
 }
 
 .container-answers p {

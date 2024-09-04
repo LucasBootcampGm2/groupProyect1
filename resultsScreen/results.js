@@ -7,7 +7,7 @@ let score = document.querySelector(".score");
 // let correctAnswers = localStorage.getItem("correctAnswers");
 // let wrongAnswers = localStorage.getItem("wrongAnswers");
 // let skipAnswers = localStorage.getItem("skipAnswers");
-let correctAnswers = 3;
+let correctAnswers = 7;
 let wrongAnswers = 6;
 let skipAnswers = 1;
 
