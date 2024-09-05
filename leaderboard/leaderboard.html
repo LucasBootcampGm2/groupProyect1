@@ -7,43 +7,48 @@
     <link rel="stylesheet" href="leaderboard.css">
 </head>
 <body>
-    <div class="container">
+    <header>
         <h1>Leaderboard</h1>
-        <div class="rankings">
-            <div class="ranking two">
-                <img src="images/trophy_2nd_place.svg">
-                <p>#2</p>
-                <p>player name</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="rankings">
+                <div class="ranking two">
+                    <img src="images/trophy_2nd_place.svg" class="img2">
+                    <p>#2</p>
+                    <p>user name</p>
+                </div>
+                <div class="ranking one">
+                    <img src="images/trophy_1st_place.svg" class="img1">
+                    <p>#1</p>
+                    <p>user name</p>
+                </div>
+                <div class="ranking three">
+                    <img src="images/trophy_3rd_place.svg" class="img3">
+                    <p>#3</p>
+                    <p>user name</p>
+                </div>
             </div>
-            <div class="ranking one">
-                <img src="images/trophy_1st_place.svg">
-                <p>#1</p>
-                <p>player name</p>
-            </div>
-            <div class="ranking three">
-                <img src="images/trophy_3rd_place.svg">
-                <p>#3</p>
-                <p>player name</p>
-            </div>
+            
+            <table>
+                    <tr>
+                        <td id="ranking">user position</td>
+                        <td id="user">user name</td>
+                        <td id="points">points</td>
+                    </tr>
+                    <tr>
+                        <td id="ranking">user position</td>
+                        <td id="user">user name</td>
+                        <td id="points">points</td>
+                    </tr>
+                    <tr>
+                        <td id="ranking">user position</td>
+                        <td id="user">user name</td>
+                        <td id="points">points</td>
+                    </tr>
+            </table>
         </div>
-        
-        <table>
-                <tr>
-                    <td>4</td>
-                    <td>Alice</td>
-                    <td>1500</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Bob</td>
-                    <td>1200</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Charlie</td>
-                    <td>1100</td>
-                </tr>
-        </table>
-    </div>
+    </main>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
