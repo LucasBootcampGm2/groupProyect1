@@ -1,13 +1,16 @@
+import { questions } from "./questionBank.js";
+
 let sectionQuizMode = document.getElementById("section-quiz-mode");
 
-let categories = [
-  "Geography",
-  "Science",
-  "Entretainment",
-  "History",
-  "Sport",
-  "Art",
-];
+let categories = object.keys(questions);
+
+function saveDifficulties() {
+  let difficulties = {};
+  categories.forEach(function (category) {
+    difficulties[category] = object.keys(category);
+  });
+  return difficulties;
+}
 
 function getElementByQuery(element) {
   return document.querySelectorAll(element);
@@ -80,24 +83,55 @@ function addCategoryButtons() {
   });
 }
 
-function addDifficultyButtons() {
-  let difficulties = ["Easy", "Medium", "Hard"];
-  difficulties.forEach(function (difficulty) {
-    let newButton = document.createElement("button");
-    newButton.classList.add("quiz-button");
-    newButton.classList.add("quiz-difficulty-buttons");
-    newButton.setAttribute("id", `${difficulty.toLowerCase()}-button`);
+// let categorys = {
+//   science: {
+//     easy: [
+//       {
+//         question:
+//           "¿Qué parte de la planta absorbe agua y nutrientes del suelo?",
+//         correct: "Las raíces",
+//         incorrect: ["Las hojas", "El tallo", "Las flores"],
+//         explanation:
+//           "Las raíces son responsables de absorber agua y nutrientes del suelo.",
+//       },
 
-    let newImg = document.createElement("img");
-    newImg.setAttribute("id", `${difficulty.toLowerCase()}-Img`);
-    newImg.classList.add("quiz-img");
-    newImg.setAttribute("src", `images/${difficulty.toLowerCase()}Img.svg`);
-    newImg.setAttribute("alt", `${difficulty.toLowerCase()}Img`);
+function addDifficultyButtons() {
+  let difficulties = object.keys(saveDifficulty());
+  difficulties.forEach(function (difficulty) {
+    let newButton = createCompleteElement(
+      "button",
+      ["quiz-difficulty-buttons", "quiz-button"],
+      [
+        {
+          attributeName: "id",
+          attributeValue: `${difficulty.toLowerCase()}-button`,
+        },
+      ]
+    );
+
+    let newImg = createCompleteElement(
+      "img",
+      ["quiz-img"],
+      [
+        {
+          attributeName: "id",
+          attributeValue: `${difficulty.toLowerCase()}-Img`,
+        },
+        {
+          attributeName: "src",
+          attributeValue: `images/${difficulty.toLowerCase()}Img.svg`,
+        },
+        {
+          attributeName: "alt",
+          attributeValue: `${difficulty.toLowerCase()}Img`,
+        },
+      ]
+    );
+
     newButton.append(newImg);
 
-    let newH4 = document.createElement("h4");
-    newH4.classList.add("quiz-h4");
-    newH4.textContent = difficulty;
+    let newH4 = createCompleteElement("h4", ["quiz-h4"], [], difficulty);
+
     newButton.append(newH4);
 
     sectionQuizMode.append(newButton);
