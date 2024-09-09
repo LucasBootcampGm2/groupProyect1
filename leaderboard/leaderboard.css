@@ -135,3 +135,35 @@ h1{
     border-radius: 50px;
     background-color: white;
 }
+.buttons{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.button{
+    border: 1px #420080 solid;
+    border-radius: 30px;
+    background-color: #420080;
+    color: white;
+    font-size: 16px;
+}
+
+.popUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 30px;
+    background-color: #42008060;
+    width: 450px;
+    height: 225px;
+    font-size: 18px;
+}
+
+.popUp button{
+    border: 1px white solid;
+    border-radius: 30px;
+    margin: 20px;
+}
