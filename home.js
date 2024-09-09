@@ -1,7 +1,3 @@
-// <!-- <button class="quiz-mode-button">
-//           <img class="quiz-mode-img" src="" alt="" />
-//           <h4 class="quiz-mode-h4"></h4>
-//         </button> -->
 let sectionQuizMode = document.getElementById("section-quiz-mode");
 
 let categories = [
@@ -12,38 +8,74 @@ let categories = [
   "Sport",
   "Art",
 ];
-let categoriesImgs = [
-  "geographyImg",
-  "scienceImg",
-  "artImg",
-  "historyImg",
-  "sportImg",
-  "EntretainmentImg",
-];
 
 function getElementByQuery(element) {
   return document.querySelectorAll(element);
 }
 
+function createNewClasses(element, classes) {
+  classes.forEach(function (newClass) {
+    element.classList.add(newClass);
+  });
+}
+
+function createNewAttributes(element, attributes) {
+  attributes.forEach(function (newAttribute) {
+    element.setAttribute(
+      newAttribute.attributeName,
+      newAttribute.attributeValue
+    );
+  });
+}
+
+function addTextToElement(element, text) {
+  element.textContent = text;
+}
+
+function createCompleteElement(element, classes, attributes, text) {
+  let newElement = document.createElement(element);
+  createNewClasses(newElement, classes);
+  createNewAttributes(newElement, attributes);
+  addTextToElement(newElement, text);
+  return newElement;
+}
+
 function addCategoryButtons() {
   categories.forEach(function (category) {
-    let newButton = document.createElement("button");
-    newButton.classList.add("quiz-category-button");
-    newButton.classList.add("quiz-button");
-    newButton.setAttribute("id", `${category.toLowerCase()}-button`);
+    let newButton = createCompleteElement(
+      "button",
+      ["quiz-category-button", "quiz-button"],
+      [
+        {
+          attributeName: "id",
+          attributeValue: `${category.toLowerCase()}-button`,
+        },
+      ]
+    );
 
-    let newImg = document.createElement("img");
-    newImg.setAttribute("id", `${category.toLowerCase()}-img`);
-    newImg.classList.add("quiz-img");
-    newImg.setAttribute("src", `images/${category.toLowerCase()}Img.svg`);
-    newImg.setAttribute("alt", `${category.toLowerCase()}Img`);
+    let newImg = createCompleteElement(
+      "img",
+      ["quiz-img"],
+      [
+        {
+          attributeName: "id",
+          attributeValue: `${category.toLowerCase()}-img`,
+        },
+        {
+          attributeName: "src",
+          attributeValue: `images/${category.toLowerCase()}Img.svg`,
+        },
+        {
+          attributeName: "alt",
+          attributeValue: `${category.toLowerCase()}Img`,
+        },
+      ]
+    );
+
+    let newH4 = createCompleteElement("h4", ["quiz-h4"], [""], category);
+
     newButton.append(newImg);
-
-    let newH4 = document.createElement("h4");
-    newH4.classList.add("quiz-h4");
-    newH4.textContent = category;
     newButton.append(newH4);
-
     sectionQuizMode.append(newButton);
   });
 }
@@ -120,8 +152,7 @@ function saveCategory() {
   getElementByQuery(".quiz-category-button").forEach(function (category) {
     category.addEventListener("click", function () {
       localStorage.setItem("category", `${category.textContent}`);
-      appearStartButton()
-
+      appearStartButton();
     });
   });
 }
@@ -131,20 +162,19 @@ function saveDifficulty() {
     difficulty.addEventListener("click", function () {
       let text = difficulty.querySelector(".quiz-h4");
       localStorage.setItem("difficulty", `${text.textContent}`);
-      appearStartButton()
+      appearStartButton();
     });
   });
 }
 
-function appearStartButton(){
-  if (localStorage.getItem('category')&& localStorage.getItem('difficulty')){
-    getElementByQuery('.start-button')[0].style.display = 'flex'
+function appearStartButton() {
+  if (localStorage.getItem("category") && localStorage.getItem("difficulty")) {
+    getElementByQuery(".start-button")[0].style.display = "flex";
   }
 }
 
-
 window.addEventListener("load", function () {
-  this.localStorage.clear()
+  this.localStorage.clear();
   addDifficultyButtons();
   addCategoryButtons();
   clickCategoryButton();
