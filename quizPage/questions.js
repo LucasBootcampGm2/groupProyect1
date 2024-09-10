@@ -99,11 +99,11 @@ function loadButtons() {
         alreadyAnswered = true;
         let answer = button.textContent;
         let questionText = document.querySelector(".question").textContent;
-        let question = finalQuestions.find(function(q) {
+        let question = finalQuestions.find(function (q) {
           return q.question === questionText;
         });
         isCorrect(answer, question, button);
-        showExplanation(question)
+        showExplanation(question);
         stopTimer = true;
         changeButton();
       }
@@ -146,7 +146,7 @@ function runOutOfTime() {
   alreadyAnswered = true;
   incorrects++;
   let questionText = document.querySelector(".question").textContent;
-  let question = finalQuestions.find(function(q) {
+  let question = finalQuestions.find(function (q) {
     return q.question === questionText;
   });
   let correctBtn = findCorrectBtn(question.correct);
@@ -184,7 +184,7 @@ continueBtn.addEventListener("click", function () {
   loadQuiz();
   resetBtnColors();
   restartTime();
-  explanationContainer.classList.add('hide-explanation')
+  explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
     skipped++;
   }
@@ -194,10 +194,10 @@ continueBtn.addEventListener("click", function () {
   }
 });
 
-function showExplanation(question){
-  explanationContainer.classList.remove('hide-explanation')
-  let explanationText = document.getElementById('explanation')
-  explanationText.textContent = question.explanation
+function showExplanation(question) {
+  explanationContainer.classList.remove("hide-explanation");
+  let explanationText = document.getElementById("explanation");
+  explanationText.textContent = question.explanation;
 }
 
 window.addEventListener("load", function () {
