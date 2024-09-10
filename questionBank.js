@@ -1,4 +1,4 @@
-let categorys = {
+export let questions = {
   science: {
     easy: [
       {
