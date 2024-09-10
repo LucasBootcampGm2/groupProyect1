@@ -2,15 +2,19 @@ import { questions } from "./questionBank.js";
 
 let sectionQuizMode = document.getElementById("section-quiz-mode");
 
-let categories = object.keys(questions);
+let categories = Object.keys(questions);
+console.log(categories)
 
 function saveDifficulties() {
   let difficulties = {};
   categories.forEach(function (category) {
-    difficulties[category] = object.keys(category);
+    difficulties[category] = Object.keys(questions[category]);
+    console.log(questions[category])
   });
-  return difficulties;
+  return difficulties
 }
+
+let difficulties =  saveDifficulties()
 
 function getElementByQuery(element) {
   return document.querySelectorAll(element);
@@ -96,15 +100,14 @@ function addCategoryButtons() {
 //       },
 
 function addDifficultyButtons() {
-  let difficulties = object.keys(saveDifficulty());
-  difficulties.forEach(function (difficulty) {
+  Object.values(difficulties.science).forEach(function (difficulty) {
     let newButton = createCompleteElement(
       "button",
       ["quiz-difficulty-buttons", "quiz-button"],
       [
         {
           attributeName: "id",
-          attributeValue: `${difficulty.toLowerCase()}-button`,
+          attributeValue: `${difficulty}-button`,
         },
       ]
     );
@@ -115,15 +118,15 @@ function addDifficultyButtons() {
       [
         {
           attributeName: "id",
-          attributeValue: `${difficulty.toLowerCase()}-Img`,
+          attributeValue: `${difficulty}-Img`,
         },
         {
           attributeName: "src",
-          attributeValue: `images/${difficulty.toLowerCase()}Img.svg`,
+          attributeValue: `images/${difficulty}Img.svg`,
         },
         {
           attributeName: "alt",
-          attributeValue: `${difficulty.toLowerCase()}Img`,
+          attributeValue: `${difficulty}Img`,
         },
       ]
     );
@@ -182,7 +185,7 @@ function clickDiffilcultyButton() {
   });
 }
 
-function saveCategory() {
+function setCategory() {
   getElementByQuery(".quiz-category-button").forEach(function (category) {
     category.addEventListener("click", function () {
       localStorage.setItem("category", `${category.textContent}`);
@@ -191,7 +194,7 @@ function saveCategory() {
   });
 }
 
-function saveDifficulty() {
+function setDifficulty() {
   getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
     difficulty.addEventListener("click", function () {
       let text = difficulty.querySelector(".quiz-h4");
@@ -213,6 +216,6 @@ window.addEventListener("load", function () {
   addCategoryButtons();
   clickCategoryButton();
   clickDiffilcultyButton();
-  saveDifficulty();
-  saveCategory();
+  setDifficulty();
+  setCategory();
 });
