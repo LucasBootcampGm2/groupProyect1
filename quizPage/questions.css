@@ -39,8 +39,6 @@ body {
 
 #container-timer {
   background-color: white;
-  border: 8px inset;
-  border-color: #b4ec68;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -51,6 +49,25 @@ body {
   font-size: 1.5em;
   padding: 19px;
   min-width: 1.25em;
+  animation: spin 10s linear infinite;
+  border: 10px solid green;
+  border-top-color: #b4ec68;
+  border-bottom-color: #b4ec68;
+  top: -50px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#timer {
+  animation: reverseSpin 10s linear infinite;
+}
+
+@keyframes reverseSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }
 
 #container-question {
