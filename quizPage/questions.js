@@ -1,7 +1,7 @@
 import { questions } from "../questionBank.js";
 
-let selectedCategory = "science";
-let selectedDifficulty = "hard";
+let selectedCategory = localStorage.getItem('category')
+let selectedDifficulty = localStorage.getItem('difficulty')
 let alreadyAsked = [];
 
 let stopTimer = false;
@@ -59,7 +59,7 @@ function selectRandomQuestion() {
     random = Math.floor(Math.random() * cantidadPreguntas);
   } while (alreadyAsked.includes(random));
   alreadyAsked.push(random);
-  let question = finalQuestions[random];
+  let question = finalQuestions[random]; 
   return question;
 }
 
