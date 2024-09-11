@@ -65,7 +65,7 @@ header {
   align-items: center;
   opacity: 0;
   transform: translateY(100%);
-  animation: aparecer 1s ease-out forwards;
+  animation: aparecer 1s ease forwards;
 }
 
 @keyframes aparecer {
@@ -85,7 +85,7 @@ main {
   align-items: center;
   opacity: 0;
   transform: translateY(100%);
-  animation: aparecer 1s ease-out forwards;
+  animation: aparecer 1s ease forwards;
 }
 
 @keyframes aparecer {
@@ -152,6 +152,7 @@ h1 {
 }
 
 .container {
+  margin-top: -50px;
   width: 90%;
   padding: 20px;
   text-align: center;
@@ -218,9 +219,12 @@ h1 {
   gap: 50px;
 }
 .button {
+  height: 40px;
+  width: 150px;
   border: 1px #420080 solid;
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: #420080;
   color: white;
   font-size: 16px;
+  font-weight: 700;
 }
