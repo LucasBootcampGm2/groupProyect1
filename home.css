@@ -44,10 +44,6 @@
   border-radius: 10px;
 }
 
-.quiz-difficulty-buttons {
-  display: none;
-}
-
 .quiz-button:hover {
   background-color: #383d5b;
 }

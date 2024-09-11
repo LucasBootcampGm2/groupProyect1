@@ -1,20 +1,18 @@
 import { questions } from "./questionBank.js";
 
 let sectionQuizMode = document.getElementById("section-quiz-mode");
-
 let categories = Object.keys(questions);
-console.log(categories)
+console.log(categories);
 
 function saveDifficulties() {
   let difficulties = {};
   categories.forEach(function (category) {
     difficulties[category] = Object.keys(questions[category]);
-    console.log(questions[category])
   });
-  return difficulties
+  return difficulties;
 }
-
-let difficulties =  saveDifficulties()
+let difficulties = saveDifficulties();
+console.log(difficulties);
 
 function getElementByQuery(element) {
   return document.querySelectorAll(element);
@@ -87,27 +85,19 @@ function addCategoryButtons() {
   });
 }
 
-// let categorys = {
-//   science: {
-//     easy: [
-//       {
-//         question:
-//           "¿Qué parte de la planta absorbe agua y nutrientes del suelo?",
-//         correct: "Las raíces",
-//         incorrect: ["Las hojas", "El tallo", "Las flores"],
-//         explanation:
-//           "Las raíces son responsables de absorber agua y nutrientes del suelo.",
-//       },
-
 function addDifficultyButtons() {
-  Object.values(difficulties.science).forEach(function (difficulty) {
+  let categorySelected = localStorage.getItem("category");
+  let categoryDifficulties = Object.values(difficulties[categorySelected]);
+  console.log(difficulties[categorySelected]);
+
+  categoryDifficulties.forEach(function (categoryDifficulty) {
     let newButton = createCompleteElement(
       "button",
       ["quiz-difficulty-buttons", "quiz-button"],
       [
         {
           attributeName: "id",
-          attributeValue: `${difficulty}-button`,
+          attributeValue: `${categoryDifficulty}-button`,
         },
       ]
     );
@@ -118,22 +108,27 @@ function addDifficultyButtons() {
       [
         {
           attributeName: "id",
-          attributeValue: `${difficulty}-Img`,
+          attributeValue: `${categoryDifficulty}-Img`,
         },
         {
           attributeName: "src",
-          attributeValue: `images/${difficulty}Img.svg`,
+          attributeValue: `images/${categoryDifficulty}Img.svg`,
         },
         {
           attributeName: "alt",
-          attributeValue: `${difficulty}Img`,
+          attributeValue: `${categoryDifficulty}Img`,
         },
       ]
     );
 
     newButton.append(newImg);
 
-    let newH4 = createCompleteElement("h4", ["quiz-h4"], [], difficulty);
+    let newH4 = createCompleteElement(
+      "h4",
+      ["quiz-h4"],
+      [],
+      categoryDifficulty
+    );
 
     newButton.append(newH4);
 
@@ -141,22 +136,16 @@ function addDifficultyButtons() {
   });
 }
 
+function removeDifficultyButtons() {
+  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
+    difficulty.remove()
+  });
+}
+
 function appearCategoryButtons() {
   getElementByQuery(".quiz-category-button").forEach(function (category) {
     sectionQuizMode.style.display = "flex";
     category.style.display = "block";
-  });
-}
-
-function appearDifficultyButtons() {
-  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
-    difficulty.style.display = "block";
-  });
-}
-
-function disappearDifficultyButtons() {
-  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
-    difficulty.style.display = "none";
   });
 }
 
@@ -171,7 +160,7 @@ function clickCategoryButton() {
   let categoryButton = document.getElementById("category-button");
   categoryButton.addEventListener("click", function () {
     appearCategoryButtons();
-    disappearDifficultyButtons();
+    removeDifficultyButtons();
     console.log("click");
   });
 }
@@ -179,9 +168,9 @@ function clickCategoryButton() {
 function clickDiffilcultyButton() {
   let difficultyButton = document.getElementById("difficulty-button");
   difficultyButton.addEventListener("click", function () {
-    appearDifficultyButtons();
     disappearCategoryButtons();
-    console.log("click");
+    addDifficultyButtons();
+    setDifficulty()
   });
 }
 
@@ -212,7 +201,6 @@ function appearStartButton() {
 
 window.addEventListener("load", function () {
   this.localStorage.clear();
-  addDifficultyButtons();
   addCategoryButtons();
   clickCategoryButton();
   clickDiffilcultyButton();
