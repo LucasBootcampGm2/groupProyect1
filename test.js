@@ -6,6 +6,8 @@ let modal = document.getElementById("modal")
 button.addEventListener("click", function(){
     document.getElementById('modal').classList.remove('show')
     setTimeout(function(){
+        main.style.display = "flex";
+        header.style.display = "flex";
         modal.style.display = "none";
         
     }, 1000)
