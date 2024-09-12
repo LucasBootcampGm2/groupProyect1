@@ -7,12 +7,39 @@ body {
   background-color: black;
 }
 
-#header {
+.header {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 10px 0 0;
+  padding: 20px;
   z-index: 1;
+}
+
+#container-progress-bar {
+  height: 32px;
+  position: relative;
+  width: 90%;
+  border-radius: 15px;
+  border: 2px solid gray;
+  box-shadow: 0 0 10px 0 white;
+  color: white;
+}
+
+#progress-bar {
+  background-color: rgb(57, 177, 57);
+  height: 100%;
+  position: absolute;
+  border-radius: 13px;
+  transition: all 1s;
+  
+}
+
+#progress-count {
+  float: left;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .purple-background {
@@ -57,8 +84,12 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #timer {
@@ -66,8 +97,12 @@ body {
 }
 
 @keyframes reverseSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 #container-question {
