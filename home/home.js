@@ -1,4 +1,4 @@
-import { questions } from "./questionBank.js";
+import { questions } from "../questionBank.js";
 
 let sectionQuizMode = document.getElementById("section-quiz-mode");
 let categories = Object.keys(questions);
@@ -70,7 +70,7 @@ function addCategoryButtons() {
         },
         {
           attributeName: "src",
-          attributeValue: `images/${category.toLowerCase()}Img.svg`,
+          attributeValue: `../images/${category.toLowerCase()}Img.svg`,
         },
         {
           attributeName: "alt",
@@ -114,7 +114,7 @@ function addDifficultyButtons() {
         },
         {
           attributeName: "src",
-          attributeValue: `images/${categoryDifficulty}Img.svg`,
+          attributeValue: `../images/${categoryDifficulty}Img.svg`,
         },
         {
           attributeName: "alt",

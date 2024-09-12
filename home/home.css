@@ -1,7 +1,23 @@
+.body {
+  background-color: #1c1c23;
+  color: white;
+}
+
 #h1 {
   font-size: 2em;
   text-align: center;
   padding: 50px 10px 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.header img {
+  width: 200px;
 }
 
 #main {
@@ -37,10 +53,10 @@
 .quiz-button {
   width: 160px;
   height: 170px;
-  background-color: #1c1c23;
+  background-color: transparent;
   color: white;
   border: none;
-  box-shadow: 0 0 10px 0 blue;
+  box-shadow: 0 0 10px 0 rgb(230, 230, 235);
   border-radius: 10px;
 }
 
@@ -67,6 +83,6 @@ footer {
   color: white;
 }
 
-#difficulty-button { 
+#difficulty-button {
   display: none;
 }
