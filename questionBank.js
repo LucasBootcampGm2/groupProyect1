@@ -89,6 +89,43 @@ export let questions = {
     ],
     medium: [
       {
+        question:
+          "¿Cuál es el órgano principal del sistema circulatorio en los humanos?",
+        correct: "El corazón",
+        incorrect: ["El hígado", "Los pulmones", "El riñón"],
+        explanation:
+          "El corazón es el órgano principal que bombea sangre a través del sistema circulatorio.",
+      },
+      {
+        question:
+          "¿Qué planeta del sistema solar es conocido como el 'planeta rojo'?",
+        correct: "Marte",
+        incorrect: ["Venus", "Júpiter", "Saturno"],
+        explanation:
+          "Marte es conocido como el 'planeta rojo' debido a su color característico.",
+      },
+      {
+        question: "¿Qué tipo de energía se obtiene del sol?",
+        correct: "Energía solar",
+        incorrect: ["Energía eólica", "Energía geotérmica", "Energía nuclear"],
+        explanation:
+          "La energía solar se obtiene aprovechando la luz y el calor del sol.",
+      },
+      {
+        question: "¿Cuál es la sustancia química básica de la vida?",
+        correct: "El ADN",
+        incorrect: ["El agua", "El oxígeno", "El carbono"],
+        explanation:
+          "El ADN es la molécula que contiene la información genética fundamental para la vida.",
+      },
+      {
+        question:
+          "¿Qué elemento químico tiene el símbolo 'O' en la tabla periódica?",
+        correct: "Oxígeno",
+        incorrect: ["Oro", "Osmio", "Ozono"],
+        explanation: "El símbolo 'O' corresponde al elemento químico oxígeno.",
+      },
+      {
         question: "¿Qué es un átomo?",
         correct: "La unidad básica de la materia.",
         incorrect: [
@@ -176,6 +213,113 @@ export let questions = {
       },
     ],
     hard: [
+      {
+        question:
+          "¿Cuál es la teoría científica que explica el origen del universo?",
+        correct: "La teoría del Big Bang",
+        incorrect: [
+          "La teoría del estado estacionario",
+          "La teoría de la relatividad",
+          "La teoría del multiverso",
+        ],
+        explanation:
+          "La teoría del Big Bang es la explicación científica más aceptada sobre el origen del universo.",
+      },
+      {
+        question:
+          "¿Qué tipo de células son responsables de la transmisión de impulsos nerviosos en el cuerpo humano?",
+        correct: "Neuronas",
+        incorrect: [
+          "Células gliales",
+          "Células epiteliales",
+          "Células musculares",
+        ],
+        explanation:
+          "Las neuronas son las células especializadas en la transmisión de impulsos nerviosos.",
+      },
+      {
+        question: "¿Qué elemento químico es el más abundante en el universo?",
+        correct: "Hidrógeno",
+        incorrect: ["Helio", "Oxígeno", "Carbono"],
+        explanation:
+          "El hidrógeno es el elemento químico más abundante en el universo, constituyendo alrededor del 75% de su materia visible.",
+      },
+      {
+        question: "¿Cuál es la función de los ribosomas en una célula?",
+        correct: "Sintetizar proteínas",
+        incorrect: [
+          "Producir energía",
+          "Almacenar material genético",
+          "Degradar desechos",
+        ],
+        explanation:
+          "Los ribosomas son responsables de la síntesis de proteínas a partir de aminoácidos.",
+      },
+      {
+        question: "¿Qué partícula subatómica tiene una carga negativa?",
+        correct: "Electrón",
+        incorrect: ["Protón", "Neutrón", "Quark"],
+        explanation:
+          "El electrón es la partícula subatómica que tiene una carga negativa.",
+      },
+      {
+        question:
+          "¿En qué parte de la célula eucariota ocurre la respiración celular?",
+        correct: "En las mitocondrias",
+        incorrect: [
+          "En el núcleo",
+          "En el retículo endoplásmico",
+          "En los lisosomas",
+        ],
+        explanation:
+          "La respiración celular, que genera energía a partir de moléculas de glucosa, ocurre en las mitocondrias.",
+      },
+      {
+        question: "¿Qué es la materia oscura?",
+        correct:
+          "Un tipo de materia que no emite luz y no puede ser observada directamente",
+        incorrect: [
+          "Materia que se puede observar con telescopios",
+          "Materia que interactúa con la luz de manera visible",
+          "Una forma de energía",
+        ],
+        explanation:
+          "La materia oscura no emite ni absorbe luz, pero tiene influencia en la gravedad y en la formación de estructuras en el universo.",
+      },
+      {
+        question: "¿Cuál es el principio de incertidumbre de Heisenberg?",
+        correct:
+          "No se puede conocer simultáneamente la posición y la velocidad exactas de una partícula",
+        incorrect: [
+          "Las partículas no pueden estar en más de un lugar al mismo tiempo",
+          "La energía de una partícula es siempre constante",
+          "Las partículas no tienen masa",
+        ],
+        explanation:
+          "El principio de incertidumbre de Heisenberg establece que es imposible conocer con precisión absoluta la posición y la velocidad de una partícula al mismo tiempo.",
+      },
+      {
+        question: "¿Qué es el bosón de Higgs?",
+        correct: "Una partícula fundamental que da masa a otras partículas",
+        incorrect: [
+          "Una partícula que transmite la gravedad",
+          "Una partícula que forma los átomos",
+          "Una partícula que produce luz",
+        ],
+        explanation:
+          "El bosón de Higgs es una partícula fundamental que se cree que proporciona masa a otras partículas elementales.",
+      },
+      {
+        question: "¿Qué es la energía de activación en una reacción química?",
+        correct: "La energía necesaria para iniciar una reacción química",
+        incorrect: [
+          "La energía liberada durante la reacción",
+          "La energía consumida en la formación de productos",
+          "La energía almacenada en los reactivos",
+        ],
+        explanation:
+          "La energía de activación es la cantidad de energía necesaria para que una reacción química comience.",
+      },
       {
         question: "¿Qué es la teoría de la relatividad?",
         correct:
@@ -387,6 +531,45 @@ export let questions = {
     ],
     medium: [
       {
+        question: "¿Quién pintó 'La noche estrellada'?",
+        correct: "Vincent van Gogh",
+        incorrect: ["Paul Cézanne", "Henri Matisse", "Gustav Klimt"],
+        explanation:
+          "'La noche estrellada' es una obra famosa de Vincent van Gogh, creada en 1889.",
+      },
+      {
+        question:
+          "¿Qué artista es conocido por sus obras en la técnica de 'collage'?",
+        correct: "Pablo Picasso",
+        incorrect: ["Georges Braque", "Henri Rousseau", "Gustav Klimt"],
+        explanation:
+          "Pablo Picasso, junto con Georges Braque, es conocido por desarrollar la técnica del collage.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del movimiento artístico que se desarrolló a finales del siglo XIX y se enfoca en la captura de la luz y la atmósfera?",
+        correct: "Impresionismo",
+        incorrect: ["Fauvismo", "Expresionismo", "Art Deco"],
+        explanation:
+          "El Impresionismo es un movimiento artístico que se centra en capturar la luz y la atmósfera en lugar de detalles precisos.",
+      },
+      {
+        question:
+          "¿Qué pintor español es conocido por su serie de obras titulada 'Las Meninas'?",
+        correct: "Diego Velázquez",
+        incorrect: ["El Greco", "Francisco de Goya", "Juan Gris"],
+        explanation:
+          "'Las Meninas' es una obra maestra de Diego Velázquez, uno de los pintores más importantes del Siglo de Oro español.",
+      },
+      {
+        question:
+          "¿Qué artista es famoso por sus retratos de la familia real española en el siglo XVII?",
+        correct: "Diego Velázquez",
+        incorrect: ["Francisco de Goya", "El Greco", "José de Ribera"],
+        explanation:
+          "Diego Velázquez es conocido por sus retratos de la familia real española, especialmente en su obra 'Las Meninas'.",
+      },
+      {
         question: "¿Quién es el autor de la escultura 'El David'?",
         correct: "Miguel Ángel",
         incorrect: ["Donatello", "Bernini", "Leonardo da Vinci"],
@@ -477,6 +660,99 @@ export let questions = {
       },
     ],
     hard: [
+      {
+        question: "¿Quién pintó 'El nacimiento de Venus'?",
+        correct: "Sandro Botticelli",
+        incorrect: ["Leonardo da Vinci", "Raphael", "Michelangelo"],
+        explanation:
+          "'El nacimiento de Venus' es una famosa obra de Sandro Botticelli, pintada en el siglo XV.",
+      },
+      {
+        question: "¿Quién pintó 'La persistencia de la memoria'?",
+        correct: "Salvador Dalí",
+        incorrect: ["René Magritte", "Max Ernst", "Joan Miró"],
+        explanation:
+          "'La persistencia de la memoria' es una obra emblemática de Salvador Dalí, creada en 1931.",
+      },
+      {
+        question:
+          "¿Qué artista es conocido por su uso innovador del color en el movimiento fauvista?",
+        correct: "Henri Matisse",
+        incorrect: ["André Derain", "Marc Chagall", "Georges Rouault"],
+        explanation:
+          "Henri Matisse es uno de los principales representantes del Fauvismo, conocido por su uso audaz del color.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del pintor neerlandés famoso por su obra 'La ronda de noche'?",
+        correct: "Rembrandt",
+        incorrect: ["Jan Vermeer", "Hieronymus Bosch", "Peter Paul Rubens"],
+        explanation:
+          "Rembrandt es el autor de 'La ronda de noche', una de sus obras más conocidas, pintada en 1642.",
+      },
+      {
+        question:
+          "¿Qué artista del Renacimiento es famoso por sus frescos en la Capilla Sixtina?",
+        correct: "Miguel Ángel",
+        incorrect: ["Leonardo da Vinci", "Raphael", "Sandro Botticelli"],
+        explanation:
+          "Miguel Ángel pintó los frescos en el techo de la Capilla Sixtina, incluyendo la famosa 'Creación de Adán'.",
+      },
+      {
+        question:
+          "¿Quién es el autor de 'El grito', una obra emblemática del Expresionismo?",
+        correct: "Edvard Munch",
+        incorrect: ["Wassily Kandinsky", "Egon Schiele", "Gustav Klimt"],
+        explanation:
+          "Edvard Munch pintó 'El grito', una obra central en el movimiento Expresionista, en 1893.",
+      },
+      {
+        question:
+          "¿Qué artista es conocido por sus esculturas de bronce, como 'El pensador'?",
+        correct: "Auguste Rodin",
+        incorrect: [
+          "Gian Lorenzo Bernini",
+          "Michelangelo Buonarroti",
+          "Henry Moore",
+        ],
+        explanation:
+          "Auguste Rodin es famoso por sus esculturas, incluyendo 'El pensador', que representa una figura contemplativa.",
+      },
+      {
+        question: "¿Qué pintor es famoso por su serie de 'Nenúfares'?",
+        correct: "Claude Monet",
+        incorrect: ["Alfred Sisley", "Berthe Morisot", "Camille Pissarro"],
+        explanation:
+          "Claude Monet es conocido por su serie de 'Nenúfares', una de las más importantes del Impresionismo.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del movimiento artístico asociado con el uso de formas geométricas y colores planos durante el siglo XX?",
+        correct: "Cubismo",
+        incorrect: ["Surrealismo", "Art Nouveau", "Constructivismo"],
+        explanation:
+          "El Cubismo, desarrollado por Picasso y Braque, se caracteriza por el uso de formas geométricas y una perspectiva múltiple.",
+      },
+      {
+        question:
+          "¿Qué pintor español es conocido por sus obras surrealistas y su estilo único, como en 'El gran masturbador'?",
+        correct: "Salvador Dalí",
+        incorrect: ["Joan Miró", "Luis Buñuel", "Rafael Alberti"],
+        explanation:
+          "Salvador Dalí es conocido por sus obras surrealistas, y 'El gran masturbador' es una de sus piezas destacadas.",
+      },
+      {
+        question:
+          "¿Qué artista es famoso por sus murales en la Biblioteca Pública de Nueva York?",
+        correct: "Diego Rivera",
+        incorrect: [
+          "David Alfaro Siqueiros",
+          "José Clemente Orozco",
+          "Rufino Tamayo",
+        ],
+        explanation:
+          "Diego Rivera es conocido por sus murales en la Biblioteca Pública de Nueva York, que reflejan temas sociales y políticos.",
+      },
       {
         question: "¿En qué año se completó la Capilla Sixtina?",
         correct: "1512",
@@ -660,6 +936,46 @@ export let questions = {
     ],
     medium: [
       {
+        question:
+          "¿Cuál es el país anfitrión de los Juegos Olímpicos de verano 2024?",
+        correct: "Francia",
+        incorrect: ["Japón", "China", "Estados Unidos"],
+        explanation:
+          "Los Juegos Olímpicos de verano 2024 se celebrarán en París, Francia.",
+      },
+      {
+        question:
+          "¿Qué equipo ha ganado más títulos de la Copa del Mundo de la FIFA en fútbol?",
+        correct: "Brasil",
+        incorrect: ["Alemania", "Argentina", "Italia"],
+        explanation:
+          "Brasil ha ganado más títulos de la Copa del Mundo de la FIFA, con un total de 5.",
+      },
+      {
+        question:
+          "¿En qué deporte se utilizan los términos 'freestyle' y 'backstroke'?",
+        correct: "Natación",
+        incorrect: ["Ciclismo", "Atletismo", "Esquí"],
+        explanation:
+          "'Freestyle' y 'backstroke' son estilos de nado en el deporte de natación.",
+      },
+      {
+        question:
+          "¿Qué país es conocido por ser el hogar del deporte del cricket?",
+        correct: "Inglaterra",
+        incorrect: ["India", "Australia", "Pakistán"],
+        explanation:
+          "El cricket tiene sus orígenes en Inglaterra, aunque es muy popular en muchos países de la Commonwealth.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del torneo de tenis que se juega sobre césped en Wimbledon?",
+        correct: "Wimbledon",
+        incorrect: ["US Open", "Roland Garros", "Australian Open"],
+        explanation:
+          "Wimbledon es el torneo de tenis que se juega sobre césped en el All England Club en Londres.",
+      },
+      {
         question: "¿Qué boxeador es conocido como 'El Más Grande'?",
         correct: "Muhammad Ali",
         incorrect: ["Mike Tyson", "Floyd Mayweather", "Joe Frazier"],
@@ -737,6 +1053,92 @@ export let questions = {
       },
     ],
     hard: [
+      {
+        question:
+          "¿Cuál es el récord mundial de velocidad en los 100 metros planos?",
+        correct: "9.58 segundos",
+        incorrect: ["9.70 segundos", "9.85 segundos", "9.92 segundos"],
+        explanation:
+          "El récord mundial de velocidad en los 100 metros planos es de 9.58 segundos, establecido por Usain Bolt.",
+      },
+      {
+        question:
+          "¿Qué atleta ha ganado más medallas en la historia de los Juegos Olímpicos?",
+        correct: "Michael Phelps",
+        incorrect: ["Usain Bolt", "Larisa Latynina", "Paavo Nurmi"],
+        explanation:
+          "Michael Phelps ha ganado el mayor número de medallas en la historia de los Juegos Olímpicos con un total de 28.",
+      },
+      {
+        question:
+          "¿En qué ciudad se celebraron los primeros Juegos Olímpicos modernos en 1896?",
+        correct: "Atenas",
+        incorrect: ["París", "Londres", "Roma"],
+        explanation:
+          "Los primeros Juegos Olímpicos modernos se celebraron en Atenas, Grecia, en 1896.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del famoso torneo de golf que se celebra anualmente en Augusta, Georgia?",
+        correct: "The Masters",
+        incorrect: ["US Open", "British Open", "PGA Championship"],
+        explanation:
+          "The Masters es el torneo de golf que se celebra anualmente en Augusta, Georgia.",
+      },
+      {
+        question:
+          "¿Qué deporte tiene una competición anual llamada 'Tour de Francia'?",
+        correct: "Ciclismo",
+        incorrect: ["Atletismo", "Nado sincronizado", "Rugby"],
+        explanation:
+          "El Tour de Francia es una competición de ciclismo que se celebra anualmente y es una de las más importantes en el mundo del ciclismo.",
+      },
+      {
+        question:
+          "¿Qué equipo de fútbol ganó la UEFA Champions League en 2023?",
+        correct: "Manchester City",
+        incorrect: ["Real Madrid", "Liverpool", "Bayern Munich"],
+        explanation:
+          "Manchester City ganó la UEFA Champions League en 2023, venciendo al Inter de Milán en la final.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del estadio más grande del mundo en términos de capacidad?",
+        correct: "Estadio Rungrado 1 de Mayo",
+        incorrect: [
+          "Estadio de Wembley",
+          "Estadio Camp Nou",
+          "Estadio Maracaná",
+        ],
+        explanation:
+          "El Estadio Rungrado 1 de Mayo, en Pyongyang, Corea del Norte, es el estadio más grande del mundo por capacidad, con un aforo de aproximadamente 114,000 personas.",
+      },
+      {
+        question: "¿Qué deporte se juega en la modalidad de 'slalom gigante'?",
+        correct: "Esquí alpino",
+        incorrect: ["Snowboard", "Patinaje sobre hielo", "Esquí de fondo"],
+        explanation:
+          "El slalom gigante es una modalidad de esquí alpino en la que los esquiadores deben pasar por una serie de puertas situadas en el campo de nieve.",
+      },
+      {
+        question: "¿Qué equipo de la NFL ha ganado más Super Bowls?",
+        correct: "Pittsburgh Steelers",
+        incorrect: [
+          "New England Patriots",
+          "Dallas Cowboys",
+          "San Francisco 49ers",
+        ],
+        explanation:
+          "Los Pittsburgh Steelers han ganado el mayor número de Super Bowls en la historia de la NFL, con seis victorias.",
+      },
+      {
+        question:
+          "¿En qué año se fundó el Comité Olímpico Internacional (COI)?",
+        correct: "1894",
+        incorrect: ["1896", "1900", "1904"],
+        explanation:
+          "El Comité Olímpico Internacional (COI) fue fundado en 1894 por Pierre de Coubertin.",
+      },
       {
         question:
           "¿Quién fue el primer piloto de Fórmula 1 en ganar siete campeonatos mundiales?",
@@ -922,6 +1324,55 @@ export let questions = {
     ],
     medium: [
       {
+        question:
+          "¿Quién fue el líder de la Revolución Francesa que proclamó la República?",
+        correct: "Maximilien Robespierre",
+        incorrect: ["Napoleón Bonaparte", "Luis XVI", "Jean-Paul Marat"],
+        explanation:
+          "Maximilien Robespierre fue una figura clave en la Revolución Francesa y jugó un papel crucial en la proclamación de la República.",
+      },
+      {
+        question:
+          "¿Qué imperio se extendió desde el Medio Oriente hasta el norte de África en la antigüedad?",
+        correct: "El Imperio Romano",
+        incorrect: [
+          "El Imperio Otomano",
+          "El Imperio Bizantino",
+          "El Imperio Persa",
+        ],
+        explanation:
+          "El Imperio Romano se extendió ampliamente en el Medio Oriente y el norte de África durante su apogeo.",
+      },
+      {
+        question: "¿Qué evento marcó el inicio de la Edad Media en Europa?",
+        correct: "La caída del Imperio Romano de Occidente",
+        incorrect: [
+          "La caída de Constantinopla",
+          "La firma del Tratado de Verdún",
+          "La Batalla de Hastings",
+        ],
+        explanation:
+          "La caída del Imperio Romano de Occidente en 476 d.C. marcó el inicio de la Edad Media en Europa.",
+      },
+      {
+        question: "¿Qué tratado puso fin a la Primera Guerra Mundial?",
+        correct: "Tratado de Versalles",
+        incorrect: [
+          "Tratado de Tordesillas",
+          "Tratado de París",
+          "Tratado de Utrecht",
+        ],
+        explanation:
+          "El Tratado de Versalles, firmado en 1919, puso fin a la Primera Guerra Mundial.",
+      },
+      {
+        question: "¿Quién fue el primer emperador de China?",
+        correct: "Qin Shi Huang",
+        incorrect: ["Han Wudi", "Kangxi", "Yuan Shikai"],
+        explanation:
+          "Qin Shi Huang fue el primer emperador de China, unificando el país bajo la dinastía Qin en 221 a.C.",
+      },
+      {
         question: "¿Qué tratado puso fin a la Primera Guerra Mundial?",
         correct: "Tratado de Versalles",
         incorrect: [
@@ -1012,6 +1463,97 @@ export let questions = {
       },
     ],
     hard: [
+      {
+        question:
+          "¿Qué tratado terminó la Guerra de los Cien Años entre Francia e Inglaterra?",
+        correct: "Tratado de Picquigny",
+        incorrect: [
+          "Tratado de Tordesillas",
+          "Tratado de Utrecht",
+          "Tratado de Versalles",
+        ],
+        explanation:
+          "El Tratado de Picquigny, firmado en 1475, terminó la Guerra de los Cien Años entre Francia e Inglaterra.",
+      },
+      {
+        question:
+          "¿Cuál fue la principal causa de la caída del Imperio Bizantino en 1453?",
+        correct: "La caída de Constantinopla",
+        incorrect: [
+          "La invasión de los hunos",
+          "La peste negra",
+          "La conquista de Jerusalén",
+        ],
+        explanation:
+          "La caída de Constantinopla en 1453 marcó el fin del Imperio Bizantino.",
+      },
+      {
+        question:
+          "¿Qué filósofo griego es conocido por su método de diálogo y su enseñanza a través de preguntas y respuestas?",
+        correct: "Sócrates",
+        incorrect: ["Platón", "Aristóteles", "Epicuro"],
+        explanation:
+          "Sócrates es conocido por su método de diálogo, en el que utilizaba preguntas y respuestas para fomentar el pensamiento crítico.",
+      },
+      {
+        question: "¿Quién fue el líder militar que fundó el Imperio Mongol?",
+        correct: "Genghis Khan",
+        incorrect: ["Kublai Khan", "Ögedei Khan", "Tamerlán"],
+        explanation:
+          "Genghis Khan fue el fundador del Imperio Mongol y uno de los conquistadores más importantes de la historia.",
+      },
+      {
+        question:
+          "¿Qué emperador romano fue conocido por su persecución de los cristianos y la persecución de la secta de los cristianos?",
+        correct: "Nerón",
+        incorrect: ["Calígula", "Domiciano", "Trajano"],
+        explanation:
+          "El emperador Nerón es conocido por sus persecuciones contra los cristianos y por su brutalidad durante su reinado.",
+      },
+      {
+        question:
+          "¿Qué figura histórica encabezó el Movimiento de Derechos Civiles en los Estados Unidos en la década de 1960?",
+        correct: "Martin Luther King Jr.",
+        incorrect: ["Malcolm X", "Rosa Parks", "James Baldwin"],
+        explanation:
+          "Martin Luther King Jr. fue el líder del Movimiento de Derechos Civiles en los Estados Unidos y es conocido por su defensa de la igualdad y la justicia.",
+      },
+      {
+        question:
+          "¿Qué imperio fue conocido por su extensa red de caminos y su sistema legal durante el siglo XVIII a.C.?",
+        correct: "El Imperio Hitita",
+        incorrect: [
+          "El Imperio Asirio",
+          "El Imperio Egipcio",
+          "El Imperio Hittita",
+        ],
+        explanation:
+          "El Imperio Hitita fue conocido por su red de caminos y su sistema legal avanzado durante el siglo XVIII a.C.",
+      },
+      {
+        question:
+          "¿Qué filósofo y matemático griego es conocido por su teorema sobre los triángulos rectángulos?",
+        correct: "Pitágoras",
+        incorrect: ["Euclides", "Arquímedes", "Sócrates"],
+        explanation:
+          "Pitágoras es conocido por su teorema sobre los triángulos rectángulos, que establece la relación entre los lados de un triángulo rectángulo.",
+      },
+      {
+        question:
+          "¿Qué movimiento artístico y cultural del Renacimiento italiano se centró en el humanismo y la recuperación de la cultura clásica?",
+        correct: "El Renacimiento",
+        incorrect: ["El Barroco", "El Rococó", "El Romanticismo"],
+        explanation:
+          "El Renacimiento fue un movimiento artístico y cultural que se centró en el humanismo y la recuperación de la cultura clásica.",
+      },
+      {
+        question:
+          "¿Quién fue el emperador de Japón durante la Segunda Guerra Mundial?",
+        correct: "Hirohito",
+        incorrect: ["Akihito", "Meiji", "Taisho"],
+        explanation:
+          "El emperador Hirohito fue el monarca de Japón durante la Segunda Guerra Mundial.",
+      },
       {
         question:
           "¿Qué guerra fue conocida como la 'Guerra para poner fin a todas las guerras'?",
@@ -1204,6 +1746,42 @@ export let questions = {
     ],
     medium: [
       {
+        question: "¿Cuál es el país más pequeño del mundo por superficie?",
+        correct: "Vaticano",
+        incorrect: ["Mónaco", "San Marino", "Liechtenstein"],
+        explanation:
+          "El Vaticano es el país más pequeño del mundo, con una superficie de aproximadamente 0.49 kilómetros cuadrados.",
+      },
+      {
+        question: "¿Cuál es el lago más grande del mundo por superficie?",
+        correct: "Mar Caspio",
+        incorrect: ["Lago Superior", "Lago Victoria", "Lago Baikal"],
+        explanation:
+          "El Mar Caspio es el lago más grande del mundo por superficie, con más de 370,000 kilómetros cuadrados.",
+      },
+      {
+        question: "¿Qué país está atravesado por el río Nilo?",
+        correct: "Egipto",
+        incorrect: ["Sudán", "Etiopía", "Kenya"],
+        explanation:
+          "El río Nilo atraviesa Egipto, y es fundamental para la agricultura y la vida en el país.",
+      },
+      {
+        question: "¿Cuál es la ciudad más poblada del mundo?",
+        correct: "Tokio",
+        incorrect: ["Nueva York", "Shanghai", "Sao Paulo"],
+        explanation:
+          "Tokio es la ciudad más poblada del mundo, con una población metropolitana de más de 37 millones de habitantes.",
+      },
+      {
+        question:
+          "¿Qué cordillera se extiende a lo largo de la costa occidental de América del Sur?",
+        correct: "Los Andes",
+        incorrect: ["Los Alpes", "Los Pirineos", "Los Apalaches"],
+        explanation:
+          "La cordillera de los Andes se extiende a lo largo de la costa occidental de América del Sur, desde Venezuela hasta Chile.",
+      },
+      {
         question: "¿Cuál es la capital de Australia?",
         correct: "Canberra",
         incorrect: ["Sídney", "Melbourne", "Brisbane"],
@@ -1284,13 +1862,82 @@ export let questions = {
     ],
     hard: [
       {
+        question: "¿Cuál es el desierto más seco del mundo?",
+        correct: "Atacama",
+        incorrect: ["Sahara", "Gobi", "Kalahari"],
+        explanation:
+          "El desierto de Atacama, ubicado en Chile, es el desierto más seco del mundo. Algunas zonas del Atacama no han recibido precipitaciones significativas durante siglos.",
+      },
+      {
+        question: "¿Qué país tiene la mayor población en el mundo?",
+        correct: "China",
+        incorrect: ["India", "Estados Unidos", "Indonesia"],
+        explanation:
+          "China es el país más poblado del mundo, con una población que supera los 1,400 millones de personas. India sigue a China, con una población similar en tamaño.",
+      },
+      {
+        question: "¿Cuál es la capital de Australia?",
+        correct: "Canberra",
+        incorrect: ["Sídney", "Melbourne", "Brisbane"],
+        explanation:
+          "Canberra es la capital de Australia, no Sídney ni Melbourne, que son las ciudades más grandes del país. Canberra fue elegida como la capital en 1908 para resolver la disputa entre Sídney y Melbourne.",
+      },
+      {
+        question: "¿Cuál es el elemento químico con el símbolo 'Au'?",
+        correct: "Oro",
+        incorrect: ["Plata", "Cobre", "Aluminio"],
+        explanation:
+          "El símbolo 'Au' representa el oro en la tabla periódica. Su nombre proviene del latín 'aurum'.",
+      },
+      {
+        question: "¿Qué continente es el hogar del río Nilo?",
+        correct: "África",
+        incorrect: ["Asia", "Europa", "América del Norte"],
+        explanation:
+          "El río Nilo, conocido por ser uno de los ríos más largos del mundo, fluye a través del noreste de África, desde el lago Victoria hasta el mar Mediterráneo.",
+      },
+      {
         question: "¿Cuál es la montaña más alta fuera de Asia?",
         correct: "Aconcagua",
         incorrect: ["Monte Kilimanjaro", "Monte Denali", "Mont Blanc"],
         explanation:
           "El Aconcagua, situado en Argentina, es la montaña más alta fuera de Asia, con una altura de 6,962 metros.",
       },
-
+      {
+        question: "¿Cuál es el río más largo de América del Sur?",
+        correct: "Amazonas",
+        incorrect: ["Río de la Plata", "Orinoco", "Paraná"],
+        explanation:
+          "El Amazonas es el río más largo de América del Sur, con una longitud de aproximadamente 7,000 kilómetros. Aunque el Nilo es más largo en el nivel mundial, el Amazonas se considera el más extenso en su continente.",
+      },
+      {
+        question: "¿Qué país tiene la mayor cantidad de islas en el mundo?",
+        correct: "Suecia",
+        incorrect: ["Indonesia", "Canadá", "Noruega"],
+        explanation:
+          "Suecia es el país con la mayor cantidad de islas, con un total de alrededor de 267,570 islas, aunque muchas son pequeñas y deshabitadas.",
+      },
+      {
+        question: "¿Cuál es el océano más grande del mundo?",
+        correct: "Océano Pacífico",
+        incorrect: ["Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        explanation:
+          "El Océano Pacífico es el más grande del mundo, abarcando una superficie de aproximadamente 63 millones de kilómetros cuadrados.",
+      },
+      {
+        question: "¿En qué continente se encuentra el desierto del Sahara?",
+        correct: "África",
+        incorrect: ["Asia", "América del Sur", "Oceanía"],
+        explanation:
+          "El desierto del Sahara está ubicado en África y es el desierto cálido más grande del mundo, cubriendo más de 9 millones de kilómetros cuadrados.",
+      },
+      {
+        question: "¿Cuál es el país más pequeño del mundo por superficie?",
+        correct: "Ciudad del Vaticano",
+        incorrect: ["Mónaco", "San Marino", "Liechtenstein"],
+        explanation:
+          "La Ciudad del Vaticano es el país más pequeño del mundo, con una superficie de aproximadamente 44 hectáreas, lo que equivale a 0.49 kilómetros cuadrados.",
+      },
       {
         question:
           "¿Cuál es el país más pequeño del mundo en términos de superficie?",
@@ -1464,6 +2111,52 @@ export let questions = {
     medium: [
       {
         question:
+          "¿Qué serie de televisión presenta a un grupo de amigos en el café Central Perk?",
+        correct: "Friends",
+        incorrect: ["How I Met Your Mother", "Seinfeld", "The Big Bang Theory"],
+        explanation:
+          "En la serie 'Friends', los personajes principales suelen reunirse en el café Central Perk.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre de la película dirigida por Steven Spielberg que presenta a un extraterrestre llamado E.T.?",
+        correct: "E.T. el Extraterrestre",
+        incorrect: [
+          "Encuentros Cercanos del Tercer Tipo",
+          "Jurassic Park",
+          "El Rescate del Soldado Ryan",
+        ],
+        explanation:
+          "La película 'E.T. el Extraterrestre', dirigida por Steven Spielberg, cuenta la historia de un extraterrestre que quiere regresar a su hogar.",
+      },
+      {
+        question:
+          "¿En qué película de Marvel los Vengadores se enfrentan a Thanos por primera vez?",
+        correct: "Avengers: Infinity War",
+        incorrect: [
+          "Avengers: Age of Ultron",
+          "Avengers: Endgame",
+          "Guardians of the Galaxy",
+        ],
+        explanation:
+          "En 'Avengers: Infinity War', los Vengadores enfrentan a Thanos en su intento de recolectar las Gemas del Infinito.",
+      },
+      {
+        question: "¿Quién ganó el premio a Mejor Actor en los Oscars 2022?",
+        correct: "Will Smith",
+        incorrect: ["Javier Bardem", "Andrew Garfield", "Benedict Cumberbatch"],
+        explanation:
+          "Will Smith ganó el premio a Mejor Actor en los Oscars 2022 por su papel en 'King Richard'.",
+      },
+      {
+        question: "¿Cuál es el nombre del planeta natal de Superman?",
+        correct: "Kryptón",
+        incorrect: ["Vulcano", "Tatooine", "Asgard"],
+        explanation:
+          "Kryptón es el planeta natal de Superman en los cómics de DC. La destrucción de Kryptón lleva a Superman a la Tierra.",
+      },
+      {
+        question:
           "¿Cuál es el nombre real del superhéroe conocido como Iron Man?",
         correct: "Tony Stark",
         incorrect: ["Bruce Wayne", "Peter Parker", "Steve Rogers"],
@@ -1547,6 +2240,93 @@ export let questions = {
       },
     ],
     hard: [
+      {
+        question:
+          "¿En qué película de Stanley Kubrick se explora una visión futurista de la inteligencia artificial y el espacio?",
+        correct: "2001: Odisea del Espacio",
+        incorrect: ["La Naranja Mecánica", "El Resplandor", "Barry Lyndon"],
+        explanation:
+          "Stanley Kubrick dirigió '2001: Odisea del Espacio', una película que explora temas de inteligencia artificial y el futuro del viaje espacial.",
+      },
+      {
+        question:
+          "¿Qué novela de J.D. Salinger presenta al personaje Holden Caulfield?",
+        correct: "El Guardián entre el Centeno",
+        incorrect: [
+          "Franny y Zooey",
+          "Seymour: Una Introducción",
+          "Los Teatros de la Calle",
+        ],
+        explanation:
+          "'El Guardián entre el Centeno' es una novela de J.D. Salinger que sigue la historia del adolescente Holden Caulfield.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del compositor famoso por su obra 'El Cuarteto de Cuerdas en Mi menor'?",
+        correct: "Felix Mendelssohn",
+        incorrect: [
+          "Ludwig van Beethoven",
+          "Johannes Brahms",
+          "Franz Schubert",
+        ],
+        explanation:
+          "Felix Mendelssohn compuso el 'Cuarteto de Cuerdas en Mi menor', una pieza destacada en el repertorio clásico.",
+      },
+      {
+        question:
+          "¿En qué año se estrenó la primera película de la saga 'Star Wars'?",
+        correct: "1977",
+        incorrect: ["1980", "1975", "1983"],
+        explanation:
+          "La primera película de la saga 'Star Wars', luego conocida como 'Star Wars: Episodio IV - Una Nueva Esperanza', se estrenó en 1977.",
+      },
+      {
+        question:
+          "¿Qué artista pintó 'La persistencia de la memoria', una famosa obra surrealista?",
+        correct: "Salvador Dalí",
+        incorrect: ["René Magritte", "Max Ernst", "Joan Miró"],
+        explanation:
+          "Salvador Dalí es el artista que pintó 'La persistencia de la memoria', conocida por sus relojes derritiéndose en un paisaje surrealista.",
+      },
+      {
+        question:
+          "¿Qué película de 1994 dirigida por Robert Zemeckis cuenta la historia de un hombre con un coeficiente intelectual bajo pero con una vida extraordinaria?",
+        correct: "Forrest Gump",
+        incorrect: ["Pulp Fiction", "The Shawshank Redemption", "Se7en"],
+        explanation:
+          "'Forrest Gump' es una película de 1994 que narra la vida de Forrest Gump, un hombre con bajo coeficiente intelectual que experimenta eventos históricos importantes.",
+      },
+      {
+        question:
+          "¿Qué famoso director cinematográfico ganó el Premio Nobel de Literatura en 1987?",
+        correct: "Ingmar Bergman",
+        incorrect: ["Jean-Luc Godard", "Federico Fellini", "Luis Buñuel"],
+        explanation:
+          "Ingmar Bergman, reconocido director cinematográfico sueco, ganó el Premio Nobel de Literatura en 1987 por su destacada contribución al arte del cine.",
+      },
+      {
+        question: "¿Qué famoso autor creó el personaje de Sherlock Holmes?",
+        correct: "Arthur Conan Doyle",
+        incorrect: ["Agatha Christie", "Edgar Allan Poe", "J.K. Rowling"],
+        explanation:
+          "Arthur Conan Doyle es el creador del famoso detective Sherlock Holmes, quien aparece en una serie de novelas y cuentos.",
+      },
+      {
+        question:
+          "¿Cuál es el nombre del personaje de la serie de videojuegos 'Final Fantasy VII' conocido por su espada enorme?",
+        correct: "Cloud Strife",
+        incorrect: ["Squall Leonhart", "Noctis Lucis Caelum", "Tidus"],
+        explanation:
+          "Cloud Strife es el protagonista de 'Final Fantasy VII', conocido por su gran espada llamada 'Buster Sword'.",
+      },
+      {
+        question:
+          "¿Qué escritor japonés es famoso por sus novelas 'Norwegian Wood' y 'Kafka en la orilla'?",
+        correct: "Haruki Murakami",
+        incorrect: ["Yoko Ogawa", "Banana Yoshimoto", "Kazuo Ishiguro"],
+        explanation:
+          "Haruki Murakami es el autor japonés conocido por sus novelas 'Norwegian Wood' y 'Kafka en la orilla', que combinan elementos de realismo mágico con la vida contemporánea.",
+      },
       {
         question:
           "¿Qué director ha ganado tres premios Óscar por mejor director por las películas 'Birdman', 'The Revenant' y 'Amores Perros'?",

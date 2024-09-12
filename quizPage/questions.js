@@ -1,12 +1,15 @@
 import { questions } from "../questionBank.js";
 
+let questionsCount 
+
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
 let alreadyAsked = [];
 
-
 let stopTimer = false;
 let seconds = 20;
+
+let continueButtonsContainer = document.getElementById('container-answer-buttons')
 let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
@@ -54,14 +57,47 @@ function showAllButtons() {
 }
 
 function selectRandomQuestion() {
-  let cantidadPreguntas = finalQuestions.length;
+  countAnswersVerification()
+  switch (selectedDifficulty){
+    case 'easy':
+      questionsCount = 10
+    case 'medium':
+      questionsCount = 15
+    case 'hard':
+      questionsCount = 20
+  }
   let random = 0;
   do {
-    random = Math.floor(Math.random() * cantidadPreguntas);
+    random = Math.floor(Math.random() * questionsCount);
   } while (alreadyAsked.includes(random));
   alreadyAsked.push(random);
   let question = finalQuestions[random];
   return question;
+}
+
+function countAnswersVerification(){
+  if (alreadyAnswered.length === questionsCount){
+    createResultsButton()
+    createAnswersExplainedButton()
+  }
+}
+
+function createResultsButton(){
+  let resultsButton = document.createElement('button')
+  let resultsPage = document.createElement('a')
+  resultsPage.setAttribute('href', '../resultsScreen/results.html') 
+  resultsPage.textContent = 'Your Results'
+  resultsButton.append(resultsPage)
+  continueButtonsContainer.append(resultsButton)
+}
+
+function createAnswersExplainedButton(){
+  let answersButton = document.createElement('button')
+  let answersPage = document.createElement('a')
+  answersPage.setAttribute('href', '../answersExplained/answersExplained.html') 
+  answersPage.textContent = 'Answers Explanation'
+  answersButton.append(answersPage)
+  continueButtonsContainer.append(answersButton)
 }
 
 function showQuestion(question) {
@@ -193,7 +229,7 @@ continueBtn.addEventListener("click", function () {
     changeButton();
     continueBtn.textContent = "Skip";
   }
-  progressBarFunctionability()
+  progressBarFunctionability();
 });
 
 function showExplanation(question) {
@@ -205,13 +241,12 @@ function showExplanation(question) {
 let progressBar = document.getElementById("progress-bar");
 let progressCount = document.getElementById("progress-count");
 let progress = 0;
-let percent = '0%'
+let percent = "0%";
 function progressBarFunctionability() {
   progress++;
-  percent = `${progress*10}%`;
+  percent = `${progress * 10}%`;
   progressBar.style.width = percent;
   progressCount.innerHTML = percent;
-  progress = progress % 100;
 }
 
 window.addEventListener("load", function () {
