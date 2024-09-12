@@ -1,16 +1,51 @@
-body {
+.body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
-  box-sizing: border-box;
+  background-color: black;
 }
 
-#header {
+.header {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 10px 0 0;
+  padding: 20px;
+  z-index: 1;
+}
+
+#container-progress-bar {
+  height: 32px;
+  position: relative;
+  width: 90%;
+  border-radius: 15px;
+  border: 2px solid gray;
+  box-shadow: 0 0 10px 0 white;
+  color: white;
+}
+
+#progress-bar {
+  background-color: rgb(57, 177, 57);
+  height: 100%;
+  position: absolute;
+  border-radius: 13px;
+  transition: all 1s;
+}
+
+#progress-count {
+  float: left;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.purple-background {
+  position: absolute;
+  height: 300px;
+  width: 100%;
+  background-color: purple;
+  z-index: 0;
+  border-radius: 0 0 100% 100%;
 }
 
 #question-number {
@@ -23,12 +58,11 @@ body {
   gap: 35px;
   padding: 70px 0 0;
   width: 90%;
+  z-index: 1;
 }
 
 #container-timer {
   background-color: white;
-  border: 8px inset;
-  border-color: #b4ec68;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -39,6 +73,33 @@ body {
   font-size: 1.5em;
   padding: 19px;
   min-width: 1.25em;
+  animation: spin 10s linear infinite;
+  border: 10px solid green;
+  border-top-color: #b4ec68;
+  border-bottom-color: #b4ec68;
+  top: -50px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#timer {
+  animation: reverseSpin 10s linear infinite;
+}
+
+@keyframes reverseSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 #container-question {
@@ -49,6 +110,7 @@ body {
   box-shadow: 0 0 1px 2px #d2c6c6;
   border-radius: 20px;
   padding: 50px;
+  background-color: #fff;
 }
 
 #container-answers {
@@ -64,19 +126,18 @@ body {
   border-radius: 20px;
 }
 
-.hide-button{
+.hide-button {
   display: none;
 }
 
-.answer-correct{
+.answer-correct {
   background-color: #b4ec68;
 }
-.answer-incorrect{
+.answer-incorrect {
   background-color: #d23232;
 }
-.answer-text{
+.answer-text {
   margin: 0;
-  
 }
 .answer-checkbox {
   display: flex;
@@ -88,7 +149,7 @@ body {
   align-items: center;
   gap: 20px;
 }
-.answer-explanation{
+.answer-explanation {
   background-color: #d2c6c6;
   padding: 15px 20px;
   text-align: center;
@@ -100,11 +161,11 @@ body {
   border-radius: 20px;
   flex-direction: column;
 }
-.answer-explanation h4{
+.answer-explanation h4 {
   font-size: 22px;
   margin: 0;
 }
-.hide-explanation{
+.hide-explanation {
   display: none;
 }
 .next-answer-button {

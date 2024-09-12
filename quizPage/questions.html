@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizMania</title>
-
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="questions.css" />
   </head>
-  <body>
-    <header id="header">
-      <p id="question-number"><0/10></p>
+  <body class="body">
+    <div class="purple-background"></div>
+    <header class="header">
+      <div id="container-progress-bar">
+        <div id="progress-bar"></div>
+        <span id="progress-count"></span>
+      </div>
     </header>
     <main id="main">
       <div id="container-question">
         <div id="container-timer">
-          <span id="timer">30</span>
+          <span id="timer"></span>
         </div>
 
         <h3 class="question"></h3>

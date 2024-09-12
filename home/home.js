@@ -1,8 +1,10 @@
-import { questions } from "./questionBank.js";
+import { questions } from "../questionBank.js";
 
 let sectionQuizMode = document.getElementById("section-quiz-mode");
 let categories = Object.keys(questions);
 console.log(categories);
+let difficultyButton = document.getElementById("difficulty-button");
+
 
 function saveDifficulties() {
   let difficulties = {};
@@ -68,7 +70,7 @@ function addCategoryButtons() {
         },
         {
           attributeName: "src",
-          attributeValue: `images/${category.toLowerCase()}Img.svg`,
+          attributeValue: `../images/${category.toLowerCase()}Img.svg`,
         },
         {
           attributeName: "alt",
@@ -112,7 +114,7 @@ function addDifficultyButtons() {
         },
         {
           attributeName: "src",
-          attributeValue: `images/${categoryDifficulty}Img.svg`,
+          attributeValue: `../images/${categoryDifficulty}Img.svg`,
         },
         {
           attributeName: "alt",
@@ -162,15 +164,16 @@ function clickCategoryButton() {
     appearCategoryButtons();
     removeDifficultyButtons();
     console.log("click");
+    difficultyButton.removeAttribute('disabled')
   });
 }
 
 function clickDiffilcultyButton() {
-  let difficultyButton = document.getElementById("difficulty-button");
   difficultyButton.addEventListener("click", function () {
     disappearCategoryButtons();
     addDifficultyButtons();
     setDifficulty()
+    difficultyButton.setAttribute('disabled', 'true')
   });
 }
 
@@ -178,6 +181,7 @@ function setCategory() {
   getElementByQuery(".quiz-category-button").forEach(function (category) {
     category.addEventListener("click", function () {
       localStorage.setItem("category", `${category.textContent}`);
+      difficultyButton.style.display = 'block'
       appearStartButton();
     });
   });

@@ -1,8 +1,9 @@
 import { questions } from "../questionBank.js";
 
-let selectedCategory = "science";
-let selectedDifficulty = "hard";
+let selectedCategory = localStorage.getItem("category");
+let selectedDifficulty = localStorage.getItem("difficulty");
 let alreadyAsked = [];
+
 
 let stopTimer = false;
 let seconds = 20;
@@ -192,12 +193,25 @@ continueBtn.addEventListener("click", function () {
     changeButton();
     continueBtn.textContent = "Skip";
   }
+  progressBarFunctionability()
 });
 
 function showExplanation(question) {
   explanationContainer.classList.remove("hide-explanation");
   let explanationText = document.getElementById("explanation");
   explanationText.textContent = question.explanation;
+}
+
+let progressBar = document.getElementById("progress-bar");
+let progressCount = document.getElementById("progress-count");
+let progress = 0;
+let percent = '0%'
+function progressBarFunctionability() {
+  progress++;
+  percent = `${progress*10}%`;
+  progressBar.style.width = percent;
+  progressCount.innerHTML = percent;
+  progress = progress % 100;
 }
 
 window.addEventListener("load", function () {
