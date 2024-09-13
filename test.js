@@ -20,3 +20,4 @@ window.onload = function() {
         document.getElementById("modal").classList.add("show");
     }, 200); 
 };
+
