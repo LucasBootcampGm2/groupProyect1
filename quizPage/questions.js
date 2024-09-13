@@ -63,16 +63,21 @@ function selectRandomQuestion() {
   switch (selectedDifficulty) {
     case "easy":
       questionsCount = 10;
+      break;
     case "medium":
       questionsCount = 15;
+      break;
     case "hard":
       questionsCount = 20;
+      break;
   }
+  console.log('antes', alreadyAsked)
   let random = 0;
-  do {
+  while (alreadyAsked.includes(random)) {
     random = Math.floor(Math.random() * questionsCount);
-  } while (alreadyAsked.includes(random));
+  }
   alreadyAsked.push(random);
+  console.log();
   let question = finalQuestions[random];
   return question;
 }
@@ -103,6 +108,9 @@ function createAnswersExplainedButton() {
 }
 
 function showQuestion(question) {
+  if (!question) {
+    console.log("pregnta no encontrada");
+  }
   let container = document.querySelector(".question");
   container.textContent = question.question;
 }
@@ -226,6 +234,7 @@ continueBtn.addEventListener("click", function () {
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
     skipped++;
+    console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
     changeButton();
@@ -246,17 +255,19 @@ let progressCount = document.getElementById("progress-count");
 let progress = 0;
 let percent = "0%";
 function progressBarFunctionability() {
-  let divisor
+  let divisor;
   progress += 10;
   percent = `${progress}%`;
-  switch (questionsCount){
-    case 10: 
-      divisor = 100
+  switch (questionsCount) {
+    case 10:
+      divisor = 100;
+      break;
     case 15:
-      divisor = 150
+      divisor = 150;
+      break;
     case 20:
-      divisor = 200
-    break
+      divisor = 200;
+      break;
   }
   progressBar.style.width =
     (containerProgressBar.offsetWidth * progress) / divisor + "px";
@@ -265,6 +276,7 @@ function progressBarFunctionability() {
 }
 
 window.addEventListener("load", function () {
+  progressBarFunctionability()
   setTimer();
   loadButtons();
   loadQuiz();
