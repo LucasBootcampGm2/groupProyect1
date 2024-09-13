@@ -1,6 +1,6 @@
 import { questions } from "../questionBank.js";
 
-let questionsCount 
+let questionsCount;
 
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
@@ -9,7 +9,9 @@ let alreadyAsked = [];
 let stopTimer = false;
 let seconds = 20;
 
-let continueButtonsContainer = document.getElementById('container-answer-buttons')
+let continueButtonsContainer = document.getElementById(
+  "container-answer-buttons"
+);
 let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
@@ -57,14 +59,14 @@ function showAllButtons() {
 }
 
 function selectRandomQuestion() {
-  countAnswersVerification()
-  switch (selectedDifficulty){
-    case 'easy':
-      questionsCount = 10
-    case 'medium':
-      questionsCount = 15
-    case 'hard':
-      questionsCount = 20
+  countAnswersVerification();
+  switch (selectedDifficulty) {
+    case "easy":
+      questionsCount = 10;
+    case "medium":
+      questionsCount = 15;
+    case "hard":
+      questionsCount = 20;
   }
   let random = 0;
   do {
@@ -75,29 +77,29 @@ function selectRandomQuestion() {
   return question;
 }
 
-function countAnswersVerification(){
-  if (alreadyAnswered.length === questionsCount){
-    createResultsButton()
-    createAnswersExplainedButton()
+function countAnswersVerification() {
+  if (alreadyAsked.length === questionsCount) {
+    createResultsButton();
+    createAnswersExplainedButton();
   }
 }
 
-function createResultsButton(){
-  let resultsButton = document.createElement('button')
-  let resultsPage = document.createElement('a')
-  resultsPage.setAttribute('href', '../resultsScreen/results.html') 
-  resultsPage.textContent = 'Your Results'
-  resultsButton.append(resultsPage)
-  continueButtonsContainer.append(resultsButton)
+function createResultsButton() {
+  let resultsButton = document.createElement("button");
+  let resultsPage = document.createElement("a");
+  resultsPage.setAttribute("href", "../resultsScreen/results.html");
+  resultsPage.textContent = "Your Results";
+  resultsButton.append(resultsPage);
+  continueButtonsContainer.append(resultsButton);
 }
 
-function createAnswersExplainedButton(){
-  let answersButton = document.createElement('button')
-  let answersPage = document.createElement('a')
-  answersPage.setAttribute('href', '../answersExplained/answersExplained.html') 
-  answersPage.textContent = 'Answers Explanation'
-  answersButton.append(answersPage)
-  continueButtonsContainer.append(answersButton)
+function createAnswersExplainedButton() {
+  let answersButton = document.createElement("button");
+  let answersPage = document.createElement("a");
+  answersPage.setAttribute("href", "../answersExplained/answersExplained.html");
+  answersPage.textContent = "Answers Explanation";
+  answersButton.append(answersPage);
+  continueButtonsContainer.append(answersButton);
 }
 
 function showQuestion(question) {
@@ -237,15 +239,17 @@ function showExplanation(question) {
   let explanationText = document.getElementById("explanation");
   explanationText.textContent = question.explanation;
 }
-
+let containerProgressBar = document.getElementById("container-progress-bar");
 let progressBar = document.getElementById("progress-bar");
 let progressCount = document.getElementById("progress-count");
 let progress = 0;
 let percent = "0%";
 function progressBarFunctionability() {
-  progress++;
-  percent = `${progress * 10}%`;
-  progressBar.style.width = percent;
+  progress += 10;
+  percent = `${progress}%`;
+  progressBar.style.width =
+    (containerProgressBar.offsetWidth * progress) / 100 + "px";
+  console.log(containerProgressBar.offsetWidth);
   progressCount.innerHTML = percent;
 }
 
