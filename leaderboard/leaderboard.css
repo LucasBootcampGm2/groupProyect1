@@ -1,52 +1,6 @@
 * {
   font-family: "Baloo 2";
 }
-#modal {
-  display: block;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.5s ease, transform 0.8s ease;
-}
-
-#modal.show {
-  opacity: 1;
-  transform: scale(1);
-}
-
-#modalContent {
-  background-color: #420080;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-  color: white;
-}
-
-#modal input {
-  margin-top: 10px;
-  padding: 10px;
-  width: 80%;
-}
-
-#modal button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 30px;
-  background-color: #ffffff;
-}
-html {
-  margin: 0;
-}
 body {
   margin: 0;
   box-sizing: border-box;
@@ -58,47 +12,15 @@ header {
   padding: 40px 60px 70px;
   border-bottom-right-radius: 100%;
   border-bottom-left-radius: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-h1 {
-  display: none;
-  animation: aparecer 1s ease forwards;
-  opacity: 0;
-  transform: translateY(100%);
-}
-
-@keyframes aparecer {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 main {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transform: translateY(100%);
-  animation: aparecer 1s ease forwards;
-}
-
-@keyframes aparecer {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 table {
   width: 100%;
@@ -132,16 +54,19 @@ table tr:hover {
   cursor: pointer;
 }
 
+/* Estilo para la primera columna */
 table td:first-child {
   font-weight: bold;
   color: #000;
   width: 10%;
 }
 
+/* Estilo para la segunda columna */
 table td:nth-child(2) {
   width: 70%;
 }
 
+/* Estilo para la tercera columna */
 table td:last-child {
   text-align: right;
   width: 20%;
@@ -152,20 +77,21 @@ h1 {
   color: white;
   font-size: 50px;
 }
-
+/* Estilo para el contenedor principal */
 .container {
-  margin-top: -50px;
   width: 90%;
   padding: 20px;
   text-align: center;
 }
 
+/* Estilo para el título */
 .container h1 {
   font-size: 36px;
   color: #333;
   margin-bottom: 20px;
 }
 
+/* Estilo para las posiciones del ranking */
 .rankings {
   display: flex;
   justify-content: center;
@@ -199,14 +125,12 @@ h1 {
     4px 4px 16px 0 rgb(173, 164, 149), 0px 0px 24px 2px rgb(196, 194, 188);
   border-radius: 50px;
   background-color: white;
-  margin-top: 80px;
 }
 .img3 {
   box-shadow: 2px 2px 8px 0 rgb(255, 179, 26), 4px 4px 16px 0 rgb(221, 175, 102),
     0px 0px 24px 2px rgb(167, 84, 7);
   border-radius: 50px;
   background-color: white;
-  margin-top: 100px;
 }
 .buttons {
   margin: 50px;
@@ -215,12 +139,28 @@ h1 {
   gap: 50px;
 }
 .button {
-  height: 40px;
-  width: 150px;
   border: 1px #420080 solid;
-  border-radius: 10px;
+  border-radius: 30px;
   background-color: #420080;
   color: white;
   font-size: 16px;
-  font-weight: 700;
+}
+
+.popUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 30px;
+  background-color: #42008060;
+  width: 450px;
+  height: 225px;
+  font-size: 18px;
+}
+
+.popUp button {
+  border: 1px white solid;
+  border-radius: 30px;
+  margin: 20px;
 }
