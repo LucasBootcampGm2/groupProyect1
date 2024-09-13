@@ -318,7 +318,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 15%;
   margin: 30px 0 30px 0;
 }
 
@@ -334,6 +334,10 @@ h1 {
   margin-top: 5px;
   font-size: 18px;
   color: #ffffffb3;
+}
+
+.trophies {
+  width: 105%;
 }
 
 .img1 {
@@ -359,8 +363,9 @@ h1 {
 .buttons {
   margin: 50px;
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  place-content: center;
+  gap: 30px;
 }
 .button {
   height: 40px;
