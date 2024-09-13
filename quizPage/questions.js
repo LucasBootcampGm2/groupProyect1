@@ -239,16 +239,27 @@ function showExplanation(question) {
   let explanationText = document.getElementById("explanation");
   explanationText.textContent = question.explanation;
 }
+
 let containerProgressBar = document.getElementById("container-progress-bar");
 let progressBar = document.getElementById("progress-bar");
 let progressCount = document.getElementById("progress-count");
 let progress = 0;
 let percent = "0%";
 function progressBarFunctionability() {
+  let divisor
   progress += 10;
   percent = `${progress}%`;
+  switch (questionsCount){
+    case 10: 
+      divisor = 100
+    case 15:
+      divisor = 150
+    case 20:
+      divisor = 200
+    break
+  }
   progressBar.style.width =
-    (containerProgressBar.offsetWidth * progress) / 100 + "px";
+    (containerProgressBar.offsetWidth * progress) / divisor + "px";
   console.log(containerProgressBar.offsetWidth);
   progressCount.innerHTML = percent;
 }
