@@ -1,26 +1,34 @@
-import { categories } from "../questionBank.js";
+import { questions } from "../questionBank.js";
 
-let selectedCategory = "sport";
-let selectedDifficulty = "hard";
+let questionsCount;
+
+let selectedCategory = localStorage.getItem("category");
+let selectedDifficulty = localStorage.getItem("difficulty");
 let alreadyAsked = [];
 
 let stopTimer = false;
 let seconds = 20;
+
+let continueButtonsContainer = document.getElementById(
+  "container-answer-buttons"
+);
 let continueBtn = document.getElementById("continue-button");
+let explanationContainer = document.querySelector(".answer-explanation");
+
 let corrects = 0;
 let incorrects = 0;
 let skipped = 0;
 let alreadyAnswered = false;
-let timerId = 0
+let timerId = 0;
 
 function getCategory() {
-  let questionsByCategory = { ...categories[selectedCategory] };
-  return questionsByCategory;
+  return questions[selectedCategory];
 }
+
 function getDifficulty(questionsByCategory) {
-  let questionsByDifficulty = [...questionsByCategory[selectedDifficulty]];
-  return questionsByDifficulty;
+  return questionsByCategory[selectedDifficulty];
 }
+
 let finalQuestions = getDifficulty(getCategory());
 
 function resetBtnColors() {
@@ -31,43 +39,77 @@ function resetBtnColors() {
   });
 }
 
-function hideNotSelectedAnswers(){
+function hideNotSelectedAnswers() {
   let buttons = document.querySelectorAll(".answer");
-  buttons.forEach(function (button){
-    if(!button.classList.contains('answer-correct') && !button.classList.contains('answer-incorrect')){
-      button.classList.add('hide-button')
-    }    
-  })
-}
-function showAllButtons(){
-  let buttons = document.querySelectorAll(".answer");
-  buttons.forEach(function (button){
-      button.classList.remove('hide-button')
-  })
+  buttons.forEach(function (button) {
+    if (
+      !button.classList.contains("answer-correct") &&
+      !button.classList.contains("answer-incorrect")
+    ) {
+      button.classList.add("hide-button");
+    }
+  });
 }
 
+function showAllButtons() {
+  let buttons = document.querySelectorAll(".answer");
+  buttons.forEach(function (button) {
+    button.classList.remove("hide-button");
+  });
+}
 
 function selectRandomQuestion() {
-  let cantidadPreguntas = finalQuestions.length;
+  countAnswersVerification();
+  switch (selectedDifficulty) {
+    case "easy":
+      questionsCount = 10;
+    case "medium":
+      questionsCount = 15;
+    case "hard":
+      questionsCount = 20;
+  }
   let random = 0;
   do {
-    random = Math.floor(Math.random() * cantidadPreguntas);
+    random = Math.floor(Math.random() * questionsCount);
   } while (alreadyAsked.includes(random));
   alreadyAsked.push(random);
-  let question = Object.keys(finalQuestions[random])[0];
+  let question = finalQuestions[random];
   return question;
+}
+
+function countAnswersVerification() {
+  if (alreadyAsked.length === questionsCount) {
+    createResultsButton();
+    createAnswersExplainedButton();
+  }
+}
+
+function createResultsButton() {
+  let resultsButton = document.createElement("button");
+  let resultsPage = document.createElement("a");
+  resultsPage.setAttribute("href", "../resultsScreen/results.html");
+  resultsPage.textContent = "Your Results";
+  resultsButton.append(resultsPage);
+  continueButtonsContainer.append(resultsButton);
+}
+
+function createAnswersExplainedButton() {
+  let answersButton = document.createElement("button");
+  let answersPage = document.createElement("a");
+  answersPage.setAttribute("href", "../answersExplained/answersExplained.html");
+  answersPage.textContent = "Answers Explanation";
+  answersButton.append(answersPage);
+  continueButtonsContainer.append(answersButton);
 }
 
 function showQuestion(question) {
   let container = document.querySelector(".question");
-  container.textContent = question;
-  return;
+  container.textContent = question.question;
 }
 
 function showAnswers(question) {
-  let questionData = getQuestion(question);
-  let correctAnswer = questionData[question].correct;
-  let incorrectAnswers = questionData[question].incorrect;
+  let correctAnswer = question.correct;
+  let incorrectAnswers = question.incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
 
   allAnswers = shuffle(allAnswers);
@@ -76,7 +118,6 @@ function showAnswers(question) {
     let answerDiv = document.getElementById("answer-" + (i + 1));
     answerDiv.querySelector("p").textContent = allAnswers[i];
   }
-  return;
 }
 
 function shuffle(answers) {
@@ -96,38 +137,33 @@ function loadButtons() {
       if (!alreadyAnswered) {
         alreadyAnswered = true;
         let answer = button.textContent;
-        let question = document.querySelector(".question").textContent;
+        let questionText = document.querySelector(".question").textContent;
+        let question = finalQuestions.find(function (q) {
+          return q.question === questionText;
+        });
         isCorrect(answer, question, button);
+        showExplanation(question);
         stopTimer = true;
         changeButton();
       }
     });
   });
 }
-function getQuestion(question) {
-  let questionData = finalQuestions.find(function (searchedQuestion) {
-    return Object.keys(searchedQuestion)[0] === question;
-  });
-  return questionData;
-}
+
 function isCorrect(answer, question, button) {
-  let questionData = getQuestion(question);
-  let index = finalQuestions.indexOf(questionData);
-  if (answer.trim() === finalQuestions[index][question].correct.toString()) {
+  if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
-    hideNotSelectedAnswers()
+    hideNotSelectedAnswers();
     corrects++;
   } else {
-    let correctBtn = findCorrectBtn(
-      finalQuestions[index][question].correct.toString()
-    );
+    let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
-    hideNotSelectedAnswers()
+    hideNotSelectedAnswers();
     incorrects++;
   }
-  return;
 }
+
 function findCorrectBtn(correctAnswer) {
   let buttonsAnswers = document.querySelectorAll(".answer p");
   for (let i = 0; i < buttonsAnswers.length; i++) {
@@ -135,37 +171,36 @@ function findCorrectBtn(correctAnswer) {
       return buttonsAnswers[i].parentElement;
     }
   }
-  return;
 }
+
 function loadQuiz() {
   let question = selectRandomQuestion();
   showQuestion(question);
   showAnswers(question);
-  showAllButtons()
+  showAllButtons();
   alreadyAnswered = false;
-  return;
 }
 
 function runOutOfTime() {
   alreadyAnswered = true;
   incorrects++;
-  let question = document.querySelector(".question").textContent;
-  let questionData = getQuestion(question);
-  let index = finalQuestions.indexOf(questionData);
-  let correctAnswer = finalQuestions[index][question].correct.toString();
-  let correctBtn = findCorrectBtn(correctAnswer);
+  let questionText = document.querySelector(".question").textContent;
+  let question = finalQuestions.find(function (q) {
+    return q.question === questionText;
+  });
+  let correctBtn = findCorrectBtn(question.correct);
   correctBtn.classList.add("answer-correct");
   hideNotSelectedAnswers();
   changeButton();
-  return;
 }
+
 function restartTime() {
   stopTimer = false;
   seconds = 20;
   clearTimeout(timerId);
   setTimer();
-  return;
 }
+
 function setTimer() {
   let timer = document.getElementById("timer");
   if (seconds > 0 && !stopTimer) {
@@ -176,36 +211,47 @@ function setTimer() {
     timer.textContent = seconds;
     runOutOfTime();
   }
-  return;
-}
-
-function repeatTimer() {
-  if (seconds >= 0) {
-    timerId = setTimeout(setTimer, 1000);
-  }
-  return;
 }
 
 function changeButton() {
   continueBtn.classList.toggle("next-answer-button");
   continueBtn.classList.toggle("skip-answer-button");
   continueBtn.textContent = "Next";
-  return;
 }
 
 continueBtn.addEventListener("click", function () {
   loadQuiz();
   resetBtnColors();
   restartTime();
+  explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
     skipped++;
-    console.log("skipeada");
   }
   if (continueBtn.textContent.trim() === "Next") {
     changeButton();
     continueBtn.textContent = "Skip";
   }
+  progressBarFunctionability();
 });
+
+function showExplanation(question) {
+  explanationContainer.classList.remove("hide-explanation");
+  let explanationText = document.getElementById("explanation");
+  explanationText.textContent = question.explanation;
+}
+let containerProgressBar = document.getElementById("container-progress-bar");
+let progressBar = document.getElementById("progress-bar");
+let progressCount = document.getElementById("progress-count");
+let progress = 0;
+let percent = "0%";
+function progressBarFunctionability() {
+  progress += 10;
+  percent = `${progress}%`;
+  progressBar.style.width =
+    (containerProgressBar.offsetWidth * progress) / 100 + "px";
+  console.log(containerProgressBar.offsetWidth);
+  progressCount.innerHTML = percent;
+}
 
 window.addEventListener("load", function () {
   setTimer();
