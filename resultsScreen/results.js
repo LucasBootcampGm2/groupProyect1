@@ -17,8 +17,8 @@ crown.style.display = "none";
 function finalScore(correct, skip) {
   let finalScore = 0;
 
-  finalScore += correct * 10;
-  finalScore -= skip * -(-5);
+  finalScore += correct * 120;
+  finalScore -= skip * -(10);
 
   score.textContent = `${finalScore}/100`;
 }
