@@ -1,22 +1,18 @@
 let crown = document.querySelector(".fa-crown");
-let correctNumber = document.querySelector(".correct-number");
-let wrongNumber = document.querySelector(".wrong-number");
-let skipNumber = document.querySelector(".skip-number");
 let score = document.querySelector(".score");
 
 let correctAnswers = localStorage.getItem("correctAnswers");
 let wrongAnswers = localStorage.getItem("wrongAnswers");
-let skipAnswers = localStorage.getItem("skipAnswers");
+let skipedAnswers = localStorage.getItem("skipedAnswers");
+
 
 function numberOfQuestions(correct, wrong, skip) {
-  correctNumber.textContent = correct;
-  wrongNumber.textContent = wrong;
-  skipNumber.textContent = skip;
+  document.querySelector(".correct-number").textContent+ correct
+  document.querySelector(".wrong-number").textContent = wrong
+  document.querySelector(".skip-number").textContent = skip;
 }
 
 crown.style.display = "none";
-
-
 
 function finalScore(correct, skip) {
   let finalScore = 0;
@@ -28,8 +24,8 @@ function finalScore(correct, skip) {
 }
 
 window.addEventListener("load", function () {
-  numberOfQuestions(correctAnswers, wrongAnswers, skipAnswers);
-  finalScore(correctAnswers, skipAnswers);
+  numberOfQuestions(localStorage.getItem("correctAnswers"), localStorage.getItem("wrongAnswers"), localStorage.getItem("skipedAnswers"));
+  finalScore(correctAnswers, skipedAnswers);
   if (correctAnswers >= 7) {
     crown.style.display = "block";
   }
