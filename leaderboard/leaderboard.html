@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard</title>
-    <link rel="stylesheet" href="leaderboard.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="leaderboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="modal">
-        <div id="modalContent">
-            <h2>Enter your name</h2>
-            <input type="text" id="username" placeholder="name">
-            <br>
-            <button class="buttonSubmit">Submit</button>
-        </div>
+      <div id="modalContent">
+        <h2>Enter your name</h2>
+        <input type="text" id="username" placeholder="name" />
+        <br />
+        <button class="buttonSubmit">Submit</button>
+      </div>
     </div>
 
     <header class="header">
-        <h1 id="h1">Leaderboard</h1>
+      <h1 id="h1">Leaderboard</h1>
     </header>
     <main class="main">
-        <div class="container">
-            <div class="rankings">
-                <div class="ranking two">
-                    <img src="./images/trophy_2nd_place.svg" class="img2">
-                    <p>#2</p>
-                    <p>user name</p>
-                </div>
-                <div class="ranking one">
-                    <img src="./images/trophy_1st_place.svg" class="img1">
-                    <p>#1</p>
-                    <p>user name</p>
-                </div>
-                <div class="ranking three">
-                    <img src="./images/trophy_3rd_place.svg" class="img3">
-                    <p>#3</p>
-                    <p>user name</p>
-                </div>
-            </div>
-            
-            <table>
-                    <tr>
-                        <td id="ranking">user position</td>
-                        <td id="user">user name</td>
-                        <td id="points">points</td>
-                    </tr>
-                    <tr>
-                        <td id="ranking">user position</td>
-                        <td id="user">user name</td>
-                        <td id="points">points</td>
-                    </tr>
-                    <tr>
-                        <td id="ranking">user position</td>
-                        <td id="user">user name</td>
-                        <td id="points">points</td>
-                    </tr>
-            </table>
+      <div class="container">
+        <div class="rankings">
+          <div class="ranking two">
+            <img src="./images/trophy_2nd_place.svg" class="img2 trophies" />
+            <p>#2</p>
+            <p>user name</p>
+          </div>
+          <div class="ranking one">
+            <img src="./images/trophy_1st_place.svg" class="img1 trophies" />
+            <p>#1</p>
+            <p>user name</p>
+          </div>
+          <div class="ranking three">
+            <img src="./images/trophy_3rd_place.svg" class="img3 trophies" />
+            <p>#3</p>
+            <p>user name</p>
+          </div>
         </div>
-        <div class="buttons">
-            <button class="button">Home</button>
-            <button class="button">Restart</button>
-            <button class="button">Results</button>
 
-        </div>
+        <table>
+          <tr>
+            <td id="ranking">user position</td>
+            <td id="user">user name</td>
+            <td id="points">points</td>
+          </tr>
+          <tr>
+            <td id="ranking">user position</td>
+            <td id="user">user name</td>
+            <td id="points">points</td>
+          </tr>
+          <tr>
+            <td id="ranking">user position</td>
+            <td id="user">user name</td>
+            <td id="points">points</td>
+          </tr>
+        </table>
+      </div>
+      <div class="buttons">
+        <button class="button">Home</button>
+        <button class="button">Restart</button>
+        <button class="button">Results</button>
+      </div>
     </main>
     <script src="leaderboard.js" type="module"></script>
     <!-- <script>
@@ -83,5 +85,5 @@
         //     document.getElementById("modal").style.display = "flex";
         // };
     </script> -->
-</body>
+  </body>
 </html>
