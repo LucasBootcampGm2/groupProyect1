@@ -211,6 +211,64 @@ export let questions = {
         explanation:
           "El nitrógeno constituye aproximadamente el 78% de la atmósfera terrestre, lo que lo convierte en el gas más abundante.",
       },
+      {
+        question: "¿Qué es el ciclo del carbono?",
+        correct:
+          "El proceso por el cual el carbono circula a través de la atmósfera, los océanos y los seres vivos.",
+        incorrect: [
+          "La formación de carbono en las estrellas.",
+          "La evaporación del carbono.",
+          "El ciclo de vida de los organismos.",
+        ],
+        explanation:
+          "El ciclo del carbono describe cómo el carbono se mueve entre la atmósfera, la tierra, los océanos y los organismos vivos.",
+      },
+      {
+        question: "¿Qué es la ley de la conservación de la energía?",
+        correct: "La energía no se crea ni se destruye, solo se transforma.",
+        incorrect: [
+          "La energía puede desaparecer.",
+          "La energía solo puede aumentar.",
+          "La energía siempre disminuye.",
+        ],
+        explanation:
+          "La ley de la conservación de la energía establece que la energía total de un sistema aislado se mantiene constante.",
+      },
+      {
+        question: "¿Qué es un isotopo?",
+        correct:
+          "Un átomo con el mismo número de protones pero diferente número de neutrones.",
+        incorrect: [
+          "Un átomo con diferentes protones.",
+          "Un átomo sin neutrones.",
+          "Un átomo que no tiene núcleo.",
+        ],
+        explanation:
+          "Los isótopos son variantes de un mismo elemento con diferente número de neutrones en su núcleo.",
+      },
+      {
+        question: "¿Qué es la tectónica de placas?",
+        correct: "El movimiento de grandes placas de la litosfera terrestre.",
+        incorrect: [
+          "La formación de volcanes.",
+          "El movimiento de las corrientes oceánicas.",
+          "El proceso de erosión.",
+        ],
+        explanation:
+          "La tectónica de placas explica el movimiento de las placas que componen la superficie terrestre, lo que provoca terremotos y la formación de montañas.",
+      },
+      {
+        question: "¿Qué son las enzimas?",
+        correct:
+          "Proteínas que aceleran las reacciones químicas en los organismos.",
+        incorrect: [
+          "Células que transportan oxígeno.",
+          "Moléculas de ADN.",
+          "Hormonas que controlan el crecimiento.",
+        ],
+        explanation:
+          "Las enzimas son catalizadores biológicos que facilitan y aceleran las reacciones químicas en los seres vivos.",
+      },
     ],
     hard: [
       {
@@ -436,6 +494,65 @@ export let questions = {
         explanation:
           "Un organismo eucariota es aquel cuyas células tienen un núcleo definido y compartimentos internos, lo que incluye a plantas, animales y hongos.",
       },
+      {
+        question: "¿Qué es la fusión nuclear?",
+        correct:
+          "El proceso en el que los núcleos ligeros se unen para formar un núcleo más pesado, liberando energía.",
+        incorrect: [
+          "La división de un núcleo pesado en núcleos más ligeros.",
+          "El proceso por el cual los átomos se disuelven.",
+          "La liberación de energía al romper enlaces químicos.",
+        ],
+        explanation:
+          "La fusión nuclear es el proceso que alimenta a las estrellas, donde los núcleos de hidrógeno se combinan para formar helio y liberan grandes cantidades de energía.",
+      },
+      {
+        question: "¿Qué es la mecánica cuántica?",
+        correct:
+          "Una rama de la física que estudia los fenómenos a escala atómica y subatómica.",
+        incorrect: [
+          "El estudio del movimiento de los planetas.",
+          "Una teoría que explica la gravedad.",
+          "La ciencia que estudia los fluidos.",
+        ],
+        explanation:
+          "La mecánica cuántica describe el comportamiento de las partículas a nivel subatómico, donde las leyes de la física clásica no se aplican.",
+      },
+      {
+        question: "¿Qué es la entropía?",
+        correct: "Una medida del desorden o la aleatoriedad en un sistema.",
+        incorrect: [
+          "La cantidad de energía en un sistema.",
+          "El volumen de un sistema cerrado.",
+          "La velocidad a la que ocurre una reacción química.",
+        ],
+        explanation:
+          "La entropía es un concepto termodinámico que mide el desorden o la dispersión de la energía en un sistema.",
+      },
+      {
+        question: "¿Qué describe la ecuación de Schrödinger?",
+        correct:
+          "El comportamiento cuántico de partículas como electrones y átomos.",
+        incorrect: [
+          "La trayectoria de los planetas en el espacio.",
+          "El movimiento de fluidos en dinámica de fluidos.",
+          "La expansión del universo.",
+        ],
+        explanation:
+          "La ecuación de Schrödinger es fundamental en la mecánica cuántica y describe cómo la onda de probabilidad de una partícula cambia con el tiempo.",
+      },
+      {
+        question: "¿Qué es el efecto fotoeléctrico?",
+        correct:
+          "La emisión de electrones desde una superficie cuando se expone a la luz.",
+        incorrect: [
+          "El aumento de la temperatura cuando la luz incide en un material.",
+          "La reflexión de la luz por una superficie brillante.",
+          "El cambio de color de un material bajo luz ultravioleta.",
+        ],
+        explanation:
+          "El efecto fotoeléctrico, explicado por Einstein, ocurre cuando la luz provoca la expulsión de electrones de la superficie de un metal.",
+      },
     ],
   },
   art: {
@@ -658,6 +775,47 @@ export let questions = {
         explanation:
           "El Panteón de Roma, una de las estructuras más influyentes de la arquitectura clásica, fue diseñado por Apollodoro de Damasco.",
       },
+      {
+        question: "¿Quién pintó 'Las señoritas de Avignon'?",
+        correct: "Pablo Picasso",
+        incorrect: ["Henri Matisse", "Paul Cézanne", "Georges Braque"],
+        explanation:
+          "'Las señoritas de Avignon' es una de las obras más influyentes de Pablo Picasso, y fue clave en el desarrollo del cubismo.",
+      },
+      {
+        question: "¿Qué técnica utiliza el artista para crear un fresco?",
+        correct: "Pintura sobre yeso húmedo",
+        incorrect: ["Óleo", "Acrílico", "Acuarela"],
+        explanation:
+          "El fresco es una técnica en la que se aplican pigmentos sobre yeso húmedo, común en el arte renacentista.",
+      },
+      {
+        question:
+          "¿Qué pintor impresionista es famoso por sus escenas de ballet?",
+        correct: "Edgar Degas",
+        incorrect: ["Claude Monet", "Pierre-Auguste Renoir", "Édouard Manet"],
+        explanation:
+          "Edgar Degas es conocido por sus pinturas de bailarinas, siendo uno de los grandes del Impresionismo.",
+      },
+      {
+        question:
+          "¿Qué obra representa a una mujer con una sonrisa enigmática y fue pintada por Leonardo da Vinci?",
+        correct: "La Mona Lisa",
+        incorrect: [
+          "La Última Cena",
+          "La Virgen de las Rocas",
+          "El Bautismo de Cristo",
+        ],
+        explanation:
+          "La Mona Lisa, también conocida como La Gioconda, es una de las obras más reconocidas de Leonardo da Vinci.",
+      },
+      {
+        question: "¿Quién esculpió 'El éxtasis de Santa Teresa'?",
+        correct: "Gian Lorenzo Bernini",
+        incorrect: ["Michelangelo", "Donatello", "Antonio Canova"],
+        explanation:
+          "'El éxtasis de Santa Teresa' es una obra maestra del barroco, creada por Gian Lorenzo Bernini.",
+      },
     ],
     hard: [
       {
@@ -852,6 +1010,53 @@ export let questions = {
         ],
         explanation:
           "'El entierro del Conde de Orgaz' es una de las obras más conocidas de El Greco, famosa por su composición y simbolismo religioso.",
+      },
+      {
+        question:
+          "¿Qué arquitecto diseñó la fachada de la Basílica del Pilar en Zaragoza?",
+        correct: "Francisco de Herrera el Mozo",
+        incorrect: [
+          "Juan de Villanueva",
+          "Ventura Rodríguez",
+          "Pedro de Ribera",
+        ],
+        explanation:
+          "Francisco de Herrera el Mozo fue un destacado arquitecto barroco español que diseñó la fachada de la Basílica del Pilar.",
+      },
+      {
+        question: "¿Quién pintó 'El jardín de las delicias'?",
+        correct: "Hieronymus Bosch",
+        incorrect: [
+          "Pieter Bruegel el Viejo",
+          "Albrecht Dürer",
+          "Jan van Eyck",
+        ],
+        explanation:
+          "'El jardín de las delicias' es una de las obras más conocidas de Hieronymus Bosch, llena de simbolismo y complejidad.",
+      },
+      {
+        question:
+          "¿Qué pintor es conocido por su serie de autorretratos, incluidos varios con vendajes en la cabeza?",
+        correct: "Vincent van Gogh",
+        incorrect: ["Paul Gauguin", "Claude Monet", "Eugène Delacroix"],
+        explanation:
+          "Vincent van Gogh pintó varios autorretratos, muchos de ellos reflejando su estado emocional y físico.",
+      },
+      {
+        question:
+          "¿Qué artista creó el famoso grabado 'El caballero, la muerte y el diablo'?",
+        correct: "Alberto Durero",
+        incorrect: ["Hans Holbein", "Lucas Cranach", "Peter Paul Rubens"],
+        explanation:
+          "'El caballero, la muerte y el diablo' es una de las obras más icónicas del maestro del grabado alemán Alberto Durero.",
+      },
+      {
+        question:
+          "¿Qué pintor italiano es conocido por su obra 'La alegoría de la primavera'?",
+        correct: "Sandro Botticelli",
+        incorrect: ["Leonardo da Vinci", "Michelangelo", "Raphael"],
+        explanation:
+          "'La alegoría de la primavera' es una de las grandes obras del renacimiento italiano, creada por Sandro Botticelli.",
       },
     ],
   },
@@ -1051,6 +1256,45 @@ export let questions = {
         explanation:
           "Lance Armstrong ganó el Tour de Francia siete veces, pero luego fue despojado de sus títulos debido a un escándalo de dopaje.",
       },
+      {
+        question: "¿Qué equipo ganó la primera Super Bowl en 1967?",
+        correct: "Green Bay Packers",
+        incorrect: [
+          "Kansas City Chiefs",
+          "New England Patriots",
+          "Dallas Cowboys",
+        ],
+        explanation:
+          "Green Bay Packers ganaron la primera Super Bowl en 1967, venciendo a los Kansas City Chiefs.",
+      },
+      {
+        question: "¿Quién tiene el récord de más títulos de Fórmula 1?",
+        correct: "Lewis Hamilton",
+        incorrect: ["Michael Schumacher", "Sebastian Vettel", "Ayrton Senna"],
+        explanation:
+          "Lewis Hamilton posee el récord de más títulos de Fórmula 1 con 7 campeonatos mundiales.",
+      },
+      {
+        question: "¿En qué deporte se utiliza una tabla y se compite en olas?",
+        correct: "Surf",
+        incorrect: ["Windsurf", "Skateboarding", "Snowboarding"],
+        explanation:
+          "El surf es un deporte acuático en el que los competidores montan sobre olas utilizando una tabla de surf.",
+      },
+      {
+        question: "¿Qué país ganó el Mundial de Rugby en 2019?",
+        correct: "Sudáfrica",
+        incorrect: ["Inglaterra", "Nueva Zelanda", "Australia"],
+        explanation:
+          "Sudáfrica ganó el Mundial de Rugby en 2019, derrotando a Inglaterra en la final.",
+      },
+      {
+        question: "¿Qué jugador de la NBA es apodado 'King James'?",
+        correct: "LeBron James",
+        incorrect: ["Kobe Bryant", "Michael Jordan", "Kevin Durant"],
+        explanation:
+          "LeBron James, conocido como 'King James', es uno de los jugadores más destacados de la NBA.",
+      },
     ],
     hard: [
       {
@@ -1233,6 +1477,44 @@ export let questions = {
         ],
         explanation:
           "El 'Grand Slam' en el tenis se refiere a ganar los cuatro torneos principales (Australian Open, Roland Garros, Wimbledon y US Open) en un solo año.",
+      },
+      {
+        question: "¿Qué futbolista argentino tiene más Balones de Oro?",
+        correct: "Lionel Messi",
+        incorrect: ["Diego Maradona", "Gabriel Batistuta", "Sergio Agüero"],
+        explanation:
+          "Lionel Messi ha ganado más Balones de Oro que cualquier otro jugador argentino en la historia del fútbol.",
+      },
+      {
+        question:
+          "¿Qué tenista femenino ha ganado más títulos de Grand Slam en la era abierta?",
+        correct: "Serena Williams",
+        incorrect: ["Steffi Graf", "Martina Navratilova", "Margaret Court"],
+        explanation:
+          "Serena Williams ha ganado el mayor número de títulos de Grand Slam en la era abierta del tenis femenino.",
+      },
+      {
+        question:
+          "¿En qué año Michael Jordan ganó su primer campeonato de la NBA?",
+        correct: "1991",
+        incorrect: ["1992", "1989", "1990"],
+        explanation:
+          "Michael Jordan ganó su primer campeonato de la NBA con los Chicago Bulls en 1991.",
+      },
+      {
+        question:
+          "¿Qué atleta paralímpico tiene el récord de más medallas de oro?",
+        correct: "Trischa Zorn",
+        incorrect: ["Michael Phelps", "Usain Bolt", "Oscar Pistorius"],
+        explanation:
+          "Trischa Zorn, nadadora paralímpica de Estados Unidos, tiene el récord de más medallas de oro en la historia de los Juegos Paralímpicos.",
+      },
+      {
+        question: "¿En qué año se introdujo el tiro de tres puntos en la NBA?",
+        correct: "1979",
+        incorrect: ["1980", "1982", "1977"],
+        explanation:
+          "El tiro de tres puntos fue introducido en la NBA en la temporada 1979-1980.",
       },
     ],
   },
@@ -1461,6 +1743,41 @@ export let questions = {
         explanation:
           "Neil Armstrong fue el primer ser humano en pisar la Luna durante la misión Apollo 11 en 1969.",
       },
+      {
+        question: "¿Qué país fue el primero en abolir la esclavitud en 1804?",
+        correct: "Haití",
+        incorrect: ["Estados Unidos", "Brasil", "Reino Unido"],
+        explanation:
+          "Haití fue el primer país en abolir la esclavitud en 1804, tras su revolución de independencia contra Francia.",
+      },
+      {
+        question: "¿En qué año comenzó la Revolución Rusa?",
+        correct: "1917",
+        incorrect: ["1905", "1921", "1936"],
+        explanation:
+          "La Revolución Rusa comenzó en 1917, lo que condujo al colapso del Imperio Ruso y el ascenso del comunismo.",
+      },
+      {
+        question: "¿Quién fue el primer presidente de los Estados Unidos?",
+        correct: "George Washington",
+        incorrect: ["Thomas Jefferson", "John Adams", "Abraham Lincoln"],
+        explanation:
+          "George Washington fue el primer presidente de los Estados Unidos, sirviendo desde 1789 hasta 1797.",
+      },
+      {
+        question: "¿Qué civilización antigua construyó las pirámides de Giza?",
+        correct: "Egipcia",
+        incorrect: ["Mesopotámica", "Maya", "Inca"],
+        explanation:
+          "La civilización egipcia construyó las pirámides de Giza, consideradas una de las Siete Maravillas del Mundo Antiguo.",
+      },
+      {
+        question: "¿Qué líder encabezó la Revolución Cubana en 1959?",
+        correct: "Fidel Castro",
+        incorrect: ["Che Guevara", "Raúl Castro", "Camilo Cienfuegos"],
+        explanation:
+          "Fidel Castro lideró la Revolución Cubana en 1959, derrocando al régimen de Batista.",
+      },
     ],
     hard: [
       {
@@ -1657,6 +1974,53 @@ export let questions = {
         incorrect: ["Luis XIV", "Carlos de Gaulle", "Francisco I"],
         explanation:
           "Napoleón Bonaparte se coronó a sí mismo como emperador de los franceses en 1804, marcando el comienzo del Primer Imperio Francés.",
+      },
+      {
+        question:
+          "¿Qué rey británico fue ejecutado durante la Guerra Civil Inglesa?",
+        correct: "Carlos I",
+        incorrect: ["Jaime II", "Enrique VIII", "Carlos II"],
+        explanation:
+          "Carlos I fue ejecutado en 1649 tras ser derrotado en la Guerra Civil Inglesa, marcando un breve periodo de república en Inglaterra.",
+      },
+      {
+        question:
+          "¿Qué tratado estableció las fronteras de América Latina tras la independencia de las colonias españolas?",
+        correct: "Congreso de Viena",
+        incorrect: [
+          "Tratado de Tordesillas",
+          "Tratado de París",
+          "Tratado de Versalles",
+        ],
+        explanation:
+          "El Congreso de Viena en 1815 estableció las fronteras de América Latina tras las guerras de independencia de las colonias españolas.",
+      },
+      {
+        question: "¿En qué año se produjo la Revolución Mexicana?",
+        correct: "1910",
+        incorrect: ["1900", "1920", "1895"],
+        explanation:
+          "La Revolución Mexicana comenzó en 1910, siendo un conflicto que transformó el sistema político y social de México.",
+      },
+      {
+        question:
+          "¿Qué imperio fue derrotado en la batalla de Waterloo en 1815?",
+        correct: "Imperio Napoleónico",
+        incorrect: [
+          "Imperio Austrohúngaro",
+          "Imperio Otomano",
+          "Imperio Británico",
+        ],
+        explanation:
+          "El Imperio Napoleónico fue derrotado en la Batalla de Waterloo en 1815, marcando el final del gobierno de Napoleón Bonaparte.",
+      },
+      {
+        question:
+          "¿Quién fue el primer emperador del Sacro Imperio Romano Germánico?",
+        correct: "Carlomagno",
+        incorrect: ["Otón I", "Carlos V", "Enrique IV"],
+        explanation:
+          "Carlomagno fue coronado como el primer emperador del Sacro Imperio Romano Germánico en el año 800.",
       },
     ],
   },
@@ -1859,6 +2223,43 @@ export let questions = {
         explanation:
           "Noruega es famosa por sus fiordos, que son profundas entradas del mar entre montañas.",
       },
+      {
+        question: "¿Cuál es el único continente que no tiene desierto?",
+        correct: "Europa",
+        incorrect: ["América del Norte", "Oceanía", "Asia"],
+        explanation:
+          "Europa es el único continente que no tiene un desierto propiamente dicho, a diferencia de otros continentes que albergan grandes áreas áridas.",
+      },
+      {
+        question: "¿Cuál es el río más largo de Europa?",
+        correct: "Volga",
+        incorrect: ["Danubio", "Rin", "Loira"],
+        explanation:
+          "El Volga, en Rusia, es el río más largo de Europa, con una longitud de aproximadamente 3,530 kilómetros.",
+      },
+      {
+        question:
+          "¿Qué país tiene el mayor número de vecinos con los que comparte frontera terrestre?",
+        correct: "China",
+        incorrect: ["Rusia", "Brasil", "India"],
+        explanation:
+          "China tiene fronteras terrestres con 14 países, lo que la convierte en el país con el mayor número de vecinos en el mundo.",
+      },
+      {
+        question:
+          "¿Qué país se encuentra en los dos hemisferios, tanto norte como sur?",
+        correct: "Ecuador",
+        incorrect: ["Colombia", "Indonesia", "Brasil"],
+        explanation:
+          "Ecuador se encuentra en la línea ecuatorial, por lo que se extiende tanto en el hemisferio norte como en el sur.",
+      },
+      {
+        question: "¿En qué país se encuentra la ciudad de Varsovia?",
+        correct: "Polonia",
+        incorrect: ["Hungría", "Rumanía", "Chequia"],
+        explanation:
+          "Varsovia es la capital de Polonia, ubicada en el centro-este del país.",
+      },
     ],
     hard: [
       {
@@ -2011,6 +2412,42 @@ export let questions = {
         incorrect: ["Lago Tanganica", "Lago Victoria", "Lago Superior"],
         explanation:
           "El Lago Baikal, en Rusia, es el lago más profundo del mundo, con una profundidad de más de 1,600 metros.",
+      },
+      {
+        question: "¿En qué país se encuentra el punto más bajo de la Tierra?",
+        correct: "Israel",
+        incorrect: ["Egipto", "Jordania", "Arabia Saudita"],
+        explanation:
+          "El Mar Muerto, ubicado entre Israel y Jordania, tiene el punto más bajo de la Tierra, a unos 430 metros bajo el nivel del mar.",
+      },
+      {
+        question: "¿Cuál es la capital más al norte del mundo?",
+        correct: "Reikiavik",
+        incorrect: ["Oslo", "Estocolmo", "Helsinki"],
+        explanation:
+          "Reikiavik, la capital de Islandia, es la capital más al norte del mundo, situada cerca del círculo polar ártico.",
+      },
+      {
+        question: "¿Cuál es el lago de agua salada más grande del mundo?",
+        correct: "Mar Caspio",
+        incorrect: ["Lago Salado", "Lago Enriquillo", "Lago Eyre"],
+        explanation:
+          "El Mar Caspio, situado entre Europa y Asia, es el lago de agua salada más grande del mundo, con una superficie de más de 370,000 kilómetros cuadrados.",
+      },
+      {
+        question: "¿Cuál es el país más grande de África?",
+        correct: "Argelia",
+        incorrect: ["Sudán", "Libia", "República Democrática del Congo"],
+        explanation:
+          "Argelia es el país más grande de África, con una superficie de más de 2.38 millones de kilómetros cuadrados.",
+      },
+      {
+        question:
+          "¿Qué país tiene la mayor cantidad de glaciares fuera de las regiones polares?",
+        correct: "Pakistán",
+        incorrect: ["Canadá", "Islandia", "Noruega"],
+        explanation:
+          "Pakistán alberga más glaciares que cualquier otro país fuera de las regiones polares, en su región montañosa del norte.",
       },
     ],
   },
@@ -2238,6 +2675,42 @@ export let questions = {
         explanation:
           "La escena de la ducha en 'Psicosis' es una de las más icónicas del cine y es obra del director Alfred Hitchcock.",
       },
+      {
+        question:
+          "¿Qué actriz interpretó a la Princesa Leia en la saga de 'Star Wars'?",
+        correct: "Carrie Fisher",
+        incorrect: ["Natalie Portman", "Daisy Ridley", "Felicity Jones"],
+        explanation:
+          "Carrie Fisher interpretó a la icónica Princesa Leia en la saga original de 'Star Wars'.",
+      },
+      {
+        question: "¿En qué película de Pixar aparece un chef llamado Remy?",
+        correct: "Ratatouille",
+        incorrect: ["Cars", "Toy Story", "Buscando a Nemo"],
+        explanation:
+          "'Ratatouille' es una película de Pixar donde el ratón Remy sueña con convertirse en chef en París.",
+      },
+      {
+        question: "¿Quién dirigió la película 'Titanic' en 1997?",
+        correct: "James Cameron",
+        incorrect: ["Steven Spielberg", "Christopher Nolan", "Ridley Scott"],
+        explanation:
+          "James Cameron fue el director de la aclamada película 'Titanic', ganadora de múltiples premios Óscar.",
+      },
+      {
+        question: "¿Cuál es el nombre del perro en la película 'The Mask'?",
+        correct: "Milo",
+        incorrect: ["Max", "Buddy", "Rufus"],
+        explanation:
+          "El perro de Stanley Ipkiss en la película 'The Mask' se llama Milo, un personaje clave en la trama.",
+      },
+      {
+        question: "¿Qué actor interpreta a Neo en la saga 'Matrix'?",
+        correct: "Keanu Reeves",
+        incorrect: ["Brad Pitt", "Johnny Depp", "Leonardo DiCaprio"],
+        explanation:
+          "Keanu Reeves es conocido por interpretar a Neo en la popular saga de ciencia ficción 'Matrix'.",
+      },
     ],
     hard: [
       {
@@ -2412,6 +2885,46 @@ export let questions = {
         incorrect: ["Aaron Paul", "Bob Odenkirk", "Dean Norris"],
         explanation:
           "Bryan Cranston interpretó a Walter White en la serie 'Breaking Bad', un papel que le valió varios premios Emmy.",
+      },
+      {
+        question:
+          "¿Quién fue el director de fotografía en la película 'El Padrino'?",
+        correct: "Gordon Willis",
+        incorrect: ["Roger Deakins", "Vittorio Storaro", "Emmanuel Lubezki"],
+        explanation:
+          "Gordon Willis fue el director de fotografía en 'El Padrino', conocido por su estilo de iluminación sombría y dramática.",
+      },
+      {
+        question:
+          "¿Qué novela de ciencia ficción de Frank Herbert se adaptó al cine en 1984 y 2021?",
+        correct: "Dune",
+        incorrect: ["Fahrenheit 451", "Neuromante", "La Fundación"],
+        explanation:
+          "'Dune' es una novela clásica de ciencia ficción escrita por Frank Herbert, adaptada al cine en dos versiones.",
+      },
+      {
+        question:
+          "¿En qué película dirigida por Andrei Tarkovsky se explora el concepto de la Zona?",
+        correct: "Stalker",
+        incorrect: ["Solaris", "El Espejo", "Nostalgia"],
+        explanation:
+          "'Stalker' es una película filosófica dirigida por Andrei Tarkovsky que explora el concepto de la Zona, un lugar misterioso y prohibido.",
+      },
+      {
+        question:
+          "¿Qué artista compuso la banda sonora de la película 'El bueno, el feo y el malo'?",
+        correct: "Ennio Morricone",
+        incorrect: ["John Williams", "Hans Zimmer", "Danny Elfman"],
+        explanation:
+          "Ennio Morricone compuso la icónica banda sonora de la película 'El bueno, el feo y el malo', dirigida por Sergio Leone.",
+      },
+      {
+        question:
+          "¿Qué personaje ficticio fue inspirado por un médico real llamado Joseph Bell?",
+        correct: "Sherlock Holmes",
+        incorrect: ["Hércules Poirot", "Phillip Marlowe", "Sam Spade"],
+        explanation:
+          "Arthur Conan Doyle basó el personaje de Sherlock Holmes en su mentor, el Dr. Joseph Bell, un médico conocido por su habilidad en la observación y deducción.",
       },
     ],
   },
