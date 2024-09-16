@@ -1,6 +1,154 @@
 * {
   font-family: "Baloo 2";
 }
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #242424;
+}
+
+header {
+  background: #420080;
+  padding: 40px 60px 70px;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+table {
+  width: 100%;
+  margin-top: 50px;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: #f8f8f8;
+  box-shadow: 5px 9px 10px rgb(45, 4, 116);
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #6600ff2d;
+}
+
+table td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #333;
+  border-bottom: 2px solid white;
+}
+
+table tr:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+/* Estilo para la primera columna */
+table td:first-child {
+  font-weight: bold;
+  color: #000;
+  width: 10%;
+}
+
+/* Estilo para la segunda columna */
+table td:nth-child(2) {
+  width: 70%;
+}
+
+/* Estilo para la tercera columna */
+table td:last-child {
+  text-align: right;
+  width: 20%;
+  color: #ff8922;
+  font-weight: bold;
+}
+h1 {
+  color: white;
+  font-size: 50px;
+}
+/* Estilo para el contenedor principal */
+.container {
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo para el título */
+.container h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilo para las posiciones del ranking */
+.rankings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 30px 0 30px 0;
+}
+
+.ranking {
+  text-align: center;
+  border-radius: 30px;
+}
+.one {
+  margin-top: -30px;
+}
+
+.ranking p {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #ffffffb3;
+}
+
+.img1 {
+  box-shadow: 2px 2px 8px 0 rgb(202, 224, 58), 4px 4px 16px 0 rgb(221, 175, 102),
+    0px 0px 24px 2px rgb(221, 197, 102);
+  border-radius: 50px;
+  background-color: white;
+}
+.img2 {
+  box-shadow: 2px 2px 8px 0 rgb(165, 170, 128),
+    4px 4px 16px 0 rgb(173, 164, 149), 0px 0px 24px 2px rgb(196, 194, 188);
+  border-radius: 50px;
+  background-color: white;
+}
+.img3 {
+  box-shadow: 2px 2px 8px 0 rgb(255, 179, 26), 4px 4px 16px 0 rgb(221, 175, 102),
+    0px 0px 24px 2px rgb(167, 84, 7);
+  border-radius: 50px;
+  background-color: white;
+  margin-top: 100px;
+}
+.buttons {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.button {
+  height: 40px;
+  width: 150px;
+  border: 1px #420080 solid;
+  border-radius: 10px;
+  background-color: #420080;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
 #modal {
   display: block;
   position: fixed;
@@ -170,7 +318,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 15%;
   margin: 30px 0 30px 0;
 }
 
@@ -186,6 +334,10 @@ h1 {
   margin-top: 5px;
   font-size: 18px;
   color: #ffffffb3;
+}
+
+.trophies {
+  width: 105%;
 }
 
 .img1 {
@@ -211,8 +363,9 @@ h1 {
 .buttons {
   margin: 50px;
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-wrap: wrap;
+  place-content: center;
+  gap: 30px;
 }
 .button {
   height: 40px;

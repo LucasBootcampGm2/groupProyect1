@@ -4,6 +4,11 @@ let questionsCount;
 
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
+
+localStorage.setItem('skipedAnswers', 0 )
+localStorage.setItem('correctAnswers', 0 )
+localStorage.setItem('wrongAnswers', 0 )
+
 let alreadyAsked = [];
 
 let stopTimer = false;
@@ -59,7 +64,6 @@ function showAllButtons() {
 }
 
 function selectRandomQuestion() {
-  countAnswersVerification();
   switch (selectedDifficulty) {
     case "easy":
       questionsCount = 10;
@@ -77,8 +81,10 @@ function selectRandomQuestion() {
     random = Math.floor(Math.random() * questionsCount);
   }
   alreadyAsked.push(random);
-  console.log();
+  console.log(alreadyAsked);
+  console.log('ques', questionsCount)
   let question = finalQuestions[random];
+  countAnswersVerification();
   return question;
 }
 
@@ -86,6 +92,7 @@ function countAnswersVerification() {
   if (alreadyAsked.length === questionsCount) {
     createResultsButton();
     createAnswersExplainedButton();
+    continueButtonsContainer.style.display = 'flex'
   }
 }
 
@@ -163,12 +170,14 @@ function isCorrect(answer, question, button) {
     button.classList.add("answer-correct");
     hideNotSelectedAnswers();
     corrects++;
+    localStorage.setItem('correctAnswers', corrects)
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
     hideNotSelectedAnswers();
     incorrects++;
+    localStorage.setItem('wrongAnswers', incorrects)
   }
 }
 
@@ -234,6 +243,7 @@ continueBtn.addEventListener("click", function () {
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
     skipped++;
+    localStorage.setItem('skipedAnswers', skipped)
     console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
