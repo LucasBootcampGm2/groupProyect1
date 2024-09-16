@@ -146,12 +146,18 @@
         justify-content:center;
     }
 
-    #container-options {
+    #container-options-full{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .container-options {
         display: flex;
         justify-content: center;
         align-items: center;
         padding:20px 0 ;
-        gap:60px;
+        gap:10px;
     }
 
     hr {
@@ -161,7 +167,7 @@
         color: #ffffff;
     }
 
-    #container-options i {
+    .container-options i {
         font-size: 50px;
     }
 
@@ -183,6 +189,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 125px;
     }
 
     .container-option p {
@@ -337,12 +344,19 @@
         justify-content:center;
     }
 
-    #container-options {
+    #container-options-full{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .container-options {
         display: flex;
         justify-content: center;
         align-items: center;
         padding:20px 0 ;
-        gap:60px;
+        gap:10px;
     }
 
     hr {
@@ -352,7 +366,7 @@
         color: #ffffff;
     }
 
-    #container-options i {
+    .container-options i {
         font-size: 50px;
     }
 
@@ -368,6 +382,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 125px;
     }
 
     .container-option p {
@@ -522,23 +537,22 @@ font-size: 20px;
     justify-content:center;
 }
 
-#container-options {
+.container-options {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding:20px 0 ;
     gap:20px;
 }
 
 hr {
-    width: 250px;
+    width: 270px;
     border-style: solid;
     border-radius: 20%;
     color: #ffffff;
 }
 
-#container-options i {
+.container-options i {
     font-size: 30px;
 }
 
@@ -555,6 +569,7 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 125px;
 }
 
 .container-option p {
