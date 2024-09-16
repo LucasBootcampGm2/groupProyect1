@@ -29,7 +29,7 @@
 ## Access the Game
 
 You can play directly by accessing the following Vercel link:  
-[Play the game](https://your-vercel-link.vercel.app/)
+[Star playing](https://group-proyect1.vercel.app/)
 
 ---
 
