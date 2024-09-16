@@ -13,11 +13,11 @@ function numberOfQuestions(correct, wrong, skip) {
 
 crown.style.display = "none";
 
-function finalScore(correct, skip) {
+function finalScore(correct, wrong) {
   let finalScore = 0;
 
   finalScore += correct * 120;
-  finalScore -= skip * -10;
+  finalScore -= wrong * -10;
 
   score.textContent = `${finalScore}/100`;
 }
