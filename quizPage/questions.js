@@ -1,22 +1,18 @@
 import { questions } from "../questionBank.js";
 
 let questionsCount;
-
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
 
-localStorage.setItem('skipedAnswers', 0 )
-localStorage.setItem('correctAnswers', 0 )
-localStorage.setItem('wrongAnswers', 0 )
+localStorage.setItem('skipedAnswers', 0);
+localStorage.setItem('correctAnswers', 0);
+localStorage.setItem('wrongAnswers', 0);
 
 let alreadyAsked = [];
-
 let stopTimer = false;
 let seconds = 20;
 
-let continueButtonsContainer = document.getElementById(
-  "container-answer-buttons"
-);
+let continueButtonsContainer = document.getElementById("container-answer-buttons");
 let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
@@ -25,6 +21,11 @@ let incorrects = 0;
 let skipped = 0;
 let alreadyAnswered = false;
 let timerId = 0;
+
+let containerProgressBar = document.getElementById("container-progress-bar");
+let progressBar = document.getElementById("progress-bar");
+let progressCount = document.getElementById("progress-count");
+let progress = 0;
 
 function getCategory() {
   return questions[selectedCategory];
@@ -64,27 +65,12 @@ function showAllButtons() {
 }
 
 function selectRandomQuestion() {
-  switch (selectedDifficulty) {
-    case "easy":
-      questionsCount = 10;
-      break;
-    case "medium":
-      questionsCount = 15;
-      break;
-    case "hard":
-      questionsCount = 20;
-      break;
-  }
-  console.log('antes', alreadyAsked)
   let random = 0;
   while (alreadyAsked.includes(random)) {
     random = Math.floor(Math.random() * questionsCount);
   }
   alreadyAsked.push(random);
-  console.log(alreadyAsked);
-  console.log('ques', questionsCount)
   let question = finalQuestions[random];
-  countAnswersVerification();
   return question;
 }
 
@@ -92,7 +78,7 @@ function countAnswersVerification() {
   if (alreadyAsked.length === questionsCount) {
     createResultsButton();
     createAnswersExplainedButton();
-    continueButtonsContainer.style.display = 'flex'
+    continueButtonsContainer.style.display = 'flex';
   }
 }
 
@@ -126,7 +112,6 @@ function showAnswers(question) {
   let correctAnswer = question.correct;
   let incorrectAnswers = question.incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
-
   allAnswers = shuffle(allAnswers);
 
   for (let i = 0; i < allAnswers.length; i++) {
@@ -170,15 +155,16 @@ function isCorrect(answer, question, button) {
     button.classList.add("answer-correct");
     hideNotSelectedAnswers();
     corrects++;
-    localStorage.setItem('correctAnswers', corrects)
+    localStorage.setItem('correctAnswers', corrects);
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
     hideNotSelectedAnswers();
     incorrects++;
-    localStorage.setItem('wrongAnswers', incorrects)
+    localStorage.setItem('wrongAnswers', incorrects);
   }
+  countAnswersVerification();
 }
 
 function findCorrectBtn(correctAnswer) {
@@ -243,7 +229,7 @@ continueBtn.addEventListener("click", function () {
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
     skipped++;
-    localStorage.setItem('skipedAnswers', skipped)
+    localStorage.setItem('skipedAnswers', skipped);
     console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
@@ -259,34 +245,32 @@ function showExplanation(question) {
   explanationText.textContent = question.explanation;
 }
 
-let containerProgressBar = document.getElementById("container-progress-bar");
-let progressBar = document.getElementById("progress-bar");
-let progressCount = document.getElementById("progress-count");
-let progress = 0;
-let percent = "0%";
+let percent = "";
 function progressBarFunctionability() {
-  let divisor;
-  progress += 10;
-  percent = `${progress}%`;
-  switch (questionsCount) {
-    case 10:
-      divisor = 100;
-      break;
-    case 15:
-      divisor = 150;
-      break;
-    case 20:
-      divisor = 200;
-      break;
+  progress = (alreadyAsked.length / questionsCount) * 100;
+  percent = `${Math.round(progress)}%`;
+  if (containerProgressBar && progressBar) {
+    progressBar.style.width = percent;
   }
-  progressBar.style.width =
-    (containerProgressBar.offsetWidth * progress) / divisor + "px";
-  console.log(containerProgressBar.offsetWidth);
   progressCount.innerHTML = percent;
+  if (progress === 100){
+    continueBtn.style.display = 'none'
+  }
 }
 
 window.addEventListener("load", function () {
-  progressBarFunctionability()
+  switch (selectedDifficulty) {
+    case "easy":
+      questionsCount = 10;
+      break;
+    case "medium":
+      questionsCount = 20;
+      break;
+    case "hard":
+      questionsCount = 25;
+      break;
+  }
+  progressBarFunctionability();
   setTimer();
   loadButtons();
   loadQuiz();
