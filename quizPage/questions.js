@@ -4,21 +4,23 @@ let questionsCount;
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
 
-localStorage.setItem('skipedAnswers', 0);
-localStorage.setItem('correctAnswers', 0);
-localStorage.setItem('wrongAnswers', 0);
-
 let alreadyAsked = [];
 let stopTimer = false;
 let seconds = 20;
 
-let continueButtonsContainer = document.getElementById("container-answer-buttons");
+let continueButtonsContainer = document.getElementById(
+  "container-answer-buttons"
+);
 let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
-let corrects = 0;
-let incorrects = 0;
-let skipped = 0;
+let userObject = {
+  userName: 'unknown',
+  corrects: 0,
+  wrongAnswers: 0,
+  skippedAnswers: 0,
+};
+
 let alreadyAnswered = false;
 let timerId = 0;
 
@@ -78,7 +80,8 @@ function countAnswersVerification() {
   if (alreadyAsked.length === questionsCount) {
     createResultsButton();
     createAnswersExplainedButton();
-    continueButtonsContainer.style.display = 'flex';
+    continueButtonsContainer.style.display = "flex";
+    localStorage.setItem('user', JSON.stringify(userObject))
   }
 }
 
@@ -154,15 +157,13 @@ function isCorrect(answer, question, button) {
   if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
     hideNotSelectedAnswers();
-    corrects++;
-    localStorage.setItem('correctAnswers', corrects);
+    userObject.corrects += 1
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
     hideNotSelectedAnswers();
-    incorrects++;
-    localStorage.setItem('wrongAnswers', incorrects);
+    userObject.wrongAnswers += 1
   }
   countAnswersVerification();
 }
@@ -186,7 +187,7 @@ function loadQuiz() {
 
 function runOutOfTime() {
   alreadyAnswered = true;
-  incorrects++;
+  userObject.wrongAnswers += 1
   let questionText = document.querySelector(".question").textContent;
   let question = finalQuestions.find(function (q) {
     return q.question === questionText;
@@ -228,8 +229,7 @@ continueBtn.addEventListener("click", function () {
   restartTime();
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
-    skipped++;
-    localStorage.setItem('skipedAnswers', skipped);
+    userObject.skippedAnswers += 1
     console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
@@ -253,8 +253,8 @@ function progressBarFunctionability() {
     progressBar.style.width = percent;
   }
   progressCount.innerHTML = percent;
-  if (progress === 100){
-    continueBtn.style.display = 'none'
+  if (progress === 100) {
+    continueBtn.style.display = "none";
   }
 }
 
