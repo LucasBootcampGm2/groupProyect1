@@ -13,6 +13,7 @@ function getSkippedAnswers() {
   let skippedAnswers = user.skippedAnswers;
   return skippedAnswers;
 }
+
 function numberOfQuestions(correct, wrong, skip) {
   document.querySelector(".correct-number").textContent + correct;
   document.querySelector(".wrong-number").textContent = wrong;
@@ -60,7 +61,7 @@ function finalScore(correct, wrong) {
 }
 window.addEventListener("load", function () {
   numberOfQuestions(getCorrecAnswers(), getWrongAnswers(), getSkippedAnswers());
-  finalScore(getCorrecAnswers(), getWrongAnswers());
+  finalScore(getCorrecAnswers(), getWrongAnswers())
   if (getCorrecAnswers() >= 7) {
     crown.style.display = "block";
   }

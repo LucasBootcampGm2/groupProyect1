@@ -5,10 +5,13 @@ let main = document.querySelector(".main");
 let modal = document.getElementById("modal");
 let header = document.querySelector(".header");
 let username = document.getElementById("username");
+
 let leaderboard;
+
 function setLeaderboard() {
   let leaderboard = {};
   let difficultiesObject = {};
+
   let categories = Object.keys(questions);
   categories.forEach(function (category) {
     let difficulties = Object.keys(questions[category]);
@@ -17,8 +20,10 @@ function setLeaderboard() {
     });
     leaderboard[category] = difficultiesObject;
   });
+
   return leaderboard;
 }
+
 function leaderboardVerification() {
   if (leaderboard) {
     leaderboard = localStorage.getItem("leaderboard");
@@ -28,13 +33,17 @@ function leaderboardVerification() {
   }
   return JSON.parse(leaderboard);
 }
+
 let userObject = JSON.parse(localStorage.getItem("user"));
+
 console.log("useObject from localstorage", userObject);
+
 function addUserName() {
   userObject.userName = username.value;
   console.log(userObject);
   localStorage.setItem("user", JSON.stringify(userObject));
 }
+
 function completeLocalStorageTable() {
   let newLeaderboard = leaderboardVerification();
   newLeaderboard[localStorage.getItem("category")][
@@ -43,6 +52,7 @@ function completeLocalStorageTable() {
   console.log("LEADERBOARD", newLeaderboard);
   localStorage.setItem("leaderboard", JSON.stringify(newLeaderboard));
 }
+
 function completeHtmlTable() {
   let localLeaderboard = leaderboardVerification();
   let table = document.createElement("table");
@@ -67,6 +77,7 @@ function completeHtmlTable() {
     table.append(newTr);
   });
 }
+
 function createPageButtons() {
   let containerButtons = document.createElement("div");
   containerButtons.classList.add("buttons");
@@ -86,6 +97,7 @@ function createPageButtons() {
   containerButtons.append(newResultsButton);
   main.append(containerButtons);
 }
+
 button.addEventListener("click", function () {
   document.getElementById("modal").classList.remove("show");
   setTimeout(function () {
