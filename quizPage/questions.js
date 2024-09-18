@@ -71,35 +71,7 @@ function selectRandomQuestion() {
     random = Math.floor(Math.random() * questionsCount)
   } while (alreadyAsked.includes(random))
   alreadyAsked.push(random)
-  let question = finalQuestions[random]
-  return question
-}
-
-function countAnswersVerification() {
-  if (alreadyAsked.length === questionsCount) {
-    createResultsButton()
-    createAnswersExplainedButton()
-    continueButtonsContainer.style.display = "flex"
-    localStorage.setItem("user", JSON.stringify(userObject))
-  }
-}
-
-function createResultsButton() {
-  let resultsButton = document.createElement("button")
-  let resultsPage = document.createElement("a")
-  resultsPage.setAttribute("href", "../resultsScreen/results.html")
-  resultsPage.textContent = "Your Results"
-  resultsButton.append(resultsPage)
-  continueButtonsContainer.append(resultsButton)
-}
-
-function createAnswersExplainedButton() {
-  let answersButton = document.createElement("button")
-  let answersPage = document.createElement("a")
-  answersPage.setAttribute("href", "../answersExplained/answersExplained.html")
-  answersPage.textContent = "Answers Explanation"
-  answersButton.append(answersPage)
-  continueButtonsContainer.append(answersButton)
+  return finalQuestions[random]
 }
 
 function showQuestion(question) {
