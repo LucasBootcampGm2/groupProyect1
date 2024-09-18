@@ -15,8 +15,8 @@ let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
 let userObject = {
-  userName: 'unknown',
-  corrects: 0,
+  userName: "unknown",
+  correctAnswers: 0,
   wrongAnswers: 0,
   skippedAnswers: 0,
 };
@@ -26,7 +26,6 @@ let timerId = 0;
 
 let containerProgressBar = document.getElementById("container-progress-bar");
 let progressBar = document.getElementById("progress-bar");
-let progressCount = document.getElementById("progress-count");
 let progress = 0;
 
 function getCategory() {
@@ -68,39 +67,11 @@ function showAllButtons() {
 
 function selectRandomQuestion() {
   let random = 0;
-  while (alreadyAsked.includes(random)) {
+  do {
     random = Math.floor(Math.random() * questionsCount);
-  }
+  } while (alreadyAsked.includes(random));
   alreadyAsked.push(random);
-  let question = finalQuestions[random];
-  return question;
-}
-
-function countAnswersVerification() {
-  if (alreadyAsked.length === questionsCount) {
-    createResultsButton();
-    createAnswersExplainedButton();
-    continueButtonsContainer.style.display = "flex";
-    localStorage.setItem('user', JSON.stringify(userObject))
-  }
-}
-
-function createResultsButton() {
-  let resultsButton = document.createElement("button");
-  let resultsPage = document.createElement("a");
-  resultsPage.setAttribute("href", "../resultsScreen/results.html");
-  resultsPage.textContent = "Your Results";
-  resultsButton.append(resultsPage);
-  continueButtonsContainer.append(resultsButton);
-}
-
-function createAnswersExplainedButton() {
-  let answersButton = document.createElement("button");
-  let answersPage = document.createElement("a");
-  answersPage.setAttribute("href", "../answersExplained/answersExplained.html");
-  answersPage.textContent = "Answers Explanation";
-  answersButton.append(answersPage);
-  continueButtonsContainer.append(answersButton);
+  return finalQuestions[random];
 }
 
 function showQuestion(question) {
@@ -116,7 +87,6 @@ function showAnswers(question) {
   let incorrectAnswers = question.incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
   allAnswers = shuffle(allAnswers);
-
   for (let i = 0; i < allAnswers.length; i++) {
     let answerDiv = document.getElementById("answer-" + (i + 1));
     answerDiv.querySelector("p").textContent = allAnswers[i];
@@ -157,13 +127,13 @@ function isCorrect(answer, question, button) {
   if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
     hideNotSelectedAnswers();
-    userObject.corrects += 1
+    userObject.correctAnswers += 1;
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
     hideNotSelectedAnswers();
-    userObject.wrongAnswers += 1
+    userObject.wrongAnswers += 1;
   }
   countAnswersVerification();
 }
@@ -178,6 +148,12 @@ function findCorrectBtn(correctAnswer) {
 }
 
 function loadQuiz() {
+  if (countAnswersVerification()) {
+    stopTimer = true;
+    document.getElementById("container-question").style.display = "none";
+    document.getElementById("container-answers").style.display = "none";
+    return;
+  }
   let question = selectRandomQuestion();
   showQuestion(question);
   showAnswers(question);
@@ -187,7 +163,7 @@ function loadQuiz() {
 
 function runOutOfTime() {
   alreadyAnswered = true;
-  userObject.wrongAnswers += 1
+  userObject.wrongAnswers += 1;
   let questionText = document.querySelector(".question").textContent;
   let question = finalQuestions.find(function (q) {
     return q.question === questionText;
@@ -224,12 +200,12 @@ function changeButton() {
 }
 
 continueBtn.addEventListener("click", function () {
-  loadQuiz();
   resetBtnColors();
   restartTime();
+  loadQuiz();
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
-    userObject.skippedAnswers += 1
+    userObject.skippedAnswers += 1;
     console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
@@ -252,10 +228,36 @@ function progressBarFunctionability() {
   if (containerProgressBar && progressBar) {
     progressBar.style.width = percent;
   }
-  progressCount.innerHTML = percent;
-  if (progress === 100) {
+}
+
+function countAnswersVerification() {
+  if (alreadyAsked.length === questionsCount) {
+    createResultsButton();
+    createAnswersExplainedButton();
+    continueButtonsContainer.style.display = "flex";
     continueBtn.style.display = "none";
+    localStorage.setItem("user", JSON.stringify(userObject));
+    return true;
   }
+  return false;
+}
+
+function createResultsButton() {
+  let resultsButton = document.createElement("button");
+  let resultsPage = document.createElement("a");
+  resultsPage.setAttribute("href", "../resultsScreen/results.html");
+  resultsPage.textContent = "Your Results";
+  resultsButton.append(resultsPage);
+  continueButtonsContainer.append(resultsButton);
+}
+
+function createAnswersExplainedButton() {
+  let answersButton = document.createElement("button");
+  let answersPage = document.createElement("a");
+  answersPage.setAttribute("href", "../answersExplained/answersExplained.html");
+  answersPage.textContent = "Answers Explanation";
+  answersButton.append(answersPage);
+  continueButtonsContainer.append(answersButton);
 }
 
 window.addEventListener("load", function () {
@@ -270,8 +272,8 @@ window.addEventListener("load", function () {
       questionsCount = 25;
       break;
   }
-  progressBarFunctionability();
   setTimer();
   loadButtons();
   loadQuiz();
+  progressBarFunctionability();
 });
