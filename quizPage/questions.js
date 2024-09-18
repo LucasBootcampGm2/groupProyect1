@@ -228,7 +228,6 @@ function progressBarFunctionability() {
   if (containerProgressBar && progressBar) {
     progressBar.style.width = percent;
   }
-  console.log(progress);
 }
 
 function countAnswersVerification() {
