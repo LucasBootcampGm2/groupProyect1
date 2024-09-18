@@ -4,10 +4,6 @@ let questionsCount;
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
 
-localStorage.setItem("skipedAnswers", 0);
-localStorage.setItem("correctAnswers", 0);
-localStorage.setItem("wrongAnswers", 0);
-
 let alreadyAsked = [];
 let stopTimer = false;
 let seconds = 20;
@@ -18,9 +14,13 @@ let continueButtonsContainer = document.getElementById(
 let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
-let corrects = 0;
-let incorrects = 0;
-let skipped = 0;
+let userObject = {
+  userName: "unknown",
+  correctAnswers: 0,
+  wrongAnswers: 0,
+  skippedAnswers: 0,
+};
+
 let alreadyAnswered = false;
 let timerId = 0;
 
@@ -76,7 +76,7 @@ function selectRandomQuestion() {
 
 function showQuestion(question) {
   if (!question) {
-    console.log("pregunta no encontrada");
+    console.log("pregnta no encontrada");
   }
   let container = document.querySelector(".question");
   container.textContent = question.question;
@@ -87,7 +87,6 @@ function showAnswers(question) {
   let incorrectAnswers = question.incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
   allAnswers = shuffle(allAnswers);
-
   for (let i = 0; i < allAnswers.length; i++) {
     let answerDiv = document.getElementById("answer-" + (i + 1));
     answerDiv.querySelector("p").textContent = allAnswers[i];
@@ -128,16 +127,15 @@ function isCorrect(answer, question, button) {
   if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
     hideNotSelectedAnswers();
-    corrects++;
-    localStorage.setItem("correctAnswers", corrects);
+    userObject.correctAnswers += 1;
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
     hideNotSelectedAnswers();
-    incorrects++;
-    localStorage.setItem("wrongAnswers", incorrects);
+    userObject.wrongAnswers += 1;
   }
+  countAnswersVerification();
 }
 
 function findCorrectBtn(correctAnswer) {
@@ -165,7 +163,7 @@ function loadQuiz() {
 
 function runOutOfTime() {
   alreadyAnswered = true;
-  incorrects++;
+  userObject.wrongAnswers += 1;
   let questionText = document.querySelector(".question").textContent;
   let question = finalQuestions.find(function (q) {
     return q.question === questionText;
@@ -207,8 +205,8 @@ continueBtn.addEventListener("click", function () {
   loadQuiz();
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
-    skipped++;
-    localStorage.setItem("skipedAnswers", skipped);
+    userObject.skippedAnswers += 1;
+    console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
     changeButton();
@@ -239,6 +237,7 @@ function countAnswersVerification() {
     createAnswersExplainedButton();
     continueButtonsContainer.style.display = "flex";
     continueBtn.style.display = "none";
+    localStorage.setItem("user", JSON.stringify(userObject));
     return true;
   }
   return false;
