@@ -1,3 +1,5 @@
+import { questions } from "../questionBank.js";
+
 let button = document.querySelector(".buttonSubmit");
 let h1 = document.getElementById("h1");
 let main = document.querySelector(".main");
@@ -5,18 +7,34 @@ let modal = document.getElementById("modal");
 let header = document.querySelector(".header");
 let username = document.getElementById("username");
 
-let leaderboardList = [];
-
 let leaderboard = localStorage.getItem("leaderboard");
 
+function setLeaderboard() {
+  let leaderboard = {};
+  let difficultiesObject = {};
+
+  let categories = Object.keys(questions);
+  categories.forEach(function (category) {
+    let difficulties = Object.keys(questions[category]);
+    difficulties.forEach(function (difficulty) {
+      difficultiesObject[difficulty] = [];
+    });
+    leaderboard[category] = difficultiesObject;
+  });
+
+  return leaderboard;
+}
+
 function leaderboardVerification() {
-  let actualLeaderboard;
   if (leaderboard) {
-    actualLeaderboard = localStorage.getItem("leaderboard");
+    leaderboard = localStorage.getItem("leaderboard");
   } else {
-    actualLeaderboard = localStorage.setItem("leaderboard", "[]");
+    leaderboard = localStorage.setItem(
+      "leaderboard",
+      JSON.stringify(setLeaderboard())
+    );
   }
-  return JSON.parse(actualLeaderboard);
+  return JSON.parse(leaderboard);
 }
 
 let userObject = JSON.parse(localStorage.getItem("user"));
@@ -30,19 +48,22 @@ function addUserName() {
 }
 
 function completeLocalStorageTable() {
-  leaderboardList.push(userObject);
-  console.log(leaderboardList);
-  let newLeaderboard = [...leaderboardList, ...leaderboardVerification()];
-  console.log(newLeaderboard);
+  let newLeaderboard = leaderboardVerification();
+  newLeaderboard[localStorage.getItem("category")][
+    localStorage.getItem("difficulty")
+  ].push(userObject);
+  console.log("LEADERBOARD", newLeaderboard);
   localStorage.setItem("leaderboard", JSON.stringify(newLeaderboard));
 }
 
 function completeHtmlTable() {
-  let localLeaderboard = JSON.parse(localStorage.getItem("leaderboard"));
+  let localLeaderboard = leaderboardVerification();
   let table = document.createElement("table");
   table.setAttribute("id", "leaderboard-table");
   main.append(table);
-  localLeaderboard.forEach((user) => {
+  localLeaderboard[localStorage.getItem("category")][
+    localStorage.getItem("difficulty")
+  ].forEach((user) => {
     let newTr = document.createElement("tr");
     let newTdPosition = document.createElement("td");
     newTdPosition.classList.add("ranking");
@@ -96,6 +117,7 @@ button.addEventListener("click", function () {
 });
 
 window.onload = function () {
+  leaderboardVerification();
   setTimeout(function () {
     document.getElementById("modal").classList.add("show");
   }, 200);

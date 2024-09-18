@@ -15,8 +15,8 @@ let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
 let userObject = {
-  userName: 'unknown',
-  corrects: 0,
+  userName: "unknown",
+  correctAnswers: 0,
   wrongAnswers: 0,
   skippedAnswers: 0,
 };
@@ -81,7 +81,7 @@ function countAnswersVerification() {
     createResultsButton();
     createAnswersExplainedButton();
     continueButtonsContainer.style.display = "flex";
-    localStorage.setItem('user', JSON.stringify(userObject))
+    localStorage.setItem("user", JSON.stringify(userObject));
   }
 }
 
@@ -157,13 +157,13 @@ function isCorrect(answer, question, button) {
   if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
     hideNotSelectedAnswers();
-    userObject.corrects += 1
+    userObject.correctAnswers += 1;
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
     hideNotSelectedAnswers();
-    userObject.wrongAnswers += 1
+    userObject.wrongAnswers += 1;
   }
   countAnswersVerification();
 }
@@ -187,7 +187,7 @@ function loadQuiz() {
 
 function runOutOfTime() {
   alreadyAnswered = true;
-  userObject.wrongAnswers += 1
+  userObject.wrongAnswers += 1;
   let questionText = document.querySelector(".question").textContent;
   let question = finalQuestions.find(function (q) {
     return q.question === questionText;
@@ -229,7 +229,7 @@ continueBtn.addEventListener("click", function () {
   restartTime();
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
-    userObject.skippedAnswers += 1
+    userObject.skippedAnswers += 1;
     console.log(alreadyAsked);
   }
   if (continueBtn.textContent.trim() === "Next") {
