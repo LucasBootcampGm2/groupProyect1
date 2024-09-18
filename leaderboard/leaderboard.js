@@ -8,6 +8,36 @@ let username = document.getElementById("username")
 
 let leaderboard
 
+function addAttributes(element, attributes) {
+  attributes.forEach(function (attribute) {
+    element.setAttribute(attribute.attributeName, attribute.attributeValue)
+  })
+}
+
+function addClasses(element, classes) {
+  classes.forEach(function (classs) {
+    element.classList.add(classs)
+  })
+}
+
+function addText(element, text) {
+  element.textContent = text
+}
+
+function appendElements(father, appends) {
+  appends.forEach(function (appendElement) {
+    father.append(appendElement)
+  })
+}
+
+function createCompleteElements(type, attributes, classes, text) {
+  let newElement = document.createElement(type)
+  addAttributes(newElement, attributes)
+  addClasses(newElement, classes)
+  addText(newElement, text)
+  return newElement
+}
+
 function setLeaderboard() {
   let leaderboard = {}
   let difficultiesObject = {}
@@ -49,52 +79,157 @@ function completeLocalStorageTable() {
   newLeaderboard[localStorage.getItem("category")][
     localStorage.getItem("difficulty")
   ].push(userObject)
-  console.log("LEADERBOARD", newLeaderboard)
   localStorage.setItem("leaderboard", JSON.stringify(newLeaderboard))
+}
+
+function createPodiumHtml() {
+  let rankingContainer = createCompleteElements(
+    "div",
+    [{ attributeName: "id", attributeValue: "rankings" }],
+    [],
+    ""
+  )
+
+  let rankingImg2 = createCompleteElements(
+    "img",
+    [
+      { attributeName: "id", attributeValue: "img-2" },
+      {
+        attributeName: "src",
+        attributeValue: "./images/trophy_2nd_place.svg",
+      },
+    ],
+    ["trophies"],
+    ""
+  )
+
+  let rankingP2 = createCompleteElements("p", [], [], "#2")
+
+  let rankingUsername2 = createCompleteElements("p", [], [], "user name")
+
+  let ranking2 = createCompleteElements("div", [], ["ranking", "two"], "")
+
+  appendElements(ranking2, [rankingImg2, rankingP2, rankingUsername2])
+
+  let rankingImg1 = createCompleteElements(
+    "img",
+    [
+      { attributeName: "id", attributeValue: "img-1" },
+      {
+        attributeName: "src",
+        attributeValue: "./images/trophy_1st_place.svg",
+      },
+    ],
+    ["trophies"],
+    ""
+  )
+
+  let rankingP1 = createCompleteElements("p", [], [], "#1")
+
+  let rankingUsername1 = createCompleteElements("p", [], [], "user name")
+
+  let ranking1 = createCompleteElements("div", [], ["ranking", "one"], "")
+
+  appendElements(ranking1, [rankingImg1, rankingP1, rankingUsername1])
+
+  let rankingImg3 = createCompleteElements(
+    "img",
+    [
+      { attributeName: "id", attributeValue: "img-3" },
+      {
+        attributeName: "src",
+        attributeValue: "./images/trophy_3rd_place.svg",
+      },
+    ],
+    ["trophies"],
+    ""
+  )
+
+  let rankingP3 = createCompleteElements("p", [], [], "#3")
+
+  let rankingUsername3 = createCompleteElements("p", [], [], "user name")
+
+  let ranking3 = createCompleteElements("div", [], ["ranking", "three"], "")
+
+  appendElements(ranking3, [rankingImg3, rankingP3, rankingUsername3])
+
+  appendElements(rankingContainer, [ranking2, ranking1, ranking3])
+
+  main.append(rankingContainer)
 }
 
 function completeHtmlTable() {
   let localLeaderboard = leaderboardVerification()
-  let table = document.createElement("table")
-  table.setAttribute("id", "leaderboard-table")
+
+  let table = createCompleteElements(
+    "table",
+    [{ attributeName: "id", attributeValue: "leaderboard-table" }],
+    [],
+    ""
+  )
+
   main.append(table)
-  localLeaderboard[localStorage.getItem("category")][
-    localStorage.getItem("difficulty")
-  ].forEach((user) => {
+
+  let allUsers = []
+
+  for (let category in localLeaderboard) {
+    for (let difficulty in localLeaderboard[category]) {
+      allUsers.push(...localLeaderboard[category][difficulty])
+    }
+  }
+
+  allUsers.sort((a, b) => b.totalPoints - a.totalPoints);
+
+  allUsers.forEach((user, idx) => {
     let newTr = document.createElement("tr")
-    let newTdPosition = document.createElement("td")
-    newTdPosition.classList.add("ranking")
-    // newTdPosition.textContent = user.ranking
-    let newTdName = document.createElement("td")
-    newTdName.classList.add("user")
-    newTdName.textContent = user.userName
-    let newTdPoints = document.createElement("td")
-    newTdPoints.classList.add("points")
-    // newTdPoints.textContent = user.totalPoints
-    newTr.append(newTdPosition)
-    newTr.append(newTdName)
-    newTr.append(newTdPoints)
+
+    let newTdPosition = createCompleteElements(
+      "td",
+      [],
+      ["ranking"],
+      `# ${idx + 1}`
+    )
+
+    let newTdName = createCompleteElements("td", [], ["user"], user.userName)
+
+    let newTdPoints = createCompleteElements(
+      "td",
+      [],
+      ["points"],
+      user.totalPoints
+    )
+
+    appendElements(newTr, [newTdPosition, newTdName, newTdPoints])
+
     table.append(newTr)
   })
 }
 
 function createPageButtons() {
-  let containerButtons = document.createElement("div")
-  containerButtons.classList.add("buttons")
-  let newHomeButton = document.createElement("button")
-  newHomeButton.textContent = "Home"
-  newHomeButton.classList.add("button")
-  containerButtons.append(newHomeButton)
-  let newResultsButton = document.createElement("button")
-  newResultsButton.textContent = "Results"
-  newResultsButton.classList.add("button")
-  containerButtons.append(newResultsButton)
-  let newRestartbutton = document.createElement("button")
-  newRestartbutton.textContent = "Restart"
-  newRestartbutton.classList.add("button")
-  containerButtons.append(newHomeButton)
-  containerButtons.append(newRestartbutton)
-  containerButtons.append(newResultsButton)
+  let containerButtons = createCompleteElements("div", [], ["buttons"], "")
+
+  let newHomeButton = createCompleteElements("button", [], ["button"], "Home")
+
+  let newResultsButton = createCompleteElements(
+    "button",
+    [],
+    ["button"],
+    "Results"
+  )
+
+  let newRestartbutton = createCompleteElements(
+    "button",
+    [],
+    ["button"],
+    "Restart"
+  )
+
+  appendElements(containerButtons, [
+    newHomeButton,
+    newRestartbutton,
+    newResultsButton,
+  ])
+
   main.append(containerButtons)
 }
 
@@ -108,6 +243,7 @@ button.addEventListener("click", function () {
     console.log(userObject)
     addUserName()
     completeLocalStorageTable()
+    createPodiumHtml()
     completeHtmlTable()
     createPageButtons()
   }, 1000)
