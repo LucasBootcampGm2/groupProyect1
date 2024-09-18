@@ -1615,7 +1615,7 @@ export let questions = {
       },
       {
         question:
-          "¿Qué imperio se extendió desde el Medio Oriente hasta el norte de África en la antigüedad?",
+          "¿Qué imperio dominó gran parte del Mediterráneo en la antigüedad?",
         correct: "El Imperio Romano",
         incorrect: [
           "El Imperio Otomano",
@@ -1623,18 +1623,18 @@ export let questions = {
           "El Imperio Persa",
         ],
         explanation:
-          "El Imperio Romano se extendió ampliamente en el Medio Oriente y el norte de África durante su apogeo.",
+          "El Imperio Romano dominó gran parte del Mediterráneo en su apogeo.",
       },
       {
-        question: "¿Qué evento marcó el inicio de la Edad Media en Europa?",
-        correct: "La caída del Imperio Romano de Occidente",
+        question: "¿Qué evento desencadenó la Primera Guerra Mundial?",
+        correct: "El asesinato del archiduque Francisco Fernando",
         incorrect: [
-          "La caída de Constantinopla",
-          "La firma del Tratado de Verdún",
-          "La Batalla de Hastings",
+          "La invasión de Polonia",
+          "El ataque a Pearl Harbor",
+          "La Revolución Rusa",
         ],
         explanation:
-          "La caída del Imperio Romano de Occidente en 476 d.C. marcó el inicio de la Edad Media en Europa.",
+          "El asesinato del archiduque Francisco Fernando de Austria en 1914 desencadenó el conflicto.",
       },
       {
         question: "¿Qué tratado puso fin a la Primera Guerra Mundial?",
@@ -1655,25 +1655,13 @@ export let questions = {
           "Qin Shi Huang fue el primer emperador de China, unificando el país bajo la dinastía Qin en 221 a.C.",
       },
       {
-        question: "¿Qué tratado puso fin a la Primera Guerra Mundial?",
-        correct: "Tratado de Versalles",
-        incorrect: [
-          "Tratado de París",
-          "Tratado de Tordesillas",
-          "Tratado de Utrecht",
-        ],
+        question:
+          "¿Qué ciudad europea fue devastada por la peste negra en el siglo XIV?",
+        correct: "Florencia",
+        incorrect: ["Roma", "París", "Londres"],
         explanation:
-          "El Tratado de Versalles, firmado en 1919, puso fin oficialmente a la Primera Guerra Mundial y estableció las condiciones de paz.",
+          "Florencia fue una de las ciudades más afectadas por la peste negra durante el siglo XIV.",
       },
-
-      {
-        question: "¿Quién fue el primer emperador de China?",
-        correct: "Qin Shi Huang",
-        incorrect: ["Confucio", "Sun Tzu", "Kublai Khan"],
-        explanation:
-          "Qin Shi Huang fue el primer emperador de China, conocido por unificar el país y construir la Gran Muralla.",
-      },
-
       {
         question:
           "¿Qué ciudad fue destruida por la erupción del Vesubio en el 79 d.C.?",
@@ -1682,7 +1670,6 @@ export let questions = {
         explanation:
           "Pompeya fue una ciudad romana que quedó sepultada por la erupción del Vesubio en el año 79 d.C.",
       },
-
       {
         question: "¿Qué rey inglés tuvo seis esposas?",
         correct: "Enrique VIII",
@@ -1690,7 +1677,14 @@ export let questions = {
         explanation:
           "Enrique VIII es famoso por haberse casado seis veces y por romper con la Iglesia Católica para formar la Iglesia Anglicana.",
       },
-
+      {
+        question:
+          "¿Qué líder indígena encabezó la resistencia contra los conquistadores en Perú?",
+        correct: "Túpac Amaru II",
+        incorrect: ["Atahualpa", "Huáscar", "Manco Inca"],
+        explanation:
+          "Túpac Amaru II fue un líder que luchó contra los colonizadores españoles en el Perú.",
+      },
       {
         question: "¿Quién pintó 'La última cena'?",
         correct: "Leonardo da Vinci",
@@ -1698,7 +1692,6 @@ export let questions = {
         explanation:
           "Leonardo da Vinci pintó 'La última cena', una de las obras maestras más reconocidas del Renacimiento.",
       },
-
       {
         question:
           "¿Qué país fue gobernado por los zares hasta la Revolución de 1917?",
@@ -1707,7 +1700,6 @@ export let questions = {
         explanation:
           "Rusia fue gobernada por los zares hasta la Revolución Rusa de 1917, que llevó al establecimiento de la Unión Soviética.",
       },
-
       {
         question:
           "¿Qué batalla marcó el fin del poder naval español en el siglo XVI?",
@@ -1727,21 +1719,13 @@ export let questions = {
         explanation:
           "Aristóteles fue el maestro de Alejandro Magno, quien luego se convirtió en uno de los conquistadores más grandes de la historia.",
       },
-
       {
         question:
-          "¿Qué país fue fundado por Pedro el Grande en el siglo XVIII?",
-        correct: "San Petersburgo",
-        incorrect: ["Moscú", "Varsovia", "Kiev"],
+          "¿Qué ciudad fue conocida como Constantinopla antes de ser renombrada?",
+        correct: "Estambul",
+        incorrect: ["Atenas", "Alejandría", "Bagdad"],
         explanation:
-          "San Petersburgo fue fundada por Pedro el Grande en 1703 como la nueva capital de Rusia.",
-      },
-      {
-        question: "¿Quién fue el primer hombre en pisar la Luna?",
-        correct: "Neil Armstrong",
-        incorrect: ["Buzz Aldrin", "Yuri Gagarin", "John Glenn"],
-        explanation:
-          "Neil Armstrong fue el primer ser humano en pisar la Luna durante la misión Apollo 11 en 1969.",
+          "Estambul fue conocida como Constantinopla hasta su renombramiento tras la conquista otomana en 1453.",
       },
       {
         question: "¿Qué país fue el primero en abolir la esclavitud en 1804?",
@@ -1777,6 +1761,14 @@ export let questions = {
         incorrect: ["Che Guevara", "Raúl Castro", "Camilo Cienfuegos"],
         explanation:
           "Fidel Castro lideró la Revolución Cubana en 1959, derrocando al régimen de Batista.",
+      },
+      {
+        question:
+          "¿Qué invento revolucionó la industria textil durante la Revolución Industrial?",
+        correct: "La máquina de hilar",
+        incorrect: ["El telégrafo", "La locomotora", "La imprenta"],
+        explanation:
+          "La máquina de hilar revolucionó la industria textil al aumentar drásticamente la producción de hilo durante la Revolución Industrial.",
       },
     ],
     hard: [
@@ -1909,7 +1901,6 @@ export let questions = {
       {
         question:
           "¿Qué emperador romano dividió el Imperio Romano en Oriente y Occidente?",
-
         correct: "Diocleciano",
         incorrect: ["Constantino", "Nerón", "Adriano"],
         explanation:
