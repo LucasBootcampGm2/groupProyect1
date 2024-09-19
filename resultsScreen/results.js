@@ -10,9 +10,9 @@ let user = JSON.parse(localStorage.getItem("user"));
 
 let selectedDifficulty = "easy";
 
-let correctAnswers = user.correctAnswers
-let wrongAnswers = user.wrongAnswers
-let skipedAnswers = user.skippedAnswers
+let correctAnswers = user.correctAnswers;
+let wrongAnswers = user.wrongAnswers;
+let skipedAnswers = user.skippedAnswers;
 
 let totalQuestions = correctAnswers + wrongAnswers + skipedAnswers;
 let correctValue = points.valuesCorrect[selectedDifficulty];
@@ -28,13 +28,13 @@ function finalScore(correct, wrong) {
   let finalScore = 0;
 
   finalScore += correctValue * correct;
-  finalScore -= wrongValue * wrong;
+  finalScore += wrongValue * wrong;
 
-  score.textContent = `${finalScore} / ${totalQuestions * correctValue}`;
   if (finalScore < 0) {
     finalScore = 0;
   }
-  
+  score.textContent = `${finalScore} / ${totalQuestions * correctValue}`;
+
   user.totalPoints = finalScore;
   localStorage.setItem("user", JSON.stringify(user));
 }
