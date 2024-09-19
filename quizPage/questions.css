@@ -9,7 +9,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 0;
   z-index: 1;
 }
 
@@ -55,8 +55,8 @@
 #main {
   display: flex;
   flex-direction: column;
-  gap: 35px;
-  padding: 70px 0 0;
+  gap: 30px;
+  padding: 45px 0 0;
   width: 90%;
   z-index: 1;
 }
@@ -115,7 +115,14 @@
 
 #container-answers {
   display: grid;
-  gap: 25px;
+  gap: 20px;
+}
+
+.page-buttons {
+  background-color: #3f2ed9;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 18px;
 }
 
 .answer {

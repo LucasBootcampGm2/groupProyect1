@@ -3,6 +3,7 @@
 // }
 
 // // let answer = localStorage.getItem("answer");
+import { questions } from "../questionBank.js";
 
 let answers = document.getElementById("container-answers");
 let containerContent = document.getElementById("container-content");
@@ -19,13 +20,11 @@ let selectedCategory = "science";
 let selectedDifficulty = "easy";
 
 function getCategory() {
-  let questionsByCategory = { ...categorys[selectedCategory] };
-  return questionsByCategory;
+  return questions[selectedCategory];
 }
 
 function getDifficulty(questionsByCategory) {
-  let questionsByDifficulty = [...questionsByCategory[selectedDifficulty]];
-  return questionsByDifficulty;
+  return questionsByCategory[selectedDifficulty];
 }
 
 let finalQuestions = getDifficulty(getCategory());
@@ -92,9 +91,6 @@ function loadPrevAnswers() {
   console.log({ index, finalQuestions });
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
-    buttonNextAnswers.style.display = "block";
-  } else if (index > 0 && index < 9) {
-    buttonNextAnswers.style.display = "block";
   } else if (index === 9) {
     addOrQuitClass();
   }
