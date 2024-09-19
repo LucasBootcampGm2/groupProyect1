@@ -118,6 +118,13 @@
   gap: 20px;
 }
 
+.page-buttons {
+  background-color: #3f2ed9;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
 .answer {
   padding: 15px 20px;
   box-shadow: 0 0 1px 2px #d2c6c6;

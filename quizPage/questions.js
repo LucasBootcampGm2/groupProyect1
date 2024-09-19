@@ -248,6 +248,7 @@ function createResultsButton() {
   resultsPage.setAttribute("href", "../resultsScreen/results.html")
   resultsPage.textContent = "Your Results"
   resultsButton.append(resultsPage)
+  resultsButton.classList.add('page-buttons')
   continueButtonsContainer.append(resultsButton)
 }
 
@@ -257,6 +258,7 @@ function createAnswersExplainedButton() {
   answersPage.setAttribute("href", "../answersExplained/answersExplained.html")
   answersPage.textContent = "Answers Explanation"
   answersButton.append(answersPage)
+  answersButton.classList.add('page-buttons')
   continueButtonsContainer.append(answersButton)
 }
 
