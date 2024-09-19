@@ -1,0 +1,85 @@
+body {
+    font-family: "Anek Bangla", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #242424;   
+    color: white;
+}
+
+header{
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    background: #420080;
+    padding: 40px 60px 70px;
+}
+
+header h1 {
+    font-size: 100px;
+    margin: 0;
+}
+
+header p {
+    font-size: 20px;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+main p {
+    font-size: 20px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.link-home {
+    font-family: "Anek Bangla", sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    background-color:#f5f5dc;
+    border-radius: 20px;
+    border-style: none;
+    margin: 10px 20px 30px 20px;
+    padding: 15px;
+}
+
+
+footer {
+    text-align: center;
+    font-size: 18px;
+    padding: 40px 40px;
+}
+
+footer a{
+    color:#ffffff;
+}
+
+footer i {
+    text-decoration: underline;
+ }
+
+@media only screen and (min-width: 1200px) {
+    .link-home {
+        font-size: 15px;
+        transition: box-shadow 0.2s ease-in;
+        cursor: pointer;
+        border-radius: 20px;
+        border-style: none;
+        background-color:#f5f5dc;
+        margin: 10px 20px 30px 20px;
+        padding: 15px;
+    }
+    
+    .link-home:hover {
+        box-shadow: 2px 5px 50px #f5f5dc;
+    }
+}
