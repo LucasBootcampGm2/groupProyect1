@@ -117,7 +117,7 @@
     
     /* hasta aca las sombras */
     
-    #container-options {
+    #container-links {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -125,11 +125,11 @@
         gap:60px;
     }
     
-    #container-options i {
+    #container-links i {
         font-size: 50px;
     }
     
-    .button-options {
+    .link-option {
         background-color:#f5f5dc;
         border-radius: 100%;
         border-style: none;
@@ -138,18 +138,18 @@
         cursor: pointer;
     }
     
-    .button-options:hover {
+    .link-option:hover {
         box-shadow: 2px 5px 50px #f5f5dc;
     }
     
-    .container-option{
+    .container-link{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
     
-    .container-option p {
+    .container-link p {
         color: white;
     }
 
@@ -242,7 +242,7 @@
     }
     
 
-    #container-options {
+    #container-links {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -250,25 +250,25 @@
         gap:60px;
     }
 
-    #container-options i {
+    #container-links i {
         font-size: 50px;
     }
 
-    .button-options {
+    .link-option {
         background-color:#f5f5dc;
         border-radius: 100%;
         border-style: none;
         padding: 15px;
     }
 
-    .container-option{
+    .container-link{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .container-option p {
+    .container-link p {
     color: white;
     }
 }
@@ -362,7 +362,7 @@
         background-color: #f5f5dc;
     }
 
-    #container-options {
+    #container-links {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -371,25 +371,25 @@
         gap:20px;
     }
 
-    #container-options i {
+    #container-links i {
         font-size: 30px;
     }
 
-    .button-options {
+    .link-option {
         background-color:#f5f5dc;
         border-radius: 100%;
         border-style: none;
         padding: 15px;
     }
 
-    .container-option{
+    .container-link{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .container-option p {
+    .container-link p {
     color: white;
     }
 }
