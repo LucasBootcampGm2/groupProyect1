@@ -15,7 +15,7 @@ function getSkippedAnswers() {
 }
 
 function numberOfQuestions(correct, wrong, skip) {
-  document.querySelector(".correct-number").textContent + correct;
+  document.querySelector(".correct-number").textContent = correct;
   document.querySelector(".wrong-number").textContent = wrong;
   document.querySelector(".skip-number").textContent = skip;
 }
