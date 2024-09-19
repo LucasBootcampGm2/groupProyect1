@@ -91,9 +91,6 @@ function loadPrevAnswers() {
   console.log({ index, finalQuestions });
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
-    buttonNextAnswers.style.display = "block";
-  } else if (index > 0 && index < 9) {
-    buttonNextAnswers.style.display = "block";
   } else if (index === 9) {
     addOrQuitClass();
   }
