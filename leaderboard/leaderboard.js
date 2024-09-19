@@ -242,11 +242,9 @@ function completeHtmlTable() {
 }
 
 function createPageButtons() {
-  let containerButtons = createCompleteElements("div", [], ["buttons"], "");
+  let containerLinks = createCompleteElements("div", [], ["buttons"], "");
 
-  let newHomeButton = createCompleteElements("button", [], ["button"]);
-
-  let homeA = createCompleteElements(
+  let newHomeLink = createCompleteElements(
     "a",
     [
       {
@@ -254,19 +252,11 @@ function createPageButtons() {
         attributeValue: "../index.html",
       },
     ],
-    [],
+    ["links"],
     "Results"
   );
 
-  newHomeButton.append(homeA);
-
-  let newResultsButton = createCompleteElements(
-    "button",
-    [],
-    ["button"],''
-  );
-
-  let resutlsA = createCompleteElements(
+  let newResultsLink = createCompleteElements(
     "a",
     [
       {
@@ -274,20 +264,11 @@ function createPageButtons() {
         attributeValue: "../resultsScreen/results.html",
       },
     ],
-    [],
+    ["links"],
     "Results"
   );
 
-  newResultsButton.append(resutlsA);
-
-  let newRestartbutton = createCompleteElements(
-    "button",
-    [],
-    ["button"],
-    ""
-  );
-
-  let restartA = createCompleteElements(
+  let newRestartLink = createCompleteElements(
     "a",
     [
       {
@@ -295,19 +276,13 @@ function createPageButtons() {
         attributeValue: "../quizPage/questions.html",
       },
     ],
-    [],
+    ["links"],
     "Restart"
   );
 
-  newRestartbutton.append(restartA);
+  appendElements(containerLinks, [newHomeLink, newRestartLink, newResultsLink]);
 
-  appendElements(containerButtons, [
-    newHomeButton,
-    newRestartbutton,
-    newResultsButton,
-  ]);
-
-  main.append(containerButtons);
+  main.append(containerLinks);
 }
 
 button.addEventListener("click", function () {
