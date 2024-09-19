@@ -2416,3 +2416,8 @@ export let questions = {
     ],
   },
 };
+
+export let points = {
+  valuesCorrect: { easy: 5, medium: 10, hard: 15 },
+  valuesIncorrect: { easy: -2, medium: -5, hard: -10 },
+};
