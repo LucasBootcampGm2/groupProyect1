@@ -10,11 +10,17 @@ let user = JSON.parse(localStorage.getItem("user"));
 
 let selectedDifficulty = localStorage.getItem("difficulty");
 
-let correctAnswers = user.correctAnswers;
-let wrongAnswers = user.wrongAnswers;
-let skipedAnswers = user.skippedAnswers;
+let correctAnswers = user.answers.filter(function(answer) {
+  return answer === "correct";
+}).length;
+let wrongAnswers = user.answers.filter(function(answer) {
+  return answer === "incorrect";
+}).length;
+let skippedAnswers = user.answers.filter(function(answer) {
+  return answer === "skipped";
+}).length;
 
-let totalQuestions = correctAnswers + wrongAnswers + skipedAnswers;
+let totalQuestions = correctAnswers + wrongAnswers + skippedAnswers;
 let correctValue = points.valuesCorrect[selectedDifficulty];
 let wrongValue = points.valuesIncorrect[selectedDifficulty];
 
@@ -53,7 +59,7 @@ function changeValuePoints() {
 }
 
 window.addEventListener("load", function () {
-  numberOfQuestions(correctAnswers, wrongAnswers, skipedAnswers);
+  numberOfQuestions(correctAnswers, wrongAnswers, skippedAnswers);
   finalScore(correctAnswers, wrongAnswers);
   showCrown();
   changeValuePoints();
