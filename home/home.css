@@ -1,5 +1,5 @@
 .body {
-  background-color: #1c1c23;
+  background-color: #010137;
   color: white;
 }
 
@@ -7,13 +7,73 @@
   font-size: 2em;
   text-align: center;
   padding: 50px 10px 30px;
+  text-shadow: 2px 1px #fd07ff;
+}
+
+h2 {
+  margin: 10px;
+}
+
+#modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+#modal.show,
+.header.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#modalContent {
+  background-color: #420080;
+  padding: 5%;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 10px 0 #fd07ff;
+}
+
+#modal input {
+  padding: 10px;
+  width: 80%;
+  background-color: #8e21b9;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 #fd07ff;
+}
+
+input#username::placeholder {
+  color: white;
+}
+
+#modal button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #420080;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  box-shadow: 0 0 5px 0 #fd07ff;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.8s ease;
 }
 
 .header img {
@@ -21,7 +81,9 @@
 }
 
 #main {
-  width: 100%;
+  padding: 30px;
+  display: none;
+  padding: 30px 5%;
 }
 
 #container-quiz-buttons {
@@ -35,7 +97,7 @@
   border-radius: 30px;
   border: none;
   background-color: white;
-  box-shadow: 0 0 15px 0px #a4a4a4;
+  box-shadow: 0 0 15px 0px #fd07ff;
   width: 50%;
   padding: 5px;
   max-width: 300px;
@@ -45,22 +107,26 @@
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
-  padding: 50px 30px;
+  padding: 50px 20px;
   display: flex;
+  background-color: #3300632e;
+  border-radius: 30px;
+  border: 1px solid #fd07ff;
+  font-family: sans-serif;
 }
 
 .quiz-button {
   width: 160px;
   height: 170px;
-  background-color: transparent;
+  background-color: #3300632e;
   color: white;
   border: none;
-  box-shadow: 0 0 10px 0 rgb(230, 230, 235);
+  box-shadow: 0 0 5px 0 #fd07ff;
   border-radius: 10px;
 }
 
 .quiz-button:hover {
-  background-color: #383d5b;
+  background-color: #8e21b9;
 }
 
 .quiz-img {
@@ -84,4 +150,20 @@ footer {
 
 #difficulty-button {
   display: none;
+}
+
+@media (min-width: 768px) {
+  #modalContent {
+    padding: 4%;
+  }
+}
+@media (min-width: 1024px) {
+  #modalContent {
+    padding: 3%;
+  }
+}
+@media (min-width: 1440px) {
+  #modalContent {
+    padding: 2%;
+  }
 }

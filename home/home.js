@@ -1,10 +1,31 @@
 import { questions } from "../questionBank.js";
-
+let modal = document.getElementById("modal");
+let button = document.querySelector(".buttonSubmit");
+let header = document.querySelector(".header");
 let sectionQuizMode = document.getElementById("section-quiz-mode");
+
+let userObject = {};
+
 let categories = Object.keys(questions);
+
 console.log(categories);
 let difficultyButton = document.getElementById("difficulty-button");
 
+function addUserName() {
+  let username = document.getElementById("username");
+  userObject.userName = username.value;
+  console.log(userObject);
+  localStorage.setItem("user", JSON.stringify(userObject));
+}
+
+button.addEventListener("click", function () {
+  document.getElementById("modal").classList.remove("show");
+  console.log(addUserName());
+  setTimeout(function () {
+    main.style.display = "block";
+    modal.style.display = "none";
+  }, 1000);
+});
 
 function saveDifficulties() {
   let difficulties = {};
@@ -140,7 +161,7 @@ function addDifficultyButtons() {
 
 function removeDifficultyButtons() {
   getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
-    difficulty.remove()
+    difficulty.remove();
   });
 }
 
@@ -164,7 +185,7 @@ function clickCategoryButton() {
     appearCategoryButtons();
     removeDifficultyButtons();
     console.log("click");
-    difficultyButton.removeAttribute('disabled')
+    difficultyButton.removeAttribute("disabled");
   });
 }
 
@@ -172,8 +193,8 @@ function clickDiffilcultyButton() {
   difficultyButton.addEventListener("click", function () {
     disappearCategoryButtons();
     addDifficultyButtons();
-    setDifficulty()
-    difficultyButton.setAttribute('disabled', 'true')
+    setDifficulty();
+    difficultyButton.setAttribute("disabled", "true");
   });
 }
 
@@ -181,7 +202,7 @@ function setCategory() {
   getElementByQuery(".quiz-category-button").forEach(function (category) {
     category.addEventListener("click", function () {
       localStorage.setItem("category", `${category.textContent}`);
-      difficultyButton.style.display = 'block'
+      difficultyButton.style.display = "block";
       appearStartButton();
     });
   });
@@ -204,6 +225,10 @@ function appearStartButton() {
 }
 
 window.addEventListener("load", function () {
+  setTimeout(function () {
+    modal.classList.add("show");
+    header.classList.add("show");
+  }, 200);
   this.localStorage.clear();
   addCategoryButtons();
   clickCategoryButton();

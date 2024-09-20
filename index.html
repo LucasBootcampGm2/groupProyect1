@@ -10,9 +10,16 @@
   <body class="body">
     <header class="header">
       <h1 id="h1">Welcome to our Quiz</h1>
-      <img src="images/brain.svg" alt="brain" />
+      <img src="./images/brain.svg" alt="brain.svg">
     </header>
-    <main>
+    <div id="modal">
+      <div id="modalContent">
+        <h2>Enter your name</h2>
+        <input type="text" id="username" placeholder="name" />
+        <button class="buttonSubmit">Submit</button>
+      </div>
+    </div>
+    <main id="main">
       <div id="container-quiz-buttons">
         <button id="category-button" class="quiz-selection-buttons">
           Category
