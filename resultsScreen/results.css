@@ -171,7 +171,7 @@
         font-size: 50px;
     }
 
-    .button-options {
+    .link-option {
         background-color:#f5f5dc;
         border-radius: 100%;
         border-style: none;
@@ -180,7 +180,7 @@
         cursor: pointer;
     }
 
-    .button-options:hover {
+    .link-option:hover {
     box-shadow: 2px 5px 50px #f5f5dc;
     }
 
@@ -370,7 +370,7 @@
         font-size: 50px;
     }
 
-    .button-options {
+    .link-option {
         background-color:#f5f5dc;
         border-radius: 100%;
         border-style: none;
@@ -556,7 +556,7 @@ hr {
     font-size: 30px;
 }
 
-.button-options {
+.link-option {
     background-color:#f5f5dc;
     border-radius: 100%;
     border-style: none;

@@ -8,7 +8,7 @@ let pCorrectAnswers = document.getElementById("paragraph-correct-answers");
 
 let user = JSON.parse(localStorage.getItem("user"));
 
-let selectedDifficulty = "easy";
+let selectedDifficulty = localStorage.getItem("difficulty");
 
 let correctAnswers = user.correctAnswers;
 let wrongAnswers = user.wrongAnswers;
