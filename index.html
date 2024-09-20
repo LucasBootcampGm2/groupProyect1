@@ -10,27 +10,31 @@
   <body class="body">
     <header class="header">
       <h1 id="h1">Welcome to our Quiz</h1>
-      <img src="./images/brain.svg" alt="brain.svg">
+      <img src="./images/brain.svg" alt="brain.svg" />
     </header>
     <div id="modal">
       <div id="modalContent">
-        <h2>Enter your name</h2>
+        <h3>Enter your name</h3>
         <input type="text" id="username" placeholder="Name" />
         <button class="buttonSubmit">Submit</button>
       </div>
     </div>
     <main id="main">
-      <div id="container-quiz-buttons">
-        <button id="category-button" class="quiz-selection-buttons">
-          Category
-        </button>
-        <button id="difficulty-button" class="quiz-selection-buttons">
-          Difficulty
-        </button>
-      </div>
+      <h2 id="category-h2" class="quiz-selection-h2">Select Category</h2>
+      <h2 id="difficulty-h2" class="quiz-selection-h2">Select Difficulty</h2>
       <section id="section-quiz-mode"></section>
     </main>
     <footer>
+      <div class="container-spans">
+        <p class="selection-p">
+          Category:
+          <span id="span-category"></span>
+        </p>
+        <p class="selection-p">
+          Difficulty:
+          <span id="span-difficulty"></span>
+        </p>
+      </div>
       <button class="start-button">
         <a href="quizPage/questions.html">Start Button</a>
       </button>

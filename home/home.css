@@ -4,7 +4,7 @@
 }
 
 #h1 {
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   padding: 50px 10px 30px;
   text-shadow: 2px 1px #fd07ff;
@@ -12,6 +12,18 @@
 
 h2 {
   margin: 10px;
+  font-size: 3em;
+}
+
+h3 {
+  margin: 10px;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 2px 1px #fd07ff;
+}
+
+h4 {
+  text-shadow: 1px 1px #fd07ff;
 }
 
 #modal {
@@ -25,9 +37,16 @@ h2 {
 }
 
 #modal.show,
-.header.show {
+.header.show,
+.quiz-category-buttons.show {
   opacity: 1;
   transform: scale(1);
+}
+
+.quiz-category-buttons {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease, transform 2s ease;
 }
 
 #modalContent {
@@ -46,9 +65,11 @@ h2 {
   padding: 10px;
   width: 80%;
   background-color: #8e21b9;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 10px;
   box-shadow: 0 0 5px 0 #fd07ff;
+  color: white;
+  outline: none;
 }
 
 input#username::placeholder {
@@ -83,25 +104,16 @@ input#username::placeholder {
 #main {
   padding: 30px;
   display: none;
-  padding: 30px 5%;
+  text-align: center;
 }
 
-#container-quiz-buttons {
-  display: flex;
-  justify-content: center;
-  padding: 0 30px 30px;
-  gap: 15px;
-}
-
-.quiz-selection-buttons {
-  border-radius: 30px;
-  border: none;
-  background-color: #010137;
-  box-shadow: 0 0 15px 0px #fd07ff;
-  width: 50%;
-  padding: 5px;
-  max-width: 300px;
+.quiz-selection-h2 {
+  text-shadow: 2px 1px #fd07ff;
   color: white;
+}
+
+#difficulty-h2 {
+  display: none;
 }
 
 #section-quiz-mode {
@@ -110,9 +122,6 @@ input#username::placeholder {
   flex-wrap: wrap;
   padding: 50px 20px;
   display: flex;
-  background-color: #3300632e;
-  border-radius: 30px;
-  box-shadow: 0 0 5px 0 #fd07ff;
   font-family: sans-serif;
 }
 
@@ -136,8 +145,8 @@ input#username::placeholder {
 
 footer {
   display: flex;
-  justify-content: center;
-  padding: 50px 0;
+  align-items: center;
+  flex-direction: column;
 }
 
 .start-button {
@@ -150,8 +159,10 @@ footer {
   box-shadow: 0 0 5px 0 #fd07ff;
 }
 
-#difficulty-button {
+.container-spans {
   display: none;
+  justify-content: center;
+  gap: 30px;
 }
 
 @media (min-width: 768px) {
