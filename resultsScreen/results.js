@@ -12,9 +12,9 @@ let selectedDifficulty = localStorage.getItem("difficulty");
 
 let correctAnswers = user.correctAnswers;
 let wrongAnswers = user.wrongAnswers;
-let skipedAnswers = user.skippedAnswers;
+let skippedAnswers = user.skippedAnswers;
 
-let totalQuestions = correctAnswers + wrongAnswers + skipedAnswers;
+let totalQuestions = correctAnswers + wrongAnswers + skippedAnswers;
 let correctValue = points.valuesCorrect[selectedDifficulty];
 let wrongValue = points.valuesIncorrect[selectedDifficulty];
 
@@ -53,7 +53,7 @@ function changeValuePoints() {
 }
 
 window.addEventListener("load", function () {
-  numberOfQuestions(correctAnswers, wrongAnswers, skipedAnswers);
+  numberOfQuestions(correctAnswers, wrongAnswers, skippedAnswers);
   finalScore(correctAnswers, wrongAnswers);
   showCrown();
   changeValuePoints();

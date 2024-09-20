@@ -118,7 +118,7 @@ font-size: 20px;
     align-items: center;
     justify-content: center;
 }
-#container-circle-skip{
+#container-circle-skipped{
     height: 60px;
     width: 60px;
     background: #796767;
@@ -227,7 +227,7 @@ color: white;
         width: 80px;
     }
     
-    #container-circle-skip{
+    #container-circle-skipped{
         height: 80px;
         width: 80px;
     }
