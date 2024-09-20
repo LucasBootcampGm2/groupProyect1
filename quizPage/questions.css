@@ -43,7 +43,6 @@
   position: absolute;
   height: 300px;
   width: 100%;
-  background-color: purple;
   z-index: 0;
   border-radius: 0 0 100% 100%;
 }
@@ -74,9 +73,7 @@
   padding: 19px;
   min-width: 1.25em;
   animation: spin 10s linear infinite;
-  border: 10px solid green;
-  border-top-color: #b4ec68;
-  border-bottom-color: #b4ec68;
+  border: 10px solid black;
   top: -50px;
 }
 
@@ -119,10 +116,10 @@
 }
 
 .page-buttons {
-  background-color: #3f2ed9;
   padding: 10px 20px;
   border-radius: 6px;
   font-size: 18px;
+  background-color: #000;
 }
 
 .answer {

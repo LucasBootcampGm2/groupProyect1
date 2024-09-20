@@ -2919,9 +2919,18 @@ export let questions = {
       },
     ],
   },
-};
+}
 
 export let points = {
   valuesCorrect: { easy: 5, medium: 10, hard: 15 },
   valuesIncorrect: { easy: -2, medium: -5, hard: -10 },
-};
+}
+
+export let colors = {
+  science: "#00804a",
+  entertainment: "#fb0099",
+  history: "#fff121",
+  geography: "#1936d2",
+  art: "#e30000",
+  sport: "#ff6c00",
+}
