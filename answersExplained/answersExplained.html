@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="answersExplained.css"/>
+    <link rel="stylesheet" href="notFoundPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Inconsolata:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header class="background-color">
@@ -33,24 +38,37 @@
                 </div>
             </div>
 
-            <div id="container-links">
 
-                <div class="container-link">
-                    <a class="link-option" title="Reset quiz" href=""><i class="fa-solid fa-rotate-left" style="color: #000;"></i></a>
-                    <p>Reset quiz</p>
+            <div id="container-links-full">
+                
+                <div id="container-links">
+
+                    <div class="container-link">
+                        <a class="link-option" title="Results questions" href="../resultsScreen/results.html"> <i class="fa-solid fa-square-poll-horizontal" style="color: #000000;"></i></a>
+                        <p>Results questions</p>
+                    </div>
+
+                    <div class="container-link">
+                        <a class="link-option" title="Reset quiz" href=""><i class="fa-solid fa-rotate-left" style="color: #000;"></i></a>
+                        <p>Reset quiz</p>
+                    </div>
+
                 </div>
 
-                <div class="container-link">
-                    <a class="link-option" title="Home" href="../index.html"><i class="fa-solid fa-house" style="color: #000;"></i></a>
-                    <p>Home</p>
+                <div id="container-links">
+                    <div class="container-link">
+                        <a class="link-option" title="Home" href="../index.html"><i class="fa-solid fa-house" style="color: #000;"></i></a>
+                        <p>Home</p>
+                    </div>
+
+                    <div class="container-link">
+                        <a class="link-option" title="Leaderboard" href="../leaderboard/leaderboard.html"><i class="fa-solid fa-medal" style="color: #000;"></i></a>
+                        <p>Leaderboard</p>
+                    </div>
                 </div>
 
-                <div class="container-link">
-                    <a class="link-option" title="Leaderboard" href="../leaderboard/leaderboard.html"><i class="fa-solid fa-medal" style="color: #000;"></i></a>
-                    <p>Leaderboard</p>
-                </div>
             </div>
-       </div>
+        </div>
     </main>
     <script src="answersExplained.js" type="module"></script>
     <script src="https://kit.fontawesome.com/7fef3468f2.js" crossorigin="anonymous"></script>
