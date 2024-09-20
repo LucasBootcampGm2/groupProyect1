@@ -21,9 +21,7 @@ let progress = 0;
 
 let userObject = {
   userName: "unknown",
-  correctAnswers: 0,
-  wrongAnswers: 0,
-  skippedAnswers: 0,
+  answers: []
 };
 
 function getCategory() {
@@ -34,7 +32,9 @@ function getDifficulty(questionsByCategory) {
   return questionsByCategory[selectedDifficulty];
 }
 
-let finalQuestions = getDifficulty(getCategory());
+let filteredQuestions = getDifficulty(getCategory());
+let shuffledQuestions = shuffle(filteredQuestions);
+localStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
 
 function resetBtnColors() {
   let buttons = document.querySelectorAll(".answer");
@@ -51,19 +51,16 @@ function showAllButtons() {
   });
 }
 
-function selectRandomQuestion() {
-  let random = 0;
-  do {
-    random = Math.floor(Math.random() * questionsCount);
-  } while (alreadyAsked.includes(random));
-  alreadyAsked.push(random);
-  return finalQuestions[random];
+function nextQuestion() {
+  let nextQuestionIndex = shuffledQuestions.findIndex(
+    (question, index) => !alreadyAsked.includes(index)
+  );
+  alreadyAsked.push(nextQuestionIndex);
+  console.log(alreadyAsked)
+  return shuffledQuestions[nextQuestionIndex];
 }
 
 function showQuestion(question) {
-  if (!question) {
-    console.log("pregunta no encontrada");
-  }
   let container = document.querySelector(".question");
   container.textContent = question.question;
 }
@@ -79,14 +76,14 @@ function showAnswers(question) {
   }
 }
 
-function shuffle(answers) {
-  for (let i = answers.length - 1; i > 0; i--) {
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
     let rand = Math.floor(Math.random() * (i + 1));
-    let temporary = answers[i];
-    answers[i] = answers[rand];
-    answers[rand] = temporary;
+    let temporary = array[i];
+    array[i] = array[rand];
+    array[rand] = temporary;
   }
-  return answers;
+  return array;
 }
 
 function loadButtons() {
@@ -109,12 +106,12 @@ function loadButtons() {
 function isCorrect(answer, question, button) {
   if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
-    userObject.correctAnswers += 1;
+    userObject.answers.push("correct");
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
-    userObject.wrongAnswers += 1;
+    userObject.answers.push("incorrect");
   }
   countAnswersVerification();
 }
@@ -135,7 +132,7 @@ function loadQuiz() {
     document.getElementById("container-answers").style.display = "none";
     return;
   }
-  let question = selectRandomQuestion();
+  let question = nextQuestion();
   showQuestion(question);
   showAnswers(question);
   showAllButtons();
@@ -144,7 +141,7 @@ function loadQuiz() {
 
 function runOutOfTime() {
   alreadyAnswered = true;
-  userObject.wrongAnswers += 1;
+  userObject.answers.push("incorrect");
   let question = findQuestion();
   let correctBtn = findCorrectBtn(question.correct);
   correctBtn.classList.add("answer-correct");
@@ -178,7 +175,7 @@ function setTimer() {
 
 function findQuestion() {
   let questionText = document.querySelector(".question").textContent;
-  return finalQuestions.find(function (q) {
+  return shuffledQuestions.find(function (q) {
     return q.question === questionText;
   });
 }
@@ -192,7 +189,7 @@ function changeButton() {
 continueBtn.addEventListener("click", function () {
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
-    userObject.skippedAnswers += 1;
+    userObject.answers.push("skipped");
   }
   if (continueBtn.textContent.trim() === "Next") {
     changeButton();
