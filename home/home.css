@@ -111,7 +111,7 @@ input#username::placeholder {
   display: flex;
   background-color: #3300632e;
   border-radius: 30px;
-  border: 1px solid #fd07ff;
+  box-shadow: 0 0 5px 0 #fd07ff;
   font-family: sans-serif;
 }
 
