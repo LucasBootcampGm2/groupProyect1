@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
+  background-color: #1c1c23;
 }
 
 .header {
@@ -116,6 +116,7 @@
 }
 
 .page-buttons {
+  display: none;
   padding: 10px 20px;
   border-radius: 6px;
   font-size: 18px;
