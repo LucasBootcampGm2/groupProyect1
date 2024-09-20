@@ -10,9 +10,15 @@ let user = JSON.parse(localStorage.getItem("user"));
 
 let selectedDifficulty = localStorage.getItem("difficulty");
 
-let correctAnswers = user.correctAnswers;
-let wrongAnswers = user.wrongAnswers;
-let skippedAnswers = user.skippedAnswers;
+let correctAnswers = user.answers.filter(function(answer) {
+  return answer === "correct";
+}).length;
+let wrongAnswers = user.answers.filter(function(answer) {
+  return answer === "incorrect";
+}).length;
+let skippedAnswers = user.answers.filter(function(answer) {
+  return answer === "skipped";
+}).length;
 
 let totalQuestions = correctAnswers + wrongAnswers + skippedAnswers;
 let correctValue = points.valuesCorrect[selectedDifficulty];
