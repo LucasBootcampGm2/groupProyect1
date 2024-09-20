@@ -1,3 +1,119 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #242424;   
+    color: white;
+}
+
+header{
+    background: #420080;
+    padding: 40px 60px 70px;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+#container-answers-button {
+    margin: 30px 0px;
+    width: 230px;
+    height: 430px;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: #e293dd2e;
+    top:-20px
+}
+
+#container-answers h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container-content{
+height: 300px;
+}
+
+#container-separation {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    width: 180px;
+    margin: 80px 0 0 0;
+    border-style: solid;
+    border-radius: 20%;
+}
+
+#container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+#button-next-answer {
+    border-style: none;
+    border-radius:30px;
+    height: 25px;
+    width: 100px;
+    background-color: #f5f5dc;
+}
+
+#button-prev-answer {
+    border-style: none;
+    border-radius:30px;
+    height: 25px;
+    width: 100px;
+    background-color: #f5f5dc;
+}
+
+#container-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:80px 0 0 0 ;
+    gap:20px;
+}
+
+#container-links i {
+    font-size: 30px;
+}
+
+.link-option {
+    background-color:#f5f5dc;
+    border-radius: 100%;
+    border-style: none;
+    padding: 15px;
+}
+
+.container-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-link p {
+color: white;
+}
+
 /* CAMBIOS CUANDO SE AGREGA UNA CLASE  */
 
 .flex {
@@ -16,83 +132,71 @@
     display: none;
 }
 
-/*Servicios largos y extra largos, laptos, desktops (1200px para arriba)*/
-@media only screen and (min-width: 1200px) {
-    body {
-        margin: 0;
-        box-sizing: border-box;
-        background-color: #242424;   
-        color: white;
-    }
-
-    header{
-        background: #420080;
-        padding: 40px 60px 70px;
-        border-bottom-right-radius: 100%;
-        border-bottom-left-radius: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
+@media  (min-width: 768px) {
     
     #container-answers-button {
-        margin: 30px 0px;
-        width: 800px;
-        height: 330px;
-        padding: 30px;
-        border-radius: 30px;
-        background-color: #e293dd2e;
-        top:-20px;
-    }
+        width: 600px;
+        height: 340px;
+    }    
     
-    #container-answers h2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-
     #container-content {
-        height: 200px;
+        height: 220px;
     }
-
+    
     #container-separation {
-        display: flex;
-        flex-direction: center;
-        justify-content: center;
         margin: 40px;
     }
     
     hr {
-        width: 500px;
-        border-style: solid;
-        border-radius: 20%;
+        width: 450px;
+        margin: 20px;
     }
     
     #container-button {
+        gap: 100px;
+    }
+    
+    
+    #container-links {
+        padding:50px 0 ;
+        gap:60px;
+        flex-direction: row;
+    }
+    
+    #container-links i {
+        font-size: 50px;
+    }
+    
+    .container-link{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 100px;
-        padding: 20px 30px;
+    }
+    
+    .container-link p {
+        color: white;
+    }
+}
+/*Servicios largos y extra largos, laptos, desktops (1200px para arriba)*/
+@media (min-width: 1200px) {
+
+    #container-answers-button {
+        width: 800px;
+        height: 330px;
+    }
+
+    #container-content {
+        height: 200px;
+    }
+    
+    hr {
+        width: 500px;
     }
     
     /* solo para computadora las sombras  */
     
     #button-next-answer {
-        border-style: none;
-        border-radius:30px;
-        height: 25px;
-        width: 100px;
-        background-color: #f5f5dc;
         transition: box-shadow 0.2s ease-in-out;
     }
     
@@ -102,11 +206,6 @@
     }
 
     #button-prev-answer {
-        border-style: none;
-        border-radius:30px;
-        height: 25px;
-        width: 100px;
-        background-color: #f5f5dc;
         transition: box-shadow 0.2s ease-in-out;
     }
     
@@ -118,22 +217,11 @@
     /* hasta aca las sombras */
     
     #container-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         padding:20px 0 ;
         gap:60px;
     }
     
-    #container-links i {
-        font-size: 50px;
-    }
-    
     .link-option {
-        background-color:#f5f5dc;
-        border-radius: 100%;
-        border-style: none;
-        padding: 15px;
         transition: box-shadow 0.2s ease-in;
         cursor: pointer;
     }
@@ -142,254 +230,4 @@
         box-shadow: 2px 5px 50px #f5f5dc;
     }
     
-    .container-link{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .container-link p {
-        color: white;
-    }
-
-}
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-    body {
-        margin: 0;
-        box-sizing: border-box;
-        background-color: #242424;   
-        color: white;
-    }
-
-    header{
-        background: #420080;
-        padding: 40px 60px 70px;
-        border-bottom-right-radius: 100%;
-        border-bottom-left-radius: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    #container-answers-button {
-        margin: 30px 0px;
-        width: 600px;
-        height: 340px;
-        padding: 30px;
-        border-radius: 30px;
-        background-color: #e293dd2e;
-        top:-20px
-    }
-
-    #container-answers h2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #container-content {
-        height: 220px;
-    }
-    
-    #container-separation {
-        display: flex;
-        justify-content: center;
-        margin: 40px;
-    }
-
-    hr {
-        margin: 0;
-        width: 450px;
-        margin: 20px;
-        border-style: solid;
-        border-radius: 20%;
-    }
-
-    #container-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 100px;
-        padding: 20px 30px;
-    }
-
-    #button-next-answer {
-        border-style: none;
-        border-radius:30px;
-        height: 25px;
-        width: 100px;
-        background-color: #f5f5dc;
-    }
-    #button-prev-answer {
-        border-style: none;
-        border-radius:30px;
-        height: 25px;
-        width: 100px;
-        background-color: #f5f5dc;
-    }
-    
-
-    #container-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding:50px 0 ;
-        gap:60px;
-    }
-
-    #container-links i {
-        font-size: 50px;
-    }
-
-    .link-option {
-        background-color:#f5f5dc;
-        border-radius: 100%;
-        border-style: none;
-        padding: 15px;
-    }
-
-    .container-link{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container-link p {
-    color: white;
-    }
-}
-
-
-@media only screen and (max-width: 767px) {
-
-    body {
-        margin: 0;
-        box-sizing: border-box;
-        background-color: #242424;   
-        color: white;
-    }
-
-    header{
-        background: #420080;
-        padding: 40px 60px 70px;
-        border-bottom-right-radius: 100%;
-        border-bottom-left-radius: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    h1 {
-        text-align: center;
-    }
-
-
-    #container-answers-button {
-        margin: 30px 0px;
-        width: 230px;
-        height: 430px;
-        padding: 30px;
-        border-radius: 30px;
-        background-color: #e293dd2e;
-        top:-20px
-    }
-
-    #container-answers h2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #container-content{
-    height: 300px;
-    }
-
-    #container-separation {
-        display: flex;
-        justify-content: center;
-    }
-
-    hr {
-        width: 180px;
-        margin: 80px 0 0 0;
-        border-style: solid;
-        border-radius: 20%;
-    }
-
-    #container-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px 30px;
-    }
-
-    #button-next-answer {
-        border-style: none;
-        border-radius:30px;
-        height: 25px;
-        width: 100px;
-        background-color: #f5f5dc;
-    }
-
-    #button-prev-answer {
-        border-style: none;
-        border-radius:30px;
-        height: 25px;
-        width: 100px;
-        background-color: #f5f5dc;
-    }
-
-    #container-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding:80px 0 0 0 ;
-        gap:20px;
-    }
-
-    #container-links i {
-        font-size: 30px;
-    }
-
-    .link-option {
-        background-color:#f5f5dc;
-        border-radius: 100%;
-        border-style: none;
-        padding: 15px;
-    }
-
-    .container-link{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container-link p {
-    color: white;
-    }
 }
