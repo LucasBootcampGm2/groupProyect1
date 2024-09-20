@@ -21,7 +21,7 @@ let progress = 0;
 
 let userObject = {
   userName: "unknown",
-  answers: []
+  answers: [],
 };
 
 function getCategory() {
@@ -33,7 +33,7 @@ function getDifficulty(questionsByCategory) {
 }
 
 let filteredQuestions = getDifficulty(getCategory());
-let shuffledQuestions = shuffle(filteredQuestions);
+let shuffledQuestions = [];
 localStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
 
 function resetBtnColors() {
@@ -56,7 +56,7 @@ function nextQuestion() {
     (question, index) => !alreadyAsked.includes(index)
   );
   alreadyAsked.push(nextQuestionIndex);
-  console.log(alreadyAsked)
+  console.log(alreadyAsked);
   return shuffledQuestions[nextQuestionIndex];
 }
 
@@ -69,21 +69,32 @@ function showAnswers(question) {
   let correctAnswer = question.correct;
   let incorrectAnswers = question.incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
-  allAnswers = shuffle(allAnswers);
+  allAnswers = shuffleAnswers(allAnswers);
   for (let i = 0; i < allAnswers.length; i++) {
     let answerDiv = document.getElementById("answer-" + (i + 1));
     answerDiv.querySelector("p").textContent = allAnswers[i];
   }
 }
 
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
+function shuffleAnswers(answers) {
+  for (let i = answers.length - 1; i > 0; i--) {
     let rand = Math.floor(Math.random() * (i + 1));
-    let temporary = array[i];
-    array[i] = array[rand];
-    array[rand] = temporary;
+    let temporary = answers[i];
+    answers[i] = answers[rand];
+    answers[rand] = temporary;
   }
-  return array;
+  return answers;
+}
+
+function shuffleQuestions(questions) {
+  for (
+    let i = questions.length - 1; i >= questions.length - questionsCount; i--) {
+    let rand = Math.floor(Math.random() * (i + 1));
+    let temporary = questions[i];
+    questions[i] = questions[rand];
+    questions[rand] = temporary;
+  }
+  return questions.slice(questions.length - questionsCount);
 }
 
 function loadButtons() {
@@ -250,6 +261,7 @@ window.addEventListener("load", function () {
       questionsCount = 25;
       break;
   }
+  shuffledQuestions = shuffleQuestions(filteredQuestions);
   setTimer();
   loadButtons();
   loadQuiz();
