@@ -16,8 +16,8 @@ let youAnswer = document.querySelector(".you-answer");
 let buttonNextAnswers = document.getElementById("button-next-answer");
 let buttonPrevAnswers = document.getElementById("button-prev-answer");
 
-let selectedCategory = "science";
-let selectedDifficulty = "easy";
+let selectedCategory = localStorage.getItem("category");
+let selectedDifficulty = localStorage.getItem("difficulty");
 
 function getCategory() {
   return questions[selectedCategory];
@@ -55,44 +55,31 @@ function prevAnswer() {
 
 function showInformation() {
   numberQuestion.textContent = `Question #${index + 1}`;
-  textQuestion.textContent = `Pregunta: ${finalQuestions[index].question}`;
-  correctAnswer.textContent = `Respuesta correcta: ${finalQuestions[index].correct}`;
-  explanationAnswer.textContent = `Explicacion: ${finalQuestions[index].explanation}`;
-  youAnswer.textContent = `Tu respuesta: ${finalAnswer}`;
-}
-
-function addOrQuitClass() {
-  containerContent.classList.toggle("flex");
-  numberQuestion.classList.toggle("center");
-  textQuestion.classList.toggle("hide");
-  correctAnswer.classList.toggle("hide");
-  explanationAnswer.classList.toggle("hide");
-  youAnswer.classList.toggle("hide");
-  buttonNextAnswers.classList.toggle("hide");
+  textQuestion.textContent = `Question: ${finalQuestions[index].question}`;
+  correctAnswer.textContent = `Correct answer: ${finalQuestions[index].correct}`;
+  explanationAnswer.textContent = `Explanation: ${finalQuestions[index].explanation}`;
+  youAnswer.textContent = `Your answer: ${finalAnswer}`;
 }
 
 function loadAnswers() {
   console.log({ index, finalQuestions });
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
-    showInformation();
-    appendInformation();
-  } else if (index < finalQuestions.length) {
+  } else if (index < finalQuestions.length - 1) {
     buttonPrevAnswers.style.display = "block";
-    showInformation();
-    appendInformation();
-  } else if (index === 10) {
-    addOrQuitClass();
-    numberQuestion.textContent = "NO HAY MAS PREGUNTAS :((";
+  } else if (index === finalQuestions.length - 1) {
+    buttonNextAnswers.style.display = 'none'
   }
+  showInformation();
+  appendInformation();
 }
 
 function loadPrevAnswers() {
   console.log({ index, finalQuestions });
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
-  } else if (index === 9) {
-    addOrQuitClass();
+  } else if (index === finalQuestions.length - 2) {
+    buttonNextAnswers.style.display = 'block'
   }
   showInformation();
   appendInformation();
