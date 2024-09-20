@@ -27,7 +27,7 @@ let wrongValue = points.valuesIncorrect[selectedDifficulty];
 function numberOfQuestions(correct, wrong, skip) {
   document.querySelector(".correct-number").textContent = correct;
   document.querySelector(".wrong-number").textContent = wrong;
-  document.querySelector(".skip-number").textContent = skip;
+  document.querySelector(".skipped-number").textContent = skip;
 }
 
 function finalScore(correct, wrong) {
