@@ -21,9 +21,7 @@ let progress = 0;
 
 let userObject = {
   userName: "unknown",
-  correctAnswers: 0,
-  wrongAnswers: 0,
-  skippedAnswers: 0,
+  answers: [],
 };
 
 function getCategory() {
@@ -34,7 +32,9 @@ function getDifficulty(questionsByCategory) {
   return questionsByCategory[selectedDifficulty];
 }
 
-let finalQuestions = getDifficulty(getCategory());
+let filteredQuestions = getDifficulty(getCategory());
+let shuffledQuestions = [];
+localStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
 
 function resetBtnColors() {
   let buttons = document.querySelectorAll(".answer");
@@ -51,19 +51,16 @@ function showAllButtons() {
   });
 }
 
-function selectRandomQuestion() {
-  let random = 0;
-  do {
-    random = Math.floor(Math.random() * questionsCount);
-  } while (alreadyAsked.includes(random));
-  alreadyAsked.push(random);
-  return finalQuestions[random];
+function nextQuestion() {
+  let nextQuestionIndex = shuffledQuestions.findIndex(
+    (question, index) => !alreadyAsked.includes(index)
+  );
+  alreadyAsked.push(nextQuestionIndex);
+  console.log(alreadyAsked);
+  return shuffledQuestions[nextQuestionIndex];
 }
 
 function showQuestion(question) {
-  if (!question) {
-    console.log("pregunta no encontrada");
-  }
   let container = document.querySelector(".question");
   container.textContent = question.question;
 }
@@ -72,14 +69,14 @@ function showAnswers(question) {
   let correctAnswer = question.correct;
   let incorrectAnswers = question.incorrect;
   let allAnswers = [correctAnswer, ...incorrectAnswers];
-  allAnswers = shuffle(allAnswers);
+  allAnswers = shuffleAnswers(allAnswers);
   for (let i = 0; i < allAnswers.length; i++) {
     let answerDiv = document.getElementById("answer-" + (i + 1));
     answerDiv.querySelector("p").textContent = allAnswers[i];
   }
 }
 
-function shuffle(answers) {
+function shuffleAnswers(answers) {
   for (let i = answers.length - 1; i > 0; i--) {
     let rand = Math.floor(Math.random() * (i + 1));
     let temporary = answers[i];
@@ -87,6 +84,17 @@ function shuffle(answers) {
     answers[rand] = temporary;
   }
   return answers;
+}
+
+function shuffleQuestions(questions) {
+  for (
+    let i = questions.length - 1; i >= questions.length - questionsCount; i--) {
+    let rand = Math.floor(Math.random() * (i + 1));
+    let temporary = questions[i];
+    questions[i] = questions[rand];
+    questions[rand] = temporary;
+  }
+  return questions.slice(questions.length - questionsCount);
 }
 
 function loadButtons() {
@@ -109,12 +117,12 @@ function loadButtons() {
 function isCorrect(answer, question, button) {
   if (answer.trim() === question.correct.trim()) {
     button.classList.add("answer-correct");
-    userObject.correctAnswers += 1;
+    userObject.answers.push("correct");
   } else {
     let correctBtn = findCorrectBtn(question.correct);
     correctBtn.classList.add("answer-correct");
     button.classList.add("answer-incorrect");
-    userObject.wrongAnswers += 1;
+    userObject.answers.push("incorrect");
   }
   countAnswersVerification();
 }
@@ -135,7 +143,7 @@ function loadQuiz() {
     document.getElementById("container-answers").style.display = "none";
     return;
   }
-  let question = selectRandomQuestion();
+  let question = nextQuestion();
   showQuestion(question);
   showAnswers(question);
   showAllButtons();
@@ -144,7 +152,7 @@ function loadQuiz() {
 
 function runOutOfTime() {
   alreadyAnswered = true;
-  userObject.wrongAnswers += 1;
+  userObject.answers.push("incorrect");
   let question = findQuestion();
   let correctBtn = findCorrectBtn(question.correct);
   correctBtn.classList.add("answer-correct");
@@ -178,7 +186,7 @@ function setTimer() {
 
 function findQuestion() {
   let questionText = document.querySelector(".question").textContent;
-  return finalQuestions.find(function (q) {
+  return shuffledQuestions.find(function (q) {
     return q.question === questionText;
   });
 }
@@ -192,7 +200,7 @@ function changeButton() {
 continueBtn.addEventListener("click", function () {
   explanationContainer.classList.add("hide-explanation");
   if (continueBtn.textContent.trim() === "Skip") {
-    userObject.skippedAnswers += 1;
+    userObject.answers.push("skipped");
   }
   if (continueBtn.textContent.trim() === "Next") {
     changeButton();
@@ -253,6 +261,7 @@ window.addEventListener("load", function () {
       questionsCount = 25;
       break;
   }
+  shuffledQuestions = shuffleQuestions(filteredQuestions);
   setTimer();
   loadButtons();
   loadQuiz();
