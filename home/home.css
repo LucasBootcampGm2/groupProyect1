@@ -96,11 +96,12 @@ input#username::placeholder {
 .quiz-selection-buttons {
   border-radius: 30px;
   border: none;
-  background-color: white;
+  background-color: #010137;
   box-shadow: 0 0 15px 0px #fd07ff;
   width: 50%;
   padding: 5px;
   max-width: 300px;
+  color: white;
 }
 
 #section-quiz-mode {
@@ -144,8 +145,9 @@ footer {
   justify-content: center;
   padding: 10px 30px;
   border-radius: 5px;
-  background-color: #4d4de7;
+  background-color: #010137;
   color: white;
+  box-shadow: 0 0 5px 0 #fd07ff;
 }
 
 #difficulty-button {
