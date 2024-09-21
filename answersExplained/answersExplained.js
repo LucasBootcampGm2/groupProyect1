@@ -24,6 +24,13 @@ let buttonPrevAnswers = document.getElementById("button-prev-answer");
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
 
+function pageError (){
+  if (localStorage.length === 0){
+    window.location.replace("../notFoundPage/notFoundPage.html");
+  }
+}
+pageError();
+
 function getCategory() {
   return questions[selectedCategory];
 }
