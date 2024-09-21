@@ -1,5 +1,6 @@
 
 body {
+    font-family: "Anek Bangla", sans-serif;
     margin: 0;
     box-sizing: border-box;
     background-color: #242424;   
@@ -12,8 +13,7 @@ main{
 }
 
 header{
-    background: #420080;
-    padding: 40px 60px 40px;
+    padding: 20px 60px 30px;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     display: flex;
@@ -84,8 +84,8 @@ font-size: 20px;
 #container-results {
     padding: 40px 0 30px 0;
     border-radius: 30px;
-    height: 140px;
-    width: 274px;
+    height: 170px;
+    width: 275px;
     background-color: white;
     display: flex;
     justify-content: space-around;
@@ -208,7 +208,7 @@ color: white;
     }
     
     #container-results {
-        height: 160px;
+        height: 190px;
         width: 380px;
     }
     
@@ -259,18 +259,6 @@ color: white;
 
 /*Servicios largos y extra largos, laptos, desktops (1200px para arriba)*/
 @media (min-width: 1200px) {
-
-    header{
-        padding: 40px 0px 20px 0px;
-    }
-
-    .score{
-        font-size: 25px;
-    }
-
-    hr {    
-        width: 700px;
-    }
 
     .link-option {
         transition: box-shadow 0.2s ease-in;
