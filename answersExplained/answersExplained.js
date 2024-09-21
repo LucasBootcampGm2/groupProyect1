@@ -60,9 +60,9 @@ function prevAnswer() {
 
 function showInformation() {
   numberQuestion.textContent = `Question #${index + 1}`;
-  textQuestion.textContent = `Question: ${finalQuestions[index].question}`;
+  textQuestion.textContent = `${finalQuestions[index].question}`;
   correctAnswer.textContent = `Correct answer: ${finalQuestions[index].correct}`;
-  explanationAnswer.textContent = `Explanation: ${finalQuestions[index].explanation}`;
+  explanationAnswer.textContent = finalQuestions[index].explanation;
   youAnswer.textContent = `Your answer: ${finalAnswer}`;
 }
 
