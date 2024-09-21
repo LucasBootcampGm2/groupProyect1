@@ -2919,18 +2919,27 @@ export let questions = {
       },
     ],
   },
-}
+};
 
 export let points = {
   valuesCorrect: { easy: 5, medium: 10, hard: 15 },
   valuesIncorrect: { easy: -2, medium: -5, hard: -10 },
-}
+};
 
 export let colors = {
   science: "#00804a",
-  entertainment: "#fb0099",
-  history: "#fff121",
-  geography: "#1936d2",
-  art: "#e30000",
+  entertainment: "#9d0260",
+  history: "#e5e020",
+  geography: "#051985",
+  art: "#890303",
   sport: "#ff6c00",
-}
+};
+
+export let subColors = {
+  science: "#62d6703d",
+  entertainment: "#d662ab2b",
+  history: "#f7e9382b",
+  geography: "#6279d62e",
+  art: "#d82b2b2e",
+  sport: "#ff950063",
+};

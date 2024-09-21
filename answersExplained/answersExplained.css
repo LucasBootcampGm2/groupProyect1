@@ -1,4 +1,6 @@
+
 body {
+    font-family: "Anek Bangla", sans-serif;
     margin: 0;
     box-sizing: border-box;
     background-color: #242424;   
@@ -6,7 +8,6 @@ body {
 }
 
 header{
-    background: #420080;
     padding: 40px 60px 70px;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
@@ -24,16 +25,16 @@ main {
 
 h1 {
     text-align: center;
+    margin: 0;
 }
 
 
 #container-answers-button {
     margin: 30px 0px;
     width: 230px;
-    height: 430px;
+    height: 480px;
     padding: 30px;
     border-radius: 30px;
-    background-color: #e293dd2e;
     top:-20px
 }
 
@@ -41,10 +42,11 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 #container-content{
-height: 300px;
+height: 370px;
 }
 
 #container-separation {
@@ -53,10 +55,10 @@ height: 300px;
 }
 
 hr {
-    width: 180px;
-    margin: 80px 0 0 0;
+    width: 250px;
     border-style: solid;
     border-radius: 20%;
+    margin: 30px 0 0 0;
 }
 
 #container-button {
@@ -64,7 +66,7 @@ hr {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 20px 30px;
+    padding: 30px 30px;
 }
 
 #button-next-answer {
@@ -83,12 +85,19 @@ hr {
     background-color: #f5f5dc;
 }
 
+#container-links-full{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 #container-links {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding:80px 0 0 0 ;
+    padding:40px 0 0 0 ;
     gap:20px;
 }
 
@@ -96,18 +105,26 @@ hr {
     font-size: 30px;
 }
 
+
 .link-option {
     background-color:#f5f5dc;
     border-radius: 100%;
     border-style: none;
-    padding: 15px;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 60px;
+    width: 60px;
+}   
 
 .container-link{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 130px;
+    height: 130px;
 }
 
 .container-link p {
@@ -136,20 +153,20 @@ color: white;
     
     #container-answers-button {
         width: 600px;
-        height: 340px;
+        height: 360px;
     }    
     
     #container-content {
-        height: 220px;
+        height: 250px;
     }
     
     #container-separation {
-        margin: 40px;
+        margin: 30px;
     }
     
     hr {
-        width: 450px;
-        margin: 20px;
+        width: 550px;
+        margin: 0px;
     }
     
     #container-button {
@@ -159,7 +176,7 @@ color: white;
     
     #container-links {
         padding:50px 0 ;
-        gap:60px;
+        gap:10px;
         flex-direction: row;
     }
     
@@ -173,7 +190,16 @@ color: white;
         align-items: center;
         justify-content: center;
     }
+
+    .container-link p{
+       margin: 20px 0 0 0;
+    }
     
+    .link-option {
+        height: 80px;
+        width: 80px;
+    }   
+        
     .container-link p {
         color: white;
     }
@@ -183,15 +209,15 @@ color: white;
 
     #container-answers-button {
         width: 800px;
-        height: 330px;
+        height: 350px;
     }
 
     #container-content {
-        height: 200px;
+        height: 240px;
     }
     
     hr {
-        width: 500px;
+        width: 600px;
     }
     
     /* solo para computadora las sombras  */
@@ -217,8 +243,8 @@ color: white;
     /* hasta aca las sombras */
     
     #container-links {
-        padding:20px 0 ;
-        gap:60px;
+        padding:45px 0 ;
+        gap:10px;
     }
     
     .link-option {

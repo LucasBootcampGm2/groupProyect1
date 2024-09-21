@@ -4,6 +4,11 @@
 
 // // let answer = localStorage.getItem("answer");
 import { questions } from "../questionBank.js";
+import { colors } from "../questionBank.js";
+import { subColors } from "../questionBank.js";
+
+let backgroundColor = document.querySelector(".background-color");
+let subBackgroundColor = document.getElementById("container-answers-button");
 
 let answers = document.getElementById("container-answers");
 let containerContent = document.getElementById("container-content");
@@ -55,9 +60,9 @@ function prevAnswer() {
 
 function showInformation() {
   numberQuestion.textContent = `Question #${index + 1}`;
-  textQuestion.textContent = `Question: ${finalQuestions[index].question}`;
+  textQuestion.textContent = `${finalQuestions[index].question}`;
   correctAnswer.textContent = `Correct answer: ${finalQuestions[index].correct}`;
-  explanationAnswer.textContent = `Explanation: ${finalQuestions[index].explanation}`;
+  explanationAnswer.textContent = finalQuestions[index].explanation;
   youAnswer.textContent = `Your answer: ${finalAnswer}`;
 }
 
@@ -68,7 +73,7 @@ function loadAnswers() {
   } else if (index < finalQuestions.length - 1) {
     buttonPrevAnswers.style.display = "block";
   } else if (index === finalQuestions.length - 1) {
-    buttonNextAnswers.style.display = 'none'
+    buttonNextAnswers.style.display = "none";
   }
   showInformation();
   appendInformation();
@@ -79,7 +84,7 @@ function loadPrevAnswers() {
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
   } else if (index === finalQuestions.length - 2) {
-    buttonNextAnswers.style.display = 'block'
+    buttonNextAnswers.style.display = "block";
   }
   showInformation();
   appendInformation();
@@ -105,7 +110,17 @@ function colorAnswer() {
   }
 }
 
+function changeColorCategory() {
+  backgroundColor.style.backgroundColor = colors[selectedCategory];
+}
+
+function subChangeColorCategory() {
+  subBackgroundColor.style.backgroundColor = subColors[selectedCategory];
+}
+
 window.addEventListener("load", function () {
   loadAnswers();
   colorAnswer();
+  changeColorCategory();
+  subChangeColorCategory();
 });
