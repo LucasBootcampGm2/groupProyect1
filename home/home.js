@@ -4,6 +4,9 @@ let button = document.querySelector(".buttonSubmit")
 let header = document.querySelector(".header")
 let sectionQuizMode = document.getElementById("section-quiz-mode")
 let containerSpans = document.querySelector(".container-spans")
+let footer = document.querySelector(".footer")
+let backCategoryButton = document.getElementById("back-category")
+let backDifficultyButton = document.getElementById("back-difficulty")
 let userObject = {}
 
 let categories = Object.keys(questions)
@@ -35,6 +38,7 @@ button.addEventListener("click", function () {
   }, 1000)
 
   setCategory()
+  footer.style.display = "flex"
 })
 
 function saveDifficulties() {
@@ -110,8 +114,12 @@ function addCategoryButtons() {
       ]
     )
 
-    let newH4 = createCompleteElement("h4", ["quiz-h4"], [""], category)
-    console.log(typeof newH4.textContent)
+    let newH4 = createCompleteElement(
+      "h4",
+      ["quiz-h4"],
+      [""],
+      category.toUpperCase()
+    )
     newButton.append(newImg)
     newButton.append(newH4)
     sectionQuizMode.append(newButton)
@@ -156,7 +164,12 @@ function addDifficultyButtons() {
 
     newButton.append(newImg)
 
-    let newH4 = createCompleteElement("h4", ["quiz-h4"], [], categoryDifficulty)
+    let newH4 = createCompleteElement(
+      "h4",
+      ["quiz-h4"],
+      [],
+      categoryDifficulty.toUpperCase()
+    )
 
     newButton.append(newH4)
 
@@ -171,6 +184,12 @@ function appearDifficultyButtons() {
 }
 
 function disappearDifficultyButtons() {
+  getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
+    difficulty.style.display = "none"
+  })
+}
+
+function removeDifficultyButtons() {
   getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
     difficulty.remove()
   })
@@ -197,12 +216,18 @@ function completeSpan(selection) {
 function setCategory() {
   getElementByQuery(".quiz-category-buttons").forEach(function (category) {
     category.addEventListener("click", function () {
-      localStorage.setItem("category", `${category.textContent}`)
+      localStorage.setItem("category", `${category.textContent}`.toLowerCase())
+      removeDifficultyButtons()
       addDifficultyButtons()
       appearDifficultyButtons()
+      document.getElementById("category-h2").style.display = "none"
+      document.getElementById("difficulty-h2").style.display = "block"
       disappearCategoryButtons()
       completeSpan("category")
       appearStartButton()
+      backButtonsClick()
+      appearBackButton("category")
+      backDifficultyButton.style.display = "none"
       setDifficulty()
     })
   })
@@ -212,9 +237,14 @@ function setDifficulty() {
   getElementByQuery(".quiz-difficulty-buttons").forEach(function (difficulty) {
     difficulty.addEventListener("click", function () {
       let text = difficulty.querySelector(".quiz-h4")
-      localStorage.setItem("difficulty", `${text.textContent}`)
+      localStorage.setItem("difficulty", `${text.textContent}`.toLowerCase())
       completeSpan("difficulty")
       appearStartButton()
+      document.getElementById("category-h2").style.display = "block"
+      document.getElementById("difficulty-h2").style.display = "none"
+      backButtonsClick()
+      appearBackButton("difficulty")
+      backButtonsClick.style.display = "none"
     })
   })
 }
@@ -223,6 +253,22 @@ function appearStartButton() {
   if (localStorage.getItem("category") && localStorage.getItem("difficulty")) {
     getElementByQuery(".start-button")[0].style.display = "flex"
   }
+}
+
+function backButtonsClick() {
+  backCategoryButton.addEventListener("click", function () {
+    disappearDifficultyButtons()
+    appearCategoryButtons()
+  })
+
+  backDifficultyButton.addEventListener("click", function () {
+    disappearCategoryButtons()
+    appearDifficultyButtons()
+  })
+}
+
+function appearBackButton(type) {
+  document.getElementById(`back-${type}`).style.display = "flex"
 }
 
 window.addEventListener("load", function () {

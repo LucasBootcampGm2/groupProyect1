@@ -1,6 +1,7 @@
 .body {
   background-color: #010137;
   color: white;
+  font-family: sans-serif;
 }
 
 #h1 {
@@ -22,8 +23,13 @@ h3 {
   text-shadow: 2px 1px #fd07ff;
 }
 
-h4 {
+h4,
+span {
   text-shadow: 1px 1px #fd07ff;
+}
+
+p {
+  font-size: 1em;
 }
 
 #modal {
@@ -120,7 +126,7 @@ input#username::placeholder {
   justify-content: center;
   gap: 35px;
   flex-wrap: wrap;
-  padding: 50px 20px;
+  padding: 50px 20px 0;
   display: flex;
   font-family: sans-serif;
 }
@@ -133,6 +139,7 @@ input#username::placeholder {
   border: none;
   box-shadow: 0 0 5px 0 #fd07ff;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .quiz-button:hover {
@@ -143,20 +150,34 @@ input#username::placeholder {
   width: 60px;
 }
 
-footer {
+#container-back-buttons {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 40px;
 }
 
+.back-buttons,
 .start-button {
   display: none;
   justify-content: center;
   padding: 10px 30px;
   border-radius: 5px;
-  background-color: #010137;
+  background-color: #420080;
   color: white;
   box-shadow: 0 0 5px 0 #fd07ff;
+  text-shadow: 1px 1px #fd07ff;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+}
+
+footer {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  gap: 40px;
 }
 
 .container-spans {

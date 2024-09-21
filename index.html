@@ -22,9 +22,6 @@
     <main id="main">
       <h2 id="category-h2" class="quiz-selection-h2">Select Category</h2>
       <h2 id="difficulty-h2" class="quiz-selection-h2">Select Difficulty</h2>
-      <section id="section-quiz-mode"></section>
-    </main>
-    <footer>
       <div class="container-spans">
         <p class="selection-p">
           Category:
@@ -35,9 +32,16 @@
           <span id="span-difficulty"></span>
         </p>
       </div>
-      <button class="start-button">
-        <a href="quizPage/questions.html">Start Button</a>
-      </button>
+      <section id="section-quiz-mode"></section>
+    </main>
+    <footer class="footer">
+      <div id="container-back-buttons">
+        <button id="back-category" class="back-buttons">Change Category</button>
+        <button id="back-difficulty" class="back-buttons">
+          Change difficulty
+        </button>
+      </div>
+      <a class="start-button" href="quizPage/questions.html">Start Playing</a>
     </footer>
     <script src="home/home.js" type="module"></script>
   </body>
