@@ -69,12 +69,6 @@ let userObject = JSON.parse(localStorage.getItem("user"))
 
 console.log("useObject from localstorage", userObject)
 
-function addUserName() {
-  userObject.userName = username.value
-  console.log(userObject)
-  localStorage.setItem("user", JSON.stringify(userObject))
-}
-
 function completeLocalStorageTable() {
   let newLeaderboard = leaderboardVerification()
   newLeaderboard[localStorage.getItem("category")][
@@ -284,7 +278,6 @@ button.addEventListener("click", function () {
     modal.style.display = "none"
     console.log(userObject)
 
-    addUserName()
     completeLocalStorageTable()
     leaderboard = leaderboardVerification()
 
