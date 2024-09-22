@@ -1,4 +1,4 @@
-import { questions } from "../questionBank.js";
+
 import { colors } from "../questionBank.js";
 import { subColors } from "../questionBank.js";
 
@@ -17,11 +17,14 @@ let buttonNextAnswers = document.getElementById("button-next-answer");
 let buttonPrevAnswers = document.getElementById("button-prev-answer");
 
 let selectedCategory = localStorage.getItem("category");
-let selectedDifficulty = localStorage.getItem("difficulty");
+
 let userObject = JSON.parse(localStorage.getItem("user"))
 console.log(userObject)
+
 let askedQuestions = JSON.parse(localStorage.getItem("askedQuestions"))
 console.log(askedQuestions)
+
+let finalAnswer = userObject.answers
 
 function pageError (){
   if (localStorage.length === 0){
@@ -59,7 +62,7 @@ function showInformation() {
   correctAnswer.textContent = `Correct answer: ${askedQuestions[index].correct}`;
   explanationAnswer.textContent = askedQuestions[index].explanation;
   colorAnswer()
-  youAnswer.textContent = `Your answer: ${userObject.answers[index]}`;
+  youAnswer.textContent = userObject.answers[index]
 }
 
 function loadAnswers() {
@@ -95,12 +98,15 @@ buttonPrevAnswers.addEventListener("click", function () {
 });
 
 function colorAnswer() {
-  if (userObject.answers[index] === "correct") {
-    youAnswer.style.color = "green";
-  } else if (userObject.answers[index] === "incorrect") {
-    youAnswer.style.color = "red";
-  } else if (userObject.answers[index] === "skipped") {
-    youAnswer.style.color = "grey";
+  if (finalAnswer[index] === "correct") {
+    youAnswer.style.backgroundColor = "#2bbc2b";
+    youAnswer.style.boxShadow = "1px 2px 25px #59754e"
+  } else if (finalAnswer[index] === "incorrect") {
+    youAnswer.style.backgroundColor = "#c21616";
+    youAnswer.style.boxShadow = "1px 2px 25px #614141"
+  } else if (finalAnswer[index] === "skipped") {
+    youAnswer.style.backgroundColor = "#6f6b6b";
+    youAnswer.style.boxShadow = "1px 2px 25px #8a6868"
   }
 }
 
