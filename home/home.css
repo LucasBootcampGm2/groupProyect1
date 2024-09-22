@@ -7,7 +7,6 @@
 #h1 {
   font-size: 3em;
   text-align: center;
-  padding: 50px 10px 30px;
   text-shadow: 2px 1px #fd07ff;
 }
 
@@ -97,7 +96,7 @@ input#username::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 40px 0 50px;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.8s ease;
