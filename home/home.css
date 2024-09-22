@@ -16,7 +16,7 @@ h2 {
 }
 
 h3 {
-  margin: 10px;
+  margin: 0;
   font-size: 1.75em;
   text-align: center;
   text-shadow: 2px 1px #fd07ff;
@@ -56,12 +56,12 @@ p {
 
 #modalContent {
   background-color: #420080;
-  padding: 20px 60px;
+  padding: 20px 40px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   box-shadow: 0 0 10px 0 #fd07ff;
   font-size: 0.8em;
 }
@@ -88,7 +88,6 @@ input#username::placeholder {
   background-color: #420080;
   color: white;
   border: none;
-  margin-top: 10px;
   box-shadow: 0 0 5px 0 #fd07ff;
 }
 
@@ -191,27 +190,56 @@ footer {
 
 @media (min-width: 768px) {
   #modalContent {
-    padding: 4%;
+    padding: 30px 60px;
   }
 
   #h1 {
     font-size: 2.5em;
   }
 
+  h3 {
+    font-size: 2.25em;
+  }
+
+  #modal input {
+    font-size: 1.25em;
+  }
+
+  #modal button {
+    font-size: 1.1em;
+  }
+
+  .header {
+    gap: 20px;
+  }
+
   .header img {
-    max-width: 150px;
+    max-width: 120px;
   }
 }
 @media (min-width: 1024px) {
   #modalContent {
-    padding: 3%;
+    gap: 30px;
   }
+
   #h1 {
     font-size: 3.5em;
   }
+
+  h3 {
+    font-size: 2.75em;
+  }
+
+  #modal input {
+    font-size: 1.5em;
+  }
+
+  #modal button {
+    font-size: 1.25em;
+  }
 }
 @media (min-width: 1440px) {
-  #modalContent {
-    padding: 2%;
+  #modal button {
+    font-size: 1.5em;
   }
 }
