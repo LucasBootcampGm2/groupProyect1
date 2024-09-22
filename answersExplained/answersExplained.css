@@ -16,7 +16,7 @@ body {
 }
 
 header{
-    padding: 40px 60px 50px;
+    padding: 50px 60px 50px;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
     display: flex;
@@ -228,9 +228,6 @@ color: white;
 /*Servicios largos y extra largos, laptos, desktops (1200px para arriba)*/
 @media (min-width: 1200px) {
 
-    header{
-        margin: 10px 0 0 0;
-    }
     #container-answers-button {
         width: 800px;
         height: 400px;
