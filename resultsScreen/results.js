@@ -67,8 +67,8 @@ function showCrown() {
 }
 
 function changeValuePoints() {
-  pCorrectAnswers.textContent = `(+${correctValue} pts)`;
-  pWrongAnswers.textContent = `(${wrongValue} pts)`;
+  pCorrectAnswers.textContent = `+${correctValue} pts`;
+  pWrongAnswers.textContent = `${wrongValue} pts`;
 }
 function changeColorCategory() {
   backgroundColor.style.backgroundColor = colors[selectedCategory];

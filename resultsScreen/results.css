@@ -120,43 +120,47 @@ font-size: 20px;
 #container-circle-correct{
     height: 60px;
     width: 60px;
-    background: #53F761;
+    background: #2bbc2b;
     border-radius: 100%;
-    box-shadow: 5px 5px 10px rgb(93 144 17);
+    box-shadow: 5px 5px 10px #959393;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight:bold;
 }
+
 #container-circle-skipped{
     height: 60px;
     width: 60px;
-    background: #796767;
+    background: #6f6b6b;
     border-radius: 100%;
-    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px #959393;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
+    font-weight:bold;
 }
 
 #container-circle-wrong{
     height: 60px;
     width: 60px;
-    background: #F75353;
-    box-shadow: 5px 5px 10px #5a0101;
+    background: #c21616;
+    box-shadow: 5px 5px 10px #959393;
     border-radius: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center;
+    font-weight:bold;
 }
 
 .container-options {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:20px 0 ;
+    padding:15px 0 0px 0;
     gap:20px;
 }
 
@@ -219,11 +223,12 @@ color: white;
     
     #container-results {
         height: 190px;
-        width: 380px;
+        width: 400px;
     }
     
     .container-answers {
-        width: 80px;
+        width: 120px;
+        height: 220px;
     }
     
     .container-answers p {
