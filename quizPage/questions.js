@@ -32,7 +32,6 @@ function getDifficulty(questionsByCategory) {
 
 let filteredQuestions = getDifficulty(getCategory())
 let shuffledQuestions = []
-localStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions))
 
 function resetBtnColors() {
   let buttons = document.querySelectorAll(".answer")
@@ -54,7 +53,6 @@ function nextQuestion() {
     (question, index) => !alreadyAsked.includes(index)
   )
   alreadyAsked.push(nextQuestionIndex)
-  console.log(alreadyAsked)
   return shuffledQuestions[nextQuestionIndex]
 }
 
@@ -217,7 +215,6 @@ function showExplanation(question) {
   explanationContainer.classList.remove("hide-explanation")
   let explanationText = document.getElementById("explanation")
   explanationText.textContent = question.explanation
-  console.log(userObject)
 }
 
 let percent = ""
@@ -264,6 +261,7 @@ window.addEventListener("load", function () {
       break
   }
   shuffledQuestions = shuffleQuestions(filteredQuestions)
+  localStorage.setItem("askedQuestions", JSON.stringify(shuffledQuestions))
   setTimer()
   loadButtons()
   loadQuiz()

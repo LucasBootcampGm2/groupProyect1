@@ -1,8 +1,3 @@
-// if (alreadyAsked.includes(finalQuestions[index].question === false)) {
-//   alreadyAsked.push(finalQuestions[index].question);
-// }
-
-// // let answer = localStorage.getItem("answer");
 import { questions } from "../questionBank.js";
 import { colors } from "../questionBank.js";
 import { subColors } from "../questionBank.js";
@@ -23,6 +18,10 @@ let buttonPrevAnswers = document.getElementById("button-prev-answer");
 
 let selectedCategory = localStorage.getItem("category");
 let selectedDifficulty = localStorage.getItem("difficulty");
+let userObject = JSON.parse(localStorage.getItem("user"))
+console.log(userObject)
+let askedQuestions = JSON.parse(localStorage.getItem("askedQuestions"))
+console.log(askedQuestions)
 
 function pageError (){
   if (localStorage.length === 0){
@@ -30,16 +29,6 @@ function pageError (){
   }
 }
 pageError();
-
-function getCategory() {
-  return questions[selectedCategory];
-}
-
-function getDifficulty(questionsByCategory) {
-  return questionsByCategory[selectedDifficulty];
-}
-
-let finalQuestions = getDifficulty(getCategory());
 
 function appendInformation() {
   answers.append(containerContent);
@@ -50,36 +39,35 @@ function appendInformation() {
   containerContent.append(youAnswer);
 }
 
-let finalAnswer = "Correct";
 let index = 0;
 
 function nextAnswer() {
-  if (index >= 0 && index < finalQuestions.length) {
+  if (index >= 0 && index < askedQuestions.length) {
     index++;
   }
 }
 
 function prevAnswer() {
-  if (index > 0 && index <= finalQuestions.length) {
+  if (index > 0 && index <= askedQuestions.length) {
     index--;
   }
 }
 
 function showInformation() {
   numberQuestion.textContent = `Question #${index + 1}`;
-  textQuestion.textContent = `${finalQuestions[index].question}`;
-  correctAnswer.textContent = `Correct answer: ${finalQuestions[index].correct}`;
-  explanationAnswer.textContent = finalQuestions[index].explanation;
-  youAnswer.textContent = `Your answer: ${finalAnswer}`;
+  textQuestion.textContent = `${askedQuestions[index].question}`;
+  correctAnswer.textContent = `Correct answer: ${askedQuestions[index].correct}`;
+  explanationAnswer.textContent = askedQuestions[index].explanation;
+  colorAnswer()
+  youAnswer.textContent = `Your answer: ${userObject.answers[index]}`;
 }
 
 function loadAnswers() {
-  console.log({ index, finalQuestions });
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
-  } else if (index < finalQuestions.length - 1) {
+  } else if (index < askedQuestions.length - 1) {
     buttonPrevAnswers.style.display = "block";
-  } else if (index === finalQuestions.length - 1) {
+  } else if (index === askedQuestions.length - 1) {
     buttonNextAnswers.style.display = "none";
   }
   showInformation();
@@ -87,10 +75,9 @@ function loadAnswers() {
 }
 
 function loadPrevAnswers() {
-  console.log({ index, finalQuestions });
   if (index === 0) {
     buttonPrevAnswers.style.display = "none";
-  } else if (index === finalQuestions.length - 2) {
+  } else if (index === askedQuestions.length - 2) {
     buttonNextAnswers.style.display = "block";
   }
   showInformation();
@@ -108,11 +95,11 @@ buttonPrevAnswers.addEventListener("click", function () {
 });
 
 function colorAnswer() {
-  if (finalAnswer === "Correct") {
+  if (userObject.answers[index] === "correct") {
     youAnswer.style.color = "green";
-  } else if (finalAnswer === "Wrong") {
+  } else if (userObject.answers[index] === "incorrect") {
     youAnswer.style.color = "red";
-  } else if (finalAnswer === "Skip") {
+  } else if (userObject.answers[index] === "skipped") {
     youAnswer.style.color = "grey";
   }
 }
