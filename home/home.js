@@ -1,12 +1,18 @@
 import { questions } from "../questionBank.js"
+
 let modal = document.getElementById("modal")
 let button = document.querySelector(".buttonSubmit")
+
 let header = document.querySelector(".header")
+let selectionH2 = document.querySelector(".quiz-selection-h2")
+
 let sectionQuizMode = document.getElementById("section-quiz-mode")
 let containerSpans = document.querySelector(".container-spans")
 let footer = document.querySelector(".footer")
+
 let backCategoryButton = document.getElementById("back-category")
 let backDifficultyButton = document.getElementById("back-difficulty")
+
 let userObject = {}
 
 let categories = Object.keys(questions)
@@ -220,15 +226,14 @@ function setCategory() {
       removeDifficultyButtons()
       addDifficultyButtons()
       appearDifficultyButtons()
-      document.getElementById("category-h2").style.display = "none"
-      document.getElementById("difficulty-h2").style.display = "block"
       disappearCategoryButtons()
       completeSpan("category")
       appearStartButton()
       backButtonsClick()
-      appearBackButton("category")
-      backDifficultyButton.style.display = "none"
       setDifficulty()
+      backDifficultyButton.style.display = "none"
+      backCategoryButton.style.display = "flex"
+      selectionH2.textContent = "Select Difficulty"
     })
   })
 }
@@ -240,11 +245,8 @@ function setDifficulty() {
       localStorage.setItem("difficulty", `${text.textContent}`.toLowerCase())
       completeSpan("difficulty")
       appearStartButton()
-      document.getElementById("category-h2").style.display = "block"
-      document.getElementById("difficulty-h2").style.display = "none"
-      backButtonsClick()
-      appearBackButton("difficulty")
-      backButtonsClick.style.display = "none"
+      backDifficultyButton.style.display = "none"
+      backCategoryButton.style.display = "flex"
     })
   })
 }
@@ -259,20 +261,23 @@ function backButtonsClick() {
   backCategoryButton.addEventListener("click", function () {
     disappearDifficultyButtons()
     appearCategoryButtons()
+    backDifficultyButton.style.display = "flex"
+    backCategoryButton.style.display = "none"
+    selectionH2.textContent = "Select Category"
   })
 
   backDifficultyButton.addEventListener("click", function () {
     disappearCategoryButtons()
     appearDifficultyButtons()
+    backDifficultyButton.style.display = "none"
+    backCategoryButton.style.display = "flex"
+    selectionH2.textContent = "Select Difficulty"
   })
-}
-
-function appearBackButton(type) {
-  document.getElementById(`back-${type}`).style.display = "flex"
 }
 
 window.addEventListener("load", function () {
   this.localStorage.clear()
+  backButtonsClick()
 
   setTimeout(function () {
     modal.classList.add("show")
