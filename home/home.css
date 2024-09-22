@@ -5,7 +5,7 @@
 }
 
 #h1 {
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   text-shadow: 2px 1px #fd07ff;
 }
@@ -17,7 +17,7 @@ h2 {
 
 h3 {
   margin: 10px;
-  font-size: 2em;
+  font-size: 1.75em;
   text-align: center;
   text-shadow: 2px 1px #fd07ff;
 }
@@ -56,14 +56,14 @@ p {
 
 #modalContent {
   background-color: #420080;
-  padding: 5%;
+  padding: 20px 60px;
   border-radius: 10px;
-  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   box-shadow: 0 0 10px 0 #fd07ff;
+  font-size: 0.8em;
 }
 
 #modal input {
@@ -102,10 +102,12 @@ input#username::placeholder {
   transition: opacity 0.5s ease, transform 0.8s ease;
   border-radius: 0 0 100% 100%;
   background-color: #420080;
+  gap: 15px;
 }
 
 .header img {
-  width: 200px;
+  width: 25%;
+  max-width: 100px;
 }
 
 #main {
@@ -191,10 +193,21 @@ footer {
   #modalContent {
     padding: 4%;
   }
+
+  #h1 {
+    font-size: 2.5em;
+  }
+
+  .header img {
+    max-width: 150px;
+  }
 }
 @media (min-width: 1024px) {
   #modalContent {
     padding: 3%;
+  }
+  #h1 {
+    font-size: 3.5em;
   }
 }
 @media (min-width: 1440px) {
