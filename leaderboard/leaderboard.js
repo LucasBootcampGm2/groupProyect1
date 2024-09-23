@@ -177,8 +177,57 @@ function completeHtmlTable() {
     ""
   )
 
-  main.append(table)
+  // Añadir las cabeceras de la tabla
+  let headerRow = document.createElement("tr")
+  const headers = ["Range", "Name", "Category", "Difficulty", "Points"]
+  headers.forEach((header) => {
+    let th = document.createElement("th")
+    th.textContent = header
+    headerRow.appendChild(th)
+  })
+  table.appendChild(headerRow)
 
+  // Añadir la fila inicial con los datos del usuario
+  if (userObject) {
+    const initialRow = document.createElement("tr")
+
+    let rangeCell = createCompleteElements("td", [], ["ranking"], "#1") // Cambiar según necesidad
+    let nameCell = createCompleteElements(
+      "td",
+      [],
+      ["user"],
+      userObject.userName
+    )
+    let categoryCell = createCompleteElements(
+      "td",
+      [],
+      [],
+      userObject.category || "N/A"
+    )
+    let difficultyCell = createCompleteElements(
+      "td",
+      [],
+      [],
+      userObject.difficulty || "N/A"
+    )
+    let pointsCell = createCompleteElements(
+      "td",
+      [],
+      ["points"],
+      userObject.totalPoints || 0
+    )
+
+    appendElements(initialRow, [
+      rangeCell,
+      nameCell,
+      categoryCell,
+      difficultyCell,
+      pointsCell,
+    ])
+    table.append(initialRow)
+  }
+
+  // Añadir los demás usuarios
   allUsers.forEach((user, idx) => {
     let newTr = document.createElement("tr")
 
@@ -186,11 +235,12 @@ function completeHtmlTable() {
       "td",
       [],
       ["ranking"],
-      `# ${idx + 1}`
+      `# ${idx + 2}` // Incrementa en 2 para que no colisione con la fila inicial
     )
 
     let newTdName = createCompleteElements("td", [], ["user"], user.userName)
-
+    let newTdCategory = createCompleteElements("td", [], [], user.category)
+    let newTdDifficulty = createCompleteElements("td", [], [], user.difficulty)
     let newTdPoints = createCompleteElements(
       "td",
       [],
@@ -198,13 +248,20 @@ function completeHtmlTable() {
       user.totalPoints
     )
 
-    appendElements(newTr, [newTdPosition, newTdName, newTdPoints])
-
+    appendElements(newTr, [
+      newTdPosition,
+      newTdName,
+      newTdCategory,
+      newTdDifficulty,
+      newTdPoints,
+    ])
     table.append(newTr)
   })
 
+  main.append(table)
   return allUsers
 }
+
 
 function createPageButtons() {
   let containerLinks = createCompleteElements("div", [], ["buttons"], "")
