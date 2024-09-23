@@ -225,9 +225,9 @@ width: max-content;
   margin: 20px 0px;
 }
 
-#custom-mesagge {
-  display: none;
+#custom-message {
   color: white;
+  font-size: 22px;
 }
 
 @media (min-width: 1024px) {

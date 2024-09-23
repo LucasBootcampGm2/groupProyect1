@@ -279,16 +279,6 @@ function finishQuiz() {
    document.querySelector('.purple-background').style.height = '200px'
 }
 
-function customMessage (totalPoints){
-  let customMessage = document.getElementById("custom-message")
-  if(totalPoints > correctValue * shuffledQuestions.length){
-    customMessage.textContent = "Congratulations you did very well!! :)"
-  }
- else if (totalPoints < correctValue * shuffledQuestions.length){
-  customMessage.textContent = "you even tried... :("
- }
-}
-
 function pushUserPointsToLeaderboard() {
   let leaderboard = JSON.parse(localStorage.getItem("leaderboard"))
   leaderboard = saveAllUsers(leaderboard)
@@ -318,6 +308,22 @@ function finalScore(correct, wrong) {
   
   customMessage(finalScore)
   userObject.totalPoints = finalScore;
+}
+
+function customMessage (totalPoints){
+  let customMessage = document.getElementById("custom-message")
+  if(totalPoints === correctValue * questionsCount){
+  customMessage.textContent = `Wow, a perfect score ${userObject.userName}... amazing :D`
+  }
+ else if (totalPoints > correctValue * (questionsCount/1.5)){
+  customMessage.textContent = `Congratulations ${userObject.userName}, you did very well :)`
+ }
+ else if (totalPoints > correctValue * (questionsCount/3)){
+  customMessage.textContent = `Well... I guess it's okay ${userObject.userName} :/`
+ }
+ else {
+  customMessage.textContent = `${userObject.userName} you didn't even try... :(`
+ }
 }
 
 window.addEventListener("load", function () {
