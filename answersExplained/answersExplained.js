@@ -18,20 +18,18 @@ let buttonPrevAnswers = document.getElementById("button-prev-answer");
 
 let selectedCategory = localStorage.getItem("category");
 
-let userObject = JSON.parse(localStorage.getItem("user"))
-console.log(userObject)
-
-let askedQuestions = JSON.parse(localStorage.getItem("askedQuestions"))
-console.log(askedQuestions)
-
-let finalAnswer = userObject.answers
-
 function pageError (){
   if (localStorage.length === 0){
     window.location.replace("../notFoundPage/notFoundPage.html");
   }
 }
 pageError();
+
+let userObject = JSON.parse(localStorage.getItem("user"))
+
+let askedQuestions = JSON.parse(localStorage.getItem("askedQuestions"))
+
+let finalAnswer = userObject.answers
 
 function appendInformation() {
   answers.append(containerContent);
