@@ -57,9 +57,9 @@ function prevAnswer() {
 }
 
 function showInformation() {
-  numberQuestion.textContent = `Question #${index + 1}`;
-  textQuestion.textContent = `${askedQuestions[index].question}`;
-  correctAnswer.textContent = `Correct answer: ${askedQuestions[index].correct}`;
+  numberQuestion.textContent = `Number #${index + 1}`;
+  textQuestion.textContent = askedQuestions[index].question;
+  correctAnswer.textContent = askedQuestions[index].correct;
   explanationAnswer.textContent = askedQuestions[index].explanation;
   colorAnswer()
   youAnswer.textContent = userObject.answers[index]
