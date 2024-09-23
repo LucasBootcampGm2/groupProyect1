@@ -14,6 +14,10 @@
   z-index: 1;
 }
 
+.question {
+  text-align: center;
+}
+
 #finish-quiz-title{
   display: none;
   color: white;
@@ -114,6 +118,7 @@
   border-radius: 20px;
   padding: 50px;
   background-color: #fff;
+  height: auto;
 }
 
 #container-answers {
@@ -125,6 +130,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
 }
 
 #container-page-links p{
@@ -178,7 +184,6 @@ color: white;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding-top: 60px;
 }
 .answer-explanation {
   background-color: #d2c6c6;

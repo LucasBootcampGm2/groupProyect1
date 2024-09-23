@@ -276,7 +276,17 @@ function finishQuiz() {
   document.querySelector(".answer-explanation").style.display = "none"
   document.getElementById("finish-quiz-title").style.display = "block"
   document.getElementById("container-page-links").style.display = "flex"
-  document.querySelector(".purple-background").style.height = "200px"
+   document.querySelector('.purple-background').style.height = '200px'
+}
+
+function customMessage (totalPoints){
+  let customMessage = document.getElementById("custom-message")
+  if(totalPoints > correctValue * shuffledQuestions.length){
+    customMessage.textContent = "Congratulations you did very well!! :)"
+  }
+ else if (totalPoints < correctValue * shuffledQuestions.length){
+  customMessage.textContent = "you even tried... :("
+ }
 }
 
 function pushUserPointsToLeaderboard() {
@@ -305,7 +315,9 @@ function finalScore(correct, wrong) {
   if (finalScore < 0) {
     finalScore = 0
   }
-  userObject.totalPoints = finalScore
+  
+  customMessage(finalScore)
+  userObject.totalPoints = finalScore;
 }
 
 window.addEventListener("load", function () {
