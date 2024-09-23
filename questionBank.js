@@ -3,718 +3,664 @@ export let questions = {
     easy: [
       {
         question:
-          "¿Qué parte de la planta absorbe agua y nutrientes del suelo?",
-        correct: "Las raíces",
-        incorrect: ["Las hojas", "El tallo", "Las flores"],
+          "What part of the plant absorbs water and nutrients from the soil?",
+        correct: "The roots",
+        incorrect: ["The leaves", "The stem", "The flowers"],
         explanation:
-          "Las raíces son responsables de absorber agua y nutrientes del suelo.",
+          "The roots are responsible for absorbing water and nutrients from the soil.",
       },
       {
         question:
-          "¿Cuál es el líquido esencial para la vida que cubre alrededor del 71% de la superficie de la Tierra?",
-        correct: "Agua",
-        incorrect: ["Oxygeno", "Hidrógeno", "Nitrógeno"],
+          "What is the essential liquid for life that covers around 71% of the Earth's surface?",
+        correct: "Water",
+        incorrect: ["Oxygen", "Hydrogen", "Nitrogen"],
         explanation:
-          "El agua es fundamental para todos los seres vivos y cubre la mayor parte de la superficie terrestre.",
+          "Water is essential for all living beings and covers most of the Earth's surface.",
       },
       {
-        question: "¿Qué tipo de energía se obtiene del viento?",
-        correct: "Energía eólica",
-        incorrect: [
-          "Energía solar",
-          "Energía geotérmica",
-          "Energía hidráulica",
-        ],
+        question: "What type of energy is obtained from the wind?",
+        correct: "Wind energy",
+        incorrect: ["Solar energy", "Geothermal energy", "Hydraulic energy"],
         explanation:
-          "La energía eólica se produce aprovechando la energía del viento mediante aerogeneradores.",
+          "Wind energy is produced by harnessing the energy of the wind through wind turbines.",
       },
       {
         question:
-          "¿Qué órgano en el cuerpo humano es responsable de la producción de insulina?",
-        correct: "Páncreas",
-        incorrect: ["Hígado", "Riñón", "Estómago"],
+          "Which organ in the human body is responsible for the production of insulin?",
+        correct: "Pancreas",
+        incorrect: ["Liver", "Kidney", "Stomach"],
         explanation:
-          "El páncreas produce insulina, una hormona crucial para regular los niveles de glucosa en la sangre.",
+          "The pancreas produces insulin, a crucial hormone for regulating blood sugar levels.",
       },
       {
-        question: "¿Qué tipo de animal es un delfín?",
-        correct: "Mamífero",
-        incorrect: ["Pez", "Reptil", "Anfibio"],
+        question: "What type of animal is a dolphin?",
+        correct: "Mammal",
+        incorrect: ["Fish", "Reptile", "Amphibian"],
         explanation:
-          "Los delfines son mamíferos marinos que pertenecen a la familia de los cetáceos y respiran aire a través de un orificio en la parte superior de su cabeza.",
+          "Dolphins are marine mammals that belong to the cetacean family and breathe air through a blowhole on the top of their heads.",
       },
       {
-        question: "¿Qué es una célula?",
-        correct: "La unidad básica de la vida.",
+        question: "What is a cell?",
+        correct: "The basic unit of life.",
         incorrect: [
-          "Un tipo de tejido.",
-          "Un órgano del cuerpo.",
-          "Una parte del sistema inmunológico.",
+          "A type of tissue.",
+          "An organ in the body.",
+          "A part of the immune system.",
         ],
         explanation:
-          "Una célula es la unidad estructural y funcional básica de todos los seres vivos, capaz de realizar funciones vitales de manera independiente.",
+          "A cell is the basic structural and functional unit of all living organisms, capable of performing vital functions independently.",
       },
       {
-        question: "¿Cuál es el planeta más cercano al sol?",
-        correct: "Mercurio",
-        incorrect: ["Venus", "Tierra", "Marte"],
+        question: "Which planet is closest to the sun?",
+        correct: "Mercury",
+        incorrect: ["Venus", "Earth", "Mars"],
         explanation:
-          "Mercurio es el planeta más cercano al sol y tiene una órbita muy rápida.",
+          "Mercury is the closest planet to the sun and has a very fast orbit.",
       },
       {
-        question: "¿Qué gas respiramos principalmente?",
-        correct: "Oxígeno",
-        incorrect: ["Dióxido de carbono", "Nitrógeno", "Hidrógeno"],
+        question: "What gas do we mainly breathe?",
+        correct: "Oxygen",
+        incorrect: ["Carbon dioxide", "Nitrogen", "Hydrogen"],
         explanation:
-          "El oxígeno es el gas que los seres humanos y otros organismos necesitan para respirar, y constituye aproximadamente el 21% del aire.",
+          "Oxygen is the gas that humans and other organisms need to breathe, and it makes up approximately 21% of the air.",
       },
       {
-        question: "¿Cuál es el órgano principal del sistema circulatorio?",
-        correct: "Corazón",
-        incorrect: ["Hígado", "Pulmones", "Riñones"],
+        question: "What is the main organ of the circulatory system?",
+        correct: "Heart",
+        incorrect: ["Liver", "Lungs", "Kidneys"],
         explanation:
-          "El corazón bombea sangre a través de todo el cuerpo, siendo fundamental para el sistema circulatorio.",
+          "The heart pumps blood throughout the body and is essential to the circulatory system.",
       },
       {
-        question: "¿Qué es la fotosíntesis?",
-        correct: "El proceso por el cual las plantas producen su alimento.",
+        question: "What is photosynthesis?",
+        correct: "The process by which plants produce their food.",
         incorrect: [
-          "La reproducción de las plantas.",
-          "La absorción de agua por las raíces.",
-          "La creación de flores.",
+          "The reproduction of plants.",
+          "The absorption of water by the roots.",
+          "The creation of flowers.",
         ],
         explanation:
-          "La fotosíntesis es el proceso mediante el cual las plantas convierten la luz solar en energía química.",
+          "Photosynthesis is the process by which plants convert sunlight into chemical energy.",
       },
     ],
     medium: [
       {
-        question:
-          "¿Cuál es el órgano principal del sistema circulatorio en los humanos?",
-        correct: "El corazón",
-        incorrect: ["El hígado", "Los pulmones", "El riñón"],
+        question: "What is the main organ of the circulatory system in humans?",
+        correct: "The heart",
+        incorrect: ["The liver", "The lungs", "The kidney"],
         explanation:
-          "El corazón es el órgano principal que bombea sangre a través del sistema circulatorio.",
-      },
-      {
-        question:
-          "¿Qué planeta del sistema solar es conocido como el 'planeta rojo'?",
-        correct: "Marte",
-        incorrect: ["Venus", "Júpiter", "Saturno"],
-        explanation:
-          "Marte es conocido como el 'planeta rojo' debido a su color característico.",
-      },
-      {
-        question: "¿Qué tipo de energía se obtiene del sol?",
-        correct: "Energía solar",
-        incorrect: ["Energía eólica", "Energía geotérmica", "Energía nuclear"],
-        explanation:
-          "La energía solar se obtiene aprovechando la luz y el calor del sol.",
-      },
-      {
-        question: "¿Cuál es la sustancia química básica de la vida?",
-        correct: "El ADN",
-        incorrect: ["El agua", "El oxígeno", "El carbono"],
-        explanation:
-          "El ADN es la molécula que contiene la información genética fundamental para la vida.",
+          "The heart is the main organ that pumps blood through the circulatory system.",
       },
       {
         question:
-          "¿Qué elemento químico tiene el símbolo 'O' en la tabla periódica?",
-        correct: "Oxígeno",
-        incorrect: ["Oro", "Osmio", "Ozono"],
-        explanation: "El símbolo 'O' corresponde al elemento químico oxígeno.",
-      },
-      {
-        question: "¿Qué es un átomo?",
-        correct: "La unidad básica de la materia.",
-        incorrect: [
-          "Una molécula.",
-          "Un tipo de célula.",
-          "Un compuesto químico.",
-        ],
+          "Which planet in the solar system is known as the 'red planet'?",
+        correct: "Mars",
+        incorrect: ["Venus", "Jupiter", "Saturn"],
         explanation:
-          "Un átomo es la unidad más pequeña que conserva las propiedades de un elemento.",
+          "Mars is known as the 'red planet' due to its characteristic color.",
       },
       {
-        question: "¿Cuál es la fórmula química del agua?",
+        question: "What type of energy is obtained from the sun?",
+        correct: "Solar energy",
+        incorrect: ["Wind energy", "Geothermal energy", "Nuclear energy"],
+        explanation:
+          "Solar energy is obtained by capturing the light and heat from the sun.",
+      },
+      {
+        question: "What is the basic chemical substance of life?",
+        correct: "DNA",
+        incorrect: ["Water", "Oxygen", "Carbon"],
+        explanation:
+          "DNA is the molecule that contains the genetic information essential for life.",
+      },
+      {
+        question:
+          "Which chemical element has the symbol 'O' in the periodic table?",
+        correct: "Oxygen",
+        incorrect: ["Gold", "Osmium", "Ozone"],
+        explanation: "The symbol 'O' represents the chemical element oxygen.",
+      },
+      {
+        question: "What is an atom?",
+        correct: "The basic unit of matter.",
+        incorrect: ["A molecule.", "A type of cell.", "A chemical compound."],
+        explanation:
+          "An atom is the smallest unit that retains the properties of an element.",
+      },
+      {
+        question: "What is the chemical formula of water?",
         correct: "H2O",
         incorrect: ["CO2", "O2", "H2O2"],
         explanation:
-          "La fórmula química del agua es H2O, lo que indica que cada molécula de agua está compuesta por dos átomos de hidrógeno y uno de oxígeno.",
+          "The chemical formula of water is H2O, indicating that each water molecule is made up of two hydrogen atoms and one oxygen atom.",
       },
       {
-        question: "¿Cuál es la función de las neuronas?",
-        correct: "Transmitir señales",
+        question: "What is the function of neurons?",
+        correct: "To transmit signals",
         incorrect: [
-          "Producir hormonas",
-          "Filtrar sangre",
-          "Absorber nutrientes",
+          "To produce hormones",
+          "To filter blood",
+          "To absorb nutrients",
         ],
         explanation:
-          "Las neuronas son células del sistema nervioso que transmiten señales eléctricas y químicas, permitiendo la comunicación entre el cerebro y el resto del cuerpo.",
+          "Neurons are cells of the nervous system that transmit electrical and chemical signals, allowing communication between the brain and the rest of the body.",
       },
       {
-        question: "¿Qué tipo de energía es la energía solar?",
-        correct: "Renovable",
-        incorrect: ["No renovable", "Térmica", "Nuclear"],
+        question: "What type of energy is solar energy?",
+        correct: "Renewable",
+        incorrect: ["Non-renewable", "Thermal", "Nuclear"],
         explanation:
-          "La energía solar es considerada energía renovable porque se obtiene del sol, una fuente inagotable de energía en escalas humanas.",
+          "Solar energy is considered renewable because it is obtained from the sun, an inexhaustible source of energy on human time scales.",
       },
       {
-        question: "¿Qué es un ecosistema?",
-        correct: "Conjunto de organismos y su entorno",
-        incorrect: [
-          "Un tipo de célula",
-          "Un planeta",
-          "Un sistema de transporte",
-        ],
+        question: "What is an ecosystem?",
+        correct: "A group of organisms and their environment",
+        incorrect: ["A type of cell", "A planet", "A transportation system"],
         explanation:
-          "Un ecosistema es un sistema formado por un conjunto de organismos que interactúan entre sí y con su entorno físico en un área determinada.",
+          "An ecosystem is a system formed by a community of organisms interacting with each other and their physical environment in a defined area.",
       },
       {
-        question: "¿Qué tipo de energía es la energía solar?",
-        correct: "Energía renovable",
-        incorrect: ["Energía no renovable", "Energía fósil", "Energía nuclear"],
+        question: "What is the process by which water turns into vapor?",
+        correct: "Evaporation",
+        incorrect: ["Condensation", "Precipitation", "Transpiration"],
         explanation:
-          "La energía solar es considerada energía renovable porque se obtiene del sol, que es inagotable en términos humanos.",
+          "Evaporation is the process where water turns into vapor due to heat.",
       },
       {
         question:
-          "¿Cuál es el proceso por el cual el agua se convierte en vapor?",
-        correct: "Evaporación",
-        incorrect: ["Condensación", "Precipitación", "Transpiración"],
-        explanation:
-          "La evaporación es el proceso en el que el agua se convierte en vapor debido al calor.",
-      },
-      {
-        question:
-          "¿Cómo se llama el proceso de división celular en células eucariotas que resulta en dos células hijas idénticas?",
+          "What is the name of the cell division process in eukaryotic cells that results in two identical daughter cells?",
         correct: "Mitosis",
-        incorrect: ["Meiosis", "Fagocitosis", "Citosinesis"],
+        incorrect: ["Meiosis", "Phagocytosis", "Cytokinesis"],
         explanation:
-          "La mitosis es el proceso mediante el cual una célula eucariota se divide para formar dos células hijas genéticamente idénticas.",
+          "Mitosis is the process by which a eukaryotic cell divides to form two genetically identical daughter cells.",
       },
       {
         question:
-          "¿Qué tipo de vínculo químico se forma cuando los átomos comparten electrones?",
-        correct: "Enlace covalente",
-        incorrect: ["Enlace iónico", "Enlace metálico", "Enlace de hidrógeno"],
+          "What type of chemical bond forms when atoms share electrons?",
+        correct: "Covalent bond",
+        incorrect: ["Ionic bond", "Metallic bond", "Hydrogen bond"],
         explanation:
-          "El enlace covalente se forma cuando dos átomos comparten uno o más pares de electrones, lo que permite a cada átomo completar su capa de electrones.",
+          "A covalent bond forms when two atoms share one or more pairs of electrons, allowing each atom to complete its electron shell.",
       },
       {
         question:
-          "¿Cuál es el elemento químico más abundante en la atmósfera terrestre?",
-        correct: "Nitrógeno",
-        incorrect: ["Oxígeno", "Dióxido de carbono", "Argón"],
+          "Which chemical element is the most abundant in Earth's atmosphere?",
+        correct: "Nitrogen",
+        incorrect: ["Oxygen", "Carbon dioxide", "Argon"],
         explanation:
-          "El nitrógeno constituye aproximadamente el 78% de la atmósfera terrestre, lo que lo convierte en el gas más abundante.",
+          "Nitrogen makes up approximately 78% of Earth's atmosphere, making it the most abundant gas.",
       },
       {
-        question: "¿Qué es el ciclo del carbono?",
+        question: "What is the carbon cycle?",
         correct:
-          "El proceso por el cual el carbono circula a través de la atmósfera, los océanos y los seres vivos.",
+          "The process by which carbon circulates through the atmosphere, oceans, and living organisms.",
         incorrect: [
-          "La formación de carbono en las estrellas.",
-          "La evaporación del carbono.",
-          "El ciclo de vida de los organismos.",
+          "The formation of carbon in stars.",
+          "The evaporation of carbon.",
+          "The life cycle of organisms.",
         ],
         explanation:
-          "El ciclo del carbono describe cómo el carbono se mueve entre la atmósfera, la tierra, los océanos y los organismos vivos.",
+          "The carbon cycle describes how carbon moves between the atmosphere, land, oceans, and living organisms.",
       },
       {
-        question: "¿Qué es la ley de la conservación de la energía?",
-        correct: "La energía no se crea ni se destruye, solo se transforma.",
+        question: "What is the law of conservation of energy?",
+        correct: "Energy cannot be created or destroyed, only transformed.",
         incorrect: [
-          "La energía puede desaparecer.",
-          "La energía solo puede aumentar.",
-          "La energía siempre disminuye.",
+          "Energy can disappear.",
+          "Energy can only increase.",
+          "Energy always decreases.",
         ],
         explanation:
-          "La ley de la conservación de la energía establece que la energía total de un sistema aislado se mantiene constante.",
+          "The law of conservation of energy states that the total energy of an isolated system remains constant.",
       },
       {
-        question: "¿Qué es un isotopo?",
+        question: "What is an isotope?",
         correct:
-          "Un átomo con el mismo número de protones pero diferente número de neutrones.",
+          "An atom with the same number of protons but a different number of neutrons.",
         incorrect: [
-          "Un átomo con diferentes protones.",
-          "Un átomo sin neutrones.",
-          "Un átomo que no tiene núcleo.",
+          "An atom with different protons.",
+          "An atom without neutrons.",
+          "An atom without a nucleus.",
         ],
         explanation:
-          "Los isótopos son variantes de un mismo elemento con diferente número de neutrones en su núcleo.",
+          "Isotopes are variants of the same element with different numbers of neutrons in their nuclei.",
       },
       {
-        question: "¿Qué es la tectónica de placas?",
-        correct: "El movimiento de grandes placas de la litosfera terrestre.",
+        question: "What is plate tectonics?",
+        correct: "The movement of large plates in Earth's lithosphere.",
         incorrect: [
-          "La formación de volcanes.",
-          "El movimiento de las corrientes oceánicas.",
-          "El proceso de erosión.",
+          "The formation of volcanoes.",
+          "The movement of ocean currents.",
+          "The process of erosion.",
         ],
         explanation:
-          "La tectónica de placas explica el movimiento de las placas que componen la superficie terrestre, lo que provoca terremotos y la formación de montañas.",
+          "Plate tectonics explains the movement of plates that make up Earth's surface, causing earthquakes and the formation of mountains.",
       },
       {
-        question: "¿Qué son las enzimas?",
-        correct:
-          "Proteínas que aceleran las reacciones químicas en los organismos.",
+        question: "What are enzymes?",
+        correct: "Proteins that speed up chemical reactions in organisms.",
         incorrect: [
-          "Células que transportan oxígeno.",
-          "Moléculas de ADN.",
-          "Hormonas que controlan el crecimiento.",
+          "Cells that transport oxygen.",
+          "DNA molecules.",
+          "Hormones that control growth.",
         ],
         explanation:
-          "Las enzimas son catalizadores biológicos que facilitan y aceleran las reacciones químicas en los seres vivos.",
+          "Enzymes are biological catalysts that facilitate and accelerate chemical reactions in living organisms.",
       },
     ],
     hard: [
       {
         question:
-          "¿Cuál es la teoría científica que explica el origen del universo?",
-        correct: "La teoría del Big Bang",
+          "What is the scientific theory that explains the origin of the universe?",
+        correct: "The Big Bang Theory",
         incorrect: [
-          "La teoría del estado estacionario",
-          "La teoría de la relatividad",
-          "La teoría del multiverso",
+          "The Steady State Theory",
+          "The Theory of Relativity",
+          "The Multiverse Theory",
         ],
         explanation:
-          "La teoría del Big Bang es la explicación científica más aceptada sobre el origen del universo.",
+          "The Big Bang Theory is the most widely accepted scientific explanation for the origin of the universe.",
       },
       {
         question:
-          "¿Qué tipo de células son responsables de la transmisión de impulsos nerviosos en el cuerpo humano?",
-        correct: "Neuronas",
+          "What type of cells are responsible for transmitting nerve impulses in the human body?",
+        correct: "Neurons",
+        incorrect: ["Glial cells", "Epithelial cells", "Muscle cells"],
+        explanation:
+          "Neurons are specialized cells responsible for transmitting nerve impulses.",
+      },
+      {
+        question: "What is the most abundant chemical element in the universe?",
+        correct: "Hydrogen",
+        incorrect: ["Helium", "Oxygen", "Carbon"],
+        explanation:
+          "Hydrogen is the most abundant chemical element in the universe, making up about 75% of its visible matter.",
+      },
+      {
+        question: "What is the function of ribosomes in a cell?",
+        correct: "To synthesize proteins",
         incorrect: [
-          "Células gliales",
-          "Células epiteliales",
-          "Células musculares",
+          "To produce energy",
+          "To store genetic material",
+          "To break down waste",
         ],
         explanation:
-          "Las neuronas son las células especializadas en la transmisión de impulsos nerviosos.",
+          "Ribosomes are responsible for synthesizing proteins from amino acids.",
       },
       {
-        question: "¿Qué elemento químico es el más abundante en el universo?",
-        correct: "Hidrógeno",
-        incorrect: ["Helio", "Oxígeno", "Carbono"],
+        question: "Which subatomic particle has a negative charge?",
+        correct: "Electron",
+        incorrect: ["Proton", "Neutron", "Quark"],
         explanation:
-          "El hidrógeno es el elemento químico más abundante en el universo, constituyendo alrededor del 75% de su materia visible.",
-      },
-      {
-        question: "¿Cuál es la función de los ribosomas en una célula?",
-        correct: "Sintetizar proteínas",
-        incorrect: [
-          "Producir energía",
-          "Almacenar material genético",
-          "Degradar desechos",
-        ],
-        explanation:
-          "Los ribosomas son responsables de la síntesis de proteínas a partir de aminoácidos.",
-      },
-      {
-        question: "¿Qué partícula subatómica tiene una carga negativa?",
-        correct: "Electrón",
-        incorrect: ["Protón", "Neutrón", "Quark"],
-        explanation:
-          "El electrón es la partícula subatómica que tiene una carga negativa.",
+          "The electron is the subatomic particle that carries a negative charge.",
       },
       {
         question:
-          "¿En qué parte de la célula eucariota ocurre la respiración celular?",
-        correct: "En las mitocondrias",
+          "In which part of the eukaryotic cell does cellular respiration occur?",
+        correct: "In the mitochondria",
         incorrect: [
-          "En el núcleo",
-          "En el retículo endoplásmico",
-          "En los lisosomas",
+          "In the nucleus",
+          "In the endoplasmic reticulum",
+          "In the lysosomes",
         ],
         explanation:
-          "La respiración celular, que genera energía a partir de moléculas de glucosa, ocurre en las mitocondrias.",
+          "Cellular respiration, which generates energy from glucose molecules, takes place in the mitochondria.",
       },
       {
-        question: "¿Qué es la materia oscura?",
+        question: "What is dark matter?",
         correct:
-          "Un tipo de materia que no emite luz y no puede ser observada directamente",
+          "A type of matter that does not emit light and cannot be observed directly",
         incorrect: [
-          "Materia que se puede observar con telescopios",
-          "Materia que interactúa con la luz de manera visible",
-          "Una forma de energía",
+          "Matter that can be observed with telescopes",
+          "Matter that interacts visibly with light",
+          "A form of energy",
         ],
         explanation:
-          "La materia oscura no emite ni absorbe luz, pero tiene influencia en la gravedad y en la formación de estructuras en el universo.",
+          "Dark matter neither emits nor absorbs light, but it has gravitational effects and influences the formation of structures in the universe.",
       },
       {
-        question: "¿Cuál es el principio de incertidumbre de Heisenberg?",
+        question: "What is Heisenberg's Uncertainty Principle?",
         correct:
-          "No se puede conocer simultáneamente la posición y la velocidad exactas de una partícula",
+          "It is impossible to know both the exact position and the velocity of a particle simultaneously.",
         incorrect: [
-          "Las partículas no pueden estar en más de un lugar al mismo tiempo",
-          "La energía de una partícula es siempre constante",
-          "Las partículas no tienen masa",
+          "Particles cannot be in more than one place at the same time",
+          "A particle's energy is always constant",
+          "Particles have no mass",
         ],
         explanation:
-          "El principio de incertidumbre de Heisenberg establece que es imposible conocer con precisión absoluta la posición y la velocidad de una partícula al mismo tiempo.",
+          "Heisenberg's Uncertainty Principle states that it's impossible to know with absolute precision both the position and the velocity of a particle at the same time.",
       },
       {
-        question: "¿Qué es el bosón de Higgs?",
-        correct: "Una partícula fundamental que da masa a otras partículas",
+        question: "What is the Higgs boson?",
+        correct: "A fundamental particle that gives mass to other particles",
         incorrect: [
-          "Una partícula que transmite la gravedad",
-          "Una partícula que forma los átomos",
-          "Una partícula que produce luz",
+          "A particle that transmits gravity",
+          "A particle that forms atoms",
+          "A particle that produces light",
         ],
         explanation:
-          "El bosón de Higgs es una partícula fundamental que se cree que proporciona masa a otras partículas elementales.",
+          "The Higgs boson is a fundamental particle believed to provide mass to other elementary particles.",
       },
       {
-        question: "¿Qué es la energía de activación en una reacción química?",
-        correct: "La energía necesaria para iniciar una reacción química",
+        question: "What is activation energy in a chemical reaction?",
+        correct: "The energy required to start a chemical reaction",
         incorrect: [
-          "La energía liberada durante la reacción",
-          "La energía consumida en la formación de productos",
-          "La energía almacenada en los reactivos",
+          "The energy released during the reaction",
+          "The energy consumed in forming products",
+          "The energy stored in the reactants",
         ],
         explanation:
-          "La energía de activación es la cantidad de energía necesaria para que una reacción química comience.",
+          "Activation energy is the amount of energy needed for a chemical reaction to begin.",
       },
       {
-        question: "¿Qué es la teoría de la relatividad?",
+        question: "What is the theory of relativity?",
         correct:
-          "Una teoría que describe la gravedad y la relación entre espacio y tiempo.",
+          "A theory that describes gravity and the relationship between space and time.",
         incorrect: [
-          "Una teoría sobre la evolución de las especies.",
-          "Una teoría sobre la estructura atómica.",
-          "Una teoría sobre la química orgánica.",
+          "A theory about the evolution of species.",
+          "A theory about atomic structure.",
+          "A theory about organic chemistry.",
         ],
         explanation:
-          "La teoría de la relatividad, formulada por Albert Einstein, revolucionó nuestra comprensión del espacio, el tiempo y la gravedad.",
+          "The theory of relativity, formulated by Albert Einstein, revolutionized our understanding of space, time, and gravity.",
       },
       {
-        question: "¿Qué es un ácido?",
-        correct: "Una sustancia que libera protones en solución.",
+        question: "What is an acid?",
+        correct: "A substance that releases protons in solution.",
         incorrect: [
-          "Una sustancia que absorbe electrones.",
-          "Una sustancia que no reacciona con bases.",
-          "Una sustancia que siempre es líquida.",
+          "A substance that absorbs electrons.",
+          "A substance that does not react with bases.",
+          "A substance that is always liquid.",
         ],
         explanation:
-          "Los ácidos son compuestos que, en solución, liberan protones (H+) y tienen un pH menor a 7.",
+          "Acids are compounds that, in solution, release protons (H+) and have a pH less than 7.",
       },
       {
         question:
-          "¿Cuál es la ley que describe la relación entre la fuerza, la masa y la aceleración de un objeto, formulada por Isaac Newton?",
-        correct: "Ley de Newton (F = m*a)",
+          "What law describes the relationship between force, mass, and acceleration of an object, formulated by Isaac Newton?",
+        correct: "Newton's law (F = m * a)",
         incorrect: [
-          "Ley de la conservación de la energía",
-          "Ley de la gravitación universal",
-          "Ley de Coulomb",
+          "The law of conservation of energy",
+          "The law of universal gravitation",
+          "Coulomb's law",
         ],
         explanation:
-          "La segunda ley de Newton establece que la fuerza aplicada a un objeto es igual a la masa del objeto multiplicada por su aceleración.",
+          "Newton's second law states that the force applied to an object is equal to the mass of the object multiplied by its acceleration.",
       },
       {
-        question: "¿Qué es la biotecnología?",
-        correct: "El uso de organismos vivos para desarrollar productos.",
+        question: "What is biotechnology?",
+        correct: "The use of living organisms to develop products.",
         incorrect: [
-          "El estudio de los ecosistemas.",
-          "La investigación sobre el clima.",
-          "La creación de nuevos planetas.",
+          "The study of ecosystems.",
+          "Research on the climate.",
+          "The creation of new planets.",
         ],
         explanation:
-          "La biotecnología implica manipular organismos vivos para crear productos útiles, como medicamentos y cultivos.",
+          "Biotechnology involves manipulating living organisms to create useful products, such as medicines and crops.",
       },
       {
-        question: "¿Qué es la teoría celular?",
+        question: "What is the cell theory?",
+        correct: "The idea that all organisms are made up of cells.",
+        incorrect: [
+          "The theory that cells are always multicellular.",
+          "The theory that cells cannot reproduce.",
+          "The theory that cells are only part of animals.",
+        ],
+        explanation:
+          "The cell theory states that all living beings are made of cells, which are the basic unit of life.",
+      },
+      {
+        question: "What is homeostasis?",
         correct:
-          "La idea de que todos los organismos están compuestos de células.",
+          "The process by which an organism maintains a stable internal environment.",
         incorrect: [
-          "La teoría de que las células son siempre multicelulares.",
-          "La teoría de que las células no pueden reproducirse.",
-          "La teoría de que las células son solo parte de los animales.",
+          "The ability of an organism to grow.",
+          "The way organisms reproduce.",
+          "The way organisms obtain energy.",
         ],
         explanation:
-          "La teoría celular establece que todos los seres vivos están formados por células, que son la unidad básica de la vida.",
-      },
-      {
-        question: "¿Qué es la homeostasis?",
-        correct:
-          "El proceso por el cual un organismo mantiene un ambiente interno estable.",
-        incorrect: [
-          "La capacidad de un organismo para crecer.",
-          "La forma en que los organismos se reproducen.",
-          "La manera en que los organismos obtienen energía.",
-        ],
-        explanation:
-          "La homeostasis es crucial para la supervivencia, ya que permite a los organismos regular su entorno interno.",
-      },
-      {
-        question: "¿Cuál es la teoría que explica el origen del universo?",
-        correct: "Big Bang",
-        incorrect: [
-          "Teoría de la relatividad",
-          "Teoría de cuerdas",
-          "Teoría del todo",
-        ],
-        explanation:
-          "La teoría del Big Bang sugiere que el universo se originó a partir de una gran explosión hace aproximadamente 13.8 mil millones de años.",
+          "Homeostasis is crucial for survival, as it allows organisms to regulate their internal environment.",
       },
       {
         question:
-          "¿Cuál es el principio de la selección natural propuesto por Darwin?",
-        correct: "Supervivencia del más apto",
+          "What is the principle of natural selection proposed by Darwin?",
+        correct: "Survival of the fittest",
         incorrect: [
-          "La vida se crea a partir de la materia inerte",
-          "Las especies son inmutables",
-          "La herencia es siempre perfecta",
+          "Life is created from inert matter",
+          "Species are immutable",
+          "Inheritance is always perfect",
         ],
         explanation:
-          "El principio de la selección natural, propuesto por Charles Darwin, sugiere que los organismos mejor adaptados a su entorno tienen más probabilidades de sobrevivir y reproducirse.",
+          "The principle of natural selection, proposed by Charles Darwin, suggests that organisms better adapted to their environment are more likely to survive and reproduce.",
       },
       {
         question:
-          "¿Qué es el bosón de Higgs y por qué es importante en la física de partículas?",
-        correct: "Una partícula que da masa a otras partículas",
+          "What is the Higgs boson and why is it important in particle physics?",
+        correct: "A particle that gives mass to other particles",
         incorrect: [
-          "Una partícula que transporta la fuerza nuclear",
-          "Una partícula que altera el tiempo",
-          "Una partícula que anula la gravedad",
+          "A particle that carries the nuclear force",
+          "A particle that alters time",
+          "A particle that negates gravity",
         ],
         explanation:
-          "El bosón de Higgs es fundamental en el modelo estándar de física de partículas porque explica cómo las partículas adquieren masa.",
+          "The Higgs boson is fundamental in the standard model of particle physics because it explains how particles acquire mass.",
       },
       {
-        question: "¿Qué es un organismo eucariota?",
-        correct: "Organismo con células con núcleo definido",
+        question: "What is a eukaryotic organism?",
+        correct: "An organism with cells that have a defined nucleus",
         incorrect: [
-          "Organismo sin núcleo",
-          "Organismo unicelular",
-          "Organismo que no se reproduce",
+          "An organism without a nucleus",
+          "A unicellular organism",
+          "An organism that does not reproduce",
         ],
         explanation:
-          "Un organismo eucariota es aquel cuyas células tienen un núcleo definido y compartimentos internos, lo que incluye a plantas, animales y hongos.",
+          "A eukaryotic organism is one whose cells have a defined nucleus and internal compartments, including plants, animals, and fungi.",
       },
       {
-        question: "¿Qué es la fusión nuclear?",
+        question: "What is nuclear fusion?",
         correct:
-          "El proceso en el que los núcleos ligeros se unen para formar un núcleo más pesado, liberando energía.",
+          "The process in which light nuclei combine to form a heavier nucleus, releasing energy.",
         incorrect: [
-          "La división de un núcleo pesado en núcleos más ligeros.",
-          "El proceso por el cual los átomos se disuelven.",
-          "La liberación de energía al romper enlaces químicos.",
+          "The splitting of a heavy nucleus into lighter nuclei.",
+          "The process by which atoms dissolve.",
+          "The release of energy by breaking chemical bonds.",
         ],
         explanation:
-          "La fusión nuclear es el proceso que alimenta a las estrellas, donde los núcleos de hidrógeno se combinan para formar helio y liberan grandes cantidades de energía.",
+          "Nuclear fusion is the process that powers stars, where hydrogen nuclei combine to form helium and release large amounts of energy.",
       },
       {
-        question: "¿Qué es la mecánica cuántica?",
+        question: "What is quantum mechanics?",
         correct:
-          "Una rama de la física que estudia los fenómenos a escala atómica y subatómica.",
+          "A branch of physics that studies phenomena at the atomic and subatomic scale.",
         incorrect: [
-          "El estudio del movimiento de los planetas.",
-          "Una teoría que explica la gravedad.",
-          "La ciencia que estudia los fluidos.",
+          "The study of the motion of planets.",
+          "A theory that explains gravity.",
+          "The science that studies fluids.",
         ],
         explanation:
-          "La mecánica cuántica describe el comportamiento de las partículas a nivel subatómico, donde las leyes de la física clásica no se aplican.",
+          "Quantum mechanics describes the behavior of particles at the subatomic level, where the laws of classical physics do not apply.",
       },
       {
-        question: "¿Qué es la entropía?",
-        correct: "Una medida del desorden o la aleatoriedad en un sistema.",
+        question: "What is entropy?",
+        correct: "A measure of disorder or randomness in a system.",
         incorrect: [
-          "La cantidad de energía en un sistema.",
-          "El volumen de un sistema cerrado.",
-          "La velocidad a la que ocurre una reacción química.",
+          "The amount of energy in a system.",
+          "The volume of a closed system.",
+          "The speed at which a chemical reaction occurs.",
         ],
         explanation:
-          "La entropía es un concepto termodinámico que mide el desorden o la dispersión de la energía en un sistema.",
+          "Entropy is a thermodynamic concept that measures disorder or the dispersion of energy in a system.",
       },
       {
-        question: "¿Qué describe la ecuación de Schrödinger?",
+        question: "What does the Schrödinger equation describe?",
         correct:
-          "El comportamiento cuántico de partículas como electrones y átomos.",
+          "The quantum behavior of particles such as electrons and atoms.",
         incorrect: [
-          "La trayectoria de los planetas en el espacio.",
-          "El movimiento de fluidos en dinámica de fluidos.",
-          "La expansión del universo.",
+          "The trajectory of planets in space.",
+          "The movement of fluids in fluid dynamics.",
+          "The expansion of the universe.",
         ],
         explanation:
-          "La ecuación de Schrödinger es fundamental en la mecánica cuántica y describe cómo la onda de probabilidad de una partícula cambia con el tiempo.",
+          "The Schrödinger equation is fundamental in quantum mechanics and describes how a particle's wave function changes over time.",
       },
       {
-        question: "¿Qué es el efecto fotoeléctrico?",
+        question: "What is the photoelectric effect?",
         correct:
-          "La emisión de electrones desde una superficie cuando se expone a la luz.",
+          "The emission of electrons from a surface when exposed to light.",
         incorrect: [
-          "El aumento de la temperatura cuando la luz incide en un material.",
-          "La reflexión de la luz por una superficie brillante.",
-          "El cambio de color de un material bajo luz ultravioleta.",
+          "The increase in temperature when light hits a material.",
+          "The reflection of light from a shiny surface.",
+          "The change in color of a material under ultraviolet light.",
         ],
         explanation:
-          "El efecto fotoeléctrico, explicado por Einstein, ocurre cuando la luz provoca la expulsión de electrones de la superficie de un metal.",
+          "The photoelectric effect, explained by Einstein, occurs when light causes the ejection of electrons from the surface of a metal.",
       },
     ],
   },
   art: {
     easy: [
       {
-        question: "¿Quién pintó la Mona Lisa?",
+        question: "Who painted the Mona Lisa?",
         correct: "Leonardo da Vinci",
         incorrect: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
         explanation:
-          "La Mona Lisa es una pintura famosa creada por Leonardo da Vinci durante el Renacimiento.",
+          "The Mona Lisa is a famous painting created by Leonardo da Vinci during the Renaissance.",
       },
       {
-        question: "¿En qué país se encuentra el Museo del Louvre?",
-        correct: "Francia",
-        incorrect: ["Italia", "España", "Alemania"],
+        question: "In which country is the Louvre Museum located?",
+        correct: "France",
+        incorrect: ["Italy", "Spain", "Germany"],
         explanation:
-          "El Museo del Louvre, hogar de la Mona Lisa, está ubicado en París, Francia.",
+          "The Louvre Museum, home to the Mona Lisa, is located in Paris, France.",
       },
-
       {
-        question: "¿Qué estilo artístico está asociado con Salvador Dalí?",
-        correct: "Surrealismo",
-        incorrect: ["Impresionismo", "Cubismo", "Expresionismo"],
+        question: "What artistic style is associated with Salvador Dalí?",
+        correct: "Surrealism",
+        incorrect: ["Impressionism", "Cubism", "Expressionism"],
         explanation:
-          "Salvador Dalí es conocido por sus obras surrealistas, que exploran el subconsciente y los sueños.",
+          "Salvador Dalí is known for his surrealist works, which explore the subconscious and dreams.",
       },
-
       {
         question:
-          "¿Qué famoso pintor es conocido por cortar parte de su oreja?",
+          "Which famous painter is known for cutting off part of his ear?",
         correct: "Vincent van Gogh",
         incorrect: ["Pablo Picasso", "Claude Monet", "Rembrandt"],
         explanation:
-          "Vincent van Gogh, un pintor postimpresionista, es famoso por haberse cortado parte de su oreja.",
+          "Vincent van Gogh, a post-impressionist painter, is famous for having cut off part of his ear.",
       },
-
       {
-        question: "¿Cuál es la técnica principal usada en la pintura al óleo?",
-        correct: "Óleo sobre lienzo",
+        question: "What is the main technique used in oil painting?",
+        correct: "Oil on canvas",
         incorrect: [
-          "Acuarela sobre papel",
-          "Tinta sobre pergamino",
-          "Carboncillo sobre madera",
+          "Watercolor on paper",
+          "Ink on parchment",
+          "Charcoal on wood",
         ],
         explanation:
-          "La técnica de óleo sobre lienzo es una de las más utilizadas en la historia del arte.",
+          "The oil on canvas technique is one of the most used throughout art history.",
       },
-
       {
-        question: "¿Quién pintó la obra 'La Noche Estrellada'?",
+        question: "Who painted 'The Starry Night'?",
         correct: "Vincent van Gogh",
         incorrect: ["Claude Monet", "Pablo Picasso", "Henri Matisse"],
         explanation:
-          "'La Noche Estrellada' es una de las pinturas más icónicas de Vincent van Gogh.",
+          "'The Starry Night' is one of the most iconic paintings by Vincent van Gogh.",
       },
-
       {
-        question:
-          "¿Qué artista es conocido por su serie de latas de sopa Campbell?",
+        question: "Which artist is known for his Campbell's Soup can series?",
         correct: "Andy Warhol",
         incorrect: ["Roy Lichtenstein", "Jackson Pollock", "Piet Mondrian"],
         explanation:
-          "Andy Warhol fue una figura clave en el movimiento del arte pop, famoso por su serie de latas de sopa Campbell.",
+          "Andy Warhol was a key figure in the pop art movement, famous for his Campbell's Soup can series.",
       },
-
+      {
+        question: "What art movement is known for its use of colored dots?",
+        correct: "Pointillism",
+        incorrect: ["Impressionism", "Cubism", "Futurism"],
+        explanation:
+          "Pointillism is a painting style in which small dots of color are combined to form an image.",
+      },
       {
         question:
-          "¿Qué movimiento artístico es conocido por su uso de puntos de colores?",
-
-        correct: "Puntillismo",
-        incorrect: ["Impresionismo", "Cubismo", "Futurismo"],
+          "What architectural style is characterized by tall cathedrals and stained glass?",
+        correct: "Gothic",
+        incorrect: ["Romanesque", "Baroque", "Renaissance"],
         explanation:
-          "El puntillismo es un estilo de pintura en el que pequeños puntos de color se combinan para formar una imagen.",
+          "The Gothic style is known for its tall structures, pointed arches, and large stained glass windows.",
       },
-
       {
-        question:
-          "¿Qué estilo arquitectónico es caracterizado por altas catedrales y vitrales?",
-
-        correct: "Gótico",
-        incorrect: ["Románico", "Barroco", "Renacentista"],
-        explanation:
-          "El estilo gótico es conocido por sus estructuras altas, arcos puntiagudos y amplios vitrales.",
-      },
-
-      {
-        question: "¿Quién esculpió 'El Pensador'?",
+        question: "Who sculpted 'The Thinker'?",
         correct: "Auguste Rodin",
         incorrect: ["Michelangelo", "Donatello", "Gian Lorenzo Bernini"],
         explanation:
-          "'El Pensador' es una famosa escultura creada por el artista francés Auguste Rodin.",
+          "'The Thinker' is a famous sculpture created by the French artist Auguste Rodin.",
       },
     ],
     medium: [
       {
-        question: "¿Quién pintó 'La noche estrellada'?",
+        question: "Who painted 'The Starry Night'?",
         correct: "Vincent van Gogh",
         incorrect: ["Paul Cézanne", "Henri Matisse", "Gustav Klimt"],
         explanation:
-          "'La noche estrellada' es una obra famosa de Vincent van Gogh, creada en 1889.",
+          "'The Starry Night' is a famous work by Vincent van Gogh, created in 1889.",
       },
       {
         question:
-          "¿Qué artista es conocido por sus obras en la técnica de 'collage'?",
+          "Which artist is known for his works in the collage technique?",
         correct: "Pablo Picasso",
         incorrect: ["Georges Braque", "Henri Rousseau", "Gustav Klimt"],
         explanation:
-          "Pablo Picasso, junto con Georges Braque, es conocido por desarrollar la técnica del collage.",
+          "Pablo Picasso, along with Georges Braque, is known for developing the collage technique.",
       },
       {
         question:
-          "¿Cuál es el nombre del movimiento artístico que se desarrolló a finales del siglo XIX y se enfoca en la captura de la luz y la atmósfera?",
-        correct: "Impresionismo",
-        incorrect: ["Fauvismo", "Expresionismo", "Art Deco"],
+          "What is the name of the artistic movement that developed in the late 19th century and focuses on capturing light and atmosphere?",
+        correct: "Impressionism",
+        incorrect: ["Fauvism", "Expressionism", "Art Deco"],
         explanation:
-          "El Impresionismo es un movimiento artístico que se centra en capturar la luz y la atmósfera en lugar de detalles precisos.",
+          "Impressionism is an artistic movement that focuses on capturing light and atmosphere rather than precise details.",
       },
       {
         question:
-          "¿Qué pintor español es conocido por su serie de obras titulada 'Las Meninas'?",
+          "Which Spanish painter is known for his series of works titled 'Las Meninas'?",
         correct: "Diego Velázquez",
         incorrect: ["El Greco", "Francisco de Goya", "Juan Gris"],
         explanation:
-          "'Las Meninas' es una obra maestra de Diego Velázquez, uno de los pintores más importantes del Siglo de Oro español.",
+          "'Las Meninas' is a masterpiece by Diego Velázquez, one of the most important painters of the Spanish Golden Age.",
       },
       {
         question:
-          "¿Qué artista es famoso por sus retratos de la familia real española en el siglo XVII?",
+          "Which artist is famous for his portraits of the Spanish royal family in the 17th century?",
         correct: "Diego Velázquez",
         incorrect: ["Francisco de Goya", "El Greco", "José de Ribera"],
         explanation:
-          "Diego Velázquez es conocido por sus retratos de la familia real española, especialmente en su obra 'Las Meninas'.",
+          "Diego Velázquez is known for his portraits of the Spanish royal family, especially in his work 'Las Meninas.'",
       },
       {
-        question: "¿Quién es el autor de la escultura 'El David'?",
-        correct: "Miguel Ángel",
+        question: "Who is the author of the sculpture 'David'?",
+        correct: "Michelangelo",
         incorrect: ["Donatello", "Bernini", "Leonardo da Vinci"],
         explanation:
-          "La escultura 'El David' es una obra maestra del Renacimiento creada por Miguel Ángel.",
+          "'David' is a masterpiece of the Renaissance created by Michelangelo.",
       },
-
       {
         question:
-          "¿Qué corriente artística se caracteriza por la representación de escenas de la vida cotidiana?",
-
-        correct: "Realismo",
-        incorrect: ["Impresionismo", "Barroco", "Surrealismo"],
+          "Which artistic movement is characterized by the representation of scenes from everyday life?",
+        correct: "Realism",
+        incorrect: ["Impressionism", "Baroque", "Surrealism"],
         explanation:
-          "El realismo es un movimiento artístico que se enfoca en representar la vida cotidiana con detalle y precisión.",
+          "Realism is an artistic movement that focuses on representing everyday life with detail and precision.",
       },
-
       {
-        question: "¿Qué obra famosa fue pintada por Sandro Botticelli?",
-        correct: "El nacimiento de Venus",
-        incorrect: ["La Última Cena", "La creación de Adán", "Las Meninas"],
+        question: "What famous work was painted by Sandro Botticelli?",
+        correct: "The Birth of Venus",
+        incorrect: ["The Last Supper", "The Creation of Adam", "Las Meninas"],
         explanation:
-          "'El nacimiento de Venus' es una de las obras más conocidas del pintor renacentista Sandro Botticelli.",
+          "'The Birth of Venus' is one of the best-known works of the Renaissance painter Sandro Botticelli.",
       },
-
       {
         question:
-          "¿Qué arquitecto es responsable de diseñar la cúpula de la Basílica de San Pedro en el Vaticano?",
+          "Which architect is responsible for designing the dome of St. Peter's Basilica in the Vatican?",
         correct: "Michelangelo",
         incorrect: [
           "Filippo Brunelleschi",
@@ -722,151 +668,144 @@ export let questions = {
           "Gian Lorenzo Bernini",
         ],
         explanation:
-          "Michelangelo fue el arquitecto que diseñó la cúpula de la Basílica de San Pedro, una de las obras maestras del Renacimiento.",
+          "Michelangelo was the architect who designed the dome of St. Peter's Basilica, one of the masterpieces of the Renaissance.",
       },
       {
-        question:
-          "¿Qué técnica de pintura utiliza pigmentos mezclados con huevo?",
-        correct: "Temple",
-        incorrect: ["Acuarela", "Óleo", "Fresco"],
+        question: "What painting technique uses pigments mixed with egg?",
+        correct: "Tempera",
+        incorrect: ["Watercolor", "Oil", "Fresco"],
         explanation:
-          "La técnica del temple utiliza pigmentos mezclados con huevo para crear una pintura duradera y vibrante.",
+          "The tempera technique uses pigments mixed with egg to create a durable and vibrant paint.",
       },
-
       {
-        question: "¿Qué artista es famoso por sus obras cubistas?",
+        question: "Which artist is famous for his cubist works?",
         correct: "Pablo Picasso",
         incorrect: ["Salvador Dalí", "Joan Miró", "Edvard Munch"],
         explanation:
-          "Pablo Picasso es uno de los fundadores del cubismo, un movimiento artístico que fragmenta y reconstruye la realidad en formas geométricas.",
+          "Pablo Picasso is one of the founders of cubism, an artistic movement that fragments and reconstructs reality in geometric forms.",
       },
-
       {
         question:
-          "¿En qué país se desarrolló el movimiento artístico conocido como el Renacimiento?",
-
-        correct: "Italia",
-        incorrect: ["Francia", "España", "Países Bajos"],
+          "In which country did the artistic movement known as the Renaissance develop?",
+        correct: "Italy",
+        incorrect: ["France", "Spain", "Netherlands"],
         explanation:
-          "El Renacimiento fue un movimiento cultural y artístico que surgió en Italia durante los siglos XIV y XV.",
+          "The Renaissance was a cultural and artistic movement that emerged in Italy during the 14th and 15th centuries.",
       },
-
       {
-        question: "¿Quién pintó 'La persistencia de la memoria'?",
+        question: "Who painted 'The Persistence of Memory'?",
         correct: "Salvador Dalí",
         incorrect: ["René Magritte", "Pablo Picasso", "Max Ernst"],
         explanation:
-          "'La persistencia de la memoria', con sus relojes derretidos, es una de las obras más famosas de Salvador Dalí.",
+          "'The Persistence of Memory,' with its melting clocks, is one of the most famous works of Salvador Dalí.",
       },
-
       {
         question:
-          "¿Qué técnica de grabado utiliza una plancha de metal cubierta con una capa de barniz?",
+          "What engraving technique uses a metal plate coated with a layer of varnish?",
         correct: "Aguafuerte",
-        incorrect: ["Xilografía", "Litografía", "Serigrafía"],
+        incorrect: ["Woodcut", "Lithography", "Screen printing"],
         explanation:
-          "El aguafuerte es una técnica de grabado en la que una plancha de metal se cubre con barniz y luego se graba con ácido.",
-      },
-
-      {
-        question: "¿Qué arquitecto diseñó el Panteón de Roma?",
-        correct: "Apollodoro de Damasco",
-        incorrect: ["Vitruvio", "Filippo Brunelleschi", "Andrea Palladio"],
-        explanation:
-          "El Panteón de Roma, una de las estructuras más influyentes de la arquitectura clásica, fue diseñado por Apollodoro de Damasco.",
+          "Aguafuerte is an engraving technique in which a metal plate is covered with varnish and then etched with acid.",
       },
       {
-        question: "¿Quién pintó 'Las señoritas de Avignon'?",
+        question: "Which architect designed the Pantheon in Rome?",
+        correct: "Apollodorus of Damascus",
+        incorrect: ["Vitruvius", "Filippo Brunelleschi", "Andrea Palladio"],
+        explanation:
+          "The Pantheon in Rome, one of the most influential structures of classical architecture, was designed by Apollodorus of Damascus.",
+      },
+      {
+        question: "Who painted 'Les Demoiselles d'Avignon'?",
         correct: "Pablo Picasso",
         incorrect: ["Henri Matisse", "Paul Cézanne", "Georges Braque"],
         explanation:
-          "'Las señoritas de Avignon' es una de las obras más influyentes de Pablo Picasso, y fue clave en el desarrollo del cubismo.",
+          "'Les Demoiselles d'Avignon' is one of the most influential works of Pablo Picasso and was key in the development of cubism.",
       },
       {
-        question: "¿Qué técnica utiliza el artista para crear un fresco?",
-        correct: "Pintura sobre yeso húmedo",
-        incorrect: ["Óleo", "Acrílico", "Acuarela"],
+        question: "What technique does the artist use to create a fresco?",
+        correct: "Painting on wet plaster",
+        incorrect: ["Oil", "Acrylic", "Watercolor"],
         explanation:
-          "El fresco es una técnica en la que se aplican pigmentos sobre yeso húmedo, común en el arte renacentista.",
+          "Fresco is a technique in which pigments are applied to wet plaster, commonly seen in Renaissance art.",
       },
       {
         question:
-          "¿Qué pintor impresionista es famoso por sus escenas de ballet?",
+          "Which Impressionist painter is famous for his ballet scenes?",
         correct: "Edgar Degas",
         incorrect: ["Claude Monet", "Pierre-Auguste Renoir", "Édouard Manet"],
         explanation:
-          "Edgar Degas es conocido por sus pinturas de bailarinas, siendo uno de los grandes del Impresionismo.",
+          "Edgar Degas is known for his paintings of dancers, being one of the greats of Impressionism.",
       },
       {
         question:
-          "¿Qué obra representa a una mujer con una sonrisa enigmática y fue pintada por Leonardo da Vinci?",
-        correct: "La Mona Lisa",
+          "What work features a woman with an enigmatic smile and was painted by Leonardo da Vinci?",
+        correct: "The Mona Lisa",
         incorrect: [
-          "La Última Cena",
-          "La Virgen de las Rocas",
-          "El Bautismo de Cristo",
+          "The Last Supper",
+          "The Virgin of the Rocks",
+          "The Baptism of Christ",
         ],
         explanation:
-          "La Mona Lisa, también conocida como La Gioconda, es una de las obras más reconocidas de Leonardo da Vinci.",
+          "The Mona Lisa, also known as La Gioconda, is one of the most recognized works of Leonardo da Vinci.",
       },
       {
-        question: "¿Quién esculpió 'El éxtasis de Santa Teresa'?",
+        question: "Who sculpted 'The Ecstasy of Saint Teresa'?",
         correct: "Gian Lorenzo Bernini",
         incorrect: ["Michelangelo", "Donatello", "Antonio Canova"],
         explanation:
-          "'El éxtasis de Santa Teresa' es una obra maestra del barroco, creada por Gian Lorenzo Bernini.",
+          "'The Ecstasy of Saint Teresa' is a Baroque masterpiece created by Gian Lorenzo Bernini.",
       },
     ],
     hard: [
       {
-        question: "¿Quién pintó 'El nacimiento de Venus'?",
+        question: "Who painted 'The Birth of Venus'?",
         correct: "Sandro Botticelli",
         incorrect: ["Leonardo da Vinci", "Raphael", "Michelangelo"],
         explanation:
-          "'El nacimiento de Venus' es una famosa obra de Sandro Botticelli, pintada en el siglo XV.",
+          "'The Birth of Venus' is a famous work by Sandro Botticelli, painted in the 15th century.",
       },
       {
-        question: "¿Quién pintó 'La persistencia de la memoria'?",
+        question: "Who painted 'The Persistence of Memory'?",
         correct: "Salvador Dalí",
         incorrect: ["René Magritte", "Max Ernst", "Joan Miró"],
         explanation:
-          "'La persistencia de la memoria' es una obra emblemática de Salvador Dalí, creada en 1931.",
+          "'The Persistence of Memory' is an emblematic work by Salvador Dalí, created in 1931.",
       },
       {
         question:
-          "¿Qué artista es conocido por su uso innovador del color en el movimiento fauvista?",
+          "Which artist is known for their innovative use of color in the Fauvist movement?",
         correct: "Henri Matisse",
         incorrect: ["André Derain", "Marc Chagall", "Georges Rouault"],
         explanation:
-          "Henri Matisse es uno de los principales representantes del Fauvismo, conocido por su uso audaz del color.",
+          "Henri Matisse is one of the leading figures of Fauvism, known for his bold use of color.",
       },
       {
         question:
-          "¿Cuál es el nombre del pintor neerlandés famoso por su obra 'La ronda de noche'?",
+          "What is the name of the Dutch painter famous for his work 'The Night Watch'?",
         correct: "Rembrandt",
         incorrect: ["Jan Vermeer", "Hieronymus Bosch", "Peter Paul Rubens"],
         explanation:
-          "Rembrandt es el autor de 'La ronda de noche', una de sus obras más conocidas, pintada en 1642.",
+          "Rembrandt is the author of 'The Night Watch', one of his most famous works, painted in 1642.",
       },
       {
         question:
-          "¿Qué artista del Renacimiento es famoso por sus frescos en la Capilla Sixtina?",
-        correct: "Miguel Ángel",
+          "Which Renaissance artist is famous for his frescoes in the Sistine Chapel?",
+        correct: "Michelangelo",
         incorrect: ["Leonardo da Vinci", "Raphael", "Sandro Botticelli"],
         explanation:
-          "Miguel Ángel pintó los frescos en el techo de la Capilla Sixtina, incluyendo la famosa 'Creación de Adán'.",
+          "Michelangelo painted the frescoes on the ceiling of the Sistine Chapel, including the famous 'Creation of Adam'.",
       },
       {
         question:
-          "¿Quién es el autor de 'El grito', una obra emblemática del Expresionismo?",
+          "Who is the author of 'The Scream', an emblematic work of Expressionism?",
         correct: "Edvard Munch",
         incorrect: ["Wassily Kandinsky", "Egon Schiele", "Gustav Klimt"],
         explanation:
-          "Edvard Munch pintó 'El grito', una obra central en el movimiento Expresionista, en 1893.",
+          "Edvard Munch painted 'The Scream', a central work in the Expressionist movement, in 1893.",
       },
       {
         question:
-          "¿Qué artista es conocido por sus esculturas de bronce, como 'El pensador'?",
+          "Which artist is known for their bronze sculptures, such as 'The Thinker'?",
         correct: "Auguste Rodin",
         incorrect: [
           "Gian Lorenzo Bernini",
@@ -874,34 +813,34 @@ export let questions = {
           "Henry Moore",
         ],
         explanation:
-          "Auguste Rodin es famoso por sus esculturas, incluyendo 'El pensador', que representa una figura contemplativa.",
+          "Auguste Rodin is famous for his sculptures, including 'The Thinker', which represents a contemplative figure.",
       },
       {
-        question: "¿Qué pintor es famoso por su serie de 'Nenúfares'?",
+        question: "Which painter is famous for his series of 'Water Lilies'?",
         correct: "Claude Monet",
         incorrect: ["Alfred Sisley", "Berthe Morisot", "Camille Pissarro"],
         explanation:
-          "Claude Monet es conocido por su serie de 'Nenúfares', una de las más importantes del Impresionismo.",
+          "Claude Monet is known for his series of 'Water Lilies', one of the most important works of Impressionism.",
       },
       {
         question:
-          "¿Cuál es el nombre del movimiento artístico asociado con el uso de formas geométricas y colores planos durante el siglo XX?",
-        correct: "Cubismo",
-        incorrect: ["Surrealismo", "Art Nouveau", "Constructivismo"],
+          "What is the name of the artistic movement associated with the use of geometric shapes and flat colors during the 20th century?",
+        correct: "Cubism",
+        incorrect: ["Surrealism", "Art Nouveau", "Constructivism"],
         explanation:
-          "El Cubismo, desarrollado por Picasso y Braque, se caracteriza por el uso de formas geométricas y una perspectiva múltiple.",
+          "Cubism, developed by Picasso and Braque, is characterized by the use of geometric shapes and multiple perspectives.",
       },
       {
         question:
-          "¿Qué pintor español es conocido por sus obras surrealistas y su estilo único, como en 'El gran masturbador'?",
+          "Which Spanish painter is known for his surrealist works and unique style, as seen in 'The Great Masturbator'?",
         correct: "Salvador Dalí",
         incorrect: ["Joan Miró", "Luis Buñuel", "Rafael Alberti"],
         explanation:
-          "Salvador Dalí es conocido por sus obras surrealistas, y 'El gran masturbador' es una de sus piezas destacadas.",
+          "Salvador Dalí is known for his surrealist works, and 'The Great Masturbator' is one of his highlighted pieces.",
       },
       {
         question:
-          "¿Qué artista es famoso por sus murales en la Biblioteca Pública de Nueva York?",
+          "Which artist is famous for his murals in the New York Public Library?",
         correct: "Diego Rivera",
         incorrect: [
           "David Alfaro Siqueiros",
@@ -909,28 +848,24 @@ export let questions = {
           "Rufino Tamayo",
         ],
         explanation:
-          "Diego Rivera es conocido por sus murales en la Biblioteca Pública de Nueva York, que reflejan temas sociales y políticos.",
+          "Diego Rivera is known for his murals in the New York Public Library, which reflect social and political themes.",
       },
       {
-        question: "¿En qué año se completó la Capilla Sixtina?",
+        question: "In what year was the Sistine Chapel completed?",
         correct: "1512",
         incorrect: ["1508", "1520", "1536"],
         explanation:
-          "La Capilla Sixtina, con su famoso techo pintado por Miguel Ángel, fue completada en 1512.",
+          "The Sistine Chapel, with its famous ceiling painted by Michelangelo, was completed in 1512.",
       },
-
       {
-        question:
-          "¿Qué técnica de grabado fue desarrollada por Albrecht Dürer?",
-        correct: "Xilografía",
-        incorrect: ["Aguafuerte", "Litografía", "Serigrafía"],
+        question: "What engraving technique was developed by Albrecht Dürer?",
+        correct: "Woodcut",
+        incorrect: ["Aguafuerte", "Lithography", "Serigraphy"],
         explanation:
-          "Albrecht Dürer es conocido por su maestría en la xilografía, una técnica de grabado en madera.",
+          "Albrecht Dürer is known for his mastery in woodcut, a wood engraving technique.",
       },
-
       {
-        question:
-          "¿Cuál es el verdadero nombre del artista conocido como Caravaggio?",
+        question: "What is the real name of the artist known as Caravaggio?",
         correct: "Michelangelo Merisi",
         incorrect: [
           "Gian Lorenzo Bernini",
@@ -938,58 +873,52 @@ export let questions = {
           "Giovanni Bellini",
         ],
         explanation:
-          "Caravaggio, un maestro del barroco italiano, nació con el nombre de Michelangelo Merisi.",
+          "Caravaggio, a master of Italian Baroque, was born with the name Michelangelo Merisi.",
       },
-
       {
-        question:
-          "¿Qué movimiento artístico fue fundado por André Breton en 1924?",
-        correct: "Surrealismo",
-        incorrect: ["Dadaísmo", "Expresionismo", "Futurismo"],
+        question: "What artistic movement was founded by André Breton in 1924?",
+        correct: "Surrealism",
+        incorrect: ["Dadaism", "Expressionism", "Futurism"],
         explanation:
-          "El surrealismo, un movimiento que explora lo irracional y el subconsciente, fue fundado por André Breton en 1924.",
+          "Surrealism, a movement exploring the irrational and the subconscious, was founded by André Breton in 1924.",
       },
-
       {
-        question:
-          "¿En qué museo se encuentra la obra 'Las Meninas' de Velázquez?",
-        correct: "Museo del Prado",
-        incorrect: ["Museo del Louvre", "Galería Uffizi", "Museo Británico"],
+        question: "In which museum is Velázquez's 'Las Meninas' located?",
+        correct: "Prado Museum",
+        incorrect: ["Louvre Museum", "Uffizi Gallery", "British Museum"],
         explanation:
-          "'Las Meninas', una de las obras maestras de Diego Velázquez, se encuentra en el Museo del Prado en Madrid.",
+          "'Las Meninas', one of Diego Velázquez's masterpieces, is located in the Prado Museum in Madrid.",
       },
-
       {
-        question: "¿Quién pintó el fresco 'La escuela de Atenas'?",
-        correct: "Rafael",
+        question: "Who painted the fresco 'The School of Athens'?",
+        correct: "Raphael",
         incorrect: ["Leonardo da Vinci", "Michelangelo", "Sandro Botticelli"],
         explanation:
-          "'La escuela de Atenas' es un famoso fresco del Renacimiento pintado por Rafael en el Vaticano.",
+          "'The School of Athens' is a famous Renaissance fresco painted by Raphael in the Vatican.",
       },
-
       {
         question:
-          "¿Qué obra de Rembrandt es conocida por su uso innovador de la luz y la sombra?",
-        correct: "La ronda de noche",
+          "What Rembrandt work is known for its innovative use of light and shadow?",
+        correct: "The Night Watch",
         incorrect: [
-          "La lección de anatomía",
-          "El retrato de Jan Six",
-          "Los síndicos del gremio de pañeros",
+          "The Anatomy Lesson",
+          "Portrait of Jan Six",
+          "The Syndics of the Cloth-Makers' Guild",
         ],
         explanation:
-          "'La ronda de noche' es famosa por su dramático uso del claroscuro, una técnica que Rembrandt dominó.",
+          "'The Night Watch' is famous for its dramatic use of chiaroscuro, a technique that Rembrandt mastered.",
       },
       {
         question:
-          "¿Qué técnica artística implica la aplicación de pigmentos sobre yeso húmedo?",
+          "What artistic technique involves applying pigments onto wet plaster?",
         correct: "Fresco",
-        incorrect: ["Tempera", "Encáustica", "Sfumato"],
+        incorrect: ["Tempera", "Encaustic", "Sfumato"],
         explanation:
-          "La técnica del fresco consiste en aplicar pigmentos sobre yeso húmedo, permitiendo que la pintura se integre con la pared.",
+          "The fresco technique involves applying pigments onto wet plaster, allowing the paint to bond with the wall.",
       },
       {
         question:
-          "¿Qué artista renacentista diseñó los planos de la Basílica de San Pedro en el Vaticano antes de su muerte?",
+          "Which Renaissance artist designed the plans for St. Peter's Basilica in the Vatican before his death?",
         correct: "Donato Bramante",
         incorrect: [
           "Leonardo da Vinci",
@@ -997,23 +926,23 @@ export let questions = {
           "Filippo Brunelleschi",
         ],
         explanation:
-          "Donato Bramante fue el arquitecto original de la Basílica de San Pedro, y su diseño influyó en las futuras modificaciones.",
+          "Donato Bramante was the original architect of St. Peter's Basilica, and his design influenced future modifications.",
       },
       {
         question:
-          "¿Qué obra de El Greco es conocida por su dramática representación del entierro de un noble toledano?",
-        correct: "El entierro del Conde de Orgaz",
+          "What work by El Greco is known for its dramatic depiction of the burial of a nobleman from Toledo?",
+        correct: "The Burial of Count Orgaz",
         incorrect: [
-          "Laocoonte",
-          "La vista de Toledo",
-          "El caballero de la mano en el pecho",
+          "Laocoon",
+          "View of Toledo",
+          "The Knight with His Hand on His Chest",
         ],
         explanation:
-          "'El entierro del Conde de Orgaz' es una de las obras más conocidas de El Greco, famosa por su composición y simbolismo religioso.",
+          "'The Burial of Count Orgaz' is one of El Greco's most known works, famous for its composition and religious symbolism.",
       },
       {
         question:
-          "¿Qué arquitecto diseñó la fachada de la Basílica del Pilar en Zaragoza?",
+          "Which architect designed the façade of the Basilica of Our Lady of the Pillar in Zaragoza?",
         correct: "Francisco de Herrera el Mozo",
         incorrect: [
           "Juan de Villanueva",
@@ -1021,243 +950,249 @@ export let questions = {
           "Pedro de Ribera",
         ],
         explanation:
-          "Francisco de Herrera el Mozo fue un destacado arquitecto barroco español que diseñó la fachada de la Basílica del Pilar.",
+          "Francisco de Herrera el Mozo was a prominent Spanish Baroque architect who designed the façade of the Basilica of Our Lady of the Pillar.",
       },
       {
-        question: "¿Quién pintó 'El jardín de las delicias'?",
+        question: "Who painted 'The Garden of Earthly Delights'?",
         correct: "Hieronymus Bosch",
         incorrect: [
-          "Pieter Bruegel el Viejo",
+          "Pieter Bruegel the Elder",
           "Albrecht Dürer",
           "Jan van Eyck",
         ],
         explanation:
-          "'El jardín de las delicias' es una de las obras más conocidas de Hieronymus Bosch, llena de simbolismo y complejidad.",
+          "'The Garden of Earthly Delights' is one of the most well-known works of Hieronymus Bosch, filled with symbolism and complexity.",
       },
       {
         question:
-          "¿Qué pintor es conocido por su serie de autorretratos, incluidos varios con vendajes en la cabeza?",
+          "Which painter is known for his series of self-portraits, several of which feature bandages on his head?",
         correct: "Vincent van Gogh",
         incorrect: ["Paul Gauguin", "Claude Monet", "Eugène Delacroix"],
         explanation:
-          "Vincent van Gogh pintó varios autorretratos, muchos de ellos reflejando su estado emocional y físico.",
+          "Vincent van Gogh painted several self-portraits, many of which reflect his emotional and physical state.",
       },
       {
         question:
-          "¿Qué artista creó el famoso grabado 'El caballero, la muerte y el diablo'?",
-        correct: "Alberto Durero",
-        incorrect: ["Hans Holbein", "Lucas Cranach", "Peter Paul Rubens"],
+          "Which artist created the famous engraving 'Knight, Death, and the Devil'?",
+        correct: "Albrecht Dürer",
+        incorrect: [
+          "Rembrandt",
+          "Lucas Cranach the Elder",
+          "Hans Holbein the Younger",
+        ],
         explanation:
-          "'El caballero, la muerte y el diablo' es una de las obras más icónicas del maestro del grabado alemán Alberto Durero.",
+          "'Knight, Death, and the Devil' is an emblematic engraving by Albrecht Dürer, reflecting the themes of mortality and virtue.",
+      },
+      {
+        question: "Who painted the iconic 'Mona Lisa'?",
+        correct: "Leonardo da Vinci",
+        incorrect: ["Raphael", "Titian", "Sandro Botticelli"],
+        explanation:
+          "'Mona Lisa' is one of the most famous paintings in the world, created by Leonardo da Vinci in the early 16th century.",
       },
       {
         question:
-          "¿Qué pintor italiano es conocido por su obra 'La alegoría de la primavera'?",
-        correct: "Sandro Botticelli",
-        incorrect: ["Leonardo da Vinci", "Michelangelo", "Raphael"],
+          "Which artist created the famous mural 'Man at the Crossroads' in the Rockefeller Center?",
+        correct: "Diego Rivera",
+        incorrect: [
+          "David Alfaro Siqueiros",
+          "José Clemente Orozco",
+          "Rufino Tamayo",
+        ],
         explanation:
-          "'La alegoría de la primavera' es una de las grandes obras del renacimiento italiano, creada por Sandro Botticelli.",
+          "'Man at the Crossroads' was a significant mural created by Diego Rivera in 1933, showcasing social and political themes.",
       },
     ],
   },
   sport: {
     easy: [
       {
-        question: "¿Cuántos jugadores forman un equipo de fútbol en el campo?",
-        correct: "11 jugadores",
-        incorrect: ["9 jugadores", "10 jugadores", "12 jugadores"],
+        question: "How many players are on a football team on the field?",
+        correct: "11 players",
+        incorrect: ["9 players", "10 players", "12 players"],
         explanation:
-          "En un partido de fútbol, cada equipo tiene 11 jugadores en el campo, incluyendo al portero.",
+          "In a football match, each team has 11 players on the field, including the goalkeeper.",
       },
-
       {
         question:
-          "¿Qué deporte se juega con una raqueta y una pelota en una cancha dividida por una red?",
-        correct: "Tenis",
-        incorrect: ["Bádminton", "Ping-pong", "Squash"],
+          "What sport is played with a racket and a ball on a court divided by a net?",
+        correct: "Tennis",
+        incorrect: ["Badminton", "Ping-pong", "Squash"],
         explanation:
-          "El tenis es un deporte en el que se utiliza una raqueta para golpear una pelota sobre una red.",
-      },
-
-      {
-        question: "¿Qué deporte es conocido como 'el deporte rey'?",
-        correct: "Fútbol",
-        incorrect: ["Béisbol", "Baloncesto", "Atletismo"],
-        explanation:
-          "El fútbol es conocido popularmente como 'el deporte rey' debido a su gran popularidad en todo el mundo.",
+          "Tennis is a sport in which a racket is used to hit a ball over a net.",
       },
       {
-        question: "¿Cuántos anillos olímpicos hay en la bandera olímpica?",
+        question: "Which sport is known as 'the king of sports'?",
+        correct: "Football",
+        incorrect: ["Baseball", "Basketball", "Athletics"],
+        explanation:
+          "Football is popularly known as 'the king of sports' due to its great popularity worldwide.",
+      },
+      {
+        question: "How many Olympic rings are there on the Olympic flag?",
         correct: "5",
         incorrect: ["4", "6", "7"],
         explanation:
-          "La bandera olímpica tiene 5 anillos entrelazados, que representan los continentes del mundo.",
-      },
-
-      {
-        question: "¿En qué deporte se puede hacer un 'strike'?",
-        correct: "Bolos",
-        incorrect: ["Tenis", "Golf", "Fútbol"],
-        explanation:
-          "En los bolos, un 'strike' ocurre cuando todos los pinos son derribados con el primer lanzamiento.",
-      },
-
-      {
-        question: "¿Qué país ha ganado más Copas del Mundo de fútbol?",
-        correct: "Brasil",
-        incorrect: ["Alemania", "Argentina", "Italia"],
-        explanation:
-          "Brasil ha ganado la Copa del Mundo de fútbol en 5 ocasiones, más que cualquier otro país.",
+          "The Olympic flag has 5 interlocking rings, representing the continents of the world.",
       },
       {
-        question: "¿Qué deporte se practica en el Tour de Francia?",
-        correct: "Ciclismo",
-        incorrect: ["Automovilismo", "Atletismo", "Esquí"],
+        question: "In what sport can you make a 'strike'?",
+        correct: "Bowling",
+        incorrect: ["Tennis", "Golf", "Football"],
         explanation:
-          "El Tour de Francia es una de las competiciones de ciclismo más prestigiosas del mundo.",
+          "In bowling, a 'strike' occurs when all the pins are knocked down with the first roll.",
       },
       {
-        question: "¿En qué deporte se utiliza un bate para golpear una pelota?",
-        correct: "Béisbol",
-        incorrect: ["Golf", "Hockey", "Críquet"],
+        question: "Which country has won the most World Cups in football?",
+        correct: "Brazil",
+        incorrect: ["Germany", "Argentina", "Italy"],
         explanation:
-          "El béisbol es un deporte en el que se usa un bate para golpear una pelota y correr entre bases.",
+          "Brazil has won the football World Cup 5 times, more than any other country.",
       },
       {
-        question: "¿Cuál es el deporte más popular en Estados Unidos?",
-        correct: "Fútbol americano",
-        incorrect: ["Béisbol", "Baloncesto", "Hockey sobre hielo"],
+        question: "What sport is practiced in the Tour de France?",
+        correct: "Cycling",
+        incorrect: ["Motorsport", "Athletics", "Skiing"],
         explanation:
-          "El fútbol americano es el deporte más popular en Estados Unidos, especialmente la NFL.",
+          "The Tour de France is one of the most prestigious cycling competitions in the world.",
+      },
+      {
+        question: "In which sport is a bat used to hit a ball?",
+        correct: "Baseball",
+        incorrect: ["Golf", "Hockey", "Cricket"],
+        explanation:
+          "Baseball is a sport in which a bat is used to hit a ball and run between bases.",
+      },
+      {
+        question: "What is the most popular sport in the United States?",
+        correct: "American football",
+        incorrect: ["Baseball", "Basketball", "Ice hockey"],
+        explanation:
+          "American football is the most popular sport in the United States, especially the NFL.",
       },
       {
         question:
-          "¿Qué deporte se juega principalmente en una cancha con dos aros en los extremos?",
-        correct: "Baloncesto",
-        incorrect: ["Voleibol", "Hockey", "Fútbol"],
+          "What sport is mainly played on a court with two hoops at each end?",
+        correct: "Basketball",
+        incorrect: ["Volleyball", "Hockey", "Football"],
         explanation:
-          "El baloncesto se juega en una cancha con dos aros, uno en cada extremo, y el objetivo es encestar la pelota.",
+          "Basketball is played on a court with two hoops, one at each end, and the objective is to score by shooting the ball through the hoop.",
       },
     ],
     medium: [
       {
-        question:
-          "¿Cuál es el país anfitrión de los Juegos Olímpicos de verano 2024?",
-        correct: "Francia",
-        incorrect: ["Japón", "China", "Estados Unidos"],
-        explanation:
-          "Los Juegos Olímpicos de verano 2024 se celebrarán en París, Francia.",
+        question: "What is the host country for the 2024 Summer Olympics?",
+        correct: "France",
+        incorrect: ["Japan", "China", "United States"],
+        explanation: "The 2024 Summer Olympics will be held in Paris, France.",
       },
       {
         question:
-          "¿Qué equipo ha ganado más títulos de la Copa del Mundo de la FIFA en fútbol?",
-        correct: "Brasil",
-        incorrect: ["Alemania", "Argentina", "Italia"],
+          "Which team has won the most FIFA World Cup titles in football?",
+        correct: "Brazil",
+        incorrect: ["Germany", "Argentina", "Italy"],
         explanation:
-          "Brasil ha ganado más títulos de la Copa del Mundo de la FIFA, con un total de 5.",
+          "Brazil has won the most FIFA World Cup titles, with a total of 5.",
       },
       {
         question:
-          "¿En qué deporte se utilizan los términos 'freestyle' y 'backstroke'?",
-        correct: "Natación",
-        incorrect: ["Ciclismo", "Atletismo", "Esquí"],
+          "In which sport are the terms 'freestyle' and 'backstroke' used?",
+        correct: "Swimming",
+        incorrect: ["Cycling", "Athletics", "Skiing"],
         explanation:
-          "'Freestyle' y 'backstroke' son estilos de nado en el deporte de natación.",
+          "'Freestyle' and 'backstroke' are swimming styles in the sport of swimming.",
+      },
+      {
+        question: "Which country is known as the home of the sport of cricket?",
+        correct: "England",
+        incorrect: ["India", "Australia", "Pakistan"],
+        explanation:
+          "Cricket originated in England, although it is very popular in many Commonwealth countries.",
       },
       {
         question:
-          "¿Qué país es conocido por ser el hogar del deporte del cricket?",
-        correct: "Inglaterra",
-        incorrect: ["India", "Australia", "Pakistán"],
-        explanation:
-          "El cricket tiene sus orígenes en Inglaterra, aunque es muy popular en muchos países de la Commonwealth.",
-      },
-      {
-        question:
-          "¿Cuál es el nombre del torneo de tenis que se juega sobre césped en Wimbledon?",
+          "What is the name of the tennis tournament played on grass at Wimbledon?",
         correct: "Wimbledon",
         incorrect: ["US Open", "Roland Garros", "Australian Open"],
         explanation:
-          "Wimbledon es el torneo de tenis que se juega sobre césped en el All England Club en Londres.",
+          "Wimbledon is the tennis tournament played on grass at the All England Club in London.",
       },
       {
-        question: "¿Qué boxeador es conocido como 'El Más Grande'?",
+        question: "Which boxer is known as 'The Greatest'?",
         correct: "Muhammad Ali",
         incorrect: ["Mike Tyson", "Floyd Mayweather", "Joe Frazier"],
         explanation:
-          "Muhammad Ali es considerado uno de los mejores boxeadores de todos los tiempos, conocido como 'El Más Grande'.",
+          "Muhammad Ali is considered one of the greatest boxers of all time, known as 'The Greatest.'",
       },
-
+      {
+        question: "In which city were the first modern Olympic Games held?",
+        correct: "Athens",
+        incorrect: ["Paris", "London", "Rome"],
+        explanation:
+          "The first modern Olympic Games were held in Athens, Greece, in 1896.",
+      },
       {
         question:
-          "¿En qué ciudad se celebraron los primeros Juegos Olímpicos modernos?",
-        correct: "Atenas",
-        incorrect: ["París", "Londres", "Roma"],
-        explanation:
-          "Los primeros Juegos Olímpicos modernos se celebraron en Atenas, Grecia, en 1896.",
-      },
-      {
-        question: "¿Qué tenista tiene el récord de más títulos de Grand Slam?",
+          "Which tennis player holds the record for the most Grand Slam titles?",
         correct: "Roger Federer",
         incorrect: ["Rafael Nadal", "Novak Djokovic", "Pete Sampras"],
         explanation:
-          "Roger Federer es uno de los tenistas más exitosos de la historia, con múltiples títulos de Grand Slam.",
+          "Roger Federer is one of the most successful tennis players in history, with multiple Grand Slam titles.",
       },
       {
-        question: "¿Qué país ganó la primera Copa del Mundo de fútbol en 1930?",
+        question: "Which country won the first football World Cup in 1930?",
         correct: "Uruguay",
-        incorrect: ["Argentina", "Brasil", "Italia"],
+        incorrect: ["Argentina", "Brazil", "Italy"],
         explanation:
-          "Uruguay ganó la primera Copa del Mundo de la FIFA en 1930, derrotando a Argentina en la final.",
+          "Uruguay won the first FIFA World Cup in 1930, defeating Argentina in the final.",
       },
       {
-        question: "¿Qué jugador de baloncesto es conocido como 'Air Jordan'?",
+        question: "Which basketball player is known as 'Air Jordan'?",
         correct: "Michael Jordan",
         incorrect: ["LeBron James", "Kobe Bryant", "Magic Johnson"],
         explanation:
-          "Michael Jordan es apodado 'Air Jordan' debido a su habilidad para saltar y encestar con estilo.",
+          "Michael Jordan is nicknamed 'Air Jordan' due to his ability to jump and score in style.",
       },
       {
-        question: "¿En qué deporte se compite por la 'Copa América'?",
-        correct: "Fútbol",
-        incorrect: ["Rugby", "Baloncesto", "Voleibol"],
+        question: "In which sport is the 'Copa América' contested?",
+        correct: "Football",
+        incorrect: ["Rugby", "Basketball", "Volleyball"],
         explanation:
-          "La Copa América es un torneo internacional de fútbol que se celebra entre selecciones de América del Sur.",
+          "The Copa América is an international football tournament held among South American national teams.",
       },
       {
         question:
-          "¿Qué atleta ganó 8 medallas de oro en los Juegos Olímpicos de Beijing 2008?",
+          "Which athlete won 8 gold medals at the Beijing 2008 Olympics?",
         correct: "Michael Phelps",
         incorrect: ["Usain Bolt", "Carl Lewis", "Mark Spitz"],
         explanation:
-          "Michael Phelps ganó 8 medallas de oro en natación durante los Juegos Olímpicos de Beijing 2008, un récord histórico.",
+          "Michael Phelps won 8 gold medals in swimming at the Beijing 2008 Olympics, a historic record.",
       },
       {
         question:
-          "¿En qué deporte se utiliza un balón ovalado y se juega en una cancha con postes en forma de H?",
+          "In which sport is an oval ball used and played on a field with H-shaped goalposts?",
         correct: "Rugby",
-        incorrect: ["Fútbol americano", "Fútbol", "Balonmano"],
+        incorrect: ["American football", "Football", "Handball"],
         explanation:
-          "El rugby es un deporte en el que se usa un balón ovalado y el objetivo es llevarlo más allá de la línea de gol o patearlo entre los postes en forma de H.",
+          "Rugby is a sport where an oval ball is used, and the goal is to carry it over the goal line or kick it between the H-shaped goalposts.",
       },
       {
-        question:
-          "¿Qué equipo de la NBA ha ganado más campeonatos en la historia?",
+        question: "Which NBA team has won the most championships in history?",
         correct: "Los Angeles Lakers",
         incorrect: ["Chicago Bulls", "Boston Celtics", "Golden State Warriors"],
         explanation:
-          "Los Angeles Lakers son uno de los equipos más exitosos en la historia de la NBA, con múltiples campeonatos ganados.",
+          "The Los Angeles Lakers are one of the most successful teams in NBA history, with multiple championships.",
       },
       {
         question:
-          "¿Qué deportista es conocido por haber ganado siete veces el Tour de Francia, aunque posteriormente fue despojado de los títulos?",
+          "Which athlete is known for winning the Tour de France seven times, though later stripped of his titles?",
         correct: "Lance Armstrong",
         incorrect: ["Miguel Induráin", "Eddy Merckx", "Chris Froome"],
         explanation:
-          "Lance Armstrong ganó el Tour de Francia siete veces, pero luego fue despojado de sus títulos debido a un escándalo de dopaje.",
+          "Lance Armstrong won the Tour de France seven times but was later stripped of his titles due to a doping scandal.",
       },
       {
-        question: "¿Qué equipo ganó la primera Super Bowl en 1967?",
+        question: "Which team won the first Super Bowl in 1967?",
         correct: "Green Bay Packers",
         incorrect: [
           "Kansas City Chiefs",
@@ -1265,107 +1200,101 @@ export let questions = {
           "Dallas Cowboys",
         ],
         explanation:
-          "Green Bay Packers ganaron la primera Super Bowl en 1967, venciendo a los Kansas City Chiefs.",
+          "The Green Bay Packers won the first Super Bowl in 1967, defeating the Kansas City Chiefs.",
       },
       {
-        question: "¿Quién tiene el récord de más títulos de Fórmula 1?",
+        question: "Who holds the record for the most Formula 1 titles?",
         correct: "Lewis Hamilton",
         incorrect: ["Michael Schumacher", "Sebastian Vettel", "Ayrton Senna"],
         explanation:
-          "Lewis Hamilton posee el récord de más títulos de Fórmula 1 con 7 campeonatos mundiales.",
+          "Lewis Hamilton holds the record for the most Formula 1 titles with 7 world championships.",
       },
       {
-        question: "¿En qué deporte se utiliza una tabla y se compite en olas?",
-        correct: "Surf",
-        incorrect: ["Windsurf", "Skateboarding", "Snowboarding"],
+        question: "In which sport is a board used to compete in waves?",
+        correct: "Surfing",
+        incorrect: ["Windsurfing", "Skateboarding", "Snowboarding"],
         explanation:
-          "El surf es un deporte acuático en el que los competidores montan sobre olas utilizando una tabla de surf.",
+          "Surfing is a water sport where competitors ride waves using a surfboard.",
       },
       {
-        question: "¿Qué país ganó el Mundial de Rugby en 2019?",
-        correct: "Sudáfrica",
-        incorrect: ["Inglaterra", "Nueva Zelanda", "Australia"],
+        question: "Which country won the Rugby World Cup in 2019?",
+        correct: "South Africa",
+        incorrect: ["England", "New Zealand", "Australia"],
         explanation:
-          "Sudáfrica ganó el Mundial de Rugby en 2019, derrotando a Inglaterra en la final.",
+          "South Africa won the Rugby World Cup in 2019, defeating England in the final.",
       },
       {
-        question: "¿Qué jugador de la NBA es apodado 'King James'?",
+        question: "Which NBA player is nicknamed 'King James'?",
         correct: "LeBron James",
         incorrect: ["Kobe Bryant", "Michael Jordan", "Kevin Durant"],
         explanation:
-          "LeBron James, conocido como 'King James', es uno de los jugadores más destacados de la NBA.",
+          "LeBron James, known as 'King James,' is one of the most prominent players in the NBA.",
       },
     ],
     hard: [
       {
-        question:
-          "¿Cuál es el récord mundial de velocidad en los 100 metros planos?",
-        correct: "9.58 segundos",
-        incorrect: ["9.70 segundos", "9.85 segundos", "9.92 segundos"],
+        question: "What is the world record speed for the 100 meters sprint?",
+        correct: "9.58 seconds",
+        incorrect: ["9.70 seconds", "9.85 seconds", "9.92 seconds"],
         explanation:
-          "El récord mundial de velocidad en los 100 metros planos es de 9.58 segundos, establecido por Usain Bolt.",
+          "The world record speed for the 100 meters sprint is 9.58 seconds, set by Usain Bolt.",
       },
       {
         question:
-          "¿Qué atleta ha ganado más medallas en la historia de los Juegos Olímpicos?",
+          "Which athlete has won the most medals in the history of the Olympic Games?",
         correct: "Michael Phelps",
         incorrect: ["Usain Bolt", "Larisa Latynina", "Paavo Nurmi"],
         explanation:
-          "Michael Phelps ha ganado el mayor número de medallas en la historia de los Juegos Olímpicos con un total de 28.",
+          "Michael Phelps has won the most medals in the history of the Olympic Games with a total of 28.",
       },
       {
         question:
-          "¿En qué ciudad se celebraron los primeros Juegos Olímpicos modernos en 1896?",
-        correct: "Atenas",
-        incorrect: ["París", "Londres", "Roma"],
+          "In which city were the first modern Olympic Games held in 1896?",
+        correct: "Athens",
+        incorrect: ["Paris", "London", "Rome"],
         explanation:
-          "Los primeros Juegos Olímpicos modernos se celebraron en Atenas, Grecia, en 1896.",
+          "The first modern Olympic Games were held in Athens, Greece, in 1896.",
       },
       {
         question:
-          "¿Cuál es el nombre del famoso torneo de golf que se celebra anualmente en Augusta, Georgia?",
+          "What is the name of the famous golf tournament held annually in Augusta, Georgia?",
         correct: "The Masters",
         incorrect: ["US Open", "British Open", "PGA Championship"],
         explanation:
-          "The Masters es el torneo de golf que se celebra anualmente en Augusta, Georgia.",
+          "The Masters is the golf tournament held annually in Augusta, Georgia.",
       },
       {
         question:
-          "¿Qué deporte tiene una competición anual llamada 'Tour de Francia'?",
-        correct: "Ciclismo",
-        incorrect: ["Atletismo", "Nado sincronizado", "Rugby"],
+          "What sport has an annual competition called the 'Tour de France'?",
+        correct: "Cycling",
+        incorrect: ["Athletics", "Synchronized swimming", "Rugby"],
         explanation:
-          "El Tour de Francia es una competición de ciclismo que se celebra anualmente y es una de las más importantes en el mundo del ciclismo.",
+          "The Tour de France is a cycling competition held annually and is one of the most important in the cycling world.",
       },
       {
-        question:
-          "¿Qué equipo de fútbol ganó la UEFA Champions League en 2023?",
+        question: "Which football team won the UEFA Champions League in 2023?",
         correct: "Manchester City",
         incorrect: ["Real Madrid", "Liverpool", "Bayern Munich"],
         explanation:
-          "Manchester City ganó la UEFA Champions League en 2023, venciendo al Inter de Milán en la final.",
+          "Manchester City won the UEFA Champions League in 2023, defeating Inter Milan in the final.",
       },
       {
         question:
-          "¿Cuál es el nombre del estadio más grande del mundo en términos de capacidad?",
-        correct: "Estadio Rungrado 1 de Mayo",
-        incorrect: [
-          "Estadio de Wembley",
-          "Estadio Camp Nou",
-          "Estadio Maracaná",
-        ],
+          "What is the name of the largest stadium in the world by capacity?",
+        correct: "Rungrado 1st of May Stadium",
+        incorrect: ["Wembley Stadium", "Camp Nou", "Maracanã Stadium"],
         explanation:
-          "El Estadio Rungrado 1 de Mayo, en Pyongyang, Corea del Norte, es el estadio más grande del mundo por capacidad, con un aforo de aproximadamente 114,000 personas.",
+          "Rungrado 1st of May Stadium in Pyongyang, North Korea, is the largest stadium in the world by capacity, holding approximately 114,000 people.",
       },
       {
-        question: "¿Qué deporte se juega en la modalidad de 'slalom gigante'?",
-        correct: "Esquí alpino",
-        incorrect: ["Snowboard", "Patinaje sobre hielo", "Esquí de fondo"],
+        question: "What sport is played in the 'giant slalom' modality?",
+        correct: "Alpine skiing",
+        incorrect: ["Snowboarding", "Ice skating", "Cross-country skiing"],
         explanation:
-          "El slalom gigante es una modalidad de esquí alpino en la que los esquiadores deben pasar por una serie de puertas situadas en el campo de nieve.",
+          "Giant slalom is a modality of alpine skiing where skiers must pass through a series of gates on the snowfield.",
       },
       {
-        question: "¿Qué equipo de la NFL ha ganado más Super Bowls?",
+        question: "Which NFL team has won the most Super Bowls?",
         correct: "Pittsburgh Steelers",
         incorrect: [
           "New England Patriots",
@@ -1373,91 +1302,78 @@ export let questions = {
           "San Francisco 49ers",
         ],
         explanation:
-          "Los Pittsburgh Steelers han ganado el mayor número de Super Bowls en la historia de la NFL, con seis victorias.",
+          "The Pittsburgh Steelers have won the most Super Bowls in NFL history, with six victories.",
       },
       {
         question:
-          "¿En qué año se fundó el Comité Olímpico Internacional (COI)?",
+          "In what year was the International Olympic Committee (IOC) founded?",
         correct: "1894",
         incorrect: ["1896", "1900", "1904"],
         explanation:
-          "El Comité Olímpico Internacional (COI) fue fundado en 1894 por Pierre de Coubertin.",
+          "The International Olympic Committee (IOC) was founded in 1894 by Pierre de Coubertin.",
       },
       {
         question:
-          "¿Quién fue el primer piloto de Fórmula 1 en ganar siete campeonatos mundiales?",
+          "Who was the first Formula 1 driver to win seven world championships?",
         correct: "Michael Schumacher",
         incorrect: ["Ayrton Senna", "Lewis Hamilton", "Alain Prost"],
         explanation:
-          "Michael Schumacher fue el primer piloto en la historia de la Fórmula 1 en ganar siete campeonatos mundiales.",
+          "Michael Schumacher was the first driver in Formula 1 history to win seven world championships.",
       },
-
       {
         question:
-          "¿En qué deporte se utiliza una pelota con 18 paneles hexagonales y 12 pentagonales?",
-        correct: "Fútbol",
-        incorrect: ["Balonmano", "Rugby", "Voleibol"],
+          "In what sport is a ball with 18 hexagonal panels and 12 pentagonal panels used?",
+        correct: "Football (Soccer)",
+        incorrect: ["Handball", "Rugby", "Volleyball"],
         explanation:
-          "El diseño clásico de un balón de fútbol está compuesto por 32 paneles, 18 hexagonales y 12 pentagonales.",
+          "The classic design of a football consists of 32 panels, 18 hexagonal and 12 pentagonal.",
       },
-
       {
         question:
-          "¿Qué golfista es conocido por haber ganado 18 títulos principales en su carrera?",
+          "Which golfer is known for winning 18 major titles in his career?",
         correct: "Jack Nicklaus",
         incorrect: ["Tiger Woods", "Arnold Palmer", "Ben Hogan"],
         explanation:
-          "Jack Nicklaus es ampliamente reconocido como uno de los mejores golfistas de todos los tiempos, con 18 títulos principales.",
+          "Jack Nicklaus is widely regarded as one of the greatest golfers of all time, with 18 major titles.",
       },
-
       {
         question:
-          "¿Qué equipo de fútbol ha ganado más veces la UEFA Champions League?",
+          "Which football team has won the most UEFA Champions League titles?",
         correct: "Real Madrid",
-        incorrect: ["AC Milan", "Liverpool", "Bayern Múnich"],
+        incorrect: ["AC Milan", "Liverpool", "Bayern Munich"],
         explanation:
-          "El Real Madrid ha ganado la UEFA Champions League más veces que cualquier otro club, con numerosos títulos en su haber.",
+          "Real Madrid has won the UEFA Champions League more times than any other club, with numerous titles.",
       },
-
       {
-        question:
-          "¿Quién es el máximo goleador de la historia de la Copa del Mundo de la FIFA?",
+        question: "Who is the all-time top scorer in FIFA World Cup history?",
         correct: "Miroslav Klose",
         incorrect: ["Pelé", "Ronaldo Nazário", "Gerd Müller"],
         explanation:
-          "Miroslav Klose, de Alemania, es el máximo goleador en la historia de la Copa del Mundo de la FIFA, con 16 goles.",
+          "Miroslav Klose from Germany is the all-time top scorer in FIFA World Cup history, with 16 goals.",
       },
-
       {
-        question:
-          "¿En qué año se celebraron los primeros Juegos Olímpicos de la era moderna?",
-
+        question: "In what year were the first modern Olympic Games held?",
         correct: "1896",
         incorrect: ["1900", "1888", "1892"],
         explanation:
-          "Los primeros Juegos Olímpicos de la era moderna se celebraron en Atenas en 1896.",
+          "The first modern Olympic Games were held in Athens in 1896.",
       },
-
       {
-        question:
-          "¿Qué tenista ha ganado el mayor número de títulos en Wimbledon?",
+        question: "Which tennis player has won the most titles at Wimbledon?",
         correct: "Roger Federer",
         incorrect: ["Rafael Nadal", "Pete Sampras", "Björn Borg"],
         explanation:
-          "Roger Federer ha ganado Wimbledon en múltiples ocasiones, más que cualquier otro jugador en la historia del torneo.",
+          "Roger Federer has won Wimbledon multiple times, more than any other player in the tournament's history.",
       },
-
       {
-        question: "¿En qué deporte se utiliza un disco llamado 'puck'?",
-        correct: "Hockey sobre hielo",
-        incorrect: ["Hockey sobre césped", "Béisbol", "Balonmano"],
+        question: "In what sport is a disc called 'puck' used?",
+        correct: "Ice hockey",
+        incorrect: ["Field hockey", "Baseball", "Handball"],
         explanation:
-          "El hockey sobre hielo utiliza un disco de goma llamado 'puck', que se golpea con un palo para anotar goles.",
+          "Ice hockey uses a rubber disc called 'puck', which is hit with a stick to score goals.",
       },
-
       {
-        question:
-          "¿Qué equipo de béisbol de la MLB ha ganado más Series Mundiales?",
+        question: "Which MLB baseball team has won the most World Series?",
         correct: "New York Yankees",
         incorrect: [
           "Boston Red Sox",
@@ -1465,980 +1381,994 @@ export let questions = {
           "San Francisco Giants",
         ],
         explanation:
-          "Los New York Yankees son el equipo más exitoso en la historia de la MLB, con el mayor número de Series Mundiales ganadas.",
+          "The New York Yankees are the most successful team in MLB history, with the most World Series wins.",
       },
       {
-        question: "¿Qué es el 'Grand Slam' en el tenis?",
-        correct: "Ganar los cuatro torneos principales en un año",
+        question: "What is a 'Grand Slam' in tennis?",
+        correct: "Winning the four major tournaments in a year",
         incorrect: [
-          "Ganar un torneo sin perder un set",
-          "Ganar un torneo con sets seguidos",
-          "Ganar los tres primeros sets de un partido",
+          "Winning a tournament without losing a set",
+          "Winning a tournament with consecutive sets",
+          "Winning the first three sets of a match",
         ],
         explanation:
-          "El 'Grand Slam' en el tenis se refiere a ganar los cuatro torneos principales (Australian Open, Roland Garros, Wimbledon y US Open) en un solo año.",
+          "A 'Grand Slam' in tennis refers to winning the four major tournaments (Australian Open, Roland Garros, Wimbledon, and US Open) in a single year.",
       },
       {
-        question: "¿Qué futbolista argentino tiene más Balones de Oro?",
+        question: "Which Argentine footballer has the most Ballon d'Or awards?",
         correct: "Lionel Messi",
         incorrect: ["Diego Maradona", "Gabriel Batistuta", "Sergio Agüero"],
         explanation:
-          "Lionel Messi ha ganado más Balones de Oro que cualquier otro jugador argentino en la historia del fútbol.",
+          "Lionel Messi has won more Ballon d'Or awards than any other Argentine player in football history.",
       },
       {
         question:
-          "¿Qué tenista femenino ha ganado más títulos de Grand Slam en la era abierta?",
+          "Which female tennis player has won the most Grand Slam titles in the open era?",
         correct: "Serena Williams",
         incorrect: ["Steffi Graf", "Martina Navratilova", "Margaret Court"],
         explanation:
-          "Serena Williams ha ganado el mayor número de títulos de Grand Slam en la era abierta del tenis femenino.",
+          "Serena Williams has won the most Grand Slam titles in the open era of women's tennis.",
       },
       {
         question:
-          "¿En qué año Michael Jordan ganó su primer campeonato de la NBA?",
+          "In what year did Michael Jordan win his first NBA championship?",
         correct: "1991",
         incorrect: ["1992", "1989", "1990"],
         explanation:
-          "Michael Jordan ganó su primer campeonato de la NBA con los Chicago Bulls en 1991.",
+          "Michael Jordan won his first NBA championship with the Chicago Bulls in 1991.",
       },
       {
         question:
-          "¿Qué atleta paralímpico tiene el récord de más medallas de oro?",
+          "Which Paralympic athlete has the record for the most gold medals?",
         correct: "Trischa Zorn",
         incorrect: ["Michael Phelps", "Usain Bolt", "Oscar Pistorius"],
         explanation:
-          "Trischa Zorn, nadadora paralímpica de Estados Unidos, tiene el récord de más medallas de oro en la historia de los Juegos Paralímpicos.",
+          "Trischa Zorn, a Paralympic swimmer from the United States, holds the record for the most gold medals in Paralympic history.",
       },
       {
-        question: "¿En qué año se introdujo el tiro de tres puntos en la NBA?",
+        question:
+          "In what year was the three-point shot introduced in the NBA?",
         correct: "1979",
         incorrect: ["1980", "1982", "1977"],
         explanation:
-          "El tiro de tres puntos fue introducido en la NBA en la temporada 1979-1980.",
+          "The three-point shot was introduced in the NBA during the 1979-1980 season.",
       },
     ],
   },
   history: {
     easy: [
       {
-        question: "¿En qué año se descubrió América?",
+        question: "In what year was America discovered?",
         correct: "1492",
         incorrect: ["1498", "1500", "1482"],
         explanation:
-          "Cristóbal Colón llegó al continente americano en 1492, marcando un evento crucial en la historia mundial.",
+          "Christopher Columbus arrived at the American continent in 1492, marking a crucial event in world history.",
       },
-
       {
-        question: "¿Quién fue el primer presidente de los Estados Unidos?",
+        question: "Who was the first president of the United States?",
         correct: "George Washington",
         incorrect: ["Thomas Jefferson", "Abraham Lincoln", "John Adams"],
         explanation:
-          "George Washington fue el primer presidente de los Estados Unidos, sirviendo de 1789 a 1797.",
+          "George Washington was the first president of the United States, serving from 1789 to 1797.",
       },
-
       {
-        question:
-          "¿Cuál fue la civilización que construyó las pirámides de Egipto?",
-        correct: "Egipcios",
-        incorrect: ["Romanos", "Mayas", "Griegos"],
+        question: "Which civilization built the pyramids of Egypt?",
+        correct: "Egyptians",
+        incorrect: ["Romans", "Mayans", "Greeks"],
         explanation:
-          "Las pirámides de Egipto fueron construidas por la antigua civilización egipcia como tumbas para sus faraones.",
+          "The pyramids of Egypt were built by the ancient Egyptian civilization as tombs for their pharaohs.",
       },
-
       {
-        question:
-          "¿Qué país fue liderado por Adolf Hitler durante la Segunda Guerra Mundial?",
-        correct: "Alemania",
-        incorrect: ["Italia", "Japón", "Rusia"],
+        question: "Which country was led by Adolf Hitler during World War II?",
+        correct: "Germany",
+        incorrect: ["Italy", "Japan", "Russia"],
         explanation:
-          "Adolf Hitler fue el líder de Alemania durante la Segunda Guerra Mundial, conocido por su régimen nazi.",
+          "Adolf Hitler was the leader of Germany during World War II, known for his Nazi regime.",
       },
       {
-        question: "¿Quién escribió la 'Ilíada' y la 'Odisea'?",
-        correct: "Homero",
-        incorrect: ["Sófocles", "Aristóteles", "Eurípides"],
+        question: "Who wrote the 'Iliad' and the 'Odyssey'?",
+        correct: "Homer",
+        incorrect: ["Sophocles", "Aristotle", "Euripides"],
         explanation:
-          "Homero es el autor de la 'Ilíada' y la 'Odisea', dos de las epopeyas más importantes de la literatura antigua.",
+          "Homer is the author of the 'Iliad' and the 'Odyssey', two of the most important epics in ancient literature.",
       },
-
       {
-        question: "¿En qué ciudad se encuentra el Coliseo?",
-        correct: "Roma",
-        incorrect: ["Atenas", "París", "Estambul"],
+        question: "In which city is the Colosseum located?",
+        correct: "Rome",
+        incorrect: ["Athens", "Paris", "Istanbul"],
         explanation:
-          "El Coliseo es un anfiteatro histórico situado en Roma, Italia, famoso por sus espectáculos de gladiadores.",
+          "The Colosseum is a historic amphitheater located in Rome, Italy, famous for its gladiatorial shows.",
       },
       {
-        question: "¿Qué revolución comenzó en Francia en 1789?",
-        correct: "Revolución Francesa",
+        question: "Which revolution began in France in 1789?",
+        correct: "French Revolution",
         incorrect: [
-          "Revolución Industrial",
-          "Revolución Americana",
-          "Revolución Rusa",
+          "Industrial Revolution",
+          "American Revolution",
+          "Russian Revolution",
         ],
         explanation:
-          "La Revolución Francesa, que comenzó en 1789, fue un evento clave que condujo a cambios políticos y sociales significativos en Francia.",
+          "The French Revolution, which began in 1789, was a key event that led to significant political and social changes in France.",
       },
       {
-        question:
-          "¿Quién fue el emperador romano que se convirtió al cristianismo?",
-        correct: "Constantino",
-        incorrect: ["Julio César", "Nerón", "Augusto"],
+        question: "Who was the Roman emperor who converted to Christianity?",
+        correct: "Constantine",
+        incorrect: ["Julius Caesar", "Nero", "Augustus"],
         explanation:
-          "Constantino el Grande fue el primer emperador romano en convertirse al cristianismo, influyendo profundamente en la historia del Imperio Romano.",
+          "Constantine the Great was the first Roman emperor to convert to Christianity, profoundly influencing the history of the Roman Empire.",
       },
       {
         question:
-          "¿Qué famosa reina egipcia fue amante de Julio César y Marco Antonio?",
+          "Which famous Egyptian queen was the lover of Julius Caesar and Mark Antony?",
         correct: "Cleopatra",
         incorrect: ["Nefertiti", "Hatshepsut", "Isis"],
         explanation:
-          "Cleopatra VII fue una reina egipcia conocida por sus relaciones con Julio César y Marco Antonio.",
+          "Cleopatra VII was an Egyptian queen known for her relationships with Julius Caesar and Mark Antony.",
       },
       {
         question:
-          "¿Quién fue el líder del movimiento de independencia de la India contra el dominio británico?",
+          "Who was the leader of the independence movement in India against British rule?",
         correct: "Mahatma Gandhi",
         incorrect: ["Jawaharlal Nehru", "Subhas Chandra Bose", "Indira Gandhi"],
         explanation:
-          "Mahatma Gandhi fue un líder clave en la lucha por la independencia de la India, utilizando la resistencia pacífica como su principal herramienta.",
+          "Mahatma Gandhi was a key leader in the struggle for India's independence, using nonviolent resistance as his main tool.",
       },
     ],
     medium: [
       {
         question:
-          "¿Quién fue el líder de la Revolución Francesa que proclamó la República?",
+          "Who was the leader of the French Revolution who proclaimed the Republic?",
         correct: "Maximilien Robespierre",
-        incorrect: ["Napoleón Bonaparte", "Luis XVI", "Jean-Paul Marat"],
+        incorrect: ["Napoleon Bonaparte", "Louis XVI", "Jean-Paul Marat"],
         explanation:
-          "Maximilien Robespierre fue una figura clave en la Revolución Francesa y jugó un papel crucial en la proclamación de la República.",
+          "Maximilien Robespierre was a key figure in the French Revolution and played a crucial role in proclaiming the Republic.",
       },
       {
         question:
-          "¿Qué imperio dominó gran parte del Mediterráneo en la antigüedad?",
-        correct: "El Imperio Romano",
+          "Which empire dominated much of the Mediterranean in ancient times?",
+        correct: "The Roman Empire",
         incorrect: [
-          "El Imperio Otomano",
-          "El Imperio Bizantino",
-          "El Imperio Persa",
+          "The Ottoman Empire",
+          "The Byzantine Empire",
+          "The Persian Empire",
         ],
         explanation:
-          "El Imperio Romano dominó gran parte del Mediterráneo en su apogeo.",
+          "The Roman Empire dominated much of the Mediterranean at its height.",
       },
       {
-        question: "¿Qué evento desencadenó la Primera Guerra Mundial?",
-        correct: "El asesinato del archiduque Francisco Fernando",
+        question: "What event triggered World War I?",
+        correct: "The assassination of Archduke Franz Ferdinand",
         incorrect: [
-          "La invasión de Polonia",
-          "El ataque a Pearl Harbor",
-          "La Revolución Rusa",
+          "The invasion of Poland",
+          "The attack on Pearl Harbor",
+          "The Russian Revolution",
         ],
         explanation:
-          "El asesinato del archiduque Francisco Fernando de Austria en 1914 desencadenó el conflicto.",
+          "The assassination of Archduke Franz Ferdinand of Austria in 1914 triggered the conflict.",
       },
       {
-        question: "¿Qué tratado puso fin a la Primera Guerra Mundial?",
-        correct: "Tratado de Versalles",
+        question: "What treaty ended World War I?",
+        correct: "Treaty of Versailles",
         incorrect: [
-          "Tratado de Tordesillas",
-          "Tratado de París",
-          "Tratado de Utrecht",
+          "Treaty of Tordesillas",
+          "Treaty of Paris",
+          "Treaty of Utrecht",
         ],
         explanation:
-          "El Tratado de Versalles, firmado en 1919, puso fin a la Primera Guerra Mundial.",
+          "The Treaty of Versailles, signed in 1919, ended World War I.",
       },
       {
-        question: "¿Quién fue el primer emperador de China?",
+        question: "Who was the first emperor of China?",
         correct: "Qin Shi Huang",
         incorrect: ["Han Wudi", "Kangxi", "Yuan Shikai"],
         explanation:
-          "Qin Shi Huang fue el primer emperador de China, unificando el país bajo la dinastía Qin en 221 a.C.",
+          "Qin Shi Huang was the first emperor of China, unifying the country under the Qin dynasty in 221 B.C.",
       },
       {
         question:
-          "¿Qué ciudad europea fue devastada por la peste negra en el siglo XIV?",
-        correct: "Florencia",
-        incorrect: ["Roma", "París", "Londres"],
+          "Which European city was devastated by the Black Death in the 14th century?",
+        correct: "Florence",
+        incorrect: ["Rome", "Paris", "London"],
         explanation:
-          "Florencia fue una de las ciudades más afectadas por la peste negra durante el siglo XIV.",
+          "Florence was one of the cities most affected by the Black Death during the 14th century.",
       },
       {
         question:
-          "¿Qué ciudad fue destruida por la erupción del Vesubio en el 79 d.C.?",
-        correct: "Pompeya",
-        incorrect: ["Roma", "Herculano", "Nápoles"],
+          "Which city was destroyed by the eruption of Vesuvius in 79 A.D.?",
+        correct: "Pompeii",
+        incorrect: ["Rome", "Herculaneum", "Naples"],
         explanation:
-          "Pompeya fue una ciudad romana que quedó sepultada por la erupción del Vesubio en el año 79 d.C.",
+          "Pompeii was a Roman city that was buried by the eruption of Vesuvius in 79 A.D.",
       },
       {
-        question: "¿Qué rey inglés tuvo seis esposas?",
-        correct: "Enrique VIII",
-        incorrect: ["Ricardo III", "Eduardo VI", "Jorge III"],
+        question: "Which English king had six wives?",
+        correct: "Henry VIII",
+        incorrect: ["Richard III", "Edward VI", "George III"],
         explanation:
-          "Enrique VIII es famoso por haberse casado seis veces y por romper con la Iglesia Católica para formar la Iglesia Anglicana.",
+          "Henry VIII is famous for having married six times and for breaking with the Catholic Church to form the Anglican Church.",
       },
       {
         question:
-          "¿Qué líder indígena encabezó la resistencia contra los conquistadores en Perú?",
+          "Which indigenous leader led the resistance against the conquerors in Peru?",
         correct: "Túpac Amaru II",
         incorrect: ["Atahualpa", "Huáscar", "Manco Inca"],
         explanation:
-          "Túpac Amaru II fue un líder que luchó contra los colonizadores españoles en el Perú.",
+          "Túpac Amaru II was a leader who fought against the Spanish colonizers in Peru.",
       },
       {
-        question: "¿Quién pintó 'La última cena'?",
+        question: "Who painted 'The Last Supper'?",
         correct: "Leonardo da Vinci",
-        incorrect: ["Miguel Ángel", "Rafael", "Tiziano"],
+        incorrect: ["Michelangelo", "Raphael", "Titian"],
         explanation:
-          "Leonardo da Vinci pintó 'La última cena', una de las obras maestras más reconocidas del Renacimiento.",
+          "Leonardo da Vinci painted 'The Last Supper', one of the most recognized masterpieces of the Renaissance.",
       },
       {
         question:
-          "¿Qué país fue gobernado por los zares hasta la Revolución de 1917?",
-        correct: "Rusia",
-        incorrect: ["Alemania", "Francia", "Austria"],
+          "Which country was ruled by the czars until the Revolution of 1917?",
+        correct: "Russia",
+        incorrect: ["Germany", "France", "Austria"],
         explanation:
-          "Rusia fue gobernada por los zares hasta la Revolución Rusa de 1917, que llevó al establecimiento de la Unión Soviética.",
+          "Russia was ruled by the czars until the Russian Revolution of 1917, which led to the establishment of the Soviet Union.",
       },
       {
         question:
-          "¿Qué batalla marcó el fin del poder naval español en el siglo XVI?",
-        correct: "Batalla de Lepanto",
+          "What battle marked the end of Spanish naval power in the 16th century?",
+        correct: "Battle of Lepanto",
         incorrect: [
-          "Batalla de Trafalgar",
-          "Batalla de Hastings",
-          "Batalla de Waterloo",
+          "Battle of Trafalgar",
+          "Battle of Hastings",
+          "Battle of Waterloo",
         ],
         explanation:
-          "La Batalla de Lepanto en 1571 fue una victoria decisiva de la Liga Santa sobre el Imperio Otomano, marcando el declive del poder naval español.",
-      },
-      {
-        question: "¿Qué filósofo griego fue el maestro de Alejandro Magno?",
-        correct: "Aristóteles",
-        incorrect: ["Platón", "Sócrates", "Epicuro"],
-        explanation:
-          "Aristóteles fue el maestro de Alejandro Magno, quien luego se convirtió en uno de los conquistadores más grandes de la historia.",
+          "The Battle of Lepanto in 1571 was a decisive victory for the Holy League over the Ottoman Empire, marking the decline of Spanish naval power.",
       },
       {
         question:
-          "¿Qué ciudad fue conocida como Constantinopla antes de ser renombrada?",
-        correct: "Estambul",
-        incorrect: ["Atenas", "Alejandría", "Bagdad"],
+          "Which Greek philosopher was the teacher of Alexander the Great?",
+        correct: "Aristotle",
+        incorrect: ["Plato", "Socrates", "Epicurus"],
         explanation:
-          "Estambul fue conocida como Constantinopla hasta su renombramiento tras la conquista otomana en 1453.",
+          "Aristotle was the teacher of Alexander the Great, who later became one of the greatest conquerors in history.",
       },
       {
-        question: "¿Qué país fue el primero en abolir la esclavitud en 1804?",
-        correct: "Haití",
-        incorrect: ["Estados Unidos", "Brasil", "Reino Unido"],
+        question:
+          "What city was known as Constantinople before it was renamed?",
+        correct: "Istanbul",
+        incorrect: ["Athens", "Alexandria", "Baghdad"],
         explanation:
-          "Haití fue el primer país en abolir la esclavitud en 1804, tras su revolución de independencia contra Francia.",
+          "Istanbul was known as Constantinople until it was renamed following the Ottoman conquest in 1453.",
       },
       {
-        question: "¿En qué año comenzó la Revolución Rusa?",
+        question: "Which country was the first to abolish slavery in 1804?",
+        correct: "Haiti",
+        incorrect: ["United States", "Brazil", "United Kingdom"],
+        explanation:
+          "Haiti was the first country to abolish slavery in 1804, following its independence revolution against France.",
+      },
+      {
+        question: "In what year did the Russian Revolution begin?",
         correct: "1917",
         incorrect: ["1905", "1921", "1936"],
         explanation:
-          "La Revolución Rusa comenzó en 1917, lo que condujo al colapso del Imperio Ruso y el ascenso del comunismo.",
+          "The Russian Revolution began in 1917, leading to the collapse of the Russian Empire and the rise of communism.",
       },
       {
-        question: "¿Quién fue el primer presidente de los Estados Unidos?",
+        question: "Who was the first president of the United States?",
         correct: "George Washington",
         incorrect: ["Thomas Jefferson", "John Adams", "Abraham Lincoln"],
         explanation:
-          "George Washington fue el primer presidente de los Estados Unidos, sirviendo desde 1789 hasta 1797.",
+          "George Washington was the first president of the United States, serving from 1789 to 1797.",
       },
       {
-        question: "¿Qué civilización antigua construyó las pirámides de Giza?",
-        correct: "Egipcia",
-        incorrect: ["Mesopotámica", "Maya", "Inca"],
+        question: "Which ancient civilization built the pyramids of Giza?",
+        correct: "Egyptian",
+        incorrect: ["Mesopotamian", "Mayan", "Inca"],
         explanation:
-          "La civilización egipcia construyó las pirámides de Giza, consideradas una de las Siete Maravillas del Mundo Antiguo.",
+          "The Egyptian civilization built the pyramids of Giza, considered one of the Seven Wonders of the Ancient World.",
       },
       {
-        question: "¿Qué líder encabezó la Revolución Cubana en 1959?",
+        question: "Which leader led the Cuban Revolution in 1959?",
         correct: "Fidel Castro",
         incorrect: ["Che Guevara", "Raúl Castro", "Camilo Cienfuegos"],
         explanation:
-          "Fidel Castro lideró la Revolución Cubana en 1959, derrocando al régimen de Batista.",
+          "Fidel Castro led the Cuban Revolution in 1959, overthrowing Batista's regime.",
       },
       {
         question:
-          "¿Qué invento revolucionó la industria textil durante la Revolución Industrial?",
-        correct: "La máquina de hilar",
-        incorrect: ["El telégrafo", "La locomotora", "La imprenta"],
+          "What invention revolutionized the textile industry during the Industrial Revolution?",
+        correct: "The spinning machine",
+        incorrect: ["The telegraph", "The locomotive", "The printing press"],
         explanation:
-          "La máquina de hilar revolucionó la industria textil al aumentar drásticamente la producción de hilo durante la Revolución Industrial.",
+          "The spinning machine revolutionized the textile industry by dramatically increasing yarn production during the Industrial Revolution.",
       },
     ],
     hard: [
       {
         question:
-          "¿Qué tratado terminó la Guerra de los Cien Años entre Francia e Inglaterra?",
-        correct: "Tratado de Picquigny",
+          "What treaty ended the Hundred Years' War between France and England?",
+        correct: "Treaty of Picquigny",
         incorrect: [
-          "Tratado de Tordesillas",
-          "Tratado de Utrecht",
-          "Tratado de Versalles",
+          "Treaty of Tordesillas",
+          "Treaty of Utrecht",
+          "Treaty of Versailles",
         ],
         explanation:
-          "El Tratado de Picquigny, firmado en 1475, terminó la Guerra de los Cien Años entre Francia e Inglaterra.",
+          "The Treaty of Picquigny, signed in 1475, ended the Hundred Years' War between France and England.",
       },
       {
         question:
-          "¿Cuál fue la principal causa de la caída del Imperio Bizantino en 1453?",
-        correct: "La caída de Constantinopla",
+          "What was the main cause of the fall of the Byzantine Empire in 1453?",
+        correct: "The fall of Constantinople",
         incorrect: [
-          "La invasión de los hunos",
-          "La peste negra",
-          "La conquista de Jerusalén",
+          "The invasion of the Huns",
+          "The Black Death",
+          "The conquest of Jerusalem",
         ],
         explanation:
-          "La caída de Constantinopla en 1453 marcó el fin del Imperio Bizantino.",
+          "The fall of Constantinople in 1453 marked the end of the Byzantine Empire.",
       },
       {
         question:
-          "¿Qué filósofo griego es conocido por su método de diálogo y su enseñanza a través de preguntas y respuestas?",
-        correct: "Sócrates",
-        incorrect: ["Platón", "Aristóteles", "Epicuro"],
+          "Which Greek philosopher is known for his method of dialogue and teaching through questions and answers?",
+        correct: "Socrates",
+        incorrect: ["Plato", "Aristotle", "Epicurus"],
         explanation:
-          "Sócrates es conocido por su método de diálogo, en el que utilizaba preguntas y respuestas para fomentar el pensamiento crítico.",
+          "Socrates is known for his method of dialogue, where he used questions and answers to encourage critical thinking.",
       },
       {
-        question: "¿Quién fue el líder militar que fundó el Imperio Mongol?",
+        question: "Who was the military leader who founded the Mongol Empire?",
         correct: "Genghis Khan",
-        incorrect: ["Kublai Khan", "Ögedei Khan", "Tamerlán"],
+        incorrect: ["Kublai Khan", "Ögedei Khan", "Tamerlane"],
         explanation:
-          "Genghis Khan fue el fundador del Imperio Mongol y uno de los conquistadores más importantes de la historia.",
+          "Genghis Khan was the founder of the Mongol Empire and one of the most important conquerors in history.",
       },
       {
         question:
-          "¿Qué emperador romano fue conocido por su persecución de los cristianos y la persecución de la secta de los cristianos?",
-        correct: "Nerón",
-        incorrect: ["Calígula", "Domiciano", "Trajano"],
+          "Which Roman emperor was known for his persecution of Christians?",
+        correct: "Nero",
+        incorrect: ["Caligula", "Domitian", "Trajan"],
         explanation:
-          "El emperador Nerón es conocido por sus persecuciones contra los cristianos y por su brutalidad durante su reinado.",
+          "Emperor Nero is known for his persecutions against Christians and his brutality during his reign.",
       },
       {
         question:
-          "¿Qué figura histórica encabezó el Movimiento de Derechos Civiles en los Estados Unidos en la década de 1960?",
+          "Which historical figure led the Civil Rights Movement in the United States in the 1960s?",
         correct: "Martin Luther King Jr.",
         incorrect: ["Malcolm X", "Rosa Parks", "James Baldwin"],
         explanation:
-          "Martin Luther King Jr. fue el líder del Movimiento de Derechos Civiles en los Estados Unidos y es conocido por su defensa de la igualdad y la justicia.",
+          "Martin Luther King Jr. was the leader of the Civil Rights Movement in the United States and is known for his advocacy for equality and justice.",
       },
       {
         question:
-          "¿Qué imperio fue conocido por su extensa red de caminos y su sistema legal durante el siglo XVIII a.C.?",
-        correct: "El Imperio Hitita",
+          "Which empire was known for its extensive road network and legal system during the 18th century BC?",
+        correct: "The Hittite Empire",
         incorrect: [
-          "El Imperio Asirio",
-          "El Imperio Egipcio",
-          "El Imperio Hittita",
+          "The Assyrian Empire",
+          "The Egyptian Empire",
+          "The Hittite Empire",
         ],
         explanation:
-          "El Imperio Hitita fue conocido por su red de caminos y su sistema legal avanzado durante el siglo XVIII a.C.",
+          "The Hittite Empire was known for its road network and advanced legal system during the 18th century BC.",
       },
       {
         question:
-          "¿Qué filósofo y matemático griego es conocido por su teorema sobre los triángulos rectángulos?",
-        correct: "Pitágoras",
-        incorrect: ["Euclides", "Arquímedes", "Sócrates"],
+          "Which Greek philosopher and mathematician is known for his theorem about right triangles?",
+        correct: "Pythagoras",
+        incorrect: ["Euclid", "Archimedes", "Socrates"],
         explanation:
-          "Pitágoras es conocido por su teorema sobre los triángulos rectángulos, que establece la relación entre los lados de un triángulo rectángulo.",
+          "Pythagoras is known for his theorem about right triangles, which establishes the relationship between the sides of a right triangle.",
       },
       {
         question:
-          "¿Qué movimiento artístico y cultural del Renacimiento italiano se centró en el humanismo y la recuperación de la cultura clásica?",
-        correct: "El Renacimiento",
-        incorrect: ["El Barroco", "El Rococó", "El Romanticismo"],
+          "Which artistic and cultural movement of the Italian Renaissance focused on humanism and the recovery of classical culture?",
+        correct: "The Renaissance",
+        incorrect: ["The Baroque", "The Rococo", "Romanticism"],
         explanation:
-          "El Renacimiento fue un movimiento artístico y cultural que se centró en el humanismo y la recuperación de la cultura clásica.",
+          "The Renaissance was an artistic and cultural movement that focused on humanism and the recovery of classical culture.",
       },
       {
-        question:
-          "¿Quién fue el emperador de Japón durante la Segunda Guerra Mundial?",
+        question: "Who was the emperor of Japan during World War II?",
         correct: "Hirohito",
         incorrect: ["Akihito", "Meiji", "Taisho"],
         explanation:
-          "El emperador Hirohito fue el monarca de Japón durante la Segunda Guerra Mundial.",
+          "Emperor Hirohito was the monarch of Japan during World War II.",
       },
       {
-        question:
-          "¿Qué guerra fue conocida como la 'Guerra para poner fin a todas las guerras'?",
-        correct: "Primera Guerra Mundial",
-        incorrect: [
-          "Segunda Guerra Mundial",
-          "Guerra de los Cien Años",
-          "Guerra de Secesión",
-        ],
+        question: "Which war was known as 'The War to End All Wars'?",
+        correct: "World War I",
+        incorrect: ["World War II", "Hundred Years' War", "Civil War"],
         explanation:
-          "La Primera Guerra Mundial fue denominada la 'Guerra para poner fin a todas las guerras' debido a su escala y devastación sin precedentes.",
+          "World War I was referred to as 'The War to End All Wars' due to its unprecedented scale and devastation.",
       },
-
       {
         question:
-          "¿Quién escribió 'El Príncipe', una obra fundamental de la teoría política?",
-        correct: "Nicolás Maquiavelo",
+          "Who wrote 'The Prince', a foundational work of political theory?",
+        correct: "Niccolò Machiavelli",
         incorrect: ["John Locke", "Thomas Hobbes", "Jean-Jacques Rousseau"],
         explanation:
-          "Nicolás Maquiavelo escribió 'El Príncipe', una obra influyente en la teoría política sobre el poder y el liderazgo.",
+          "Niccolò Machiavelli wrote 'The Prince', an influential work in political theory about power and leadership.",
       },
-
       {
         question:
-          "¿Qué conferencia de 1945 decidió la división de Alemania después de la Segunda Guerra Mundial?",
-        correct: "Conferencia de Yalta",
+          "Which conference in 1945 decided the division of Germany after World War II?",
+        correct: "Yalta Conference",
         incorrect: [
-          "Conferencia de Potsdam",
-          "Conferencia de Teherán",
-          "Conferencia de París",
+          "Potsdam Conference",
+          "Tehran Conference",
+          "Paris Conference",
         ],
         explanation:
-          "La Conferencia de Yalta, celebrada en 1945, fue donde los líderes aliados decidieron la división de Alemania en zonas de ocupación.",
+          "The Yalta Conference, held in 1945, was where Allied leaders decided the division of Germany into occupation zones.",
       },
-
       {
         question:
-          "¿Qué emperador romano dividió el Imperio Romano en Oriente y Occidente?",
-        correct: "Diocleciano",
-        incorrect: ["Constantino", "Nerón", "Adriano"],
+          "Which Roman emperor divided the Roman Empire into East and West?",
+        correct: "Diocletian",
+        incorrect: ["Constantine", "Nero", "Hadrian"],
         explanation:
-          "Diocleciano fue el emperador romano que dividió el Imperio en dos partes: Oriente y Occidente, para una mejor administración.",
+          "Diocletian was the Roman emperor who divided the Empire into two parts: East and West, for better administration.",
       },
-
       {
-        question:
-          "¿Qué tratado de 1648 puso fin a la Guerra de los Treinta Años?",
-        correct: "Tratado de Westfalia",
+        question: "What treaty in 1648 ended the Thirty Years' War?",
+        correct: "Treaty of Westphalia",
         incorrect: [
-          "Tratado de Viena",
-          "Tratado de Utrecht",
-          "Tratado de Aix-la-Chapelle",
+          "Treaty of Vienna",
+          "Treaty of Utrecht",
+          "Treaty of Aix-la-Chapelle",
         ],
         explanation:
-          "El Tratado de Westfalia, firmado en 1648, puso fin a la Guerra de los Treinta Años y estableció un nuevo orden político en Europa.",
+          "The Treaty of Westphalia, signed in 1648, ended the Thirty Years' War and established a new political order in Europe.",
       },
-
       {
         question:
-          "¿Qué faraón egipcio es conocido por su tumba intacta descubierta en 1922?",
-        correct: "Tutankamón",
-        incorrect: ["Ramsés II", "Akhenatón", "Seti I"],
+          "Which Egyptian pharaoh is known for his intact tomb discovered in 1922?",
+        correct: "Tutankhamun",
+        incorrect: ["Ramses II", "Akhenaten", "Seti I"],
         explanation:
-          "Tutankamón es famoso por su tumba casi intacta, descubierta en el Valle de los Reyes por Howard Carter en 1922.",
+          "Tutankhamun is famous for his almost intact tomb, discovered in the Valley of the Kings by Howard Carter in 1922.",
       },
-
       {
-        question: "¿Qué evento dio inicio a la Segunda Guerra Mundial?",
-        correct: "Invasión de Polonia",
+        question: "What event marked the beginning of World War II?",
+        correct: "Invasion of Poland",
         incorrect: [
-          "Ataque a Pearl Harbor",
-          "Anschluss de Austria",
-          "Firma del Pacto de Múnich",
+          "Attack on Pearl Harbor",
+          "Anschluss of Austria",
+          "Signing of the Munich Pact",
         ],
         explanation:
-          "La invasión de Polonia por Alemania en 1939 marcó el comienzo de la Segunda Guerra Mundial.",
+          "The invasion of Poland by Germany in 1939 marked the beginning of World War II.",
       },
-
       {
         question:
-          "¿Qué civilización mesoamericana construyó la ciudad de Tenochtitlán?",
-        correct: "Aztecas",
-        incorrect: ["Mayas", "Incas", "Olmecas"],
+          "Which Mesoamerican civilization built the city of Tenochtitlán?",
+        correct: "Aztecs",
+        incorrect: ["Mayans", "Incans", "Olmecs"],
         explanation:
-          "Los aztecas construyeron Tenochtitlán, su capital, en el lugar donde hoy se encuentra la Ciudad de México.",
+          "The Aztecs built Tenochtitlán, their capital, on the site where Mexico City is located today.",
       },
       {
         question:
-          "¿Qué explorador portugués fue el primero en circunnavegar el globo?",
-        correct: "Fernando de Magallanes",
-        incorrect: ["Cristóbal Colón", "Vasco da Gama", "Bartolomé Díaz"],
+          "Which Portuguese explorer was the first to circumnavigate the globe?",
+        correct: "Ferdinand Magellan",
+        incorrect: ["Christopher Columbus", "Vasco da Gama", "Bartolomeu Dias"],
         explanation:
-          "Fernando de Magallanes lideró la primera expedición que circunnavegó el globo, aunque murió en Filipinas antes de completar el viaje.",
+          "Ferdinand Magellan led the first expedition to circumnavigate the globe, although he died in the Philippines before completing the journey.",
       },
-
       {
         question:
-          "¿Qué líder militar francés coronó a sí mismo emperador en 1804?",
-        correct: "Napoleón Bonaparte",
-        incorrect: ["Luis XIV", "Carlos de Gaulle", "Francisco I"],
+          "Which French military leader crowned himself emperor in 1804?",
+        correct: "Napoleon Bonaparte",
+        incorrect: ["Louis XIV", "Charles de Gaulle", "Francis I"],
         explanation:
-          "Napoleón Bonaparte se coronó a sí mismo como emperador de los franceses en 1804, marcando el comienzo del Primer Imperio Francés.",
+          "Napoleon Bonaparte crowned himself emperor of the French in 1804, marking the beginning of the First French Empire.",
       },
       {
         question:
-          "¿Qué rey británico fue ejecutado durante la Guerra Civil Inglesa?",
-        correct: "Carlos I",
-        incorrect: ["Jaime II", "Enrique VIII", "Carlos II"],
+          "Which British king was executed during the English Civil War?",
+        correct: "Charles I",
+        incorrect: ["James II", "Henry VIII", "Charles II"],
         explanation:
-          "Carlos I fue ejecutado en 1649 tras ser derrotado en la Guerra Civil Inglesa, marcando un breve periodo de república en Inglaterra.",
+          "Charles I was executed in 1649 after being defeated in the English Civil War, marking a brief period of republic in England.",
       },
       {
         question:
-          "¿Qué tratado estableció las fronteras de América Latina tras la independencia de las colonias españolas?",
-        correct: "Congreso de Viena",
+          "What treaty established the borders of Latin America after the independence of the Spanish colonies?",
+        correct: "Congress of Vienna",
         incorrect: [
-          "Tratado de Tordesillas",
-          "Tratado de París",
-          "Tratado de Versalles",
+          "Treaty of Tordesillas",
+          "Treaty of Paris",
+          "Treaty of Versailles",
         ],
         explanation:
-          "El Congreso de Viena en 1815 estableció las fronteras de América Latina tras las guerras de independencia de las colonias españolas.",
+          "The Congress of Vienna in 1815 established the borders of Latin America after the wars of independence of the Spanish colonies.",
       },
       {
-        question: "¿En qué año se produjo la Revolución Mexicana?",
+        question: "In what year did the Mexican Revolution occur?",
         correct: "1910",
         incorrect: ["1900", "1920", "1895"],
         explanation:
-          "La Revolución Mexicana comenzó en 1910, siendo un conflicto que transformó el sistema político y social de México.",
+          "The Mexican Revolution began in 1910, transforming the political and social system of Mexico.",
       },
       {
         question:
-          "¿Qué imperio fue derrotado en la batalla de Waterloo en 1815?",
-        correct: "Imperio Napoleónico",
+          "Which empire was defeated at the Battle of Waterloo in 1815?",
+        correct: "Napoleonic Empire",
         incorrect: [
-          "Imperio Austrohúngaro",
-          "Imperio Otomano",
-          "Imperio Británico",
+          "Austro-Hungarian Empire",
+          "Ottoman Empire",
+          "British Empire",
         ],
         explanation:
-          "El Imperio Napoleónico fue derrotado en la Batalla de Waterloo en 1815, marcando el final del gobierno de Napoleón Bonaparte.",
+          "The Napoleonic Empire was defeated at the Battle of Waterloo in 1815, marking the end of Napoleon Bonaparte's rule.",
+      },
+      {
+        question: "Who was the first emperor of the Roman Empire?",
+        correct: "Augustus",
+        incorrect: ["Julius Caesar", "Nero", "Tiberius"],
+        explanation:
+          "Augustus, originally known as Octavian, became the first emperor of the Roman Empire after the fall of the Republic.",
       },
       {
         question:
-          "¿Quién fue el primer emperador del Sacro Imperio Romano Germánico?",
-        correct: "Carlomagno",
-        incorrect: ["Otón I", "Carlos V", "Enrique IV"],
+          "What document declared the independence of the United States?",
+        correct: "Declaration of Independence",
+        incorrect: [
+          "Articles of Confederation",
+          "Constitution",
+          "Bill of Rights",
+        ],
         explanation:
-          "Carlomagno fue coronado como el primer emperador del Sacro Imperio Romano Germánico en el año 800.",
+          "The Declaration of Independence, adopted on July 4, 1776, declared the independence of the United States from Great Britain.",
+      },
+      {
+        question: "What event is known as the 'Boston Tea Party'?",
+        correct: "Colonial protest against British taxation",
+        incorrect: [
+          "Battle of Bunker Hill",
+          "Signing of the Treaty of Paris",
+          "First Continental Congress",
+        ],
+        explanation:
+          "The Boston Tea Party was a protest by American colonists against British taxation, specifically the tea tax, in 1773.",
+      },
+      {
+        question:
+          "Which country was responsible for the construction of the Panama Canal?",
+        correct: "United States",
+        incorrect: ["France", "Colombia", "Spain"],
+        explanation:
+          "The United States completed the construction of the Panama Canal in 1914 after France's failed attempt in the 1880s.",
+      },
+      {
+        question: "Who was the leader of the Soviet Union during World War II?",
+        correct: "Joseph Stalin",
+        incorrect: ["Leon Trotsky", "Nikita Khrushchev", "Vladimir Lenin"],
+        explanation:
+          "Joseph Stalin was the leader of the Soviet Union during World War II and played a crucial role in the Allied victory.",
+      },
+      {
+        question:
+          "What movement sought to end racial segregation in the United States?",
+        correct: "Civil Rights Movement",
+        incorrect: [
+          "Suffragette Movement",
+          "Labor Movement",
+          "Tea Party Movement",
+        ],
+        explanation:
+          "The Civil Rights Movement sought to end racial segregation and discrimination against African Americans in the United States.",
+      },
+      {
+        question:
+          "Which document established the framework for the United States government?",
+        correct: "Constitution",
+        incorrect: [
+          "Bill of Rights",
+          "Declaration of Independence",
+          "Federalist Papers",
+        ],
+        explanation:
+          "The Constitution established the framework for the government of the United States and was adopted in 1787.",
       },
     ],
   },
   geography: {
     easy: [
       {
-        question: "¿Cuál es el río más largo del mundo?",
-        correct: "Río Amazonas",
-        incorrect: ["Río Nilo", "Río Yangtsé", "Río Misisipi"],
+        question: "What is the longest river in the world?",
+        correct: "Amazon River",
+        incorrect: ["Nile River", "Yangtze River", "Mississippi River"],
         explanation:
-          "El río Amazonas en América del Sur es considerado el río más largo del mundo, con una longitud de aproximadamente 7,000 km.",
-      },
-
-      {
-        question: "¿En qué continente se encuentra Egipto?",
-        correct: "África",
-        incorrect: ["Asia", "Europa", "América"],
-        explanation:
-          "Egipto se encuentra en el continente africano, aunque su región del Sinaí está en Asia.",
+          "The Amazon River in South America is considered the longest river in the world, with a length of approximately 7,000 km.",
       },
       {
-        question: "¿Cuál es el océano más grande del mundo?",
-        correct: "Océano Pacífico",
-        incorrect: ["Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        question: "In which continent is Egypt located?",
+        correct: "Africa",
+        incorrect: ["Asia", "Europe", "America"],
         explanation:
-          "El Océano Pacífico es el más grande del mundo, cubriendo más del 30% de la superficie terrestre.",
+          "Egypt is located on the African continent, although its Sinai region is in Asia.",
       },
-
       {
-        question:
-          "¿Qué país tiene la mayor cantidad de habitantes en el mundo?",
+        question: "What is the largest ocean in the world?",
+        correct: "Pacific Ocean",
+        incorrect: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+        explanation:
+          "The Pacific Ocean is the largest in the world, covering more than 30% of the Earth's surface.",
+      },
+      {
+        question: "Which country has the largest population in the world?",
         correct: "China",
-        incorrect: ["India", "Estados Unidos", "Indonesia"],
+        incorrect: ["India", "United States", "Indonesia"],
         explanation:
-          "China es el país más poblado del mundo, con más de 1,400 millones de habitantes.",
+          "China is the most populous country in the world, with over 1.4 billion inhabitants.",
       },
       {
-        question: "¿Cuál es la capital de Francia?",
-        correct: "París",
-        incorrect: ["Marsella", "Lyon", "Toulouse"],
+        question: "What is the capital of France?",
+        correct: "Paris",
+        incorrect: ["Marseille", "Lyon", "Toulouse"],
         explanation:
-          "París es la capital de Francia y uno de los principales centros culturales y económicos de Europa.",
-      },
-
-      {
-        question: "¿Qué desierto es el más grande del mundo?",
-        correct: "Desierto del Sahara",
-        incorrect: [
-          "Desierto de Gobi",
-          "Desierto de Atacama",
-          "Desierto de Kalahari",
-        ],
-        explanation:
-          "El Desierto del Sahara en África es el desierto más grande del mundo si excluimos las regiones polares.",
+          "Paris is the capital of France and one of the main cultural and economic centers in Europe.",
       },
       {
-        question: "¿En qué país se encuentra la Torre Eiffel?",
-        correct: "Francia",
-        incorrect: ["Italia", "España", "Alemania"],
+        question: "What is the largest desert in the world?",
+        correct: "Sahara Desert",
+        incorrect: ["Gobi Desert", "Atacama Desert", "Kalahari Desert"],
         explanation:
-          "La Torre Eiffel es uno de los monumentos más emblemáticos de Francia, situada en su capital, París.",
+          "The Sahara Desert in Africa is the largest desert in the world if polar regions are excluded.",
       },
-
       {
-        question: "¿Qué país tiene forma de bota en el mapa?",
-        correct: "Italia",
-        incorrect: ["Grecia", "España", "Portugal"],
+        question: "In which country is the Eiffel Tower located?",
+        correct: "France",
+        incorrect: ["Italy", "Spain", "Germany"],
         explanation:
-          "Italia es conocida por su distintiva forma de bota en el mapa.",
+          "The Eiffel Tower is one of France's most iconic monuments, located in its capital, Paris.",
       },
-
       {
-        question: "¿En qué continente se encuentra Brasil?",
-        correct: "América del Sur",
-        incorrect: ["África", "Europa", "Oceanía"],
+        question: "Which country is shaped like a boot on the map?",
+        correct: "Italy",
+        incorrect: ["Greece", "Spain", "Portugal"],
         explanation:
-          "Brasil se encuentra en América del Sur y es el país más grande de este continente.",
+          "Italy is known for its distinctive boot shape on the map.",
       },
-
       {
-        question: "¿Qué cadena montañosa separa a Europa de Asia?",
-        correct: "Montes Urales",
-        incorrect: ["Alpes", "Himalaya", "Andes"],
+        question: "In which continent is Brazil located?",
+        correct: "South America",
+        incorrect: ["Africa", "Europe", "Oceania"],
         explanation:
-          "Los Montes Urales se consideran la frontera natural entre Europa y Asia.",
+          "Brazil is located in South America and is the largest country on this continent.",
+      },
+      {
+        question: "What mountain range separates Europe from Asia?",
+        correct: "Ural Mountains",
+        incorrect: ["Alps", "Himalayas", "Andes"],
+        explanation:
+          "The Ural Mountains are considered the natural border between Europe and Asia.",
       },
     ],
     medium: [
       {
-        question: "¿Cuál es el país más pequeño del mundo por superficie?",
-        correct: "Vaticano",
-        incorrect: ["Mónaco", "San Marino", "Liechtenstein"],
+        question: "What is the smallest country in the world by area?",
+        correct: "Vatican City",
+        incorrect: ["Monaco", "San Marino", "Liechtenstein"],
         explanation:
-          "El Vaticano es el país más pequeño del mundo, con una superficie de aproximadamente 0.49 kilómetros cuadrados.",
+          "Vatican City is the smallest country in the world, with an area of approximately 0.49 square kilometers.",
       },
       {
-        question: "¿Cuál es el lago más grande del mundo por superficie?",
-        correct: "Mar Caspio",
-        incorrect: ["Lago Superior", "Lago Victoria", "Lago Baikal"],
+        question: "What is the largest lake in the world by area?",
+        correct: "Caspian Sea",
+        incorrect: ["Lake Superior", "Lake Victoria", "Lake Baikal"],
         explanation:
-          "El Mar Caspio es el lago más grande del mundo por superficie, con más de 370,000 kilómetros cuadrados.",
+          "The Caspian Sea is the largest lake in the world by area, covering more than 370,000 square kilometers.",
       },
       {
-        question: "¿Qué país está atravesado por el río Nilo?",
-        correct: "Egipto",
-        incorrect: ["Sudán", "Etiopía", "Kenya"],
+        question: "Which country is crossed by the Nile River?",
+        correct: "Egypt",
+        incorrect: ["Sudan", "Ethiopia", "Kenya"],
         explanation:
-          "El río Nilo atraviesa Egipto, y es fundamental para la agricultura y la vida en el país.",
+          "The Nile River runs through Egypt and is vital for agriculture and life in the country.",
       },
       {
-        question: "¿Cuál es la ciudad más poblada del mundo?",
-        correct: "Tokio",
-        incorrect: ["Nueva York", "Shanghai", "Sao Paulo"],
+        question: "What is the most populous city in the world?",
+        correct: "Tokyo",
+        incorrect: ["New York", "Shanghai", "São Paulo"],
         explanation:
-          "Tokio es la ciudad más poblada del mundo, con una población metropolitana de más de 37 millones de habitantes.",
+          "Tokyo is the most populous city in the world, with a metropolitan population of over 37 million.",
       },
       {
         question:
-          "¿Qué cordillera se extiende a lo largo de la costa occidental de América del Sur?",
-        correct: "Los Andes",
-        incorrect: ["Los Alpes", "Los Pirineos", "Los Apalaches"],
+          "Which mountain range runs along the western coast of South America?",
+        correct: "The Andes",
+        incorrect: ["The Alps", "The Pyrenees", "The Appalachians"],
         explanation:
-          "La cordillera de los Andes se extiende a lo largo de la costa occidental de América del Sur, desde Venezuela hasta Chile.",
+          "The Andes mountain range stretches along the western coast of South America, from Venezuela to Chile.",
       },
       {
-        question: "¿Cuál es la capital de Australia?",
+        question: "What is the capital of Australia?",
         correct: "Canberra",
-        incorrect: ["Sídney", "Melbourne", "Brisbane"],
+        incorrect: ["Sydney", "Melbourne", "Brisbane"],
         explanation:
-          "Canberra es la capital de Australia, aunque Sídney y Melbourne son sus ciudades más conocidas.",
-      },
-
-      {
-        question: "¿Qué país es conocido como la tierra de los mil lagos?",
-        correct: "Finlandia",
-        incorrect: ["Suecia", "Noruega", "Canadá"],
-        explanation:
-          "Finlandia es conocida como la tierra de los mil lagos debido a la gran cantidad de lagos en su territorio.",
+          "Canberra is the capital of Australia, although Sydney and Melbourne are its most well-known cities.",
       },
       {
-        question: "¿En qué océano se encuentra la isla de Madagascar?",
-        correct: "Océano Índico",
-        incorrect: ["Océano Atlántico", "Océano Pacífico", "Mar Mediterráneo"],
+        question: "Which country is known as the land of a thousand lakes?",
+        correct: "Finland",
+        incorrect: ["Sweden", "Norway", "Canada"],
         explanation:
-          "Madagascar es una isla situada en el Océano Índico, al sureste de África.",
-      },
-
-      {
-        question:
-          "¿Cuál es el país más grande en superficie de América del Sur?",
-        correct: "Brasil",
-        incorrect: ["Argentina", "Perú", "Colombia"],
-        explanation:
-          "Brasil es el país más grande de América del Sur, abarcando gran parte del continente.",
-      },
-
-      {
-        question: "¿Qué mar se encuentra al este de Grecia?",
-        correct: "Mar Egeo",
-        incorrect: ["Mar Mediterráneo", "Mar Negro", "Mar Jónico"],
-        explanation:
-          "El Mar Egeo está situado al este de Grecia, entre este país y Turquía.",
+          "Finland is known as the land of a thousand lakes due to the large number of lakes within its territory.",
       },
       {
-        question: "¿Qué país africano tiene la mayor población?",
+        question: "In which ocean is the island of Madagascar located?",
+        correct: "Indian Ocean",
+        incorrect: ["Atlantic Ocean", "Pacific Ocean", "Mediterranean Sea"],
+        explanation:
+          "Madagascar is an island located in the Indian Ocean, southeast of Africa.",
+      },
+      {
+        question: "What is the largest country by area in South America?",
+        correct: "Brazil",
+        incorrect: ["Argentina", "Peru", "Colombia"],
+        explanation:
+          "Brazil is the largest country in South America, covering a large part of the continent.",
+      },
+      {
+        question: "Which sea is located to the east of Greece?",
+        correct: "Aegean Sea",
+        incorrect: ["Mediterranean Sea", "Black Sea", "Ionian Sea"],
+        explanation:
+          "The Aegean Sea is situated to the east of Greece, between the country and Turkey.",
+      },
+      {
+        question: "Which African country has the largest population?",
         correct: "Nigeria",
-        incorrect: ["Egipto", "Sudáfrica", "Etiopía"],
+        incorrect: ["Egypt", "South Africa", "Ethiopia"],
         explanation:
-          "Nigeria es el país más poblado de África, con más de 200 millones de habitantes.",
+          "Nigeria is the most populous country in Africa, with over 200 million inhabitants.",
       },
       {
-        question: "¿Qué cordillera atraviesa gran parte de América del Sur?",
-        correct: "Cordillera de los Andes",
-        incorrect: ["Montañas Rocosas", "Alpes", "Himalaya"],
+        question: "Which mountain range crosses much of South America?",
+        correct: "Andes Mountains",
+        incorrect: ["Rocky Mountains", "Alps", "Himalayas"],
         explanation:
-          "La Cordillera de los Andes se extiende a lo largo de la costa occidental de América del Sur.",
+          "The Andes Mountains extend along the western coast of South America.",
       },
       {
         question:
-          "¿Qué país europeo es conocido por su sistema de canales en Ámsterdam?",
-
-        correct: "Países Bajos",
-        incorrect: ["Bélgica", "Dinamarca", "Alemania"],
+          "Which European country is known for its canal system in Amsterdam?",
+        correct: "Netherlands",
+        incorrect: ["Belgium", "Denmark", "Germany"],
         explanation:
-          "Los Países Bajos son conocidos por sus canales, especialmente en Ámsterdam.",
+          "The Netherlands is known for its canals, especially in Amsterdam.",
       },
-
       {
-        question: "¿Cuál es la capital de Canadá?",
+        question: "What is the capital of Canada?",
         correct: "Ottawa",
         incorrect: ["Toronto", "Vancouver", "Montreal"],
         explanation:
-          "Ottawa es la capital de Canadá, aunque Toronto y Vancouver son ciudades más grandes y conocidas.",
+          "Ottawa is the capital of Canada, although Toronto and Vancouver are larger and more well-known cities.",
       },
-
       {
-        question: "¿Qué país es famoso por sus fiordos?",
-        correct: "Noruega",
-        incorrect: ["Suecia", "Finlandia", "Islandia"],
+        question: "Which country is famous for its fjords?",
+        correct: "Norway",
+        incorrect: ["Sweden", "Finland", "Iceland"],
         explanation:
-          "Noruega es famosa por sus fiordos, que son profundas entradas del mar entre montañas.",
+          "Norway is famous for its fjords, which are deep sea inlets between mountains.",
       },
       {
-        question: "¿Cuál es el único continente que no tiene desierto?",
-        correct: "Europa",
-        incorrect: ["América del Norte", "Oceanía", "Asia"],
+        question: "Which continent has no deserts?",
+        correct: "Europe",
+        incorrect: ["North America", "Oceania", "Asia"],
         explanation:
-          "Europa es el único continente que no tiene un desierto propiamente dicho, a diferencia de otros continentes que albergan grandes áreas áridas.",
+          "Europe is the only continent that does not have a true desert, unlike other continents that have large arid areas.",
       },
       {
-        question: "¿Cuál es el río más largo de Europa?",
+        question: "What is the longest river in Europe?",
         correct: "Volga",
-        incorrect: ["Danubio", "Rin", "Loira"],
+        incorrect: ["Danube", "Rhine", "Loire"],
         explanation:
-          "El Volga, en Rusia, es el río más largo de Europa, con una longitud de aproximadamente 3,530 kilómetros.",
+          "The Volga River, in Russia, is the longest river in Europe, measuring approximately 3,530 kilometers.",
       },
       {
         question:
-          "¿Qué país tiene el mayor número de vecinos con los que comparte frontera terrestre?",
+          "Which country has the most neighbors it shares a land border with?",
         correct: "China",
-        incorrect: ["Rusia", "Brasil", "India"],
+        incorrect: ["Russia", "Brazil", "India"],
         explanation:
-          "China tiene fronteras terrestres con 14 países, lo que la convierte en el país con el mayor número de vecinos en el mundo.",
+          "China shares land borders with 14 countries, making it the country with the most neighbors in the world.",
       },
       {
         question:
-          "¿Qué país se encuentra en los dos hemisferios, tanto norte como sur?",
+          "Which country is located in both the northern and southern hemispheres?",
         correct: "Ecuador",
-        incorrect: ["Colombia", "Indonesia", "Brasil"],
+        incorrect: ["Colombia", "Indonesia", "Brazil"],
         explanation:
-          "Ecuador se encuentra en la línea ecuatorial, por lo que se extiende tanto en el hemisferio norte como en el sur.",
+          "Ecuador is located on the equator, extending into both the northern and southern hemispheres.",
       },
       {
-        question: "¿En qué país se encuentra la ciudad de Varsovia?",
-        correct: "Polonia",
-        incorrect: ["Hungría", "Rumanía", "Chequia"],
+        question: "In which country is the city of Warsaw located?",
+        correct: "Poland",
+        incorrect: ["Hungary", "Romania", "Czech Republic"],
         explanation:
-          "Varsovia es la capital de Polonia, ubicada en el centro-este del país.",
+          "Warsaw is the capital of Poland, located in the central-eastern part of the country.",
       },
     ],
     hard: [
       {
-        question: "¿Cuál es el desierto más seco del mundo?",
+        question: "What is the driest desert in the world?",
         correct: "Atacama",
         incorrect: ["Sahara", "Gobi", "Kalahari"],
         explanation:
-          "El desierto de Atacama, ubicado en Chile, es el desierto más seco del mundo. Algunas zonas del Atacama no han recibido precipitaciones significativas durante siglos.",
+          "The Atacama Desert, located in Chile, is the driest desert in the world. Some areas of the Atacama have not received significant rainfall for centuries.",
       },
       {
-        question: "¿Qué país tiene la mayor población en el mundo?",
+        question: "Which country has the largest population in the world?",
         correct: "China",
-        incorrect: ["India", "Estados Unidos", "Indonesia"],
+        incorrect: ["India", "United States", "Indonesia"],
         explanation:
-          "China es el país más poblado del mundo, con una población que supera los 1,400 millones de personas. India sigue a China, con una población similar en tamaño.",
+          "China is the most populous country in the world, with a population exceeding 1.4 billion people. India follows closely behind, with a similar population size.",
       },
       {
-        question: "¿Cuál es la capital de Australia?",
+        question: "What is the capital of Australia?",
         correct: "Canberra",
-        incorrect: ["Sídney", "Melbourne", "Brisbane"],
+        incorrect: ["Sydney", "Melbourne", "Brisbane"],
         explanation:
-          "Canberra es la capital de Australia, no Sídney ni Melbourne, que son las ciudades más grandes del país. Canberra fue elegida como la capital en 1908 para resolver la disputa entre Sídney y Melbourne.",
+          "Canberra is the capital of Australia, not Sydney or Melbourne, which are the largest cities in the country. Canberra was chosen as the capital in 1908 to resolve the dispute between Sydney and Melbourne.",
       },
       {
-        question: "¿Cuál es el elemento químico con el símbolo 'Au'?",
-        correct: "Oro",
-        incorrect: ["Plata", "Cobre", "Aluminio"],
+        question: "What is the chemical element with the symbol 'Au'?",
+        correct: "Gold",
+        incorrect: ["Silver", "Copper", "Aluminum"],
         explanation:
-          "El símbolo 'Au' representa el oro en la tabla periódica. Su nombre proviene del latín 'aurum'.",
+          "The symbol 'Au' represents gold in the periodic table. Its name comes from the Latin 'aurum'.",
       },
       {
-        question: "¿Qué continente es el hogar del río Nilo?",
-        correct: "África",
-        incorrect: ["Asia", "Europa", "América del Norte"],
+        question: "Which continent is home to the Nile River?",
+        correct: "Africa",
+        incorrect: ["Asia", "Europe", "North America"],
         explanation:
-          "El río Nilo, conocido por ser uno de los ríos más largos del mundo, fluye a través del noreste de África, desde el lago Victoria hasta el mar Mediterráneo.",
+          "The Nile River, known for being one of the longest rivers in the world, flows through northeastern Africa, from Lake Victoria to the Mediterranean Sea.",
       },
       {
-        question: "¿Cuál es la montaña más alta fuera de Asia?",
+        question: "What is the highest mountain outside of Asia?",
         correct: "Aconcagua",
-        incorrect: ["Monte Kilimanjaro", "Monte Denali", "Mont Blanc"],
+        incorrect: ["Mount Kilimanjaro", "Mount Denali", "Mont Blanc"],
         explanation:
-          "El Aconcagua, situado en Argentina, es la montaña más alta fuera de Asia, con una altura de 6,962 metros.",
+          "Aconcagua, located in Argentina, is the highest mountain outside of Asia, standing at 6,962 meters.",
       },
       {
-        question: "¿Cuál es el río más largo de América del Sur?",
-        correct: "Amazonas",
-        incorrect: ["Río de la Plata", "Orinoco", "Paraná"],
+        question: "What is the longest river in South America?",
+        correct: "Amazon",
+        incorrect: ["Rio de la Plata", "Orinoco", "Paraná"],
         explanation:
-          "El Amazonas es el río más largo de América del Sur, con una longitud de aproximadamente 7,000 kilómetros. Aunque el Nilo es más largo en el nivel mundial, el Amazonas se considera el más extenso en su continente.",
+          "The Amazon is the longest river in South America, measuring approximately 7,000 kilometers. Although the Nile is longer globally, the Amazon is considered the most extensive in its continent.",
       },
       {
-        question: "¿Qué país tiene la mayor cantidad de islas en el mundo?",
-        correct: "Suecia",
-        incorrect: ["Indonesia", "Canadá", "Noruega"],
+        question: "Which country has the most islands in the world?",
+        correct: "Sweden",
+        incorrect: ["Indonesia", "Canada", "Norway"],
         explanation:
-          "Suecia es el país con la mayor cantidad de islas, con un total de alrededor de 267,570 islas, aunque muchas son pequeñas y deshabitadas.",
+          "Sweden is the country with the most islands, totaling around 267,570 islands, although many are small and uninhabited.",
       },
       {
-        question: "¿Cuál es el océano más grande del mundo?",
-        correct: "Océano Pacífico",
-        incorrect: ["Océano Atlántico", "Océano Índico", "Océano Ártico"],
+        question: "What is the largest ocean in the world?",
+        correct: "Pacific Ocean",
+        incorrect: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
         explanation:
-          "El Océano Pacífico es el más grande del mundo, abarcando una superficie de aproximadamente 63 millones de kilómetros cuadrados.",
+          "The Pacific Ocean is the largest ocean in the world, covering an area of approximately 63 million square kilometers.",
       },
       {
-        question: "¿En qué continente se encuentra el desierto del Sahara?",
-        correct: "África",
-        incorrect: ["Asia", "América del Sur", "Oceanía"],
+        question: "On which continent is the Sahara Desert located?",
+        correct: "Africa",
+        incorrect: ["Asia", "South America", "Oceania"],
         explanation:
-          "El desierto del Sahara está ubicado en África y es el desierto cálido más grande del mundo, cubriendo más de 9 millones de kilómetros cuadrados.",
+          "The Sahara Desert is located in Africa and is the largest hot desert in the world, covering more than 9 million square kilometers.",
       },
       {
-        question: "¿Cuál es el país más pequeño del mundo por superficie?",
-        correct: "Ciudad del Vaticano",
-        incorrect: ["Mónaco", "San Marino", "Liechtenstein"],
+        question: "What is the smallest country in the world by area?",
+        correct: "Vatican City",
+        incorrect: ["Monaco", "San Marino", "Liechtenstein"],
         explanation:
-          "La Ciudad del Vaticano es el país más pequeño del mundo, con una superficie de aproximadamente 44 hectáreas, lo que equivale a 0.49 kilómetros cuadrados.",
+          "Vatican City is the smallest country in the world, covering approximately 44 hectares, which is equivalent to 0.49 square kilometers.",
+      },
+      {
+        question: "What is the smallest country in the world in terms of area?",
+        correct: "Vatican City",
+        incorrect: ["Monaco", "Nauru", "San Marino"],
+        explanation:
+          "Vatican City is the smallest country in the world, with an area of approximately 44 hectares.",
+      },
+      {
+        question: "Which desert occupies most of northern Africa?",
+        correct: "Sahara Desert",
+        incorrect: ["Namib Desert", "Kalahari Desert", "Arabian Desert"],
+        explanation:
+          "The Sahara Desert is the largest hot desert in the world, occupying much of northern Africa.",
+      },
+      {
+        question: "Which country has the most islands in the world?",
+        correct: "Sweden",
+        incorrect: ["Philippines", "Indonesia", "Japan"],
+        explanation:
+          "Sweden has the most islands in the world, with approximately 267,570 islands.",
       },
       {
         question:
-          "¿Cuál es el país más pequeño del mundo en términos de superficie?",
-        correct: "Ciudad del Vaticano",
-        incorrect: ["Mónaco", "Nauru", "San Marino"],
+          "Which European country has the highest number of active volcanoes?",
+        correct: "Iceland",
+        incorrect: ["Italy", "Greece", "Spain"],
         explanation:
-          "Ciudad del Vaticano es el país más pequeño del mundo, con una superficie de aproximadamente 44 hectáreas.",
+          "Iceland has the highest number of active volcanoes in Europe, due to its location on the Mid-Atlantic Ridge.",
       },
       {
-        question: "¿Qué desierto ocupa la mayor parte del norte de África?",
-        correct: "Desierto del Sahara",
-        incorrect: [
-          "Desierto de Namib",
-          "Desierto de Kalahari",
-          "Desierto Arábigo",
-        ],
-        explanation:
-          "El Desierto del Sahara es el desierto cálido más grande del mundo, ocupando gran parte del norte de África.",
-      },
-
-      {
-        question: "¿Qué país tiene el mayor número de islas en el mundo?",
-        correct: "Suecia",
-        incorrect: ["Filipinas", "Indonesia", "Japón"],
-        explanation:
-          "Suecia tiene el mayor número de islas en el mundo, con aproximadamente 267,570 islas.",
-      },
-
-      {
-        question:
-          "¿Qué país europeo tiene el mayor número de volcanes activos?",
-        correct: "Islandia",
-        incorrect: ["Italia", "Grecia", "España"],
-        explanation:
-          "Islandia tiene el mayor número de volcanes activos en Europa, debido a su ubicación en la dorsal mesoatlántica.",
-      },
-      {
-        question: "¿Cuál es la capital más alta del mundo?",
+        question: "What is the highest capital city in the world?",
         correct: "La Paz",
-        incorrect: ["Quito", "Katmandú", "Bogotá"],
+        incorrect: ["Quito", "Kathmandu", "Bogotá"],
         explanation:
-          "La Paz, en Bolivia, es la capital administrativa más alta del mundo, situada a una altitud de aproximadamente 3,650 metros sobre el nivel del mar.",
+          "La Paz, in Bolivia, is the highest administrative capital in the world, situated at an altitude of approximately 3,650 meters above sea level.",
       },
       {
-        question: "¿Cuál es la isla más poblada del mundo?",
+        question: "What is the most populous island in the world?",
         correct: "Java",
-        incorrect: ["Honshū", "Gran Bretaña", "Sumatra"],
+        incorrect: ["Honshu", "Great Britain", "Sumatra"],
         explanation:
-          "Java, en Indonesia, es la isla más poblada del mundo, con una población que supera los 140 millones de habitantes.",
+          "Java, in Indonesia, is the most populous island in the world, with a population exceeding 140 million inhabitants.",
       },
-
       {
         question:
-          "¿En qué país se encuentra la cordillera más larga del mundo?",
+          "In which country is the longest mountain range in the world located?",
         correct: "Chile",
-        incorrect: ["Argentina", "Perú", "Colombia"],
+        incorrect: ["Argentina", "Peru", "Colombia"],
         explanation:
-          "Chile es el país donde se encuentra la mayor parte de la Cordillera de los Andes, la cordillera más larga del mundo.",
+          "Chile is the country where most of the Andes Mountain Range is located, the longest mountain range in the world.",
       },
       {
-        question: "¿Qué país es conocido como 'la tierra del sol naciente'?",
-        correct: "Japón",
-        incorrect: ["China", "Corea del Sur", "Filipinas"],
+        question: "Which country is known as 'the land of the rising sun'?",
+        correct: "Japan",
+        incorrect: ["China", "South Korea", "Philippines"],
         explanation:
-          "Japón es conocido como 'la tierra del sol naciente' debido a su ubicación en el extremo oriental de Asia.",
-      },
-
-      {
-        question: "¿Cuál es el lago más profundo del mundo?",
-        correct: "Lago Baikal",
-        incorrect: ["Lago Tanganica", "Lago Victoria", "Lago Superior"],
-        explanation:
-          "El Lago Baikal, en Rusia, es el lago más profundo del mundo, con una profundidad de más de 1,600 metros.",
+          "Japan is known as 'the land of the rising sun' due to its location at the eastern edge of Asia.",
       },
       {
-        question: "¿En qué país se encuentra el punto más bajo de la Tierra?",
+        question: "What is the deepest lake in the world?",
+        correct: "Lake Baikal",
+        incorrect: ["Lake Tanganyika", "Lake Victoria", "Lake Superior"],
+        explanation:
+          "Lake Baikal, in Russia, is the deepest lake in the world, with a depth of over 1,600 meters.",
+      },
+      {
+        question: "In which country is the lowest point on Earth located?",
         correct: "Israel",
-        incorrect: ["Egipto", "Jordania", "Arabia Saudita"],
+        incorrect: ["Egypt", "Jordan", "Saudi Arabia"],
         explanation:
-          "El Mar Muerto, ubicado entre Israel y Jordania, tiene el punto más bajo de la Tierra, a unos 430 metros bajo el nivel del mar.",
+          "The Dead Sea, located between Israel and Jordan, has the lowest point on Earth, at about 430 meters below sea level.",
       },
       {
-        question: "¿Cuál es la capital más al norte del mundo?",
-        correct: "Reikiavik",
-        incorrect: ["Oslo", "Estocolmo", "Helsinki"],
+        question: "What is the northernmost capital city in the world?",
+        correct: "Reykjavik",
+        incorrect: ["Oslo", "Stockholm", "Helsinki"],
         explanation:
-          "Reikiavik, la capital de Islandia, es la capital más al norte del mundo, situada cerca del círculo polar ártico.",
+          "Reykjavik, the capital of Iceland, is the northernmost capital city in the world, located near the Arctic Circle.",
       },
       {
-        question: "¿Cuál es el lago de agua salada más grande del mundo?",
-        correct: "Mar Caspio",
-        incorrect: ["Lago Salado", "Lago Enriquillo", "Lago Eyre"],
+        question: "What is the largest saltwater lake in the world?",
+        correct: "Caspian Sea",
+        incorrect: ["Salton Sea", "Lake Enriquillo", "Lake Eyre"],
         explanation:
-          "El Mar Caspio, situado entre Europa y Asia, es el lago de agua salada más grande del mundo, con una superficie de más de 370,000 kilómetros cuadrados.",
+          "The Caspian Sea, located between Europe and Asia, is the largest saltwater lake in the world, with an area of over 370,000 square kilometers.",
       },
       {
-        question: "¿Cuál es el país más grande de África?",
-        correct: "Argelia",
-        incorrect: ["Sudán", "Libia", "República Democrática del Congo"],
+        question: "What is the largest country in Africa?",
+        correct: "Algeria",
+        incorrect: ["Sudan", "Libya", "Democratic Republic of the Congo"],
         explanation:
-          "Argelia es el país más grande de África, con una superficie de más de 2.38 millones de kilómetros cuadrados.",
+          "Algeria is the largest country in Africa, covering more than 2.38 million square kilometers.",
       },
       {
         question:
-          "¿Qué país tiene la mayor cantidad de glaciares fuera de las regiones polares?",
-        correct: "Pakistán",
-        incorrect: ["Canadá", "Islandia", "Noruega"],
+          "Which country has the largest number of glaciers outside of polar regions?",
+        correct: "Pakistan",
+        incorrect: ["Canada", "Iceland", "Norway"],
         explanation:
-          "Pakistán alberga más glaciares que cualquier otro país fuera de las regiones polares, en su región montañosa del norte.",
+          "Pakistan has more glaciers than any other country outside of polar regions, in its northern mountainous region.",
       },
     ],
   },
@@ -2446,120 +2376,106 @@ export let questions = {
     easy: [
       {
         question:
-          "¿Quién es el personaje principal en la serie animada 'Los Simpson'?",
+          "Who is the main character in the animated series 'The Simpsons'?",
         correct: "Homer Simpson",
         incorrect: ["Bart Simpson", "Lisa Simpson", "Marge Simpson"],
         explanation:
-          "Homer Simpson es el personaje principal de 'Los Simpson', conocido por su característico humor y pereza.",
+          "Homer Simpson is the main character of 'The Simpsons', known for his characteristic humor and laziness.",
       },
-
       {
-        question: "¿Cuál es el nombre del mago protagonista en 'Harry Potter'?",
+        question:
+          "What is the name of the protagonist wizard in 'Harry Potter'?",
         correct: "Harry Potter",
         incorrect: ["Ron Weasley", "Hermione Granger", "Albus Dumbledore"],
         explanation:
-          "Harry Potter es el personaje principal de la famosa serie de libros y películas de 'Harry Potter'.",
+          "Harry Potter is the main character of the famous series of books and films 'Harry Potter'.",
       },
-
       {
         question:
-          "¿Cuál es el nombre del superhéroe que tiene una araña como símbolo?",
+          "What is the name of the superhero that has a spider as a symbol?",
         correct: "Spider-Man",
         incorrect: ["Batman", "Superman", "Iron Man"],
         explanation:
-          "Spider-Man es el superhéroe cuyo símbolo es una araña, y su alter ego es Peter Parker.",
+          "Spider-Man is the superhero whose symbol is a spider, and his alter ego is Peter Parker.",
       },
-
       {
-        question: "¿Quién es el villano principal en 'Star Wars'?",
+        question: "Who is the main villain in 'Star Wars'?",
         correct: "Darth Vader",
         incorrect: ["Luke Skywalker", "Yoda", "Han Solo"],
         explanation:
-          "Darth Vader es el villano icónico de la saga 'Star Wars'.",
+          "Darth Vader is the iconic villain of the 'Star Wars' saga.",
       },
-
       {
-        question:
-          "¿Qué película de Disney presenta a una princesa llamada Ariel?",
-        correct: "La Sirenita",
-        incorrect: ["Cenicienta", "Blancanieves", "La Bella Durmiente"],
+        question: "Which Disney movie features a princess named Ariel?",
+        correct: "The Little Mermaid",
+        incorrect: ["Cinderella", "Snow White", "Sleeping Beauty"],
         explanation:
-          "Ariel es la protagonista de la película 'La Sirenita', una de las clásicas películas de Disney.",
+          "Ariel is the protagonist of the movie 'The Little Mermaid', one of Disney's classic films.",
       },
-
       {
-        question:
-          "¿Cuál es la película más taquillera de todos los tiempos hasta 2023?",
-
+        question: "What is the highest-grossing film of all time as of 2023?",
         correct: "Avatar",
         incorrect: [
           "Avengers: Endgame",
           "Titanic",
-          "Star Wars: El despertar de la Fuerza",
+          "Star Wars: The Force Awakens",
         ],
         explanation:
-          "'Avatar', dirigida por James Cameron, es la película más taquillera de todos los tiempos, superando los $2.9 mil millones en taquilla.",
+          "'Avatar', directed by James Cameron, is the highest-grossing film of all time, surpassing $2.9 billion at the box office.",
       },
-
       {
-        question:
-          "¿Cuál es la banda británica que lanzó el álbum 'Abbey Road'?",
+        question: "Which British band released the album 'Abbey Road'?",
         correct: "The Beatles",
         incorrect: ["The Rolling Stones", "Pink Floyd", "Queen"],
         explanation:
-          "'Abbey Road' es uno de los álbumes más icónicos lanzados por la banda británica The Beatles en 1969.",
+          "'Abbey Road' is one of the most iconic albums released by the British band The Beatles in 1969.",
       },
-
       {
-        question: "¿Cuál es el nombre del juguete cowboy en 'Toy Story'?",
+        question: "What is the name of the cowboy toy in 'Toy Story'?",
         correct: "Woody",
         incorrect: ["Buzz Lightyear", "Jessie", "Slinky"],
         explanation:
-          "Woody es el juguete cowboy y uno de los personajes principales de la serie de películas 'Toy Story'.",
+          "Woody is the cowboy toy and one of the main characters in the 'Toy Story' film series.",
       },
-
       {
-        question:
-          "¿Qué película animada de Pixar presenta a un robot llamado WALL-E?",
+        question: "What animated Pixar film features a robot named WALL-E?",
         correct: "WALL-E",
         incorrect: ["Up", "Toy Story", "Monsters, Inc."],
         explanation:
-          "'WALL-E' es una película de Pixar que sigue a un pequeño robot en una misión para salvar a la Tierra.",
+          "'WALL-E' is a Pixar film that follows a small robot on a mission to save Earth.",
       },
-
       {
-        question:
-          "¿Cuál es el nombre del parque temático basado en las películas de Disney?",
+        question: "What is the name of the theme park based on Disney movies?",
         correct: "Disneyland",
         incorrect: ["Universal Studios", "Six Flags", "Legoland"],
         explanation:
-          "Disneyland es el famoso parque temático inspirado en las películas de Disney, con ubicaciones en varios países.",
+          "Disneyland is the famous theme park inspired by Disney movies, with locations in several countries.",
       },
     ],
     medium: [
       {
         question:
-          "¿Qué serie de televisión presenta a un grupo de amigos en el café Central Perk?",
+          "Which TV series features a group of friends at Central Perk café?",
         correct: "Friends",
         incorrect: ["How I Met Your Mother", "Seinfeld", "The Big Bang Theory"],
         explanation:
-          "En la serie 'Friends', los personajes principales suelen reunirse en el café Central Perk.",
+          "In the series 'Friends', the main characters often gather at Central Perk café.",
       },
       {
         question:
-          "¿Cuál es el nombre de la película dirigida por Steven Spielberg que presenta a un extraterrestre llamado E.T.?",
-        correct: "E.T. el Extraterrestre",
+          "What is the name of the movie directed by Steven Spielberg featuring an alien named E.T.?",
+        correct: "E.T. the Extra-Terrestrial",
         incorrect: [
-          "Encuentros Cercanos del Tercer Tipo",
+          "Close Encounters of the Third Kind",
           "Jurassic Park",
-          "El Rescate del Soldado Ryan",
+          "Saving Private Ryan",
         ],
         explanation:
-          "La película 'E.T. el Extraterrestre', dirigida por Steven Spielberg, cuenta la historia de un extraterrestre que quiere regresar a su hogar.",
+          "The movie 'E.T. the Extra-Terrestrial', directed by Steven Spielberg, tells the story of an alien wanting to return home.",
       },
       {
         question:
-          "¿En qué película de Marvel los Vengadores se enfrentan a Thanos por primera vez?",
+          "In which Marvel movie do the Avengers face Thanos for the first time?",
         correct: "Avengers: Infinity War",
         incorrect: [
           "Avengers: Age of Ultron",
@@ -2567,166 +2483,159 @@ export let questions = {
           "Guardians of the Galaxy",
         ],
         explanation:
-          "En 'Avengers: Infinity War', los Vengadores enfrentan a Thanos en su intento de recolectar las Gemas del Infinito.",
+          "In 'Avengers: Infinity War', the Avengers confront Thanos in his attempt to collect the Infinity Stones.",
       },
       {
-        question: "¿Quién ganó el premio a Mejor Actor en los Oscars 2022?",
+        question: "Who won the Best Actor award at the Oscars 2022?",
         correct: "Will Smith",
         incorrect: ["Javier Bardem", "Andrew Garfield", "Benedict Cumberbatch"],
         explanation:
-          "Will Smith ganó el premio a Mejor Actor en los Oscars 2022 por su papel en 'King Richard'.",
+          "Will Smith won the Best Actor award at the Oscars 2022 for his role in 'King Richard'.",
       },
       {
-        question: "¿Cuál es el nombre del planeta natal de Superman?",
-        correct: "Kryptón",
-        incorrect: ["Vulcano", "Tatooine", "Asgard"],
+        question: "What is the name of Superman's home planet?",
+        correct: "Krypton",
+        incorrect: ["Vulcan", "Tatooine", "Asgard"],
         explanation:
-          "Kryptón es el planeta natal de Superman en los cómics de DC. La destrucción de Kryptón lleva a Superman a la Tierra.",
+          "Krypton is Superman's home planet in DC comics. The destruction of Krypton leads Superman to Earth.",
       },
       {
-        question:
-          "¿Cuál es el nombre real del superhéroe conocido como Iron Man?",
+        question: "What is the real name of the superhero known as Iron Man?",
         correct: "Tony Stark",
         incorrect: ["Bruce Wayne", "Peter Parker", "Steve Rogers"],
         explanation:
-          "Tony Stark es el alter ego de Iron Man, un genio, multimillonario, playboy y filántropo en el universo Marvel.",
+          "Tony Stark is the alter ego of Iron Man, a genius, billionaire, playboy, and philanthropist in the Marvel universe.",
       },
-
       {
         question:
-          "¿Qué actor interpretó al Joker en la película 'The Dark Knight' de 2008?",
+          "Which actor played the Joker in the 2008 film 'The Dark Knight'?",
         correct: "Heath Ledger",
         incorrect: ["Joaquin Phoenix", "Jack Nicholson", "Jared Leto"],
         explanation:
-          "Heath Ledger interpretó al Joker en 'The Dark Knight', una actuación que le valió un Óscar póstumo.",
+          "Heath Ledger portrayed the Joker in 'The Dark Knight', a performance that earned him a posthumous Oscar.",
       },
       {
         question:
-          "¿En qué película de ciencia ficción de 1982 aparece el personaje Rick Deckard?",
+          "In which 1982 sci-fi film does the character Rick Deckard appear?",
         correct: "Blade Runner",
         incorrect: ["Terminator", "Alien", "Mad Max"],
         explanation:
-          "Rick Deckard es el protagonista de 'Blade Runner', una película de culto dirigida por Ridley Scott.",
+          "Rick Deckard is the protagonist of 'Blade Runner', a cult film directed by Ridley Scott.",
       },
       {
-        question:
-          "¿Qué famoso festival de música se celebró en 1969 en Nueva York?",
+        question: "What famous music festival was held in 1969 in New York?",
         correct: "Woodstock",
         incorrect: ["Coachella", "Glastonbury", "Lollapalooza"],
         explanation:
-          "Woodstock fue un festival de música icónico que se celebró en 1969 y es considerado un hito en la historia de la música.",
+          "Woodstock was an iconic music festival held in 1969 and is considered a milestone in music history.",
       },
       {
         question:
-          "¿Cuál es el nombre del dragón en la película 'Cómo entrenar a tu dragón'?",
-        correct: "Chimuelo",
-        incorrect: ["Furia Nocturna", "Toothless", "Desdentado"],
+          "What is the name of the dragon in the movie 'How to Train Your Dragon'?",
+        correct: "Toothless",
+        incorrect: ["Night Fury", "Toothless", "Desdentado"],
         explanation:
-          "Chimuelo (Toothless en inglés) es el dragón protagonista de la serie de películas 'Cómo entrenar a tu dragón'.",
+          "Toothless is the main dragon in the 'How to Train Your Dragon' film series.",
       },
-
       {
         question:
-          "¿Qué serie de televisión sigue la vida de una familia de criminales en Birmingham después de la Primera Guerra Mundial?",
+          "Which TV series follows the life of a crime family in Birmingham after World War I?",
         correct: "Peaky Blinders",
         incorrect: ["Boardwalk Empire", "The Sopranos", "Breaking Bad"],
         explanation:
-          "'Peaky Blinders' es una serie que sigue la vida de la familia Shelby en Birmingham en los años 1920.",
+          "'Peaky Blinders' is a series that follows the Shelby family in Birmingham during the 1920s.",
       },
       {
         question:
-          "¿Qué película dirigida por Quentin Tarantino tiene capítulos titulados 'Vincent Vega y la esposa de Marsellus Wallace' y 'El reloj de oro'?",
+          "Which film directed by Quentin Tarantino has chapters titled 'Vincent Vega and Marsellus Wallace's Wife' and 'The Gold Watch'?",
         correct: "Pulp Fiction",
         incorrect: ["Reservoir Dogs", "Kill Bill", "Django Unchained"],
         explanation:
-          "'Pulp Fiction' es una de las películas más icónicas de Quentin Tarantino, famosa por su narrativa no lineal.",
+          "'Pulp Fiction' is one of Quentin Tarantino's most iconic films, famous for its non-linear narrative.",
       },
       {
         question:
-          "¿Cuál es el nombre de la ciudad ficticia donde se desarrolla la serie 'Stranger Things'?",
+          "What is the name of the fictional city where the series 'Stranger Things' takes place?",
         correct: "Hawkins",
         incorrect: ["Sunnydale", "Smallville", "Riverdale"],
         explanation:
-          "Hawkins es la ciudad ficticia donde ocurre la mayoría de los eventos en la serie 'Stranger Things'.",
+          "Hawkins is the fictional city where most of the events in 'Stranger Things' occur.",
       },
       {
         question:
-          "¿Qué artista lanzó el álbum 'Thriller', que se convirtió en el más vendido de todos los tiempos?",
+          "Which artist released the album 'Thriller', which became the best-selling album of all time?",
         correct: "Michael Jackson",
         incorrect: ["Prince", "Madonna", "Elvis Presley"],
         explanation:
-          "Michael Jackson lanzó 'Thriller' en 1982, y sigue siendo el álbum más vendido de todos los tiempos.",
+          "Michael Jackson released 'Thriller' in 1982, and it remains the best-selling album of all time.",
       },
-
       {
-        question:
-          "¿Qué película de Alfred Hitchcock presenta una famosa escena en la ducha?",
-        correct: "Psicosis",
-        incorrect: ["Los pájaros", "Vértigo", "La ventana indiscreta"],
+        question: "Which Alfred Hitchcock film features a famous shower scene?",
+        correct: "Psycho",
+        incorrect: ["The Birds", "Vertigo", "Rear Window"],
         explanation:
-          "La escena de la ducha en 'Psicosis' es una de las más icónicas del cine y es obra del director Alfred Hitchcock.",
+          "The shower scene in 'Psycho' is one of the most iconic in film and is directed by Alfred Hitchcock.",
       },
       {
-        question:
-          "¿Qué actriz interpretó a la Princesa Leia en la saga de 'Star Wars'?",
+        question: "Which actress played Princess Leia in the 'Star Wars' saga?",
         correct: "Carrie Fisher",
         incorrect: ["Natalie Portman", "Daisy Ridley", "Felicity Jones"],
         explanation:
-          "Carrie Fisher interpretó a la icónica Princesa Leia en la saga original de 'Star Wars'.",
+          "Carrie Fisher played the iconic Princess Leia in the original 'Star Wars' saga.",
       },
       {
-        question: "¿En qué película de Pixar aparece un chef llamado Remy?",
+        question: "In which Pixar film does a chef named Remy appear?",
         correct: "Ratatouille",
-        incorrect: ["Cars", "Toy Story", "Buscando a Nemo"],
+        incorrect: ["Cars", "Toy Story", "Finding Nemo"],
         explanation:
-          "'Ratatouille' es una película de Pixar donde el ratón Remy sueña con convertirse en chef en París.",
+          "'Ratatouille' is a Pixar film where the rat Remy dreams of becoming a chef in Paris.",
       },
       {
-        question: "¿Quién dirigió la película 'Titanic' en 1997?",
+        question: "Who directed the movie 'Titanic' in 1997?",
         correct: "James Cameron",
         incorrect: ["Steven Spielberg", "Christopher Nolan", "Ridley Scott"],
         explanation:
-          "James Cameron fue el director de la aclamada película 'Titanic', ganadora de múltiples premios Óscar.",
+          "James Cameron was the director of the acclaimed film 'Titanic', which won multiple Oscar awards.",
       },
       {
-        question: "¿Cuál es el nombre del perro en la película 'The Mask'?",
+        question: "What is the name of the dog in the movie 'The Mask'?",
         correct: "Milo",
         incorrect: ["Max", "Buddy", "Rufus"],
         explanation:
-          "El perro de Stanley Ipkiss en la película 'The Mask' se llama Milo, un personaje clave en la trama.",
+          "The dog of Stanley Ipkiss in 'The Mask' is named Milo, a key character in the plot.",
       },
       {
-        question: "¿Qué actor interpreta a Neo en la saga 'Matrix'?",
+        question: "Which actor plays Neo in the 'Matrix' saga?",
         correct: "Keanu Reeves",
         incorrect: ["Brad Pitt", "Johnny Depp", "Leonardo DiCaprio"],
         explanation:
-          "Keanu Reeves es conocido por interpretar a Neo en la popular saga de ciencia ficción 'Matrix'.",
+          "Keanu Reeves is known for playing Neo in the popular sci-fi saga 'Matrix'.",
       },
     ],
     hard: [
       {
         question:
-          "¿En qué película de Stanley Kubrick se explora una visión futurista de la inteligencia artificial y el espacio?",
-        correct: "2001: Odisea del Espacio",
-        incorrect: ["La Naranja Mecánica", "El Resplandor", "Barry Lyndon"],
+          "In which Stanley Kubrick film is a futuristic vision of artificial intelligence and space explored?",
+        correct: "2001: A Space Odyssey",
+        incorrect: ["A Clockwork Orange", "The Shining", "Barry Lyndon"],
         explanation:
-          "Stanley Kubrick dirigió '2001: Odisea del Espacio', una película que explora temas de inteligencia artificial y el futuro del viaje espacial.",
+          "Stanley Kubrick directed '2001: A Space Odyssey', a film that explores themes of artificial intelligence and the future of space travel.",
       },
       {
         question:
-          "¿Qué novela de J.D. Salinger presenta al personaje Holden Caulfield?",
-        correct: "El Guardián entre el Centeno",
+          "Which novel by J.D. Salinger features the character Holden Caulfield?",
+        correct: "The Catcher in the Rye",
         incorrect: [
-          "Franny y Zooey",
-          "Seymour: Una Introducción",
-          "Los Teatros de la Calle",
+          "Franny and Zooey",
+          "Seymour: An Introduction",
+          "The Theaters of the Street",
         ],
         explanation:
-          "'El Guardián entre el Centeno' es una novela de J.D. Salinger que sigue la historia del adolescente Holden Caulfield.",
+          "'The Catcher in the Rye' is a novel by J.D. Salinger that follows the story of the teenager Holden Caulfield.",
       },
       {
         question:
-          "¿Cuál es el nombre del compositor famoso por su obra 'El Cuarteto de Cuerdas en Mi menor'?",
+          "What is the name of the composer famous for his work 'String Quartet No. 6 in E Minor'?",
         correct: "Felix Mendelssohn",
         incorrect: [
           "Ludwig van Beethoven",
@@ -2734,188 +2643,177 @@ export let questions = {
           "Franz Schubert",
         ],
         explanation:
-          "Felix Mendelssohn compuso el 'Cuarteto de Cuerdas en Mi menor', una pieza destacada en el repertorio clásico.",
+          "Felix Mendelssohn composed 'String Quartet No. 6 in E Minor', a prominent piece in the classical repertoire.",
       },
       {
-        question:
-          "¿En qué año se estrenó la primera película de la saga 'Star Wars'?",
+        question: "In what year was the first 'Star Wars' film released?",
         correct: "1977",
         incorrect: ["1980", "1975", "1983"],
         explanation:
-          "La primera película de la saga 'Star Wars', luego conocida como 'Star Wars: Episodio IV - Una Nueva Esperanza', se estrenó en 1977.",
+          "The first 'Star Wars' film, later known as 'Star Wars: Episode IV - A New Hope', was released in 1977.",
       },
       {
         question:
-          "¿Qué artista pintó 'La persistencia de la memoria', una famosa obra surrealista?",
+          "Which artist painted 'The Persistence of Memory', a famous surrealist work?",
         correct: "Salvador Dalí",
         incorrect: ["René Magritte", "Max Ernst", "Joan Miró"],
         explanation:
-          "Salvador Dalí es el artista que pintó 'La persistencia de la memoria', conocida por sus relojes derritiéndose en un paisaje surrealista.",
+          "Salvador Dalí is the artist who painted 'The Persistence of Memory', known for its melting clocks in a surreal landscape.",
       },
       {
         question:
-          "¿Qué película de 1994 dirigida por Robert Zemeckis cuenta la historia de un hombre con un coeficiente intelectual bajo pero con una vida extraordinaria?",
+          "Which 1994 film directed by Robert Zemeckis tells the story of a man with a low IQ but an extraordinary life?",
         correct: "Forrest Gump",
         incorrect: ["Pulp Fiction", "The Shawshank Redemption", "Se7en"],
         explanation:
-          "'Forrest Gump' es una película de 1994 que narra la vida de Forrest Gump, un hombre con bajo coeficiente intelectual que experimenta eventos históricos importantes.",
+          "'Forrest Gump' is a 1994 film that narrates the life of Forrest Gump, a man with a low IQ who experiences significant historical events.",
       },
       {
         question:
-          "¿Qué famoso director cinematográfico ganó el Premio Nobel de Literatura en 1987?",
+          "Which famous film director won the Nobel Prize in Literature in 1987?",
         correct: "Ingmar Bergman",
         incorrect: ["Jean-Luc Godard", "Federico Fellini", "Luis Buñuel"],
         explanation:
-          "Ingmar Bergman, reconocido director cinematográfico sueco, ganó el Premio Nobel de Literatura en 1987 por su destacada contribución al arte del cine.",
+          "Ingmar Bergman, the acclaimed Swedish film director, won the Nobel Prize in Literature in 1987 for his significant contribution to the art of cinema.",
       },
       {
-        question: "¿Qué famoso autor creó el personaje de Sherlock Holmes?",
+        question: "Which famous author created the character Sherlock Holmes?",
         correct: "Arthur Conan Doyle",
         incorrect: ["Agatha Christie", "Edgar Allan Poe", "J.K. Rowling"],
         explanation:
-          "Arthur Conan Doyle es el creador del famoso detective Sherlock Holmes, quien aparece en una serie de novelas y cuentos.",
+          "Arthur Conan Doyle is the creator of the famous detective Sherlock Holmes, who appears in a series of novels and stories.",
       },
       {
         question:
-          "¿Cuál es el nombre del personaje de la serie de videojuegos 'Final Fantasy VII' conocido por su espada enorme?",
+          "What is the name of the character in the 'Final Fantasy VII' video game series known for his large sword?",
         correct: "Cloud Strife",
         incorrect: ["Squall Leonhart", "Noctis Lucis Caelum", "Tidus"],
         explanation:
-          "Cloud Strife es el protagonista de 'Final Fantasy VII', conocido por su gran espada llamada 'Buster Sword'.",
+          "Cloud Strife is the protagonist of 'Final Fantasy VII', known for his large sword called the 'Buster Sword'.",
       },
       {
         question:
-          "¿Qué escritor japonés es famoso por sus novelas 'Norwegian Wood' y 'Kafka en la orilla'?",
+          "Which Japanese writer is famous for his novels 'Norwegian Wood' and 'Kafka on the Shore'?",
         correct: "Haruki Murakami",
         incorrect: ["Yoko Ogawa", "Banana Yoshimoto", "Kazuo Ishiguro"],
         explanation:
-          "Haruki Murakami es el autor japonés conocido por sus novelas 'Norwegian Wood' y 'Kafka en la orilla', que combinan elementos de realismo mágico con la vida contemporánea.",
+          "Haruki Murakami is the Japanese author known for his novels 'Norwegian Wood' and 'Kafka on the Shore', which combine elements of magical realism with contemporary life.",
       },
       {
         question:
-          "¿Qué director ha ganado tres premios Óscar por mejor director por las películas 'Birdman', 'The Revenant' y 'Amores Perros'?",
+          "Which director has won three Oscars for Best Director for the films 'Birdman', 'The Revenant', and 'Amores Perros'?",
         correct: "Alejandro González Iñárritu",
         incorrect: ["Guillermo del Toro", "Alfonso Cuarón", "Pedro Almodóvar"],
         explanation:
-          "Alejandro González Iñárritu ha ganado tres premios Óscar por mejor director, incluyendo por 'Birdman' y 'The Revenant'.",
+          "Alejandro González Iñárritu has won three Oscars for Best Director, including for 'Birdman' and 'The Revenant'.",
       },
       {
-        question:
-          "¿Qué película ganó el primer Óscar a Mejor Película en 1929?",
+        question: "What film won the first Oscar for Best Picture in 1929?",
         correct: "Wings",
-        incorrect: [
-          "El Cantante de Jazz",
-          "Metrópolis",
-          "El Acorazado Potemkin",
-        ],
+        incorrect: ["The Jazz Singer", "Metropolis", "Battleship Potemkin"],
         explanation:
-          "'Wings' fue la primera película en ganar el Óscar a Mejor Película en la ceremonia inaugural de 1929.",
+          "'Wings' was the first film to win the Oscar for Best Picture at the inaugural ceremony in 1929.",
       },
       {
         question:
-          "¿Qué actor protagonizó junto a Tom Hanks la película 'Philadelphia'?",
+          "Which actor starred alongside Tom Hanks in the film 'Philadelphia'?",
         correct: "Denzel Washington",
         incorrect: ["Morgan Freeman", "Samuel L. Jackson", "Will Smith"],
         explanation:
-          "Denzel Washington protagonizó junto a Tom Hanks la película 'Philadelphia', un drama sobre el SIDA y la discriminación.",
+          "Denzel Washington starred alongside Tom Hanks in 'Philadelphia', a drama about AIDS and discrimination.",
       },
       {
-        question:
-          "¿Cuál es el verdadero nombre del rapero conocido como Jay-Z?",
+        question: "What is the real name of the rapper known as Jay-Z?",
         correct: "Shawn Carter",
         incorrect: ["Andre Young", "Marshall Mathers", "Calvin Broadus"],
         explanation:
-          "El verdadero nombre de Jay-Z es Shawn Carter. Es uno de los raperos y productores más influyentes de la historia del hip-hop.",
+          "Jay-Z's real name is Shawn Carter. He is one of the most influential rappers and producers in hip-hop history.",
       },
       {
         question:
-          "¿En qué año se lanzó el primer videojuego de la serie 'The Legend of Zelda'?",
+          "In what year was the first video game in the 'The Legend of Zelda' series released?",
         correct: "1986",
         incorrect: ["1984", "1988", "1990"],
         explanation:
-          "El primer videojuego de la serie 'The Legend of Zelda' fue lanzado en 1986 para la consola NES de Nintendo.",
+          "The first video game in 'The Legend of Zelda' series was released in 1986 for the Nintendo NES.",
       },
       {
-        question:
-          "¿Quién fue el creador de la serie de televisión 'The Twilight Zone'?",
+        question: "Who created the television series 'The Twilight Zone'?",
         correct: "Rod Serling",
         incorrect: ["Alfred Hitchcock", "Gene Roddenberry", "David Lynch"],
         explanation:
-          "Rod Serling fue el creador y presentador de la serie de televisión 'The Twilight Zone', que se estrenó en 1959.",
+          "Rod Serling was the creator and host of the television series 'The Twilight Zone', which premiered in 1959.",
       },
       {
         question:
-          "¿Qué cantante ganó un Grammy por la canción 'Rolling in the Deep'?",
+          "Which singer won a Grammy for the song 'Rolling in the Deep'?",
         correct: "Adele",
         incorrect: ["Beyoncé", "Taylor Swift", "Lady Gaga"],
         explanation:
-          "Adele ganó varios premios Grammy por su canción 'Rolling in the Deep', incluida la Grabación del Año.",
+          "Adele won several Grammy awards for her song 'Rolling in the Deep', including Record of the Year.",
       },
-
       {
         question:
-          "¿En qué película de Quentin Tarantino se mencionan los '88 maníacos'?",
+          "In which Quentin Tarantino film are the '88 maniacs' mentioned?",
         correct: "Kill Bill Vol. 1",
         incorrect: ["Pulp Fiction", "Reservoir Dogs", "Django Unchained"],
         explanation:
-          "Los '88 maníacos' son un grupo de asesinos en 'Kill Bill Vol. 1', liderados por O-Ren Ishii, interpretada por Lucy Liu.",
+          "The '88 maniacs' are a group of assassins in 'Kill Bill Vol. 1', led by O-Ren Ishii, played by Lucy Liu.",
       },
       {
         question:
-          "¿Qué comediante es conocido por su serie de stand-up 'Raw' y su papel en 'El profesor chiflado'?",
+          "Which comedian is known for his stand-up series 'Raw' and his role in 'The Nutty Professor'?",
         correct: "Eddie Murphy",
         incorrect: ["Richard Pryor", "Dave Chappelle", "Chris Rock"],
         explanation:
-          "Eddie Murphy es un comediante y actor famoso por su stand-up 'Raw' y su papel en 'El profesor chiflado'.",
+          "Eddie Murphy is a comedian and actor famous for his stand-up 'Raw' and his role in 'The Nutty Professor'.",
       },
       {
         question:
-          "¿Cuál es el nombre del actor que interpretó a Walter White en 'Breaking Bad'?",
-
+          "What is the name of the actor who played Walter White in 'Breaking Bad'?",
         correct: "Bryan Cranston",
         incorrect: ["Aaron Paul", "Bob Odenkirk", "Dean Norris"],
         explanation:
-          "Bryan Cranston interpretó a Walter White en la serie 'Breaking Bad', un papel que le valió varios premios Emmy.",
+          "Bryan Cranston played Walter White in the series 'Breaking Bad', a role that earned him several Emmy awards.",
       },
       {
-        question:
-          "¿Quién fue el director de fotografía en la película 'El Padrino'?",
+        question: "Who was the cinematographer for the film 'The Godfather'?",
         correct: "Gordon Willis",
         incorrect: ["Roger Deakins", "Vittorio Storaro", "Emmanuel Lubezki"],
         explanation:
-          "Gordon Willis fue el director de fotografía en 'El Padrino', conocido por su estilo de iluminación sombría y dramática.",
+          "Gordon Willis was the cinematographer for 'The Godfather', known for his dark and dramatic lighting style.",
       },
       {
         question:
-          "¿Qué novela de ciencia ficción de Frank Herbert se adaptó al cine en 1984 y 2021?",
+          "Which science fiction novel by Frank Herbert was adapted into films in 1984 and 2021?",
         correct: "Dune",
-        incorrect: ["Fahrenheit 451", "Neuromante", "La Fundación"],
+        incorrect: ["Fahrenheit 451", "Neuromancer", "Foundation"],
         explanation:
-          "'Dune' es una novela clásica de ciencia ficción escrita por Frank Herbert, adaptada al cine en dos versiones.",
+          "'Dune' is a classic science fiction novel written by Frank Herbert, adapted into two film versions.",
       },
       {
         question:
-          "¿En qué película dirigida por Andrei Tarkovsky se explora el concepto de la Zona?",
+          "In which film directed by Andrei Tarkovsky is the concept of the Zone explored?",
         correct: "Stalker",
-        incorrect: ["Solaris", "El Espejo", "Nostalgia"],
+        incorrect: ["Solaris", "The Mirror", "Nostalgia"],
         explanation:
-          "'Stalker' es una película filosófica dirigida por Andrei Tarkovsky que explora el concepto de la Zona, un lugar misterioso y prohibido.",
+          "'Stalker' is a philosophical film directed by Andrei Tarkovsky that explores the concept of the Zone, a mysterious and dangerous area.",
       },
       {
         question:
-          "¿Qué artista compuso la banda sonora de la película 'El bueno, el feo y el malo'?",
+          "Which artist composed the soundtrack for the movie 'The Good, the Bad and the Ugly'?",
         correct: "Ennio Morricone",
         incorrect: ["John Williams", "Hans Zimmer", "Danny Elfman"],
         explanation:
-          "Ennio Morricone compuso la icónica banda sonora de la película 'El bueno, el feo y el malo', dirigida por Sergio Leone.",
+          "Ennio Morricone composed the iconic soundtrack for the film 'The Good, the Bad and the Ugly', directed by Sergio Leone.",
       },
       {
         question:
-          "¿Qué personaje ficticio fue inspirado por un médico real llamado Joseph Bell?",
+          "Which fictional character was inspired by a real doctor named Joseph Bell?",
         correct: "Sherlock Holmes",
-        incorrect: ["Hércules Poirot", "Phillip Marlowe", "Sam Spade"],
+        incorrect: ["Hercule Poirot", "Philip Marlowe", "Sam Spade"],
         explanation:
-          "Arthur Conan Doyle basó el personaje de Sherlock Holmes en su mentor, el Dr. Joseph Bell, un médico conocido por su habilidad en la observación y deducción.",
+          "Arthur Conan Doyle based the character of Sherlock Holmes on his mentor, Dr. Joseph Bell, a physician known for his observational and deductive skills.",
       },
     ],
   },
