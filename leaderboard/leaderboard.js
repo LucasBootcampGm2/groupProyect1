@@ -1,11 +1,25 @@
-import { questions } from "../questionBank.js";
+import { questions } from "../questionBank.js"
+
 let h1 = document.getElementById("h1");
 let main = document.querySelector(".main");
 let header = document.querySelector(".header");
-let username = document.getElementById("username");
 
 let leaderboard = localStorage.getItem("leaderboard");
 let allUsers = [];
+
+function saveDifficulties(){
+  let categories = Object.keys(questions)
+  let difficulties = []
+  
+  categories.forEach(function(category) {
+    Object.keys(questions[category]).forEach(function(_,idx){
+      if (!difficulties.includes(Object.keys(questions[category])[idx])){
+        difficulties.push(Object.keys(questions[category])[idx])
+      }
+    })
+  })
+  return difficulties  
+}
 
 function addAttributes(element, attributes) {
   attributes.forEach(function (attribute) {
@@ -244,6 +258,84 @@ function createPageButtons() {
   main.append(containerLinks);
 }
 
+function createButtonFilters() {
+  let containerFilters = createCompleteElements(
+    "div",
+    [{ attributeName: "id", attributeValue: "container-filters" }],
+    [],
+    ""
+  );
+  let categoryDropdown = createCompleteElements(
+    "div",
+    [{ attributeName: "id", attributeValue: "category-dropdown" }],
+    ["dropdown"],
+    ""
+  );
+  let categoryButton = createCompleteElements(
+    "button",
+    [],
+    ["dropdown-button"],
+    "Filter by category"
+  );
+  let categoryContent = createCompleteElements(
+    "div",
+    [],
+    ["dropdown-content"],
+    ""
+  );
+  let categoryOptionsArray = Object.keys(JSON.parse(leaderboard));
+  let newCategoryA;
+  categoryOptionsArray.forEach(function (option) {
+    newCategoryA = createCompleteElements(
+      "a",
+      [{ attributeName: "id", attributeValue: option }],
+      ["categoryoOptions"],
+      option
+    );
+    categoryContent.append(newCategoryA);
+  });
+  categoryButton.append(categoryContent);
+  categoryDropdown.append(categoryButton);
+
+  let difficultyDropdown = createCompleteElements(
+    "div",
+    [{ attributeName: "id", attributeValue: "category-dropdown" }],
+    ["dropdown"],
+    ""
+  );
+  let difficultyButton = createCompleteElements(
+    "button",
+    [],
+    ["dropdown-button"],
+    "Filter by difficulty"
+  );
+  let difficultyContent = createCompleteElements(
+    "div",
+    [],
+    ["dropdown-content"],
+    ""
+  );
+  let difficultyOptionsArray = saveDifficulties()
+  let newdifficultyA;
+
+  difficultyOptionsArray.forEach(function (option) {
+    newdifficultyA = createCompleteElements(
+      "a",
+      [{ attributeName: "id", attributeValue: option }],
+      ["categoryoOptions"],
+      option
+    );
+    difficultyContent.append(newdifficultyA);
+  });
+  difficultyButton.append(difficultyContent);
+  difficultyDropdown.append(difficultyButton);
+
+  containerFilters.append(categoryDropdown);
+  containerFilters.append(difficultyDropdown);
+  main.append(containerFilters)
+}
+
+
 window.onload = function () {
   setTimeout(function () {
     main.style.display = "flex";
@@ -252,9 +344,10 @@ window.onload = function () {
     leaderboard = leaderboardVerification();
     saveAllUsers();
     console.log("Usuarios después de guardar:", allUsers);
-
+    
     if (allUsers.length > 0) {
       createPodiumHtml();
+      createButtonFilters();
       completeHtmlTable();
     }
 
