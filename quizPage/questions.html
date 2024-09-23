@@ -6,6 +6,10 @@
     <title>QuizMania</title>
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="questions.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Inconsolata:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   </head>
   <body class="body">
     <div class="purple-background"></div>
@@ -13,6 +17,7 @@
       <div id="container-progress-bar">
         <div id="progress-bar"></div>
       </div>
+      <h1 id="finish-quiz-title">FINISH QUIZ</h1>
     </header>
     <main id="main">
       <div id="container-question">
@@ -46,12 +51,14 @@
 
       <div id="container-answer-buttons">
         <button id="continue-button" class="skip-answer-button">Skip</button>
-          <a class="page-buttons" href="../resultsScreen/results.html">Your Results</a>
-        </button>
-          <a class="page-buttons" href="../answersExplained/answersExplained.html">Answers Explanation</a>
-        </button>
+        <div id="container-page-links">
+          <a class="page-links" title="Results questions" href="../resultsScreen/results.html"> <i class="fa-solid fa-square-poll-horizontal" style="color: #000000;"></i></a>
+          <p>Results questions</p>
+          <p id="custom-mesagge"></p>
+        </div>
       </div>
     </main>
     <script src="questions.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/7fef3468f2.js" crossorigin="anonymous"></script>
   </body>
 </html>

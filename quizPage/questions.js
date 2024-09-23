@@ -124,7 +124,6 @@ function isCorrect(answer, question, button) {
     button.classList.add("answer-incorrect");
     userObject.answers.push("incorrect");
   }
-  countAnswersVerification();
 }
 
 function findCorrectBtn(correctAnswer) {
@@ -139,8 +138,7 @@ function findCorrectBtn(correctAnswer) {
 function loadQuiz() {
   if (countAnswersVerification()) {
     stopTimer = true;
-    document.getElementById("container-question").style.display = "none";
-    document.getElementById("container-answers").style.display = "none";
+    finishQuiz()
     return;
   }
   let question = nextQuestion();
@@ -159,8 +157,7 @@ function runOutOfTime() {
   showExplanation(question);
   changeButton();
   if (countAnswersVerification()) {
-    document.getElementById("container-question").style.display = "none";
-    document.getElementById("container-answers").style.display = "none";
+    finishQuiz()
     return;
   }
 }
@@ -230,10 +227,6 @@ function progressBarFunctionability() {
 function countAnswersVerification() {
   if (alreadyAsked.length === questionsCount) {
     continueBtn.style.display = "none";
-    let resultsAndLeaderboardBtn = document.querySelectorAll(".page-buttons");
-    resultsAndLeaderboardBtn.forEach(function (button) {
-      button.style.display = "block";
-    });
     localStorage.setItem("user", JSON.stringify(userObject));
     return true;
   }
@@ -256,6 +249,17 @@ export function changeTimerColorsByCategory(objectsArray) {
         timerColors[localStorage.getItem("category")];
     });
   });
+}
+
+
+function finishQuiz(){
+  document.getElementById("container-question").style.display = "none";
+  document.getElementById("container-answers").style.display = "none";
+  document.getElementById("container-progress-bar").style.display = "none";
+  document.querySelector(".answer-explanation").style.display = "none";
+  document.getElementById("finish-quiz-title").style.display = "block"
+  document.getElementById("container-page-links").style.display = "flex"
+  document.querySelector('.purple-background').style.height = '200px'
 }
 
 window.addEventListener("load", function () {
