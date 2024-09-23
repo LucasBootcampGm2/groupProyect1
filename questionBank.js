@@ -2943,3 +2943,12 @@ export let subColors = {
   art: "#d82b2b2e",
   sport: "#ff950063",
 };
+
+export let timerColors = {
+  science: "#0cd27f",
+  entertainment: "#de1d92",
+  history: "#ccc700",
+  geography: "#0f2dd5",
+  art:"#d00c0c",
+  sport:"#ff8f3d",
+};
