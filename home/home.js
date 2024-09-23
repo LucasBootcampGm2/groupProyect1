@@ -275,10 +275,27 @@ function backButtonsClick() {
   })
 }
 
-window.addEventListener("load", function () {
-  this.localStorage.clear()
-  backButtonsClick()
+function setLeaderboard() {
+  let leaderboard = {};
+  let difficultiesObject = {};
 
+  let categories = Object.keys(questions);
+  categories.forEach(function (category) {
+    let difficulties = Object.keys(questions[category]);
+    difficulties.forEach(function (difficulty) {
+      difficultiesObject[difficulty] = [];
+    });
+    leaderboard[category] = difficultiesObject;
+  });
+
+  return leaderboard;
+}
+
+window.addEventListener("load", function () {
+  backButtonsClick()
+  if (this.localStorage.getItem("leadearboard")){
+    localStorage.setItem("leaderboard", JSON.stringify(setLeaderboard()));
+  }
   setTimeout(function () {
     modal.classList.add("show")
     header.classList.add("show")

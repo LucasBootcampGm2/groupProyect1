@@ -1,6 +1,7 @@
 import { questions } from "../questionBank.js";
 import { colors } from "../questionBank.js";
 import { timerColors } from "../questionBank.js";
+import { points } from "../questionBank.js";
 
 let questionsCount;
 let selectedCategory = localStorage.getItem("category");
@@ -13,6 +14,9 @@ let stopTimer = false;
 let seconds = 20;
 let timerId = 0;
 
+let correctValue = points.valuesCorrect[selectedDifficulty];
+let wrongValue = points.valuesIncorrect[selectedDifficulty];
+
 let continueBtn = document.getElementById("continue-button");
 let explanationContainer = document.querySelector(".answer-explanation");
 
@@ -22,6 +26,8 @@ let progress = 0;
 
 let userObject = JSON.parse(localStorage.getItem("user"));
 userObject.answers = [];
+
+let allUsers = [];
 
 function getCategory() {
   return questions[selectedCategory];
@@ -227,6 +233,18 @@ function progressBarFunctionability() {
 function countAnswersVerification() {
   if (alreadyAsked.length === questionsCount) {
     continueBtn.style.display = "none";
+    let resultsAndLeaderboardBtn = document.querySelectorAll(".page-buttons");
+    resultsAndLeaderboardBtn.forEach(function (button) {
+      button.style.display = "block";
+    });
+    let correctAnswers = userObject.answers.filter(function (answer) {
+      return answer === "correct";
+    }).length;
+    let wrongAnswers = userObject.answers.filter(function (answer) {
+      return answer === "incorrect";
+    }).length;
+    finalScore(correctAnswers, wrongAnswers);
+    pushUserPointsToLeaderboard();
     localStorage.setItem("user", JSON.stringify(userObject));
     return true;
   }
@@ -260,6 +278,34 @@ function finishQuiz(){
   document.getElementById("finish-quiz-title").style.display = "block"
   document.getElementById("container-page-links").style.display = "flex"
   document.querySelector('.purple-background').style.height = '200px'
+
+function pushUserPointsToLeaderboard() {
+  let leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
+  leaderboard = saveAllUsers(leaderboard)
+  console.log(leaderboard)
+  leaderboard[selectedCategory][selectedDifficulty].push(userObject);
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+}
+
+function saveAllUsers(leaderboard) {
+  allUsers = [];
+  for (let category in leaderboard) {
+    for (let difficulty in leaderboard[category]) {
+      allUsers = allUsers.concat(leaderboard[category][difficulty]);
+    }
+  }
+  allUsers.sort((a, b) => b.totalPoints - a.totalPoints);
+  return leaderboard
+}
+
+function finalScore(correct, wrong) {
+  let finalScore = 0;
+  finalScore += correctValue * correct;
+  finalScore += wrongValue * wrong;
+  if (finalScore < 0) {
+    finalScore = 0;
+  }
+  userObject.totalPoints = finalScore;
 }
 
 window.addEventListener("load", function () {
