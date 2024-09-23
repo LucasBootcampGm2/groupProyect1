@@ -262,7 +262,6 @@ function completeHtmlTable() {
   return allUsers
 }
 
-
 function createPageButtons() {
   let containerLinks = createCompleteElements("div", [], ["buttons"], "")
 
@@ -424,6 +423,16 @@ function filterUsers() {
   const table = document.getElementById("leaderboard-table")
   table.innerHTML = ""
 
+  // Re-add the header row
+  let headerRow = document.createElement("tr")
+  const headers = ["Range", "Name", "Category", "Difficulty", "Points"]
+  headers.forEach((header) => {
+    let th = document.createElement("th")
+    th.textContent = header
+    headerRow.appendChild(th)
+  })
+  table.appendChild(headerRow)
+
   filteredUsers.forEach((user, idx) => {
     const newTr = document.createElement("tr")
     const newTdPosition = createCompleteElements(
@@ -433,13 +442,26 @@ function filterUsers() {
       `# ${idx + 1}`
     )
     const newTdName = createCompleteElements("td", [], ["user"], user.userName)
+    const newTdCategory = createCompleteElements("td", [], [], user.category)
+    const newTdDifficulty = createCompleteElements(
+      "td",
+      [],
+      [],
+      user.difficulty
+    )
     const newTdPoints = createCompleteElements(
       "td",
       [],
       ["points"],
       user.totalPoints
     )
-    appendElements(newTr, [newTdPosition, newTdName, newTdPoints])
+    appendElements(newTr, [
+      newTdPosition,
+      newTdName,
+      newTdCategory,
+      newTdDifficulty,
+      newTdPoints,
+    ])
     table.append(newTr)
   })
 }
