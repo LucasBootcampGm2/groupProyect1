@@ -1,76 +1,78 @@
 import { questions } from "../questionBank.js"
 
-let h1 = document.getElementById("h1");
-let main = document.querySelector(".main");
-let header = document.querySelector(".header");
+let h1 = document.getElementById("h1")
+let main = document.querySelector(".main")
+let header = document.querySelector(".header")
 
-let leaderboard = localStorage.getItem("leaderboard");
-let allUsers = [];
+let leaderboard = localStorage.getItem("leaderboard")
+let allUsers = []
 
-function saveDifficulties(){
+function saveDifficulties() {
   let categories = Object.keys(questions)
   let difficulties = []
-  
-  categories.forEach(function(category) {
-    Object.keys(questions[category]).forEach(function(_,idx){
-      if (!difficulties.includes(Object.keys(questions[category])[idx])){
+
+  categories.forEach(function (category) {
+    Object.keys(questions[category]).forEach(function (_, idx) {
+      if (!difficulties.includes(Object.keys(questions[category])[idx])) {
         difficulties.push(Object.keys(questions[category])[idx])
       }
     })
   })
-  return difficulties  
+  return difficulties
 }
 
 function addAttributes(element, attributes) {
   attributes.forEach(function (attribute) {
-    element.setAttribute(attribute.attributeName, attribute.attributeValue);
-  });
+    element.setAttribute(attribute.attributeName, attribute.attributeValue)
+  })
 }
 
 function addClasses(element, classes) {
   classes.forEach(function (classs) {
-    element.classList.add(classs);
-  });
+    element.classList.add(classs)
+  })
 }
 
 function addText(element, text) {
-  element.textContent = text;
+  element.textContent = text
 }
 
 function appendElements(father, appends) {
   appends.forEach(function (appendElement) {
-    father.append(appendElement);
-  });
+    father.append(appendElement)
+  })
 }
 
 function createCompleteElements(type, attributes, classes, text) {
-  let newElement = document.createElement(type);
-  addAttributes(newElement, attributes);
-  addClasses(newElement, classes);
-  addText(newElement, text);
-  return newElement;
+  let newElement = document.createElement(type)
+  addAttributes(newElement, attributes)
+  addClasses(newElement, classes)
+  addText(newElement, text)
+  return newElement
 }
 
 function leaderboardVerification() {
-  leaderboard = localStorage.getItem("leaderboard");
-  return JSON.parse(leaderboard);
+  leaderboard = localStorage.getItem("leaderboard")
+  return JSON.parse(leaderboard)
 }
 
-let userObject = JSON.parse(localStorage.getItem("user"));
+let userObject = JSON.parse(localStorage.getItem("user"))
 
-console.log("userObject from localstorage", userObject);
+console.log("userObject from localstorage", userObject)
 
 function saveAllUsers() {
-  let leaderboardData = leaderboardVerification();
-  allUsers = [];
+  let leaderboardData = leaderboardVerification()
+  allUsers = []
   for (let category in leaderboardData) {
     for (let difficulty in leaderboardData[category]) {
-      allUsers = allUsers.concat(leaderboardData[category][difficulty]);
+      leaderboardData[category][difficulty].forEach(function (user) {
+        user.category = category
+        user.difficulty = difficulty
+        allUsers.push(user)
+      })
     }
   }
-  allUsers.sort((a, b) => b.totalPoints - a.totalPoints);
-
-  console.log(allUsers);
+  allUsers.sort((a, b) => b.totalPoints - a.totalPoints)
 }
 
 function createPodiumHtml() {
@@ -79,12 +81,12 @@ function createPodiumHtml() {
     [{ attributeName: "id", attributeValue: "rankings" }],
     [],
     ""
-  );
+  )
 
-  let ranking2;
-  let rankingImg2;
-  let rankingP2;
-  let rankingUsername2;
+  let ranking2
+  let rankingImg2
+  let rankingP2
+  let rankingUsername2
 
   if (allUsers.length >= 2) {
     rankingImg2 = createCompleteElements(
@@ -98,20 +100,15 @@ function createPodiumHtml() {
       ],
       ["trophies"],
       ""
-    );
+    )
 
-    rankingP2 = createCompleteElements("p", [], [], "#2");
+    rankingP2 = createCompleteElements("p", [], [], "#2")
 
-    rankingUsername2 = createCompleteElements(
-      "p",
-      [],
-      [],
-      allUsers[1].userName
-    );
+    rankingUsername2 = createCompleteElements("p", [], [], allUsers[1].userName)
 
-    ranking2 = createCompleteElements("div", [], ["ranking", "two"], "");
-    appendElements(ranking2, [rankingImg2, rankingP2, rankingUsername2]);
-    rankingContainer.append(ranking2);
+    ranking2 = createCompleteElements("div", [], ["ranking", "two"], "")
+    appendElements(ranking2, [rankingImg2, rankingP2, rankingUsername2])
+    rankingContainer.append(ranking2)
   }
 
   let rankingImg1 = createCompleteElements(
@@ -125,26 +122,26 @@ function createPodiumHtml() {
     ],
     ["trophies"],
     ""
-  );
+  )
 
-  let rankingP1 = createCompleteElements("p", [], [], "#1");
+  let rankingP1 = createCompleteElements("p", [], [], "#1")
 
   let rankingUsername1 = createCompleteElements(
     "p",
     [],
     [],
     allUsers[0].userName
-  );
+  )
 
-  let ranking1 = createCompleteElements("div", [], ["ranking", "one"], "");
+  let ranking1 = createCompleteElements("div", [], ["ranking", "one"], "")
 
-  appendElements(ranking1, [rankingImg1, rankingP1, rankingUsername1]);
-  rankingContainer.append(ranking1);
+  appendElements(ranking1, [rankingImg1, rankingP1, rankingUsername1])
+  rankingContainer.append(ranking1)
 
-  let ranking3;
-  let rankingImg3;
-  let rankingP3;
-  let rankingUsername3;
+  let ranking3
+  let rankingImg3
+  let rankingP3
+  let rankingUsername3
 
   if (allUsers.length >= 3) {
     rankingImg3 = createCompleteElements(
@@ -158,23 +155,18 @@ function createPodiumHtml() {
       ],
       ["trophies"],
       ""
-    );
+    )
 
-    rankingP3 = createCompleteElements("p", [], [], "#3");
+    rankingP3 = createCompleteElements("p", [], [], "#3")
 
-    rankingUsername3 = createCompleteElements(
-      "p",
-      [],
-      [],
-      allUsers[2].userName
-    );
+    rankingUsername3 = createCompleteElements("p", [], [], allUsers[2].userName)
 
-    ranking3 = createCompleteElements("div", [], ["ranking", "three"], "");
-    appendElements(ranking3, [rankingImg3, rankingP3, rankingUsername3]);
-    rankingContainer.append(ranking3);
+    ranking3 = createCompleteElements("div", [], ["ranking", "three"], "")
+    appendElements(ranking3, [rankingImg3, rankingP3, rankingUsername3])
+    rankingContainer.append(ranking3)
   }
 
-  main.append(rankingContainer);
+  main.append(rankingContainer)
 }
 
 function completeHtmlTable() {
@@ -183,39 +175,39 @@ function completeHtmlTable() {
     [{ attributeName: "id", attributeValue: "leaderboard-table" }],
     [],
     ""
-  );
+  )
 
-  main.append(table);
+  main.append(table)
 
   allUsers.forEach((user, idx) => {
-    let newTr = document.createElement("tr");
+    let newTr = document.createElement("tr")
 
     let newTdPosition = createCompleteElements(
       "td",
       [],
       ["ranking"],
       `# ${idx + 1}`
-    );
+    )
 
-    let newTdName = createCompleteElements("td", [], ["user"], user.userName);
+    let newTdName = createCompleteElements("td", [], ["user"], user.userName)
 
     let newTdPoints = createCompleteElements(
       "td",
       [],
       ["points"],
       user.totalPoints
-    );
+    )
 
-    appendElements(newTr, [newTdPosition, newTdName, newTdPoints]);
+    appendElements(newTr, [newTdPosition, newTdName, newTdPoints])
 
-    table.append(newTr);
-  });
+    table.append(newTr)
+  })
 
-  return allUsers;
+  return allUsers
 }
 
 function createPageButtons() {
-  let containerLinks = createCompleteElements("div", [], ["buttons"], "");
+  let containerLinks = createCompleteElements("div", [], ["buttons"], "")
 
   let newHomeLink = createCompleteElements(
     "a",
@@ -227,7 +219,7 @@ function createPageButtons() {
     ],
     ["links"],
     "Home"
-  );
+  )
 
   let newResultsLink = createCompleteElements(
     "a",
@@ -239,7 +231,7 @@ function createPageButtons() {
     ],
     ["links"],
     "Results"
-  );
+  )
 
   let newRestartLink = createCompleteElements(
     "a",
@@ -251,106 +243,181 @@ function createPageButtons() {
     ],
     ["links"],
     "Restart"
-  );
+  )
 
-  appendElements(containerLinks, [newHomeLink, newRestartLink, newResultsLink]);
+  appendElements(containerLinks, [newHomeLink, newRestartLink, newResultsLink])
 
-  main.append(containerLinks);
+  main.append(containerLinks)
 }
-
 function createButtonFilters() {
   let containerFilters = createCompleteElements(
     "div",
     [{ attributeName: "id", attributeValue: "container-filters" }],
     [],
     ""
-  );
-  let categoryDropdown = createCompleteElements(
-    "div",
-    [{ attributeName: "id", attributeValue: "category-dropdown" }],
-    ["dropdown"],
-    ""
-  );
+  )
+
   let categoryButton = createCompleteElements(
     "button",
-    [],
-    ["dropdown-button"],
-    "Filter by category"
-  );
-  let categoryContent = createCompleteElements(
-    "div",
-    [],
-    ["dropdown-content"],
-    ""
-  );
-  let categoryOptionsArray = Object.keys(JSON.parse(leaderboard));
-  let newCategoryA;
-  categoryOptionsArray.forEach(function (option) {
-    newCategoryA = createCompleteElements(
-      "a",
-      [{ attributeName: "id", attributeValue: option }],
-      ["categoryoOptions"],
-      option
-    );
-    categoryContent.append(newCategoryA);
-  });
-  categoryButton.append(categoryContent);
-  categoryDropdown.append(categoryButton);
+    [{ attributeName: "id", attributeValue: "category-button" }],
+    ["filter-buttons"],
+    "Filter by Category"
+  )
 
-  let difficultyDropdown = createCompleteElements(
+  let categoryOptions = createCompleteElements(
     "div",
-    [{ attributeName: "id", attributeValue: "category-dropdown" }],
-    ["dropdown"],
+    [{ attributeName: "id", attributeValue: "category-content" }],
+    ["content"],
     ""
-  );
+  )
+
+  let categories = Object.keys(JSON.parse(leaderboard))
+  categories.forEach(function (category) {
+    let newOption = createCompleteElements(
+      "div",
+      [{ attributeName: "name", attributeValue: category }],
+      ["options"],
+      ""
+    )
+
+    let newCategoryCheckbox = createCompleteElements(
+      "input",
+      [
+        { attributeName: "type", attributeValue: "checkbox" },
+        { attributeName: "id", attributeValue: `${category}-checkbox` },
+      ],
+      [],
+      ""
+    )
+    let newCategoryLabel = createCompleteElements("span", [], [], category)
+    newCategoryCheckbox.addEventListener("change", filterUsers)
+    newOption.append(newCategoryCheckbox)
+    newOption.append(newCategoryLabel)
+    categoryOptions.append(newOption)
+  })
+  categoryButton.append(categoryOptions)
+
   let difficultyButton = createCompleteElements(
     "button",
-    [],
-    ["dropdown-button"],
-    "Filter by difficulty"
-  );
-  let difficultyContent = createCompleteElements(
+    [{ attributeName: "id", attributeValue: "difficulty-button" }],
+    ["filter-buttons"],
+    "Filter by Difficulty"
+  )
+
+  let difficultyOptions = createCompleteElements(
     "div",
-    [],
-    ["dropdown-content"],
+    [{ attributeName: "id", attributeValue: "difficulty-content" }],
+    ["content"],
     ""
-  );
-  let difficultyOptionsArray = saveDifficulties()
-  let newdifficultyA;
+  )
 
-  difficultyOptionsArray.forEach(function (option) {
-    newdifficultyA = createCompleteElements(
-      "a",
-      [{ attributeName: "id", attributeValue: option }],
-      ["categoryoOptions"],
-      option
-    );
-    difficultyContent.append(newdifficultyA);
-  });
-  difficultyButton.append(difficultyContent);
-  difficultyDropdown.append(difficultyButton);
+  let difficulties = saveDifficulties()
+  difficulties.forEach(function (difficulty) {
+    let newOption = createCompleteElements(
+      "div",
+      [{ attributeName: "name", attributeValue: difficulty }],
+      ["options"],
+      ""
+    )
 
-  containerFilters.append(categoryDropdown);
-  containerFilters.append(difficultyDropdown);
+    let newDifficultyCheckbox = createCompleteElements(
+      "input",
+      [
+        { attributeName: "type", attributeValue: "checkbox" },
+        { attributeName: "id", attributeValue: `${difficulty}-difficulty` },
+      ],
+      [],
+      ""
+    )
+
+    let newDifficultyLable = createCompleteElements("span", [], [], difficulty)
+    newDifficultyCheckbox.addEventListener("change", filterUsers)
+    newOption.append(newDifficultyCheckbox)
+    newOption.append(newDifficultyLable)
+    difficultyOptions.append(newOption)
+  })
+
+  difficultyButton.append(difficultyOptions)
+  containerFilters.append(categoryButton)
+  containerFilters.append(difficultyButton)
   main.append(containerFilters)
 }
 
+function filterUsers() {
+  const selectedCategories = Array.from(
+    document.querySelectorAll('input[type="checkbox"]:checked[id$="-checkbox"]')
+  ).map((checkbox) => checkbox.id.replace("-checkbox", ""))
+
+  const selectedDifficulties = Array.from(
+    document.querySelectorAll(
+      'input[type="checkbox"]:checked[id$="-difficulty"]'
+    )
+  ).map((checkbox) => checkbox.id.replace("-difficulty", ""))
+
+  const filteredUsers = allUsers.filter((user) => {
+    const categoryMatch = selectedCategories.length
+      ? selectedCategories.includes(user.category)
+      : true
+    const difficultyMatch = selectedDifficulties.length
+      ? selectedDifficulties.includes(user.difficulty)
+      : true
+    return categoryMatch && difficultyMatch
+  })
+
+  const table = document.getElementById("leaderboard-table")
+  table.innerHTML = ""
+
+  filteredUsers.forEach((user, idx) => {
+    const newTr = document.createElement("tr")
+    const newTdPosition = createCompleteElements(
+      "td",
+      [],
+      ["ranking"],
+      `# ${idx + 1}`
+    )
+    const newTdName = createCompleteElements("td", [], ["user"], user.userName)
+    const newTdPoints = createCompleteElements(
+      "td",
+      [],
+      ["points"],
+      user.totalPoints
+    )
+    appendElements(newTr, [newTdPosition, newTdName, newTdPoints])
+    table.append(newTr)
+  })
+}
+
+function appearFilterOptins() {
+  let categoryFilter = document.getElementById("category-button")
+  let difficultyFilter = document.getElementById("difficulty-button")
+
+  categoryFilter.addEventListener("click", function () {
+    let categoryContent = document.getElementById("category-content")
+    categoryContent.classList.toggle("show-content")
+  })
+
+  difficultyFilter.addEventListener("click", function () {
+    let difficultyContent = document.getElementById("difficulty-content")
+    difficultyContent.classList.toggle("show-content")
+  })
+}
 
 window.onload = function () {
   setTimeout(function () {
-    main.style.display = "flex";
-    h1.style.display = "flex";
-    header.style.display = "flex";
-    leaderboard = leaderboardVerification();
-    saveAllUsers();
-    console.log("Usuarios después de guardar:", allUsers);
-    
+    main.style.display = "flex"
+    h1.style.display = "flex"
+    header.style.display = "flex"
+    leaderboard = leaderboardVerification()
+    saveAllUsers()
+    console.log("Usuarios después de guardar:", allUsers)
+
     if (allUsers.length > 0) {
-      createPodiumHtml();
-      createButtonFilters();
-      completeHtmlTable();
+      createPodiumHtml()
+      createButtonFilters()
+      completeHtmlTable()
     }
 
-    createPageButtons();
-  }, 1000);
-};
+    createPageButtons()
+    appearFilterOptins()
+  }, 1000)
+}

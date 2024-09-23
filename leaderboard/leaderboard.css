@@ -184,42 +184,45 @@ table td:last-child {
   gap: 30px;
 }
 
-.dropdown-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
 #container-filters {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.filter-buttons {
+  border: none;
+  border-radius: 5px;
+  background-color: #420080;
+  color: white;
+  padding: 10px;
+  font-size: 1em;
+  position: relative;
+  cursor: pointer;
+}
+
+.content {
+  position: absolute;
+  color: #000;
+  background-color: white;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  text-align: left;
+  left: 0;
+  top: 40px;
+  width: 86%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+.show-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.options {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
