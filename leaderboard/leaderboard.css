@@ -68,12 +68,12 @@ main {
 #leaderboard-table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: 1em;
+  border-radius: 10px;
   overflow: hidden;
   font-family: Arial, sans-serif;
   font-size: 18px;
   background-color: #f8f8f8;
-  box-shadow: 5px 9px 10px rgb(45, 4, 116);
+  box-shadow: 0 0 10px 5px rgb(45, 4, 116);
 }
 
 table tr {
@@ -86,7 +86,7 @@ table tr:nth-child(even) {
 
 table td {
   padding: 12px 0;
-  text-align: left;
+  text-align: center;
   color: #333;
   border-bottom: 2px solid white;
 }
@@ -105,7 +105,7 @@ table td:first-child {
 
 /* Estilo para la segunda columna */
 table td:nth-child(2) {
-  width: 70%;
+  width: 20%;
 }
 
 /* Estilo para la tercera columna */
@@ -225,4 +225,8 @@ table td:last-child {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+th {
+  font-size: 15px;
 }
