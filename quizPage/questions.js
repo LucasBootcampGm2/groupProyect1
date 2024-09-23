@@ -1,5 +1,6 @@
 import { questions } from "../questionBank.js";
 import { colors } from "../questionBank.js";
+import { timerColors } from "../questionBank.js";
 import { points } from "../questionBank.js";
 
 let questionsCount;
@@ -129,7 +130,6 @@ function isCorrect(answer, question, button) {
     button.classList.add("answer-incorrect");
     userObject.answers.push("incorrect");
   }
-  countAnswersVerification();
 }
 
 function findCorrectBtn(correctAnswer) {
@@ -144,8 +144,7 @@ function findCorrectBtn(correctAnswer) {
 function loadQuiz() {
   if (countAnswersVerification()) {
     stopTimer = true;
-    document.getElementById("container-question").style.display = "none";
-    document.getElementById("container-answers").style.display = "none";
+    finishQuiz()
     return;
   }
   let question = nextQuestion();
@@ -164,8 +163,7 @@ function runOutOfTime() {
   showExplanation(question);
   changeButton();
   if (countAnswersVerification()) {
-    document.getElementById("container-question").style.display = "none";
-    document.getElementById("container-answers").style.display = "none";
+    finishQuiz()
     return;
   }
 }
@@ -262,6 +260,25 @@ export function changeColorsByCategory(objectsArray) {
   });
 }
 
+export function changeTimerColorsByCategory(objectsArray) {
+  objectsArray.forEach(function (element) {
+    element.styles.forEach(function (styleType) {
+      element.elementType.style[styleType] =
+        timerColors[localStorage.getItem("category")];
+    });
+  });
+}
+
+
+function finishQuiz(){
+  document.getElementById("container-question").style.display = "none";
+  document.getElementById("container-answers").style.display = "none";
+  document.getElementById("container-progress-bar").style.display = "none";
+  document.querySelector(".answer-explanation").style.display = "none";
+  document.getElementById("finish-quiz-title").style.display = "block"
+  document.getElementById("container-page-links").style.display = "flex"
+  document.querySelector('.purple-background').style.height = '200px'
+
 function pushUserPointsToLeaderboard() {
   let leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
   leaderboard = saveAllUsers(leaderboard)
@@ -314,6 +331,8 @@ window.addEventListener("load", function () {
       elementType: document.querySelector(".purple-background"),
       styles: ["backgroundColor"],
     },
+  ]);
+  changeTimerColorsByCategory([
     {
       elementType: document.getElementById("container-timer"),
       styles: ["borderTopColor", "borderBottomColor"],
