@@ -293,7 +293,7 @@ function setLeaderboard() {
 
 window.addEventListener("load", function () {
   backButtonsClick()
-  if (!this.localStorage.getItem("leadearboard")){
+  if (!this.localStorage.getItem("leaderboard")){
     localStorage.setItem("leaderboard", JSON.stringify(setLeaderboard()));
   }
   setTimeout(function () {
