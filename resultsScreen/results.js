@@ -1,5 +1,4 @@
-import { points } from "../questionBank.js";
-import { colors } from "../questionBank.js";
+import { points, colors } from "../questionBank.js";
 
 let crown = document.querySelector(".fa-crown");
 let score = document.querySelector(".score");
@@ -76,9 +75,13 @@ function changeColorCategory() {
 
 
 window.addEventListener("load", function () {
-  numberOfQuestions(correctAnswers, wrongAnswers, skippedAnswers);
-  finalScore(correctAnswers, wrongAnswers);
-  showCrown();
-  changeValuePoints();
-  changeColorCategory();
+  if (user ** selectedCategory && selectedDifficulty){
+    numberOfQuestions(correctAnswers, wrongAnswers, skippedAnswers);
+    finalScore(correctAnswers, wrongAnswers);
+    showCrown();
+    changeValuePoints();
+    changeColorCategory();
+  }else{
+    window.location.href = "../notFoundPage/notFoundPage.html"
+  }
 });

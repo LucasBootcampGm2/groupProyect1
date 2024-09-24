@@ -1,5 +1,4 @@
-import { colors } from "../questionBank.js";
-import { subColors } from "../questionBank.js";
+import { colors, subColors } from "../questionBank.js";
 
 let backgroundColor = document.querySelector(".background-color");
 let subBackgroundColor = document.getElementById("container-answers-button");
@@ -16,7 +15,6 @@ let buttonNextAnswers = document.getElementById("button-next-answer");
 let buttonPrevAnswers = document.getElementById("button-prev-answer");
 
 let selectedCategory = localStorage.getItem("category");
-
 let userObject = JSON.parse(localStorage.getItem("user"));
 let askedQuestions = JSON.parse(localStorage.getItem("askedQuestions"));
 
@@ -115,8 +113,12 @@ function subChangeColorCategory() {
 }
 
 window.addEventListener("load", function () {
-  loadAnswers();
-  colorAnswer();
-  changeColorCategory();
-  subChangeColorCategory();
+  if (userObject && selectedCategory && askedQuestions){
+    loadAnswers();
+    colorAnswer();
+    changeColorCategory();
+    subChangeColorCategory();
+  }else{
+    window.location.href = "../notFoundPage/notFoundPage.html"
+  }
 });
