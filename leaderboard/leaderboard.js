@@ -175,7 +175,6 @@ function completeHtmlTable() {
     ""
   )
 
-  // Añadir las cabeceras de la tabla
   let headerRow = document.createElement("tr")
   const headers = ["Range", "Name", "Category", "Difficulty", "Points"]
   headers.forEach((header) => {
@@ -185,7 +184,6 @@ function completeHtmlTable() {
   })
   table.appendChild(headerRow)
 
-  // Añadir la fila inicial con los datos del usuario
   if (userObject) {
     allUsers.forEach((user, idx) => {
       console.log(user)
@@ -195,7 +193,7 @@ function completeHtmlTable() {
         "td",
         [],
         ["ranking"],
-        `# ${idx + 1}` // Incrementa en 2 para que no colisione con la fila inicial
+        `# ${idx + 1}` 
       )
   
       let newTdName = createCompleteElements("td", [], ["user"], user.userName)
@@ -386,7 +384,6 @@ function filterUsers() {
   const table = document.getElementById("leaderboard-table")
   table.innerHTML = ""
 
-  // Re-add the header row
   let headerRow = document.createElement("tr")
   const headers = ["Range", "Name", "Category", "Difficulty", "Points"]
   headers.forEach((header) => {
