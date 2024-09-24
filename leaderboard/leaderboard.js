@@ -433,11 +433,14 @@ function appearFilterOptins() {
   categoryFilter.addEventListener("click", function () {
     let categoryContent = document.getElementById("category-content")
     categoryContent.classList.toggle("show-content")
+    document.getElementById('category-content').classList.add('active-pointer')
   })
 
   difficultyFilter.addEventListener("click", function () {
     let difficultyContent = document.getElementById("difficulty-content")
     difficultyContent.classList.toggle("show-content")
+    document.getElementById('difficulty-content').classList.add('active-pointer')
+
   })
 }
 
