@@ -20,7 +20,7 @@ let difficulties = saveDifficulties();
 
 function addUserName() {
   let username = document.getElementById("username");
-  if ((!username.value.trim())) {
+  if (username.value.trim() === '') {
     userObject.userName = "unknown";
   } else {
     userObject.userName = username.value.trim();
@@ -31,6 +31,7 @@ function addUserName() {
 button.addEventListener("click", function () {
   modal.classList.remove("show");
   header.classList.remove("show");
+  addUserName()
   addCategoryButtons();
   setTimeout(function () {
     main.style.display = "block";

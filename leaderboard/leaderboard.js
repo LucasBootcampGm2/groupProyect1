@@ -186,7 +186,6 @@ function completeHtmlTable() {
 
   if (userObject) {
     allUsers.forEach((user, idx) => {
-      console.log(user)
       let newTr = document.createElement("tr")
     
       let newTdPosition = createCompleteElements(
@@ -451,9 +450,7 @@ window.onload = function () {
       h1.style.display = "flex"
       header.style.display = "flex"
       leaderboard = leaderboardVerification()
-      saveAllUsers()
-      console.log("Usuarios después de guardar:", allUsers)
-  
+      saveAllUsers()  
       if (allUsers.length > 0) {
         createPodiumHtml()
         createButtonFilters()
