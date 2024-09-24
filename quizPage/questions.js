@@ -273,12 +273,12 @@ function finishQuiz() {
   document.querySelector(".answer-explanation").style.display = "none"
   document.getElementById("finish-quiz-title").style.display = "block"
   document.getElementById("container-page-links").style.display = "flex"
+  document.getElementById("container-page-links").style.paddingTop = "60px"
   document.querySelector(".purple-background").style.height = "200px"
 }
 
 function pushUserPointsToLeaderboard() {
   leaderboard = saveAllUsers(leaderboard)
-  console.log(leaderboard)
   leaderboard[selectedCategory][selectedDifficulty].push(userObject)
   localStorage.setItem("leaderboard", JSON.stringify(leaderboard))
 }
@@ -302,6 +302,23 @@ function finalScore(correct, wrong) {
     finalScore = 0
   }
   userObject.totalPoints = finalScore
+  customMessage(finalScore)
+}
+
+function customMessage(totalPoints){
+  let customMessage = document.getElementById("custom-message")
+  if(totalPoints === correctValue * questionsCount){
+  customMessage.textContent = `Wow, a perfect score ${userObject.userName}... amazing :D`
+  }
+ else if (totalPoints > correctValue * (questionsCount/1.5)){
+  customMessage.textContent = `Congratulations ${userObject.userName}, you did very well :)`
+ }
+ else if (totalPoints > correctValue * (questionsCount/3)){
+  customMessage.textContent = `Well... I guess it's okay ${userObject.userName} :/`
+ }
+ else {
+  customMessage.textContent = `${userObject.userName} you didn't even try... :(`
+ }
 }
 
 window.addEventListener("load", function () {

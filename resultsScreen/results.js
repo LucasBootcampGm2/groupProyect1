@@ -75,7 +75,7 @@ function changeColorCategory() {
 
 
 window.addEventListener("load", function () {
-  if (user ** selectedCategory && selectedDifficulty){
+  if (user && selectedCategory && selectedDifficulty){
     numberOfQuestions(correctAnswers, wrongAnswers, skippedAnswers);
     finalScore(correctAnswers, wrongAnswers);
     showCrown();
