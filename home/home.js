@@ -16,24 +16,21 @@ let backDifficultyButton = document.getElementById("back-difficulty");
 let userObject = {};
 
 let categories = Object.keys(questions);
-
-console.log(categories);
+let difficulties = saveDifficulties();
 
 function addUserName() {
   let username = document.getElementById("username");
-  if ((!username.value)) {
+  if ((!username.value.trim())) {
     userObject.userName = "unknown";
   } else {
-    userObject.userName = username.value;
+    userObject.userName = username.value.trim();
   }
-  console.log(userObject);
   localStorage.setItem("user", JSON.stringify(userObject));
 }
 
 button.addEventListener("click", function () {
   modal.classList.remove("show");
   header.classList.remove("show");
-  console.log(addUserName());
   addCategoryButtons();
   setTimeout(function () {
     main.style.display = "block";
@@ -58,8 +55,6 @@ function saveDifficulties() {
   });
   return difficulties;
 }
-let difficulties = saveDifficulties();
-console.log(difficulties);
 
 function getElementByQuery(element) {
   return document.querySelectorAll(element);
@@ -139,7 +134,6 @@ function addCategoryButtons() {
 function addDifficultyButtons() {
   let categorySelected = localStorage.getItem("category");
   let categoryDifficulties = Object.values(difficulties[categorySelected]);
-  console.log(difficulties[categorySelected]);
 
   categoryDifficulties.forEach(function (categoryDifficulty) {
     let newButton = createCompleteElement(
