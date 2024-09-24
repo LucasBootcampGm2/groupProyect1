@@ -1,7 +1,4 @@
-import { questions } from "../questionBank.js"
-import { colors } from "../questionBank.js"
-import { timerColors } from "../questionBank.js"
-import { points } from "../questionBank.js"
+import { questions, colors, timerColors, points } from "../questionBank.js"
 
 let questionsCount
 let selectedCategory = localStorage.getItem("category")
@@ -25,7 +22,8 @@ let progressBar = document.getElementById("progress-bar")
 let progress = 0
 
 let userObject = JSON.parse(localStorage.getItem("user"))
-userObject.answers = []
+
+let leaderboard = JSON.parse(localStorage.getItem("leaderboard"))
 
 let allUsers = []
 
@@ -37,7 +35,6 @@ function getDifficulty(questionsByCategory) {
   return questionsByCategory[selectedDifficulty]
 }
 
-let filteredQuestions = getDifficulty(getCategory())
 let shuffledQuestions = []
 
 function resetBtnColors() {
@@ -280,7 +277,6 @@ function finishQuiz() {
 }
 
 function pushUserPointsToLeaderboard() {
-  let leaderboard = JSON.parse(localStorage.getItem("leaderboard"))
   leaderboard = saveAllUsers(leaderboard)
   console.log(leaderboard)
   leaderboard[selectedCategory][selectedDifficulty].push(userObject)
@@ -309,33 +305,38 @@ function finalScore(correct, wrong) {
 }
 
 window.addEventListener("load", function () {
-  switch (selectedDifficulty) {
-    case "easy":
-      questionsCount = 10
-      break
-    case "medium":
-      questionsCount = 20
-      break
-    case "hard":
-      questionsCount = 25
-      break
+  if (getCategory() && getDifficulty(getCategory()) && userObject && leaderboard){
+    userObject.answers = []
+    switch (selectedDifficulty) {
+      case "easy":
+        questionsCount = 10
+        break
+      case "medium":
+        questionsCount = 20
+        break
+      case "hard":
+        questionsCount = 25
+        break
+    }
+    shuffledQuestions = shuffleQuestions(getDifficulty(getCategory()))
+    localStorage.setItem("askedQuestions", JSON.stringify(shuffledQuestions))
+    setTimer()
+    loadButtons()
+    loadQuiz()
+    progressBarFunctionability()
+    changeColorsByCategory([
+      {
+        elementType: document.querySelector(".purple-background"),
+        styles: ["backgroundColor"],
+      },
+    ])
+    changeTimerColorsByCategory([
+      {
+        elementType: document.getElementById("container-timer"),
+        styles: ["borderTopColor", "borderBottomColor"],
+      },
+    ])
+  }else{
+    window.location.href = "../notFoundPage/notFoundPage.html"
   }
-  shuffledQuestions = shuffleQuestions(filteredQuestions)
-  localStorage.setItem("askedQuestions", JSON.stringify(shuffledQuestions))
-  setTimer()
-  loadButtons()
-  loadQuiz()
-  progressBarFunctionability()
-  changeColorsByCategory([
-    {
-      elementType: document.querySelector(".purple-background"),
-      styles: ["backgroundColor"],
-    },
-  ])
-  changeTimerColorsByCategory([
-    {
-      elementType: document.getElementById("container-timer"),
-      styles: ["borderTopColor", "borderBottomColor"],
-    },
-  ])
 })

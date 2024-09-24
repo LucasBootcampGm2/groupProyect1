@@ -58,8 +58,6 @@ function leaderboardVerification() {
 
 let userObject = JSON.parse(localStorage.getItem("user"))
 
-console.log("userObject from localstorage", userObject)
-
 function saveAllUsers() {
   let leaderboardData = leaderboardVerification()
   allUsers = []
@@ -447,21 +445,25 @@ function appearFilterOptins() {
 }
 
 window.onload = function () {
-  setTimeout(function () {
-    main.style.display = "flex"
-    h1.style.display = "flex"
-    header.style.display = "flex"
-    leaderboard = leaderboardVerification()
-    saveAllUsers()
-    console.log("Usuarios después de guardar:", allUsers)
-
-    if (allUsers.length > 0) {
-      createPodiumHtml()
-      createButtonFilters()
-      completeHtmlTable()
-    }
-
-    createPageButtons()
-    appearFilterOptins()
-  }, 1000)
+  if (userObject && leaderboard){
+    setTimeout(function () {
+      main.style.display = "flex"
+      h1.style.display = "flex"
+      header.style.display = "flex"
+      leaderboard = leaderboardVerification()
+      saveAllUsers()
+      console.log("Usuarios después de guardar:", allUsers)
+  
+      if (allUsers.length > 0) {
+        createPodiumHtml()
+        createButtonFilters()
+        completeHtmlTable()
+      }
+  
+      createPageButtons()
+      appearFilterOptins()
+    }, 1000)
+  }else{
+    window.location.href = "../notFoundPage/notFoundPage.html"
+  }
 }
