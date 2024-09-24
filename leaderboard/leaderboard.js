@@ -189,77 +189,43 @@ function completeHtmlTable() {
 
   // Añadir la fila inicial con los datos del usuario
   if (userObject) {
-    const initialRow = document.createElement("tr")
-
-    let rangeCell = createCompleteElements("td", [], ["ranking"], "#1") // Cambiar según necesidad
-    let nameCell = createCompleteElements(
-      "td",
-      [],
-      ["user"],
-      userObject.userName
-    )
-    let categoryCell = createCompleteElements(
-      "td",
-      [],
-      [],
-      userObject.category || "N/A"
-    )
-    let difficultyCell = createCompleteElements(
-      "td",
-      [],
-      [],
-      userObject.difficulty || "N/A"
-    )
-    let pointsCell = createCompleteElements(
-      "td",
-      [],
-      ["points"],
-      userObject.totalPoints || 0
-    )
-
-    appendElements(initialRow, [
-      rangeCell,
-      nameCell,
-      categoryCell,
-      difficultyCell,
-      pointsCell,
-    ])
-    table.append(initialRow)
+    allUsers.forEach((user, idx) => {
+      console.log(user)
+      let newTr = document.createElement("tr")
+    
+      let newTdPosition = createCompleteElements(
+        "td",
+        [],
+        ["ranking"],
+        `# ${idx + 1}` // Incrementa en 2 para que no colisione con la fila inicial
+      )
+  
+      let newTdName = createCompleteElements("td", [], ["user"], user.userName)
+      let newTdCategory = createCompleteElements("td", [], [], user.category)
+      let newTdDifficulty = createCompleteElements("td", [], [], user.difficulty)
+      let newTdPoints = createCompleteElements(
+        "td",
+        [],
+        ["points"],
+        user.totalPoints
+      )
+  
+      appendElements(newTr, [
+        newTdPosition,
+        newTdName,
+        newTdCategory,
+        newTdDifficulty,
+        newTdPoints,
+      ])
+      table.append(newTr)
+    })
+  
+    main.append(table)
+    return allUsers
   }
-
-  // Añadir los demás usuarios
-  allUsers.forEach((user, idx) => {
-    let newTr = document.createElement("tr")
-
-    let newTdPosition = createCompleteElements(
-      "td",
-      [],
-      ["ranking"],
-      `# ${idx + 2}` // Incrementa en 2 para que no colisione con la fila inicial
-    )
-
-    let newTdName = createCompleteElements("td", [], ["user"], user.userName)
-    let newTdCategory = createCompleteElements("td", [], [], user.category)
-    let newTdDifficulty = createCompleteElements("td", [], [], user.difficulty)
-    let newTdPoints = createCompleteElements(
-      "td",
-      [],
-      ["points"],
-      user.totalPoints
-    )
-
-    appendElements(newTr, [
-      newTdPosition,
-      newTdName,
-      newTdCategory,
-      newTdDifficulty,
-      newTdPoints,
-    ])
-    table.append(newTr)
-  })
-
-  main.append(table)
-  return allUsers
+  else{
+    window.location.href = "../notFoundPage/notFoundPage.html"
+  }
 }
 
 function createPageButtons() {
@@ -419,7 +385,6 @@ function filterUsers() {
       : true
     return categoryMatch && difficultyMatch
   })
-
   const table = document.getElementById("leaderboard-table")
   table.innerHTML = ""
 
